@@ -72,7 +72,7 @@ export const initialState = (): State => ({
   cards: {},
   roleplays: {},
   speechScores: [],
-  ai: { geminiKey: "", passcode: "", model: "gemini-2.5-flash" },
+  ai: { geminiKey: "", passcode: "", model: "gemini-flash-lite-latest" },
   accents: { heard: [], pairsBest: 0, dictations: 0 },
   writings: { count: 0, best: 0 },
   outfits: { owned: [], worn: null },
@@ -83,7 +83,12 @@ export const initialState = (): State => ({
 function load(): State {
   try {
     const raw = localStorage.getItem(KEY);
-    if (raw) return { ...initialState(), ...JSON.parse(raw) };
+    if (raw) {
+      const s: State = { ...initialState(), ...JSON.parse(raw) };
+      // gemini-2.5-flash a été fermé par Google aux nouveaux comptes.
+      if (s.ai.model === "gemini-2.5-flash") s.ai = { ...s.ai, model: "gemini-flash-lite-latest" };
+      return s;
+    }
   } catch {
     /* stockage indisponible : on repart d'un état neuf */
   }

@@ -43,7 +43,7 @@ Deux possibilités :
 - **Simple** : crée une clé sur https://aistudio.google.com (« Get API key », sans carte bancaire) et colle-la dans **Profil → Tuteur IA**. Elle reste sur ton téléphone.
 - **Plus sûr, une fois l'app sur Vercel** : dans **Settings → Environment Variables**, ajoute `GEMINI_API_KEY` (ta clé) et `APP_PASSCODE` (un code de ton choix), puis redéploie. Recopie le code dans **Profil → Tuteur IA**. La clé reste sur le serveur (`api/tutor.js`).
 
-Le modèle par défaut est `gemini-2.5-flash` ; s'il n'existe plus, mets le nom d'un modèle « Flash » actuel dans Profil (ou `GEMINI_MODEL` sur Vercel). Sur l'offre gratuite, Google peut utiliser les échanges : n'écris rien de confidentiel.
+Le modèle par défaut est `gemini-flash-lite-latest` (réponse en 3 secondes environ). Si Google ferme un modèle ou s'il est surchargé, l'app essaie automatiquement `gemini-3.5-flash-lite`, `gemini-3.1-flash-lite` puis `gemini-flash-latest`. Tu peux imposer un autre modèle dans Profil, ou avec `GEMINI_MODEL` sur Vercel. Sur l'offre gratuite, Google peut utiliser les échanges : n'écris rien de confidentiel.
 
 ## Lancer sur ton ordinateur
 

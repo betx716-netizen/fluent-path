@@ -1,10 +1,13 @@
 // Fonction serveur Vercel (offre gratuite) : transmet la conversation à Gemini
 // sans exposer la clé. Variables à définir sur Vercel :
 //   GEMINI_API_KEY  (obligatoire) — clé gratuite créée sur aistudio.google.com
-//   GEMINI_MODEL    (facultatif)  — par défaut gemini-2.5-flash
+//   GEMINI_MODEL    (facultatif)  — modèle préféré ; sinon gemini-flash-lite-latest
 //   APP_PASSCODE    (conseillé)   — code à recopier dans Profil → Tuteur IA,
 //                                   pour que personne d'autre n'use ton quota
 export const config = { runtime: "edge" };
+
+// Modèles rapides (réponse en quelques secondes), du préféré au secours.
+const FALLBACK_MODELS = ["gemini-flash-lite-latest", "gemini-3.5-flash-lite", "gemini-3.1-flash-lite", "gemini-flash-latest"];
 
 const json = (status, body) =>
   new Response(JSON.stringify(body), { status, headers: { "Content-Type": "application/json" } });
@@ -40,15 +43,22 @@ export default async function handler(req) {
   if (contents[0]?.role === "model") contents.unshift({ role: "user", parts: [{ text: "(The conversation starts.)" }] });
   if (!contents.length || contents[contents.length - 1].role !== "user") contents.push({ role: "user", parts: [{ text: "(continue)" }] });
 
-  const model = process.env.GEMINI_MODEL || "gemini-2.5-flash";
-  const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json", "x-goog-api-key": key },
-    body: JSON.stringify({
-      systemInstruction: { parts: [{ text: system }] },
-      contents,
-      generationConfig: { responseMimeType: "application/json", temperature: 0.7 }
-    })
+  // Google retire régulièrement des modèles : si l'un est fermé (404) ou
+  // surchargé (503, 429), on essaie le suivant.
+  const models = [...new Set([process.env.GEMINI_MODEL, ...FALLBACK_MODELS].filter(Boolean))];
+  const payload = JSON.stringify({
+    systemInstruction: { parts: [{ text: system }] },
+    contents,
+    generationConfig: { responseMimeType: "application/json", temperature: 0.7 }
   });
+  let r;
+  for (const model of models) {
+    r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "x-goog-api-key": key },
+      body: payload
+    });
+    if (![404, 429, 503].includes(r.status)) break;
+  }
   return new Response(await r.text(), { status: r.status, headers: { "Content-Type": "application/json" } });
 }

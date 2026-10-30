@@ -210,7 +210,7 @@ function AiCard({ toast }: { toast: (m: string) => void }) {
         style={{ display: "grid", gap: 10 }}
         onSubmit={e => {
           e.preventDefault();
-          setState(x => ({ ...x, ai: { geminiKey: key.trim(), passcode: passcode.trim(), model: model.trim() || "gemini-2.5-flash" } }));
+          setState(x => ({ ...x, ai: { geminiKey: key.trim(), passcode: passcode.trim(), model: model.trim() || "gemini-flash-lite-latest" } }));
           toast("Réglages du tuteur enregistrés");
         }}
       >
