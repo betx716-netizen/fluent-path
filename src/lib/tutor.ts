@@ -29,7 +29,9 @@ Rules:
 ${sc.objectives.map(o => `  - "${o.id}": ${o.en}`).join("\n")}
 - Do NOT correct the learner in your reply. Instead, put a correction of the learner's LAST message in "correction" only if it contains a real grammar or vocabulary mistake (not punctuation, not capital letters, not minor speech-recognition noise). Otherwise null.
 - The learner's messages may come from speech recognition: ignore missing punctuation.
-- When all objectives are done, or after the learner's 10th message, close the conversation politely in character and set "finished": true.
+- When all objectives are done, or after the learner's ${sc.maxTurns ?? 10}th message, close the conversation politely in character and set "finished": true.${sc.extra ? `
+Course instructions (in French) — follow them; where they ask you to rephrase the learner's mistake inside your reply, do so naturally in "reply" and ALSO fill "correction". Keep the JSON format below in all cases:
+${sc.extra}` : ""}
 Answer with ONLY this JSON object:
 {"reply": "your in-character line in English",
  "reply_fr": "French translation of your line",

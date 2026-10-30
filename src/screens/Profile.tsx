@@ -97,7 +97,7 @@ export function Profile({ session, toast }: { session: Session | null; toast: (m
         <div className="switch">
           <span>Temps par jour</span>
           <div className="seg">
-            {([10, 20, 30] as const).map(m => (
+            {([5, 10, 15, 20] as const).map(m => (
               <button key={m} aria-pressed={s.profile.minutes === m} onClick={() => setState(x => ({ ...x, profile: { ...x.profile, minutes: m } }))}>
                 {m} min
               </button>

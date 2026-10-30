@@ -1,4 +1,4 @@
-import { SECTIONS } from "../data/units";
+import { sectionsOf } from "../data/units";
 import { sectionOpen } from "../lib/game";
 import { useStore } from "../lib/store";
 import { today } from "../lib/day";
@@ -9,7 +9,8 @@ export type Tab = "learn" | "review" | "talk" | "accent" | "profile";
 
 export function TopBar() {
   const s = useStore(x => x);
-  const current = [...SECTIONS].reverse().find(sec => sectionOpen(s, sec)) ?? SECTIONS[0];
+  const list = sectionsOf(s.track).filter(sec => sec.units.length > 0);
+  const current = [...list].reverse().find(sec => sectionOpen(s, sec)) ?? list[0];
   const activeToday = s.lastActiveDay === today();
   return (
     <header className="topbar">

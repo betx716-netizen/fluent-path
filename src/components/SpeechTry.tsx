@@ -4,15 +4,25 @@ import { PASS_SPEECH, scoreSpeech, type WordScore } from "../lib/score";
 import { speak } from "../lib/speech";
 import { sfx } from "../lib/sfx";
 import { Mic } from "./Icons";
+import { COURSE_SETTINGS } from "../data/course";
 
 // Bouton micro + note mot à mot. Réutilisé dans les leçons et les révisions.
+// Couleur de la note : parfait (≥ 85), presque (60–84), réessaie (< 60).
+export function scoreBand(score: number): { cls: "perfect" | "almost" | "retry"; label: string } {
+  if (score >= COURSE_SETTINGS.scoreColors.perfect) return { cls: "perfect", label: "Parfait !" };
+  if (score >= COURSE_SETTINGS.scoreColors.almost) return { cls: "almost", label: "Presque !" };
+  return { cls: "retry", label: "Réessaie" };
+}
+
 export function SpeechTry({
   text,
   disabled,
+  pass = PASS_SPEECH,
   onResult
 }: {
   text: string;
   disabled?: boolean;
+  pass?: number;
   onResult: (r: { score: number; words: WordScore[]; heard: string }) => void;
 }) {
   const [state, setState] = useState<"idle" | "listening" | "done">("idle");
@@ -39,7 +49,7 @@ export function SpeechTry({
       const r = scoreSpeech(text, heard.text, heard.confidence);
       setResult(r);
       setState("done");
-      if (r.score >= PASS_SPEECH) sfx.correct();
+      if (r.score >= pass) sfx.correct();
       onResult({ ...r, heard: heard.text });
     } catch (e) {
       setState(result ? "done" : "idle");
@@ -73,8 +83,9 @@ export function SpeechTry({
         {state === "listening"
           ? interim || "Je t'écoute… appuie encore quand tu as fini"
           : result
-            ? `Note : ${result.score}/100${result.score >= PASS_SPEECH ? "" : " · appuie pour réessayer"}`
-            : "Appuie sur le micro et lis la phrase"}
+            ? <span className={`score-badge ${scoreBand(result.score).cls}`}>{scoreBand(result.score).label} {result.score}/100</span>
+            : "Appuie sur le micro et parle"}
+        {result && result.score < pass && state !== "listening" && <><br />Il faut {pass}/100 : appuie pour réessayer</>}
       </p>
       {error && <p className="notice">{error}</p>}
     </div>

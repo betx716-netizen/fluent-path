@@ -2,6 +2,8 @@ import { useSyncExternalStore } from "react";
 import { today } from "./day";
 
 export type Goal = "travail" | "voyage" | "etudes";
+// Objectif quotidien en minutes (réglage du programme : 5, 10, 15 ou 20).
+export type DailyMinutes = 5 | 10 | 15 | 20;
 
 export interface UnitProgress {
   stars: number;
@@ -28,7 +30,8 @@ export interface RoleplayProgress {
 
 export interface State {
   version: 1;
-  profile: { name: string; goal: Goal; minutes: 10 | 20 | 30; onboarded: boolean };
+  profile: { name: string; goal: Goal; minutes: DailyMinutes; onboarded: boolean };
+  track: "general" | "pro";
   xpTotal: number;
   gems: number;
   streak: number;
@@ -58,7 +61,8 @@ const KEY = "fluent-path/state";
 
 export const initialState = (): State => ({
   version: 1,
-  profile: { name: "", goal: "travail", minutes: 20, onboarded: false },
+  profile: { name: "", goal: "travail", minutes: 10, onboarded: false },
+  track: "general",
   xpTotal: 0,
   gems: 50,
   streak: 0,
@@ -91,6 +95,11 @@ function load(): State {
       const s: State = { ...initialState(), ...JSON.parse(raw) };
       // gemini-2.5-flash a été fermé par Google aux nouveaux comptes.
       if (s.ai.model === "gemini-2.5-flash") s.ai = { ...s.ai, model: "gemini-flash-lite-latest" };
+      // Ancien objectif de 30 min → 20 min (nouveau maximum).
+      if (![5, 10, 15, 20].includes(s.profile.minutes)) s.profile = { ...s.profile, minutes: 20 };
+      // Avant les deux parcours, toute la progression était dans « Anglais pro ».
+      const saved = JSON.parse(raw);
+      if (!saved.track) s.track = Object.keys(s.units).some(k => /^s\d/.test(k)) ? "pro" : "general";
       return s;
     }
   } catch {
@@ -141,6 +150,7 @@ export function applyMissedDays(s: State, now = today()): State {
   return { ...s, streak: 0 };
 }
 
+// Environ 5 XP par minute d'apprentissage.
 export function dailyGoalXp(minutes: State["profile"]["minutes"]): number {
-  return { 10: 30, 20: 50, 30: 80 }[minutes];
+  return { 5: 20, 10: 40, 15: 60, 20: 80 }[minutes] ?? 40;
 }

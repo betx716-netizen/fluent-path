@@ -1,4 +1,5 @@
 import { SCENARIOS, type Scenario } from "../data/scenarios";
+import { GENERAL_SCENARIOS } from "../data/general";
 import { allUnits } from "../data/units";
 import { Lock, Star } from "../components/Icons";
 import { Zazou } from "../components/Zazou";
@@ -19,11 +20,13 @@ export function Talk({ onStart }: { onStart: (sc: Scenario) => void }) {
         <Zazou mood="wave" size={80} />
         <div style={{ flex: 1, minWidth: 0 }}>
           <h1 style={{ fontSize: "1.5rem" }}>Parler</h1>
-          <p className="muted">Des situations réelles de commerce et de transit. Parle au micro, ton interlocuteur te répond.</p>
+          <p className="muted">Des situations de la vie réelle, du maquis au port de Lomé. Parle au micro, ton interlocuteur te répond.</p>
         </div>
       </div>
-      <div style={{ display: "grid", gap: 12 }}>
-        {SCENARIOS.map(sc => {
+      {([["Anglais général", GENERAL_SCENARIOS], ["Anglais pro", SCENARIOS]] as const).map(([label, list]) => (
+      <div key={label} style={{ display: "grid", gap: 12 }}>
+        <h3 className="chapter-title">{label}</h3>
+        {list.map(sc => {
           const open = scenarioOpen(s.units, sc);
           const best = s.roleplays[sc.id]?.best ?? 0;
           const need = allUnits.find(u => u.id === sc.unlockAfter);
@@ -57,6 +60,7 @@ export function Talk({ onStart }: { onStart: (sc: Scenario) => void }) {
           );
         })}
       </div>
+      ))}
     </div>
   );
 }

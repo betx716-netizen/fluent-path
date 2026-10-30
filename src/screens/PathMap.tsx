@@ -1,5 +1,5 @@
 import { Fragment, useLayoutEffect, useRef, useState } from "react";
-import { SECTIONS } from "../data/units";
+import { sectionsOf } from "../data/units";
 import type { Section, Unit } from "../data/types";
 import { Check, Chest, Crown, Guide, Lock, Mic, Star } from "../components/Icons";
 import { SpeakButton } from "../exercises/Exercises";
@@ -15,7 +15,7 @@ const OFFSETS = [0, 52, 78, 52, 0, -52, -78, -52];
 // toutes les unités sont faites, sinon la dernière étape validée.
 function perchFor(s: State): string | null {
   let last: string | null = null;
-  for (const section of SECTIONS) {
+  for (const section of sectionsOf(s.track)) {
     for (let i = 0; i < section.units.length; i++) {
       const st = unitState(s, section, i);
       if (st === "current") return section.units[i].id;
@@ -123,15 +123,37 @@ export function PathMap({ onStart, onChest, onTest }: { onStart: (u: Unit) => vo
         </div>
       </div>
 
-      {SECTIONS.map((section, si) => {
+      <div className="seg wide track-switch" role="tablist" aria-label="Parcours">
+        <button role="tab" aria-pressed={s.track === "general"} onClick={() => setState(x => ({ ...x, track: "general" }))}>Anglais général</button>
+        <button role="tab" aria-pressed={s.track === "pro"} onClick={() => setState(x => ({ ...x, track: "pro" }))}>Anglais pro</button>
+      </div>
+
+      {sectionsOf(s.track).map((section, si, list) => {
         const open = sectionOpen(s, section);
         const done = section.units.filter(u => (s.units[u.id]?.stars ?? 0) >= PASS_STARS).length;
+        const newChapter = section.chapter && section.chapter !== list[si - 1]?.chapter;
+        if (section.upcoming) {
+          return (
+            <Fragment key={section.id}>
+              {newChapter && <h3 className="chapter-title">{section.chapter} · {section.cefr}</h3>}
+              <div className="card upcoming">
+                <span className="tag">Bientôt</span>
+                <ul>
+                  {section.upcoming.map(u => (
+                    <li key={u.title}><b>{u.title}</b> <span className="muted">· {u.situations}</span></li>
+                  ))}
+                </ul>
+              </div>
+            </Fragment>
+          );
+        }
         return (
           <Fragment key={section.id}>
+            {newChapter && <h3 className="chapter-title">{section.chapter} · {section.cefr}</h3>}
             <div className={`section-banner ${open ? section.theme : "locked"}`}>
               <div style={{ minWidth: 0 }}>
                 <div className="eyebrow">
-                  Section {si + 1} · {section.level} {section.cefr}
+                  {section.track === "general" ? `${section.level} · ${section.cefr}` : `Section ${si + 1} · ${section.level} ${section.cefr}`}
                 </div>
                 <h2>{section.title}</h2>
               </div>
@@ -158,7 +180,7 @@ export function PathMap({ onStart, onChest, onTest }: { onStart: (u: Unit) => vo
               />
             ) : (
               <p className="muted" style={{ textAlign: "center", padding: "4px 0 12px" }}>
-                {section.plannedUnits} unités prévues dans la phase 4
+                {section.plannedUnits} unités prévues prochainement
               </p>
             )}
           </Fragment>
@@ -288,8 +310,11 @@ function UnitSheet({ unit, stars, onClose, onStart }: { unit: Unit; stars: numbe
         </span>
         <h2>{unit.title}</h2>
         <p className="muted">{unit.goal}</p>
+        {unit.roleplay && (
+          <p className="notice info">Puis conversation IA : {unit.roleplay.title}, avec {unit.roleplay.zazou_role}.</p>
+        )}
         <div className="row muted" style={{ fontSize: "0.9rem" }}>
-          <span>{unit.exercises.length} exercices</span>·<span>{unit.vocab.length} mots</span>·<span>environ 5 min</span>
+          <span>{unit.exercises.length} exercices</span>·<span>{unit.vocab.length} mots</span>·<span>{unit.minutes ?? "environ 5"} min</span>
         </div>
         {stars > 0 && (
           <div className="stars" aria-label={`Meilleur résultat : ${stars} étoiles`}>

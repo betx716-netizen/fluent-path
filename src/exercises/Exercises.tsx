@@ -31,11 +31,15 @@ export function isCorrect(ex: Exercise, a: Answer): boolean {
     case "listen":
       return a === ex.answer;
     case "build":
+    case "listen_order":
       return Array.isArray(a) && norm(a.join(" ")) === norm(ex.answer);
     case "pairs":
       return typeof a === "object" && "mistakes" in a && a.mistakes === 0;
     case "speak":
-      return typeof a === "object" && "speech" in a && a.speech >= PASS_SPEECH;
+    case "speak_translate":
+      return typeof a === "object" && "speech" in a && a.speech >= (ex.pass ?? PASS_SPEECH);
+    case "discover":
+      return true;
   }
 }
 
@@ -49,15 +53,22 @@ export function solution(ex: Exercise): string {
     case "build":
       return ex.answer + (/[?]$/.test(ex.fr) ? "?" : ".");
     case "pairs":
+    case "discover":
       return "";
     case "speak":
       return ex.text;
+    case "listen_order":
+      return ex.audio;
+    case "speak_translate":
+      return ex.answer;
   }
 }
 
 export function explanation(ex: Exercise): string {
-  if (ex.type === "pairs") return "";
+  if (ex.type === "pairs" || ex.type === "discover") return "";
   if (ex.type === "speak") return "Écoute le modèle, puis réessaie : les mots en rouge n'ont pas été reconnus.";
+  if (ex.type === "speak_translate") return "Écoute la bonne phrase avec le bouton bleu, puis répète-la.";
+  if (ex.type === "listen_order") return `Traduction : ${ex.fr}`;
   return ex.explain;
 }
 
@@ -68,7 +79,10 @@ export function title(ex: Exercise): string {
     build: "Traduis cette phrase",
     listen: "Écoute et choisis ce que tu entends",
     pairs: "Associe les paires",
-    speak: "Lis cette phrase à voix haute"
+    speak: "Lis cette phrase à voix haute",
+    discover: "Nouveau mot",
+    listen_order: "Écoute et remets les mots dans l'ordre",
+    speak_translate: "Dis cette phrase en anglais"
   }[ex.type];
 }
 
@@ -285,6 +299,89 @@ export function Speak({ ex, checked, onAnswer }: ExProps<Extract<Exercise, { typ
       </div>
       <SpeechTry
         text={ex.text}
+        pass={ex.pass}
+        disabled={checked}
+        onResult={r => {
+          recordSpeech(r.score);
+          onAnswer({ speech: r.score });
+        }}
+      />
+    </>
+  );
+}
+
+// Découverte d'un mot : rien à vérifier, on écoute et on retient.
+export function Discover({ ex }: ExProps<Extract<Exercise, { type: "discover" }>>) {
+  useEffect(() => {
+    const t = setTimeout(() => void speak(ex.en), 300);
+    return () => clearTimeout(t);
+  }, [ex.en]);
+  return (
+    <div className="discover card">
+      <SpeakButton text={ex.en} big />
+      <p className="discover-en">{ex.en}</p>
+      <p className="discover-say">se dit « {ex.say} »</p>
+      <p className="discover-fr">{ex.fr}</p>
+    </div>
+  );
+}
+
+// Écoute une phrase puis remets les mots dans l'ordre (sans mots pièges).
+export function ListenOrder({ ex, checked, onAnswer }: ExProps<Extract<Exercise, { type: "listen_order" }>>) {
+  const tiles = useMemo(() => shuffle(ex.tiles).map((w, i) => ({ w, i })), [ex]);
+  const [chosen, setChosen] = useState<number[]>([]);
+  const [showFr, setShowFr] = useState(false);
+  useEffect(() => {
+    const t = setTimeout(() => void speak(ex.audio), 300);
+    return () => clearTimeout(t);
+  }, [ex.audio]);
+  const update = (next: number[]) => {
+    setChosen(next);
+    onAnswer(next.length ? next.map(i => tiles[i].w) : null);
+  };
+  return (
+    <>
+      <div className="row" style={{ justifyContent: "center", gap: 16 }}>
+        <SpeakButton text={ex.audio} big />
+        <button className="speak-btn" aria-label="Écouter lentement" onClick={() => void speak(ex.audio, { rate: 0.6 })}>
+          <span style={{ fontSize: 12, fontWeight: 900 }} aria-hidden>LENT</span>
+        </button>
+      </div>
+      <button className="linkbtn" style={{ justifySelf: "center" }} onClick={() => setShowFr(v => !v)}>
+        {showFr ? ex.fr : "Voir la traduction"}
+      </button>
+      <div className="answer-line" aria-label="Ta phrase">
+        {chosen.map(i => (
+          <button key={i} className="word" disabled={checked} onClick={() => { sfx.tap(); update(chosen.filter(c => c !== i)); }}>
+            {tiles[i].w}
+          </button>
+        ))}
+      </div>
+      <div className="bank" aria-label="Mots disponibles">
+        {tiles.map(t => (
+          <button key={t.i} className={`word${chosen.includes(t.i) ? " used" : ""}`} disabled={checked || chosen.includes(t.i)} onClick={() => { sfx.tap(); update([...chosen, t.i]); }}>
+            {t.w}
+          </button>
+        ))}
+      </div>
+    </>
+  );
+}
+
+// Traduire à l'oral : on lit le français, on dit la phrase en anglais.
+export function SpeakTranslate({ ex, checked, onAnswer }: ExProps<Extract<Exercise, { type: "speak_translate" }>>) {
+  return (
+    <>
+      <div className="say">
+        <Zazou mood="think" size={84} />
+        <div className="bubble">
+          <b>{ex.fr}</b>
+          <p className="muted" style={{ fontSize: "0.95rem" }}>Dis-le en anglais, sans regarder la réponse.</p>
+        </div>
+      </div>
+      <SpeechTry
+        text={ex.answer}
+        pass={ex.pass}
         disabled={checked}
         onResult={r => {
           recordSpeech(r.score);
@@ -310,5 +407,11 @@ export function ExerciseView(props: ExProps) {
       return <Pairs {...props} ex={ex} />;
     case "speak":
       return <Speak {...props} ex={ex} />;
+    case "discover":
+      return <Discover {...props} ex={ex} />;
+    case "listen_order":
+      return <ListenOrder {...props} ex={ex} />;
+    case "speak_translate":
+      return <SpeakTranslate {...props} ex={ex} />;
   }
 }

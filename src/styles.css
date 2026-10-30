@@ -1048,3 +1048,20 @@ h3 { font-size: 20px; }
 .log-me { background: var(--indigo-soft); }
 .node-label { position: relative; z-index: 2; margin-top: 16px; }
 .perch-bubble { margin-bottom: 38px; }
+/* Note de prononciation : parfait / presque / réessaie */
+.score-badge { display: inline-block; padding: 4px 12px; border-radius: 999px; font: 900 15px var(--f-display); }
+.score-badge.perfect { background: var(--mint-soft); color: var(--mint-dark); }
+.score-badge.almost { background: var(--sun-soft); color: var(--sun-dark); }
+.score-badge.retry { background: var(--coral-soft); color: var(--coral-dark); }
+/* Découverte d'un mot */
+.discover { display: grid; justify-items: center; gap: 8px; text-align: center; padding: 28px 16px; }
+.discover-en { font: 900 34px var(--f-display); line-height: 1.1; margin-top: 8px; }
+.discover-say { color: var(--blue); font-weight: 800; }
+.discover-fr { font-size: 20px; font-weight: 800; color: var(--muted); }
+.track-switch { margin-bottom: 2px; }
+.chapter-title { font-size: 18px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 10px; }
+.upcoming ul { margin: 6px 0 0; padding-left: 18px; display: grid; gap: 6px; }
+.seg { border-bottom-width: 4px; border-radius: 14px; }
+.seg button { font-weight: 900; }
+.seg button[aria-pressed="true"] { background: var(--indigo); }
+.tag.Quotidien { background: var(--blue-soft); color: var(--blue); }

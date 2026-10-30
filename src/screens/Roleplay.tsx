@@ -81,7 +81,7 @@ export function Roleplay({ sc, onExit, onFinish }: { sc: Scenario; onExit: () =>
       setDone(d => [...new Set([...d, ...r.objectives_done])]);
       if (r.correction) setCorrections(c => [...c, r.correction!]);
       const allDone = new Set([...done, ...r.objectives_done]).size === sc.objectives.length;
-      if (r.finished || allDone || nextHistory.filter(t => t.role === "user").length >= 12) setFinished(true);
+      if (r.finished || allDone || nextHistory.filter(t => t.role === "user").length >= (sc.maxTurns ?? 12)) setFinished(true);
       void speak(r.reply, { accent: sc.partner.voice });
     } catch (e) {
       setError(e instanceof AiError ? AI_MESSAGES[e.code] : AI_MESSAGES.network);

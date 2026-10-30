@@ -14,6 +14,8 @@ export interface Scenario {
   openingFr: string;
   objectives: { id: string; fr: string; en: string }[];
   unlockAfter?: string; // id d'unité qui doit être validée
+  extra?: string; // consignes du programme ZAZOU pour le tuteur
+  maxTurns?: number;
 }
 
 // Les 10 premiers jeux de rôle du cahier des charges (section 2).

@@ -21,7 +21,7 @@ function useCountUp(target: number, ms = 900) {
   return v;
 }
 
-export function Victory({ reward, seconds, onContinue }: { reward: Reward; seconds: number; onContinue: () => void }) {
+export function Victory({ reward, seconds, onContinue, next }: { reward: Reward; seconds: number; onContinue: () => void; next?: string }) {
   const xp = useCountUp(reward.xp);
   const [step, setStep] = useState<"result" | "streak">("result");
   const passed = reward.stars >= PASS_STARS;
@@ -97,7 +97,7 @@ export function Victory({ reward, seconds, onContinue }: { reward: Reward; secon
         </div>
       ))}
       <button className="btn3d" onClick={() => (reward.streakUp ? setStep("streak") : onContinue())}>
-        Continuer
+        {next ?? "Continuer"}
       </button>
     </div>
   );

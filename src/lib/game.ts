@@ -33,9 +33,11 @@ export function unitState(s: State, section: Section, index: number): NodeState 
 // Une section s'ouvre quand le test de la précédente est réussi
 // (ou quand on a sauté jusqu'ici grâce à son propre test).
 export function sectionOpen(s: State, section: Section): boolean {
-  const i = SECTIONS.indexOf(section);
-  if (i <= 0 || s.bosses[section.id]?.passed) return true;
-  const prev = SECTIONS[i - 1];
+  // Chaque parcours (général, pro) s'ouvre indépendamment ; les chapitres « bientôt » sont ignorés.
+  const track = SECTIONS.filter(x => x.track === section.track && x.units.length > 0);
+  const i = track.indexOf(section);
+  if (i <= 0 || s.bosses[section.id]?.passed) return section.units.length > 0;
+  const prev = track[i - 1];
   if (s.bosses[prev.id]?.passed) return true;
   // Progression faite avant l'arrivée des tests : on ne la rebloque pas.
   return prev.units.length > 0 && prev.units.every(u => (s.units[u.id]?.stars ?? 0) >= PASS_STARS) && section.units.some(u => s.units[u.id]);
@@ -54,7 +56,7 @@ export const GEMS_TEST = 30;
 // (QCM, trous, écoute, phrases à construire ; ni paires ni oral).
 export function buildTest(section: Section): Unit {
   const pool = section.units.flatMap(u =>
-    u.exercises.filter(e => e.type === "mcq" || e.type === "fill" || e.type === "listen" || e.type === "build")
+    u.exercises.filter(e => e.type === "mcq" || e.type === "fill" || e.type === "listen" || e.type === "build" || e.type === "listen_order")
   );
   return {
     id: `${section.id}-test`,
@@ -86,7 +88,8 @@ export function finishTest(s: State, section: Section, firstTry: number, total: 
   let next: State = { ...s, bosses: { ...s.bosses, [section.id]: { best: Math.max(s.bosses[section.id]?.best ?? 0, Math.round(score * 100)), passed: passed || !!s.bosses[section.id]?.passed } } };
   if (passed) {
     // Saut de niveau : toutes les unités jusqu'à cette section sont validées.
-    const upto = SECTIONS.slice(0, SECTIONS.indexOf(section) + 1);
+    const track = SECTIONS.filter(x => x.track === section.track);
+    const upto = track.slice(0, track.indexOf(section) + 1);
     const units = { ...next.units };
     const bosses = { ...next.bosses };
     for (const sec of upto) {
@@ -147,7 +150,7 @@ export const ACHIEVEMENTS: Record<string, { title: string; desc: string }> = {
   xp_100: { title: "100 XP", desc: "Gagner 100 XP" },
   xp_500: { title: "500 XP", desc: "Gagner 500 XP" },
   chest_1: { title: "Chercheur d'or", desc: "Ouvrir un premier coffre" },
-  section_1: { title: "Premiers contacts", desc: "Valider toute la section 1" },
+  section_1: { title: "Premiers contacts", desc: "Valider toute la section 1 d'Anglais pro" },
   first_talk: { title: "Premier échange", desc: "Terminer un premier jeu de rôle" },
   talk_5: { title: "Bavard", desc: "Terminer 5 jeux de rôle différents" },
   talk_90: { title: "Comme un pro", desc: "Obtenir 90/100 ou plus dans un jeu de rôle" },
@@ -161,11 +164,11 @@ export const ACHIEVEMENTS: Record<string, { title: string; desc: string }> = {
   first_test: { title: "Examen réussi", desc: "Réussir un premier test de section" },
   perfect_test: { title: "Major de promo", desc: "Réussir un test de section sans faute" },
   jump: { title: "Saute-mouton", desc: "Sauter une section grâce à son test" },
-  section_2: { title: "Commerçant", desc: "Réussir le test de la section 2 (A2)" },
-  section_3: { title: "Transitaire", desc: "Réussir le test de la section 3 (B1)" },
-  section_4: { title: "Négociateur", desc: "Réussir le test de la section 4 (B2)" },
-  section_5: { title: "Expert", desc: "Réussir le test de la section 5 (C1)" },
-  section_6: { title: "Maître de l'anglais", desc: "Réussir le test de la section 6 (C2)" },
+  section_2: { title: "Commerçant", desc: "Réussir le test de la section 2 d'Anglais pro (A2)" },
+  section_3: { title: "Transitaire", desc: "Réussir le test de la section 3 d'Anglais pro (B1)" },
+  section_4: { title: "Négociateur", desc: "Réussir le test de la section 4 d'Anglais pro (B2)" },
+  section_5: { title: "Expert", desc: "Réussir le test de la section 5 d'Anglais pro (C1)" },
+  section_6: { title: "Maître de l'anglais", desc: "Réussir le test de la section 6 d'Anglais pro (C2)" },
   units_30: { title: "Mi-parcours", desc: "Valider 30 unités" },
   xp_2000: { title: "2 000 XP", desc: "Gagner 2 000 XP" },
   streak_100: { title: "Centurion", desc: "100 jours de suite" }
@@ -227,10 +230,11 @@ export function checkAchievements(before: State, after: State, accuracy?: number
   add("xp_100", after.xpTotal >= 100);
   add("xp_500", after.xpTotal >= 500);
   add("chest_1", Object.keys(after.chests).length > 0);
-  add("section_1", SECTIONS[0].units.every(u => (after.units[u.id]?.stars ?? 0) >= PASS_STARS));
+  const pro = SECTIONS.filter(x => x.track === "pro");
+  add("section_1", !!pro[0] && pro[0].units.every(u => (after.units[u.id]?.stars ?? 0) >= PASS_STARS));
   add("first_talk", Object.keys(after.roleplays).length > 0);
   add("first_test", Object.values(after.bosses).some(b => b.passed));
-  SECTIONS.slice(1).forEach((sec, k) => add(`section_${k + 2}`, !!after.bosses[sec.id]?.passed));
+  pro.slice(1).forEach((sec, k) => add(`section_${k + 2}`, !!after.bosses[sec.id]?.passed));
   add("units_30", Object.values(after.units).filter(u => u.stars >= PASS_STARS).length >= 30);
   add("xp_2000", after.xpTotal >= 2000);
   add("streak_100", after.streak >= 100);

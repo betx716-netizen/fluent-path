@@ -26,13 +26,15 @@ function ReportLink({ unitId, ex }: { unitId: string; ex: Unit["exercises"][numb
   );
 }
 
+const isSpoken = (e: Unit["exercises"][number]) => e.type === "speak" || e.type === "speak_translate";
+
 const CHEERS = ["Excellent !", "Bravo !", "Parfait !", "Bien joué !", "Super !"];
 
 export function Lesson({ unit, onExit, onDone, test = false }: { unit: Unit; onExit: () => void; onDone: (r: LessonResult) => void; test?: boolean }) {
   const started = useRef(Date.now());
-  const [intro, setIntro] = useState(!test);
+  const [intro, setIntro] = useState(!test && unit.exercises[0]?.type !== "discover");
   const [queue, setQueue] = useState<number[]>(() =>
-    unit.exercises.map((_, i) => i).filter(i => unit.exercises[i].type !== "speak" || canListen())
+    unit.exercises.map((_, i) => i).filter(i => !isSpoken(unit.exercises[i]) || canListen())
   );
   const [total, setTotal] = useState(queue.length);
   const [pos, setPos] = useState(0);
@@ -68,8 +70,8 @@ export function Lesson({ unit, onExit, onDone, test = false }: { unit: Unit; onE
 
   // « Je ne peux pas parler maintenant » : on retire les exercices oraux restants.
   const skipSpeaking = () => {
-    const rest = queue.slice(pos).filter(i => unit.exercises[i].type !== "speak");
-    const removed = new Set(queue.slice(pos).filter(i => unit.exercises[i].type === "speak"));
+    const rest = queue.slice(pos).filter(i => !isSpoken(unit.exercises[i]));
+    const removed = new Set(queue.slice(pos).filter(i => isSpoken(unit.exercises[i])));
     setTotal(t => t - removed.size);
     setMissed(m => new Set([...m].filter(i => !removed.has(i))));
     const nextQueue = [...queue.slice(0, pos), ...rest];
@@ -172,10 +174,23 @@ export function Lesson({ unit, onExit, onDone, test = false }: { unit: Unit; onE
           </div>
           {verdict === null ? (
             <div className="lesson-foot">
-              <button className="btn3d mint" disabled={answer === null || ex.type === "pairs"} onClick={() => check()}>
-                Vérifier
-              </button>
-              {ex.type === "speak" && (
+              {ex.type === "discover" ? (
+                <button
+                  className="btn3d mint"
+                  onClick={() => {
+                    sfx.tap();
+                    setSolved(n => n + 1);
+                    next();
+                  }}
+                >
+                  Continuer
+                </button>
+              ) : (
+                <button className="btn3d mint" disabled={answer === null || ex.type === "pairs"} onClick={() => check()}>
+                  Vérifier
+                </button>
+              )}
+              {isSpoken(ex) && (
                 <button className="btn3d ghost" style={{ marginTop: 12 }} onClick={skipSpeaking}>
                   Je ne peux pas parler maintenant
                 </button>

@@ -1,4 +1,4 @@
-# Fluent Path
+# Fluent Path — ZAZOU
 
 Application d'anglais personnelle, gamifiée, centrée sur le commerce, le transit et l'usage professionnel.
 Mascotte : Zazou le calao. Version **phase 4** (contenu complet), coût : **0 €**.
@@ -35,6 +35,13 @@ La voix utilise la reconnaissance vocale gratuite de Chrome (meilleure sur Andro
 - Zazou réagit à chaque réponse dans les leçons, « +10 XP » animé, 6 nouveaux trophées
 
 Note : les animations de Zazou sont en SVG et CSS. Rive demanderait de dessiner Zazou dans l'éditeur Rive ; ce sera possible plus tard sans changer le reste de l'app.
+
+## Deux parcours
+
+- **Anglais général** (programme ZAZOU 1.0, `src/data/course.ts`) : 6 chapitres, 30 unités du A1.1 au B1.2. Le chapitre 1 « Les bases » est prêt : 5 unités × 5 leçons (Bonjour !, Les chiffres, Ma famille, Au maquis, En ville). Chaque leçon : 5 mots à découvrir (avec prononciation à la française), 3 « que veut dire… », 2 phrases à remettre en ordre après écoute, 4 phrases à dire, 1 phrase à traduire à l'oral. La 5ᵉ leçon de chaque unité se termine par une **conversation IA** (aéroport d'Abidjan, kiosque, photo de famille, maquis de Yopougon, touriste perdue au Plateau). Les chapitres 2 à 6 sont affichés « bientôt » avec leurs unités.
+- **Anglais pro** (commerce, transit) : les 60 unités ci-dessous.
+
+Réglages repris du programme : leçons de 5 à 7 min, objectif quotidien de 5, 10, 15 ou 20 min, 5 vies, note de prononciation en couleur (≥ 85 parfait, 60–84 presque, < 60 réessaie), seuil de réussite propre à chaque phrase (70, ou 65 pour la traduction à l'oral).
 
 ## Ce qu'ajoute la phase 4 (contenu)
 

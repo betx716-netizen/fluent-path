@@ -3,6 +3,7 @@ import type { Session } from "@supabase/supabase-js";
 import type { Section, Unit } from "./data/types";
 import type { Scenario } from "./data/scenarios";
 import { syncUnitCards } from "./lib/review";
+import { scenarioFromLesson } from "./data/general";
 import { ReviewTab } from "./screens/Review";
 import { Accents } from "./screens/Accents";
 import { Roleplay, type RoleplayOutcome } from "./screens/Roleplay";
@@ -27,7 +28,7 @@ type View =
   | { kind: "roleplay"; sc: Scenario }
   | { kind: "report"; sc: Scenario; outcome: RoleplayOutcome }
   | { kind: "lesson"; unit: Unit }
-  | { kind: "victory"; reward: Reward; seconds: number }
+  | { kind: "victory"; reward: Reward; seconds: number; unit: Unit }
   | { kind: "test"; section: Section; unit: Unit }
   | { kind: "testResult"; section: Section; outcome: TestOutcome };
 
@@ -61,7 +62,7 @@ export default function App() {
     const { next, reward } = finishLesson(getState(), r);
     setState(() => syncUnitCards(next));
     void logSession(r.unit.id, r.seconds, reward.xp);
-    setView({ kind: "victory", reward, seconds: r.seconds });
+    setView({ kind: "victory", reward, seconds: r.seconds, unit: r.unit });
   };
 
   if (view.kind === "lesson") {
@@ -116,7 +117,16 @@ export default function App() {
   if (view.kind === "victory") {
     return (
       <div className="app">
-        <Victory reward={view.reward} seconds={view.seconds} onContinue={() => setView({ kind: "tabs" })} />
+        <Victory
+          reward={view.reward}
+          seconds={view.seconds}
+          next={view.unit.roleplay ? "Passer à la conversation" : undefined}
+          onContinue={() => {
+            // Leçon « Conversation » : les exercices finis, on enchaîne sur le jeu de rôle.
+            const sc = scenarioFromLesson(view.unit);
+            setView(sc ? { kind: "roleplay", sc } : { kind: "tabs" });
+          }}
+        />
       </div>
     );
   }

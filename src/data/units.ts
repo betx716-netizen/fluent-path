@@ -1,5 +1,6 @@
 import type { Section, Unit } from "./types";
 import syllabus from "../../content/syllabus.json";
+import { GENERAL_SECTIONS } from "./general";
 
 // Unités rédigées (Gemini), vérifiées par content/validate.mjs puis relues.
 const generated = import.meta.glob<Unit>("../../content/units/*.json", { eager: true, import: "default" });
@@ -8,6 +9,7 @@ const byId = new Map(Object.values(generated).map(u => [u.id, u]));
 const BASE: Section[] = [
   {
     id: "s1",
+    track: "pro",
     level: "Débutant",
     cefr: "A1",
     title: "Premiers contacts pro",
@@ -241,18 +243,22 @@ const BASE: Section[] = [
       }
     ]
   },
-  { id: "s2", level: "Débutant", cefr: "A2", title: "Le commerce au quotidien", theme: "sable", plannedUnits: 10, units: [] },
-  { id: "s3", level: "Intermédiaire", cefr: "B1", title: "Transit et logistique", theme: "savane", plannedUnits: 10, units: [] },
-  { id: "s4", level: "Intermédiaire", cefr: "B2", title: "Négocier et réclamer", theme: "savane", plannedUnits: 10, units: [] },
-  { id: "s5", level: "Avancé", cefr: "C1", title: "Contrats et Incoterms", theme: "nuit", plannedUnits: 10, units: [] },
-  { id: "s6", level: "Avancé", cefr: "C2", title: "Convaincre à l'international", theme: "nuit", plannedUnits: 10, units: [] }
+  { id: "s2", track: "pro", level: "Débutant", cefr: "A2", title: "Le commerce au quotidien", theme: "sable", plannedUnits: 10, units: [] },
+  { id: "s3", track: "pro", level: "Intermédiaire", cefr: "B1", title: "Transit et logistique", theme: "savane", plannedUnits: 10, units: [] },
+  { id: "s4", track: "pro", level: "Intermédiaire", cefr: "B2", title: "Négocier et réclamer", theme: "savane", plannedUnits: 10, units: [] },
+  { id: "s5", track: "pro", level: "Avancé", cefr: "C1", title: "Contrats et Incoterms", theme: "nuit", plannedUnits: 10, units: [] },
+  { id: "s6", track: "pro", level: "Avancé", cefr: "C2", title: "Convaincre à l'international", theme: "nuit", plannedUnits: 10, units: [] }
 ];
 
 // Chaque section reçoit, dans l'ordre du programme, les unités déjà rédigées.
-export const SECTIONS: Section[] = BASE.map(section => {
+const PRO_SECTIONS: Section[] = BASE.map(section => {
   const plan = (syllabus as Record<string, { units: { id: string }[] }>)[section.id]?.units ?? [];
   const extra = plan.map(p => byId.get(p.id)).filter((u): u is Unit => !!u);
   return { ...section, units: [...section.units, ...extra] };
 });
+
+// Deux parcours : « Anglais général » (programme ZAZOU) puis « Anglais pro » (commerce, transit).
+export const SECTIONS: Section[] = [...GENERAL_SECTIONS, ...PRO_SECTIONS];
+export const sectionsOf = (track: Section["track"]) => SECTIONS.filter(s => s.track === track);
 
 export const allUnits = SECTIONS.flatMap(s => s.units);

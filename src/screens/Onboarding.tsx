@@ -1,23 +1,24 @@
 import { useState } from "react";
 import { Zazou } from "../components/Zazou";
-import { setState, type Goal } from "../lib/store";
+import { setState, type DailyMinutes, type Goal } from "../lib/store";
 
 const GOALS: [Goal, string, string][] = [
   ["travail", "Pour mon travail", "Commerce, transit, clients étrangers"],
   ["voyage", "Pour voyager", "Aéroport, hôtel, rencontres"],
   ["etudes", "Pour mes études", "Examens, cours, lectures"]
 ];
-const TIMES: [10 | 20 | 30, string][] = [
+const TIMES: [DailyMinutes, string][] = [
+  [5, "Juste un peu"],
   [10, "Tranquille"],
-  [20, "Sérieux"],
-  [30, "Intensif"]
+  [15, "Sérieux"],
+  [20, "Intensif"]
 ];
 
 export function Onboarding() {
   const [step, setStep] = useState(0);
   const [name, setName] = useState("");
   const [goal, setGoal] = useState<Goal>("travail");
-  const [minutes, setMinutes] = useState<10 | 20 | 30>(20);
+  const [minutes, setMinutes] = useState<DailyMinutes>(10);
 
   const finish = () =>
     setState(s => ({ ...s, profile: { name: name.trim(), goal, minutes, onboarded: true } }));
@@ -27,7 +28,7 @@ export function Onboarding() {
       <div className="hero">
         <Zazou mood={step === 0 ? "wave" : step === 3 ? "cheer" : "happy"} size={step === 0 ? 170 : 140} />
         <div className="bubble">
-          {step === 0 && "Salut ! Moi c'est Zazou. Je vais t'apprendre l'anglais, 20 minutes par jour."}
+          {step === 0 && "Salut ! Moi c'est Zazou. Je vais t'apprendre à parler anglais, quelques minutes par jour."}
           {step === 1 && "Comment tu t'appelles ?"}
           {step === 2 && "Pourquoi veux-tu apprendre l'anglais ?"}
           {step === 3 && "Combien de temps par jour ?"}
