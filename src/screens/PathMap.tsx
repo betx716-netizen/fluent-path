@@ -3,14 +3,15 @@ import { SECTIONS } from "../data/units";
 import type { Section, Unit } from "../data/types";
 import { Book, Check, Chest, Crown, Lock, Star } from "../components/Icons";
 import { Zazou } from "../components/Zazou";
-import { CHEST_AFTER, PASS_STARS, chestId, chestReady, sectionOpen, unitState } from "../lib/game";
+import { CHEST_AFTER, PASS_STARS, TEST_PASS, TEST_SIZE, chestId, chestReady, sectionOpen, sectionUnitsDone, unitState } from "../lib/game";
 import { dailyGoalXp, setState, useStore, type State } from "../lib/store";
 import { today } from "../lib/day";
 
 // Zigzag : décalage horizontal de chaque pastille (en px).
 const OFFSETS = [0, 52, 78, 52, 0, -52, -78, -52];
 
-// L'étape où Zazou se pose : l'unité en cours, sinon la dernière validée.
+// L'étape où Zazou se pose : l'unité en cours, ou le test de section quand
+// toutes les unités sont faites, sinon la dernière étape validée.
 function perchFor(s: State): string | null {
   let last: string | null = null;
   for (const section of SECTIONS) {
@@ -19,15 +20,17 @@ function perchFor(s: State): string | null {
       if (st === "current") return section.units[i].id;
       if (st === "done") last = section.units[i].id;
     }
+    if (sectionUnitsDone(s, section) && sectionOpen(s, section) && !s.bosses[section.id]?.passed) return `${section.id}-boss`;
   }
   return last;
 }
 
 const PERCH = 64; // taille de Zazou sur la carte
 
-export function PathMap({ onStart, onChest }: { onStart: (u: Unit) => void; onChest: (s: Section) => void }) {
+export function PathMap({ onStart, onChest, onTest }: { onStart: (u: Unit) => void; onChest: (s: Section) => void; onTest: (s: Section) => void }) {
   const s = useStore(x => x);
   const [preview, setPreview] = useState<Unit | null>(null);
+  const [testFor, setTestFor] = useState<Section | null>(null);
   const goal = dailyGoalXp(s.profile.minutes);
   const todayXp = s.xpByDay[today()] ?? 0;
   const container = useRef<HTMLDivElement>(null);
@@ -128,11 +131,17 @@ export function PathMap({ onStart, onChest }: { onStart: (u: Unit) => void; onCh
                 {section.units.length ? `${done} / ${section.units.length}` : "Bientôt"}
               </span>
             </div>
+            {!open && section.units.length > 0 && (
+              <button className="btn3d ghost small-btn jump-btn" onClick={() => setTestFor(section)}>
+                Déjà ce niveau ? Passer le test pour sauter ici
+              </button>
+            )}
             {section.units.length > 0 ? (
               <SectionPath
                 section={section}
                 onPick={setPreview}
                 onChest={onChest}
+                onBoss={() => setTestFor(section)}
                 nodeRef={(id, el) => (el ? nodes.current.set(id, el) : nodes.current.delete(id))}
               />
             ) : (
@@ -143,6 +152,22 @@ export function PathMap({ onStart, onChest }: { onStart: (u: Unit) => void; onCh
           </Fragment>
         );
       })}
+
+      {testFor && (
+        <>
+          <div className="sheet-backdrop" onClick={() => setTestFor(null)} />
+          <div className="sheet" role="dialog" aria-modal="true" aria-label="Test de section">
+            <span className="tag" style={{ justifySelf: "start" }}>Test · {testFor.level} {testFor.cefr}</span>
+            <h2>{testFor.title}</h2>
+            <p className="muted">
+              {TEST_SIZE} questions tirées de toute la section, sans seconde chance. Il faut {Math.ceil(TEST_SIZE * TEST_PASS)} bonnes réponses.
+              {sectionUnitsDone(s, testFor) ? " La réussite ouvre la section suivante." : " Si tu réussis, toutes les unités de la section sont validées d'un coup."}
+            </p>
+            {s.bosses[testFor.id]?.best ? <p className="tag" style={{ justifySelf: "start" }}>Meilleur score : {s.bosses[testFor.id].best} %</p> : null}
+            <button className="btn3d sun" onClick={() => { const sec = testFor; setTestFor(null); onTest(sec); }}>Commencer le test</button>
+          </div>
+        </>
+      )}
 
       {preview && (
         <UnitSheet
@@ -159,10 +184,11 @@ export function PathMap({ onStart, onChest }: { onStart: (u: Unit) => void; onCh
   );
 }
 
-function SectionPath({ section, onPick, onChest, nodeRef }: {
+function SectionPath({ section, onPick, onChest, onBoss, nodeRef }: {
   section: Section;
   onPick: (u: Unit) => void;
   onChest: (s: Section) => void;
+  onBoss: () => void;
   nodeRef: (id: string, el: HTMLElement | null) => void;
 }) {
   const s = useStore(x => x);
@@ -216,13 +242,22 @@ function SectionPath({ section, onPick, onChest, nodeRef }: {
     }
   });
 
-  const allDone = section.units.every(u => (s.units[u.id]?.stars ?? 0) >= PASS_STARS);
+  const passed = !!s.bosses[section.id]?.passed;
+  const ready = sectionUnitsDone(s, section) && !passed;
+  const open = sectionOpen(s, section);
   nodes.push(
     <div className="node-wrap" key="boss" style={{ transform: `translateX(${offset()}px)` }}>
-      <button className={`node boss ${allDone ? "done" : "locked"}`} disabled aria-label="Test de section, arrive en phase 4">
+      {ready && <span className="node-ring current" />}
+      <button
+        ref={el => nodeRef(`${section.id}-boss`, el)}
+        className={`node boss ${passed ? "done" : ready ? "ready" : "locked"}`}
+        disabled={!open}
+        aria-label={passed ? "Test de section réussi" : "Test de section"}
+        onClick={onBoss}
+      >
         <Crown />
       </button>
-      <small className="muted" style={{ marginTop: 10 }}>Test de section</small>
+      <small className="muted" style={{ marginTop: 10 }}>{passed ? `Réussi · ${s.bosses[section.id].best} %` : "Test de section"}</small>
     </div>
   );
 

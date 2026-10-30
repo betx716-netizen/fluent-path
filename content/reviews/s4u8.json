@@ -1,0 +1,15 @@
+{
+  "model": "gemini-flash-lite-latest",
+  "issues": [
+    {
+      "where": "examples[2][0]",
+      "problem": "The French translation uses 'la transitaire' which is grammatically incorrect (transitaire is a person or a company, the noun is 'la transit' or 'le transit / la profession de transitaire').",
+      "fix": "Je travaille dans le transit depuis 2018."
+    },
+    {
+      "where": "exercises[7].answer",
+      "problem": "The French sentence states 'J'ai travaillé à Abidjan pendant cinq ans' (simple past or finished action), but the English answer uses the present perfect continuous ('I have been working...'), which means 'Je travaille à Abidjan depuis cinq ans' (and still do). To match the French sentence correctly (completed action), it should use the simple past or present perfect, or the French sentence should be corrected to 'Je travaille à Abidjan depuis cinq ans'.",
+      "fix": "I worked in Abidjan for five years"
+    }
+  ]
+}

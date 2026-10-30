@@ -794,3 +794,10 @@ textarea { resize: vertical; min-height: 160px; line-height: 1.5; }
 .path { gap: 34px; }
 .zazou-logo { width: min(260px, 70vw); height: auto; animation: logo-in 0.6s cubic-bezier(0.3, 1.4, 0.5, 1) both; }
 @keyframes logo-in { from { transform: scale(0.6) rotate(-8deg); opacity: 0; } }
+
+/* Tests de section */
+.node.boss.ready { --c: var(--sun); --cd: var(--sun-dark); }
+.node.boss.locked:not(:disabled) { cursor: pointer; }
+.jump-btn { margin-top: -6px; }
+.report-link { justify-self: center; font-size: 0.82rem; color: inherit; opacity: 0.75; }
+.report-list { white-space: pre-wrap; font-size: 0.8rem; max-height: 180px; overflow: auto; background: var(--surface-2); padding: 10px; border-radius: 10px; margin: 0; }

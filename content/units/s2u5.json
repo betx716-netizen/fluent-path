@@ -1,0 +1,184 @@
+{
+  "id": "s2u5",
+  "title": "Commander par e-mail",
+  "context": "Commerce",
+  "goal": "Écrire un e-mail de commande court et poli.",
+  "points": [
+    "Pour commander poliment, écrivez « I would like to order » suivi des articles souhaités.",
+    "Utilisez « Could you send...? » pour demander une facture proforma ou des détails avec courtoisie.",
+    "Pour joindre un document, utilisez la formule classique « Please find attached ».",
+    "Terminez toujours votre courriel professionnel par la formule de politesse « Best regards »."
+  ],
+  "examples": [
+    [
+      "I would like to order fifty bags of rice.",
+      "Je voudrais commander cinquante sacs de riz."
+    ],
+    [
+      "Could you send the proforma invoice to Abidjan?",
+      "Pourriez-vous envoyer la facture proforma à Abidjan ?"
+    ],
+    [
+      "Please find attached our official purchase order.",
+      "Veuillez trouver ci-joint notre bon de commande officiel."
+    ],
+    [
+      "Best regards, Kodjo Mensah from Lomé Port.",
+      "Cordialement, Kodjo Mensah du port de Lomé."
+    ]
+  ],
+  "vocab": [
+    [
+      "to order",
+      "commander",
+      "/tuː ˈɔːdə/"
+    ],
+    [
+      "purchase order",
+      "bon de commande",
+      "/ˈpɜːtʃəs ˈɔːdə/"
+    ],
+    [
+      "attached",
+      "en pièce jointe",
+      "/əˈtætʃt/"
+    ],
+    [
+      "invoice",
+      "facture",
+      "/ˈɪnvɔɪs/"
+    ],
+    [
+      "best regards",
+      "cordialement",
+      "/bɛst rɪˈɡɑːdz/"
+    ],
+    [
+      "delivery",
+      "livraison",
+      "/dɪˈlɪvəri/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Quelle formule exprime poliment le souhait de passer une commande ?",
+      "options": [
+        "I want now",
+        "I would like to order",
+        "Send me goods",
+        "I take products"
+      ],
+      "answer": 1,
+      "explain": "« I would like to order » est la formule standard et polie pour commander."
+    },
+    {
+      "type": "fill",
+      "sentence": "Please find ___ our new purchase order.",
+      "options": [
+        "attached",
+        "attaching",
+        "attach",
+        "attachment"
+      ],
+      "answer": 0,
+      "explain": "L'expression consacrée est « Please find attached » (Veuillez trouver ci-joint)."
+    },
+    {
+      "type": "listen",
+      "audio": "Could you send the invoice today?",
+      "options": [
+        "Could you spend the invoice today?",
+        "Could you send the invoice today?",
+        "Could you send the advice today?",
+        "Would you send the device today?"
+      ],
+      "answer": 1,
+      "explain": "« Could you send the invoice today? » signifie « Pourriez-vous envoyer la facture aujourd'hui ? »."
+    },
+    {
+      "type": "build",
+      "fr": "Je voudrais commander du tissu d'Abidjan.",
+      "answer": "I would like to order fabric from Abidjan",
+      "extra": [
+        "want",
+        "buying",
+        "for"
+      ],
+      "explain": "On utilise la structure : sujet + « would like to » + verbe à l'infinitif."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "purchase order",
+          "bon de commande"
+        ],
+        [
+          "best regards",
+          "cordialement"
+        ],
+        [
+          "attached",
+          "en pièce jointe"
+        ],
+        [
+          "invoice",
+          "facture"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "___ you send the delivery note to Cotonou?",
+      "options": [
+        "Must",
+        "Could",
+        "Should",
+        "Shall"
+      ],
+      "answer": 1,
+      "explain": "« Could you » est la formule polie la plus courante pour faire une demande par e-mail."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Awa termine son e-mail professionnel à un fournisseur. Que doit-elle écrire ?",
+      "options": [
+        "See you tomorrow",
+        "Bye bye",
+        "Best regards",
+        "No problem"
+      ],
+      "answer": 2,
+      "explain": "« Best regards » est la salutation finale la plus adaptée au commerce."
+    },
+    {
+      "type": "build",
+      "fr": "Veuillez trouver ci-joint le bon de commande.",
+      "answer": "Please find attached the purchase order",
+      "extra": [
+        "attaching",
+        "send",
+        "invoice"
+      ],
+      "explain": "« Please find attached » précède directement le nom du document joint."
+    },
+    {
+      "type": "listen",
+      "audio": "I would like to order three containers.",
+      "options": [
+        "I would like to offer three containers.",
+        "I will like to order three containers.",
+        "I would like to order three containers.",
+        "I would like to enter three containers."
+      ],
+      "answer": 2,
+      "explain": "« I would like to order three containers » se traduit par « J'aimerais commander trois conteneurs »."
+    },
+    {
+      "type": "speak",
+      "text": "Could you send the proforma invoice please?",
+      "fr": "Pourriez-vous envoyer la facture proforma s'il vous plaît ?"
+    }
+  ]
+}

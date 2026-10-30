@@ -1,0 +1,184 @@
+{
+  "id": "s3u4",
+  "title": "Suivre un conteneur",
+  "context": "Transit",
+  "goal": "Suivre un conteneur et donner une date d'arrivée.",
+  "points": [
+    "Pour demander la position d'un conteneur en transit, utilisez les termes clés du transport maritime entre Lomé, Abidjan et Cotonou comme « tracking number ».",
+    "La date de départ d'un navire s'appelle l'« ETD » (Estimated Time of Departure) et la date d'arrivée prévue est l'« ETA » (Estimated Time of Arrival).",
+    "Pour indiquer qu'un navire accoste au port de Tema ou de Cotonou, on utilise le verbe « berth ».",
+    "Pour rassurer un client ou un partenaire à Ouagadougou, confirmez si la cargaison est bien « on schedule »."
+  ],
+  "examples": [
+    [
+      "What is the current tracking number for this shipment to Cotonou?",
+      "Quel est le numéro de suivi actuel pour cet envoi à Cotonou ?"
+    ],
+    [
+      "The vessel will berth at the Port of Lomé tomorrow morning.",
+      "Le navire accostera au port de Lomé demain matin."
+    ],
+    [
+      "The new ETA for the container from Abidjan is Friday.",
+      "Le nouveau ETA pour le conteneur d'Abidjan est vendredi."
+    ],
+    [
+      "Don't worry, the transit and the delivery are on schedule.",
+      "Ne vous inquiétez pas, le transit et la livraison sont dans les délais."
+    ]
+  ],
+  "vocab": [
+    [
+      "ETA",
+      "date d'arrivée prévue",
+      "/ˌiː tiː ˈeɪ/"
+    ],
+    [
+      "ETD",
+      "date de départ prévue",
+      "/ˌiː tiː ˈdiː/"
+    ],
+    [
+      "vessel",
+      "navire",
+      "/ˈvesəl/"
+    ],
+    [
+      "berth",
+      "accoster",
+      "/bɜːθ/"
+    ],
+    [
+      "tracking number",
+      "numéro de suivi",
+      "/ˈtrækɪŋ ˈnʌmbə/"
+    ],
+    [
+      "on schedule",
+      "dans les délais",
+      "/ɒn ˈʃedjuːl/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Que signifie l'acronyme ETA dans le transit maritime ?",
+      "options": [
+        "Estimated Time of Arrival",
+        "Estimated Transit Agency",
+        "Express Transport Agreement",
+        "External Terminal Area"
+      ],
+      "answer": 0,
+      "explain": "ETA signifie Estimated Time of Arrival, soit la date et l'heure d'arrivée estimées."
+    },
+    {
+      "type": "fill",
+      "sentence": "Mr Mensah needs the ___ number to check the container status.",
+      "options": [
+        "tracking",
+        "running",
+        "moving",
+        "packing"
+      ],
+      "answer": 0,
+      "explain": "On utilise 'tracking number' pour désigner le numéro de suivi du conteneur."
+    },
+    {
+      "type": "listen",
+      "audio": "The vessel is now on schedule.",
+      "options": [
+        "The vessel is now on schedule.",
+        "The vessel is not on schedule.",
+        "The vessel will soon schedule.",
+        "The vessel was not on schedule."
+      ],
+      "answer": 0,
+      "explain": "La phrase correcte entendue est 'The vessel is now on schedule'."
+    },
+    {
+      "type": "build",
+      "fr": "Le navire va accoster au port de Lomé.",
+      "answer": "The vessel will berth at the port of Lomé",
+      "extra": [
+        "leave",
+        "harbour",
+        "in"
+      ],
+      "explain": "L'ordre correct est sujet + verbe modal + verbe d'action + lieu."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "ETA",
+          "date d'arrivée prévue"
+        ],
+        [
+          "ETD",
+          "date de départ prévue"
+        ],
+        [
+          "vessel",
+          "navire"
+        ],
+        [
+          "berth",
+          "accoster"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "What is the new ___ for the cargo arriving in Abidjan?",
+      "options": [
+        "ETA",
+        "ETD",
+        "berth",
+        "vessel"
+      ],
+      "answer": 0,
+      "explain": "On demande l'ETA (date d'arrivée prévue) pour une cargaison qui arrive."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Awa souhaite connaître la date de départ du navire depuis le port de chargement. Quel acronyme utilise-t-elle ?",
+      "options": [
+        "ETA",
+        "ETD",
+        "BL",
+        "TIR"
+      ],
+      "answer": 1,
+      "explain": "L'ETD (Estimated Time of Departure) correspond à la date de départ."
+    },
+    {
+      "type": "build",
+      "fr": "Mon conteneur est dans les délais.",
+      "answer": "My container is on schedule",
+      "extra": [
+        "late",
+        "ship",
+        "port"
+      ],
+      "explain": "Structure simple : My container (sujet) + is (verbe) + on schedule (dans les délais)."
+    },
+    {
+      "type": "listen",
+      "audio": "What is the tracking number?",
+      "options": [
+        "What is the tracking number?",
+        "Where is the tracking number?",
+        "What is the transit number?",
+        "Where is the transit number?"
+      ],
+      "answer": 0,
+      "explain": "Écoutez bien les mots 'What is the tracking number'."
+    },
+    {
+      "type": "speak",
+      "text": "The container is on schedule and the ETA is Friday.",
+      "fr": "Le conteneur est dans les délais et l'arrivée est prévue vendredi."
+    }
+  ]
+}

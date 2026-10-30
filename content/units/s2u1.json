@@ -1,0 +1,184 @@
+{
+  "id": "s2u1",
+  "title": "Raconter une livraison",
+  "context": "Transit",
+  "goal": "Raconter au passé comment s'est passée une livraison.",
+  "points": [
+    "Pour raconter au passé, ajoutez « -ed » aux verbes réguliers : « deliver » devient « delivered », « load » devient « loaded ».",
+    "Si le verbe se termine déjà par « -e », ajoutez simplement « -d » : « arrive » devient « arrived ».",
+    "Utilisez « yesterday » (hier) et « last week » (la semaine dernière) pour situer la livraison dans le temps.",
+    "Pour exprimer « il y a », placez « ago » après la durée : « two days ago » (il y a deux jours)."
+  ],
+  "examples": [
+    [
+      "The truck arrived at Lomé port yesterday.",
+      "Le camion est arrivé au port de Lomé hier."
+    ],
+    [
+      "Kodjo checked the cargo two days ago.",
+      "Kodjo a vérifié la cargaison il y a deux jours."
+    ],
+    [
+      "We loaded the containers last week.",
+      "Nous avons chargé les conteneurs la semaine dernière."
+    ],
+    [
+      "The driver delivered the goods this morning.",
+      "Le chauffeur a livré les marchandises ce matin."
+    ]
+  ],
+  "vocab": [
+    [
+      "delivered",
+      "livré",
+      "/dɪˈlɪvəd/"
+    ],
+    [
+      "arrived",
+      "arrivé",
+      "/əˈraɪvd/"
+    ],
+    [
+      "loaded",
+      "chargé",
+      "/ˈləʊdɪd/"
+    ],
+    [
+      "checked",
+      "vérifié",
+      "/tʃekt/"
+    ],
+    [
+      "yesterday",
+      "hier",
+      "/ˈjestədeɪ/"
+    ],
+    [
+      "two days ago",
+      "il y a deux jours",
+      "/tuː deɪz əˈɡəʊ/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Comment dit-on « Le camion est arrivé hier » en anglais ?",
+      "options": [
+        "The truck arrives yesterday.",
+        "The truck arrived yesterday.",
+        "The truck is arrive yesterday.",
+        "The truck arriving yesterday."
+      ],
+      "answer": 1,
+      "explain": "Pour une action terminée avec « yesterday », le verbe régulier prend « -ed » : « arrived »."
+    },
+    {
+      "type": "fill",
+      "sentence": "Awa ___ the documents two days ago.",
+      "options": [
+        "checks",
+        "checked",
+        "checking",
+        "check"
+      ],
+      "answer": 1,
+      "explain": "Avec « two days ago », on utilise le prétérit régulier terminé par « -ed » : « checked »."
+    },
+    {
+      "type": "listen",
+      "audio": "Mr Mensah delivered the cargo last week.",
+      "options": [
+        "Mr Mensah delivers the cargo last week.",
+        "Mr Mensah delivered the car last week.",
+        "Mr Mensah delivered the cargo last week.",
+        "Mr Mensah delayed the cargo last week."
+      ],
+      "answer": 2,
+      "explain": "La phrase correcte entendue au passé est « Mr Mensah delivered the cargo last week. »."
+    },
+    {
+      "type": "build",
+      "fr": "Ils ont chargé le conteneur hier.",
+      "answer": "They loaded the container yesterday",
+      "extra": [
+        "load",
+        "tomorrow",
+        "unloaded"
+      ],
+      "explain": "« They loaded the container yesterday » traduit exactement « Ils ont chargé le conteneur hier »."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "delivered",
+          "livré"
+        ],
+        [
+          "checked",
+          "vérifié"
+        ],
+        [
+          "loaded",
+          "chargé"
+        ],
+        [
+          "last week",
+          "la semaine dernière"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "The ship arrived at Abidjan port three days ___.",
+      "options": [
+        "since",
+        "before",
+        "ago",
+        "last"
+      ],
+      "answer": 2,
+      "explain": "Pour traduire « il y a trois jours », on place « ago » après la durée : « three days ago »."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Au port de Cotonou, Koffi veut dire qu'il a contrôlé les conteneurs la semaine dernière. Que dit-il ?",
+      "options": [
+        "I check the containers tomorrow.",
+        "I checked the containers last week.",
+        "I am checking containers last week.",
+        "I load the containers last week."
+      ],
+      "answer": 1,
+      "explain": "« I checked the containers last week » exprime correctement un contrôle terminé la semaine passée."
+    },
+    {
+      "type": "build",
+      "fr": "Le chauffeur a livré les marchandises.",
+      "answer": "The driver delivered the goods",
+      "extra": [
+        "delivers",
+        "truck",
+        "pack"
+      ],
+      "explain": "« The driver delivered the goods » correspond à « Le chauffeur a livré les marchandises »."
+    },
+    {
+      "type": "listen",
+      "audio": "We loaded the trucks two hours ago.",
+      "options": [
+        "We loaded the trucks two hours ago.",
+        "We load the trucks two hours ago.",
+        "We loaded the track two hours ago.",
+        "We unloaded the trucks two hours ago."
+      ],
+      "answer": 0,
+      "explain": "La phrase entendue est bien « We loaded the trucks two hours ago. »."
+    },
+    {
+      "type": "speak",
+      "text": "The cargo arrived at Tema port yesterday.",
+      "fr": "La cargaison est arrivée au port de Tema hier."
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "id": "s3u5",
+  "title": "La voix passive",
+  "context": "Transit",
+  "goal": "Décrire un processus logistique avec la voix passive.",
+  "points": [
+    "Utilisez le présent passif (is/are + participe passé) pour décrire des processus habituels au port de Lomé. Exemple : « The goods are inspected ».",
+    "Utilisez le passé passif (was/were + participe passé) pour parler d'actions terminées hier à Abidjan. Exemple : « The container was loaded ».",
+    "Mentionnez l'agent avec la préposition « by » pour indiquer qui fait l'action, comme « by the customs officer ».",
+    "La voix passive met l'accent sur la marchandise ou le conteneur plutôt que sur la personne qui effectue le travail."
+  ],
+  "examples": [
+    [
+      "The goods are inspected by customs in Cotonou.",
+      "Les marchandises sont inspectées par la douane à Cotonou."
+    ],
+    [
+      "The container was loaded yesterday at Tema port.",
+      "Le conteneur a été chargé hier au port de Tema."
+    ],
+    [
+      "The documents are checked by Mr Mensah.",
+      "Les documents sont vérifiés par M. Mensah."
+    ],
+    [
+      "The truck was cleared by the transit agent.",
+      "Le camion a été dédouané par l'agent de transit."
+    ]
+  ],
+  "vocab": [
+    [
+      "goods",
+      "marchandises",
+      "/ɡʊdz/"
+    ],
+    [
+      "container",
+      "conteneur",
+      "/kənˈteɪnə/"
+    ],
+    [
+      "customs",
+      "douane",
+      "/ˈkʌstəmz/"
+    ],
+    [
+      "inspected",
+      "inspecté",
+      "/ɪnˈspɛktɪd/"
+    ],
+    [
+      "loaded",
+      "chargé",
+      "/ˈləʊdɪd/"
+    ],
+    [
+      "cleared",
+      "dédouané",
+      "/klɪəd/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Comment dire au présent passif que les conteneurs sont inspectés à Lomé ?",
+      "options": [
+        "The containers is inspected in Lomé",
+        "The containers are inspected in Lomé",
+        "The containers inspected in Lomé",
+        "The containers were inspect in Lomé"
+      ],
+      "answer": 1,
+      "explain": "Au pluriel présent, on utilise 'are' suivi du participe passé 'inspected'."
+    },
+    {
+      "type": "fill",
+      "sentence": "The bill of lading ___ signed by Mrs Okafor yesterday.",
+      "options": [
+        "is",
+        "are",
+        "was",
+        "were"
+      ],
+      "answer": 2,
+      "explain": "'Yesterday' indique le passé. 'Bill of lading' est singulier, donc on utilise 'was'."
+    },
+    {
+      "type": "listen",
+      "audio": "The goods are cleared by customs.",
+      "options": [
+        "The goods were cleared by customs.",
+        "The goods are cleared by customs.",
+        "The goods are clear by customs.",
+        "The good are cleared by customs."
+      ],
+      "answer": 1,
+      "explain": "Écoutez bien le présent 'are' et le participe passé 'cleared'."
+    },
+    {
+      "type": "build",
+      "fr": "Le camion a été chargé par Koffi.",
+      "answer": "The truck was loaded by Koffi",
+      "extra": [
+        "were",
+        "is",
+        "load"
+      ],
+      "explain": "Sujet singulier au passé + was + loaded + by + nom."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "goods",
+          "marchandises"
+        ],
+        [
+          "container",
+          "conteneur"
+        ],
+        [
+          "customs",
+          "douane"
+        ],
+        [
+          "loaded",
+          "chargé"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "All transit documents ___ checked every morning.",
+      "options": [
+        "was",
+        "is",
+        "are",
+        "were"
+      ],
+      "answer": 2,
+      "explain": "'Every morning' indique une habitude au présent. 'Documents' est pluriel, donc 'are'."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Quel choix exprime correctement une action passée au port de Lagos ?",
+      "options": [
+        "The ship was unloaded on Monday",
+        "The ship are unloaded on Monday",
+        "The ship is unload yesterday",
+        "The ship were unloaded on Monday"
+      ],
+      "answer": 0,
+      "explain": "'The ship' est singulier et l'action est passée, donc 'was unloaded'."
+    },
+    {
+      "type": "build",
+      "fr": "Les conteneurs sont inspectés par Awa.",
+      "answer": "The containers are inspected by Awa",
+      "extra": [
+        "was",
+        "is",
+        "inspect"
+      ],
+      "explain": "Pluriel au présent : 'are inspected' suivi de 'by Awa'."
+    },
+    {
+      "type": "listen",
+      "audio": "The container was loaded yesterday.",
+      "options": [
+        "The container is loaded yesterday.",
+        "The containers were loaded yesterday.",
+        "The container was loaded yesterday.",
+        "The container was loading yesterday."
+      ],
+      "answer": 2,
+      "explain": "La phrase correcte utilise le singulier passé 'was loaded'."
+    },
+    {
+      "type": "speak",
+      "text": "The goods are inspected by customs today.",
+      "fr": "Les marchandises sont inspectées par la douane aujourd'hui."
+    }
+  ]
+}

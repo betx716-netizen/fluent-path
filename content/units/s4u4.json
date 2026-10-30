@@ -1,0 +1,184 @@
+{
+  "id": "s4u4",
+  "title": "Réclamation formelle",
+  "context": "Commerce",
+  "goal": "Écrire une réclamation formelle et efficace.",
+  "points": [
+    "Pour exprimer un mécontentement professionnel de manière formelle, utilisez « I am writing to complain about… » suivi du problème rencontré au port de Lomé ou d'Abidjan.",
+    "Pour exiger une solution ou un dédommagement sans être agressif, formulez votre demande ainsi : « I would appreciate it if you could… ».",
+    "Qualifiez clairement la situation comme « unacceptable » (inacceptable) pour montrer la gravité d'un retard de fret ou d'avaries sur des marchandises.",
+    "Mentionnez explicitement le montant ou la forme de la « compensation » (indemnisation) attendue pour clore le litige commercial avec votre fournisseur."
+  ],
+  "examples": [
+    [
+      "I am writing to complain about the delayed shipment of cocoa beans from Abidjan.",
+      "Je vous écris pour me plaindre du retard de l'expédition de fèves de cacao en provenance d'Abidjan."
+    ],
+    [
+      "This unacceptable service at Tema port has caused severe disruption to our supply chain.",
+      "Ce service inacceptable au port de Tema a causé de graves perturbations dans notre chaîne d'approvisionnement."
+    ],
+    [
+      "I would appreciate it if you could arrange an immediate replacement for the damaged goods.",
+      "J'apprécierais que vous puissiez organiser un remplacement immédiat pour les marchandises endommagées."
+    ],
+    [
+      "We expect full compensation for the financial losses incurred during transit to Ouagadougou.",
+      "Nous attendons une indemnisation complète pour les pertes financières subies pendant le transit vers Ouagadougou."
+    ]
+  ],
+  "vocab": [
+    [
+      "compensation",
+      "indemnisation / dédommagement",
+      "/ˌkɒmpənˈseɪʃən/"
+    ],
+    [
+      "unacceptable",
+      "inacceptable",
+      "/ˌʌnəkˈseptəbəl/"
+    ],
+    [
+      "shipment",
+      "cargaison / expédition",
+      "/ˈʃɪpmənt/"
+    ],
+    [
+      "disruption",
+      "perturbation / rupture",
+      "/dɪsˈrʌpʃən/"
+    ],
+    [
+      "transit",
+      "transit / passage",
+      "/ˈtrænzɪt/"
+    ],
+    [
+      "delay",
+      "retard",
+      "/dɪˈleɪ/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Quelle formule formelle est la plus adaptée pour entamer une réclamation écrite ?",
+      "options": [
+        "I am writing to complain about...",
+        "Hey, I am very angry because...",
+        "Tell me why my cargo is lost...",
+        "Please fix this right now, guys..."
+      ],
+      "answer": 0,
+      "explain": "« I am writing to complain about... » est la structure standard, polie et formelle en anglais professionnel."
+    },
+    {
+      "type": "fill",
+      "sentence": "I would ___ it if you could investigate this cargo delay immediately.",
+      "options": [
+        "appreciate",
+        "like",
+        "want",
+        "hope"
+      ],
+      "answer": 0,
+      "explain": "On utilise le verbe « appreciate » dans la formule polie « I would appreciate it if... »."
+    },
+    {
+      "type": "listen",
+      "audio": "This unacceptable situation requires your immediate attention.",
+      "options": [
+        "This unacceptable situation requires your immediate attention.",
+        "This acceptable situation requires your immediate attention.",
+        "These unacceptable situations require our immediate attention.",
+        "This unexpected situation requires your immediate attention."
+      ],
+      "answer": 0,
+      "explain": "Écoutez bien le mot « unacceptable » et la forme singulière « This... situation »."
+    },
+    {
+      "type": "build",
+      "fr": "Nous attendons une compensation financière pour ces marchandises endommagées.",
+      "answer": "We expect financial compensation for these damaged goods",
+      "extra": [
+        "were",
+        "loss",
+        "at"
+      ],
+      "explain": "L'ordre correct est sujet (« we »), verbe (« expect »), objet (« financial compensation ») et la cause (« for these damaged goods »)."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "compensation",
+          "indemnisation"
+        ],
+        [
+          "unacceptable",
+          "inacceptable"
+        ],
+        [
+          "shipment",
+          "cargaison"
+        ],
+        [
+          "delay",
+          "retard"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "The delay at Cotonou port is completely ___ for our business.",
+      "options": [
+        "unacceptable",
+        "acceptable",
+        "pleasant",
+        "normal"
+      ],
+      "answer": 0,
+      "explain": "Dans une réclamation, on qualifie un tel problème de « unacceptable » (inacceptable)."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Que signifie la phrase de Mr Mensah : « We expect full compensation for the losses » ?",
+      "options": [
+        "Nous attendons une indemnisation intégrale pour les pertes",
+        "Nous refusons de payer pour les nouvelles pertes",
+        "Nous payons un supplément pour la cargaison perdue",
+        "Nous annulons la commande suite aux pertes"
+      ],
+      "answer": 0,
+      "explain": "« Full compensation » signifie une indemnisation complète ou intégrale pour les préjudices subis."
+    },
+    {
+      "type": "build",
+      "fr": "Je vous écris pour me plaindre du retard de la cargaison.",
+      "answer": "I am writing to complain about the shipment delay",
+      "extra": [
+        "was",
+        "were",
+        "been"
+      ],
+      "explain": "Structure clé de la leçon : « I am writing to complain about » suivi de « the shipment delay »."
+    },
+    {
+      "type": "listen",
+      "audio": "I would appreciate it if you could reply by Friday.",
+      "options": [
+        "I would appreciate it if you could reply by Friday.",
+        "I will appreciate it if you can reply by Friday.",
+        "I would appreciate if you reply by Friday.",
+        "I should appreciate it if you would reply by Friday."
+      ],
+      "answer": 0,
+      "explain": "La formulation exacte apprise est « I would appreciate it if you could... »."
+    },
+    {
+      "type": "speak",
+      "text": "I am writing to complain about the missing cargo at Lomé port.",
+      "fr": "Je vous écris pour me plaindre de la cargaison manquante au port de Lomé."
+    }
+  ]
+}

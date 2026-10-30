@@ -1,0 +1,184 @@
+{
+  "id": "s2u10",
+  "title": "Discuter avec un client",
+  "context": "Pro",
+  "goal": "Faire la conversation avant de parler affaires.",
+  "points": [
+    "Pour demander comment s'est passé le voyage de votre client à Abidjan, utilisez « How was your trip? ».",
+    "Pour poser des questions sur le week-end de votre partenaire à Lomé, dites simplement « Did you have a good weekend? ».",
+    "Pour parler du temps qu'il fait au port de Tema, dites « It is very hot today ».",
+    "Pour demander des nouvelles de la famille de monsieur Mensah, utilisez « How is your family? »."
+  ],
+  "examples": [
+    [
+      "How was your trip to Cotonou?",
+      "Comment s'est passé votre voyage à Cotonou ?"
+    ],
+    [
+      "Did you have a good weekend?",
+      "Avez-vous passé un bon week-end ?"
+    ],
+    [
+      "The weather is fine today.",
+      "Il fait beau aujourd'hui."
+    ],
+    [
+      "How is your family?",
+      "Comment va votre famille ?"
+    ]
+  ],
+  "vocab": [
+    [
+      "trip",
+      "voyage",
+      "/trɪp/"
+    ],
+    [
+      "weekend",
+      "week-end",
+      "/ˈwiːk.end/"
+    ],
+    [
+      "weather",
+      "temps (météo)",
+      "/ˈweð.ə/"
+    ],
+    [
+      "family",
+      "famille",
+      "/ˈfæm.əl.i/"
+    ],
+    [
+      "good",
+      "bon / bien",
+      "/ɡʊd/"
+    ],
+    [
+      "hot",
+      "chaud",
+      "/hɒt/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Comment demandez-vous à Awa comment s'est passé son voyage à Lagos ?",
+      "options": [
+        "How was your trip?",
+        "Where is your trip?",
+        "When is your trip?",
+        "Who was your trip?"
+      ],
+      "answer": 0,
+      "explain": "« How was your trip? » est la formule correcte pour demander des nouvelles d'un voyage."
+    },
+    {
+      "type": "fill",
+      "sentence": "Did you have a good ___?",
+      "options": [
+        "trip",
+        "weekend",
+        "port",
+        "cargo"
+      ],
+      "answer": 1,
+      "explain": "« weekend » complète la question courante sur le repos hebdomadaire."
+    },
+    {
+      "type": "listen",
+      "audio": "How is your family?",
+      "options": [
+        "How is your family?",
+        "How was your family?",
+        "Who is your family?",
+        "How is your factory?"
+      ],
+      "answer": 0,
+      "explain": "L'audio prononce clairement « How is your family? »."
+    },
+    {
+      "type": "build",
+      "fr": "Le temps est très chaud aujourd'hui.",
+      "answer": "It is very hot today",
+      "extra": [
+        "cold",
+        "rainy",
+        "bad"
+      ],
+      "explain": "Ordre sujet + verbe + adverbe + adjectif + complément de temps."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "trip",
+          "voyage"
+        ],
+        [
+          "weekend",
+          "week-end"
+        ],
+        [
+          "weather",
+          "météo"
+        ],
+        [
+          "family",
+          "famille"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "How ___ your trip to Ouagadougou?",
+      "options": [
+        "were",
+        "was",
+        "is",
+        "did"
+      ],
+      "answer": 1,
+      "explain": "On utilise « was » au prétérit car le voyage est terminé."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Monsieur Mensah arrive au bureau à Cotonou. Que dites-vous pour briser la glace ?",
+      "options": [
+        "Give me your price.",
+        "Did you have a good weekend?",
+        "Where is the container?",
+        "Stop the transit."
+      ],
+      "answer": 1,
+      "explain": "C'est une formule de politesse professionnelle idéale pour commencer."
+    },
+    {
+      "type": "build",
+      "fr": "Avez-vous passé un bon week-end ?",
+      "answer": "Did you have a good weekend",
+      "extra": [
+        "was",
+        "has",
+        "does"
+      ],
+      "explain": "Structure interrogative au passé simple avec l'auxiliaire « Did »."
+    },
+    {
+      "type": "listen",
+      "audio": "The weather is nice today",
+      "options": [
+        "The weather is nice today",
+        "The weather was nice today",
+        "The weather is hot yesterday",
+        "The water is nice today"
+      ],
+      "answer": 0,
+      "explain": "L'audio correspond exactement à « The weather is nice today »."
+    },
+    {
+      "type": "speak",
+      "text": "How was your trip to Abidjan?",
+      "fr": "Comment s'est passé votre voyage à Abidjan ?"
+    }
+  ]
+}

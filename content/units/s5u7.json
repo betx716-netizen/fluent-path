@@ -1,0 +1,185 @@
+{
+  "id": "s5u7",
+  "title": "Regrets et conditionnel 3",
+  "context": "Pro",
+  "goal": "Analyser une erreur passée et ce qu'il aurait fallu faire.",
+  "points": [
+    "Conditionnel 3 : « if + past perfect », puis « would have + participe » : « If we had shipped earlier, we would have avoided the storm. »",
+    "« I wish » ou « If only » + past perfect expriment un regret : « If only we had checked the documents. »",
+    "« should have / shouldn't have + participe » = ce qu'il aurait fallu faire : « We should have booked the vessel sooner. »",
+    "Conditionnel mixte (passé → présent) : « If we had signed the contract, we would be in Lagos now. »"
+  ],
+  "examples": [
+    [
+      "If we had checked the seal, we would have noticed the damage.",
+      "Si nous avions vérifié le scellé, nous aurions remarqué les dégâts."
+    ],
+    [
+      "I wish we had insured the cargo.",
+      "Si seulement nous avions assuré la marchandise."
+    ],
+    [
+      "We should have booked the vessel two weeks earlier.",
+      "Nous aurions dû réserver le navire deux semaines plus tôt."
+    ],
+    [
+      "If Kodjo had sent the invoice, the goods would be cleared now.",
+      "Si Kodjo avait envoyé la facture, la marchandise serait dédouanée maintenant."
+    ]
+  ],
+  "vocab": [
+    [
+      "hindsight",
+      "le recul (après coup)",
+      "/ˈhaɪndsaɪt/"
+    ],
+    [
+      "to avoid",
+      "éviter",
+      "/əˈvɔɪd/"
+    ],
+    [
+      "a missed deadline",
+      "une échéance manquée",
+      "/ə mɪst ˈdedlaɪn/"
+    ],
+    [
+      "lesson learned",
+      "leçon retenue",
+      "/ˈlesn lɜːnd/"
+    ],
+    [
+      "to foresee",
+      "prévoir",
+      "/fɔːˈsiː/"
+    ],
+    [
+      "costly",
+      "coûteux",
+      "/ˈkɒstli/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Quelle phrase exprime correctement une hypothèse sur le passé ?",
+      "options": [
+        "If we would have known, we would have acted.",
+        "If we had known, we would have acted.",
+        "If we knew, we would have acted.",
+        "If we had known, we will act."
+      ],
+      "answer": 1,
+      "explain": "Conditionnel 3 : « if + past perfect » puis « would have + participe passé ». On ne met jamais « would » après « if »."
+    },
+    {
+      "type": "fill",
+      "sentence": "If the driver ___ the wrong road, he would have arrived on time.",
+      "options": [
+        "hadn't taken",
+        "didn't take",
+        "wouldn't take",
+        "hasn't taken"
+      ],
+      "answer": 0,
+      "explain": "Dans la partie « if » du conditionnel 3, on utilise le past perfect : « hadn't taken »."
+    },
+    {
+      "type": "listen",
+      "audio": "We should have checked the documents before loading.",
+      "options": [
+        "We should have checked the documents before loading.",
+        "We should check the documents before loading.",
+        "We shouldn't have checked the documents before loading.",
+        "We should have checked the documents after loading."
+      ],
+      "answer": 0,
+      "explain": "« should have checked » = nous aurions dû vérifier : un regret sur une action passée."
+    },
+    {
+      "type": "build",
+      "fr": "Si seulement nous avions assuré la marchandise.",
+      "answer": "If only we had insured the goods",
+      "extra": [
+        "would",
+        "have",
+        "insure"
+      ],
+      "explain": "« If only + past perfect » exprime un regret sur le passé."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "hindsight",
+          "le recul"
+        ],
+        [
+          "to avoid",
+          "éviter"
+        ],
+        [
+          "costly",
+          "coûteux"
+        ],
+        [
+          "to foresee",
+          "prévoir"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "If we had signed the contract last month, we ___ in Lagos now.",
+      "options": [
+        "would be",
+        "would have been",
+        "will be",
+        "had been"
+      ],
+      "answer": 0,
+      "explain": "Conditionnel mixte : condition passée (« had signed »), conséquence présente (« would be … now »)."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Un client te reproche un retard. Quelle réponse reconnaît l'erreur avec tact ?",
+      "options": [
+        "With hindsight, we should have warned you earlier.",
+        "You should have warned us earlier.",
+        "We would warn you earlier.",
+        "With hindsight, we must warn you earlier."
+      ],
+      "answer": 0,
+      "explain": "« With hindsight, we should have… » reconnaît poliment une erreur passée."
+    },
+    {
+      "type": "build",
+      "fr": "Nous aurions évité les surestaries.",
+      "answer": "We would have avoided the demurrage",
+      "extra": [
+        "had",
+        "will",
+        "avoid"
+      ],
+      "explain": "Conséquence imaginaire dans le passé : « would have + participe passé »."
+    },
+    {
+      "type": "listen",
+      "audio": "If they had told us, we wouldn't have paid.",
+      "options": [
+        "If they had told us, we wouldn't have paid.",
+        "If they told us, we wouldn't pay.",
+        "If they had told us, we would have paid.",
+        "If they'd told us, we won't pay."
+      ],
+      "answer": 0,
+      "explain": "« If they had told us » + « wouldn't have paid » : nous n'aurions pas payé."
+    },
+    {
+      "type": "speak",
+      "text": "With hindsight, we should have booked the vessel earlier.",
+      "fr": "Avec le recul, nous aurions dû réserver le navire plus tôt."
+    }
+  ],
+  "author": "claude"
+}

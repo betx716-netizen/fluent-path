@@ -1,0 +1,184 @@
+{
+  "id": "s5u8",
+  "title": "Formel ou informel",
+  "context": "Pro",
+  "goal": "Adapter son niveau de langue à l'interlocuteur.",
+  "points": [
+    "Utilisez « I would be grateful if » dans les e-mails formels pour les douanes à Abidjan au lieu de formules directes.",
+    "Préférez « regarding » à « about » dans la correspondance professionnelle pour un registre formel et précis.",
+    "Réservez « Can you… » aux messages instantanés entre collègues familiers au port de Lomé.",
+    "Adaptez votre niveau selon votre interlocuteur pour concilier respect hiérarchique et efficacité opérationnelle."
+  ],
+  "examples": [
+    [
+      "I would be grateful if you could forward the bill of lading for the Cotonou shipment.",
+      "Je vous serais reconnaissant de bien vouloir transmettre le connaissement pour l'expédition de Cotonou."
+    ],
+    [
+      "Regarding the transit clearance in Ouagadougou, please find attached the revised invoice.",
+      "Concernant le dédouanement en transit à Ouagadougou, veuillez trouver ci-joint la facture révisée."
+    ],
+    [
+      "Can you check the container status at Tema port before Mr Mensah arrives?",
+      "Tu peux vérifier le statut du conteneur au port de Tema avant l'arrivée de M. Mensah ?"
+    ],
+    [
+      "We are writing to inquire about the delayed cargo from Lagos destined for Togo.",
+      "Nous vous écrivons pour nous renseigner au sujet de la cargaison retardée de Lagos à destination du Togo."
+    ]
+  ],
+  "vocab": [
+    [
+      "regarding",
+      "concernant",
+      "/rɪˈɡɑːdɪŋ/"
+    ],
+    [
+      "grateful",
+      "reconnaissant",
+      "/ˈɡreɪtfʊl/"
+    ],
+    [
+      "forward",
+      "transmettre",
+      "/ˈfɔːwəd/"
+    ],
+    [
+      "inquire",
+      "se renseigner",
+      "/ɪnˈkwaɪə/"
+    ],
+    [
+      "shipment",
+      "expédition",
+      "/ˈʃɪpmənt/"
+    ],
+    [
+      "clearance",
+      "dédouanement",
+      "/ˈklɪərəns/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Quelle formule formelle utiliseriez-vous pour demander un document à un haut fonctionnaire à Abidjan ?",
+      "options": [
+        "Can you send the papers now?",
+        "I would be grateful if you could provide the clearance certificate.",
+        "Send me the papers about the transit.",
+        "Give me the file quickly."
+      ],
+      "answer": 1,
+      "explain": "« I would be grateful if » est la formule formelle idéale pour s'adresser à une haute autorité."
+    },
+    {
+      "type": "fill",
+      "sentence": "I am writing to you ___ the customs delays at the border.",
+      "options": [
+        "regarding",
+        "about",
+        "with",
+        "for"
+      ],
+      "answer": 0,
+      "explain": "« Regarding » est le terme le plus formel et professionnel pour introduire un sujet dans un e-mail."
+    },
+    {
+      "type": "listen",
+      "audio": "I would be grateful if you could check the bill of lading.",
+      "options": [
+        "I would be grateful if you could check the bill of lading.",
+        "I am grateful that you checked the bill of lading.",
+        "Can you check the bill of lading please?",
+        "Could you please check the bill of lading."
+      ],
+      "answer": 0,
+      "explain": "Écoutez attentivement la structure formelle exacte avec « I would be grateful if »."
+    },
+    {
+      "type": "build",
+      "fr": "Je vous serais reconnaissant de bien vouloir envoyer la facture.",
+      "answer": "I would be grateful if you could send the invoice",
+      "extra": [
+        "please",
+        "can",
+        "about"
+      ],
+      "explain": "L'ordre des mots respecte la structure polie et formelle exigée pour ce niveau."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "regarding",
+          "concernant"
+        ],
+        [
+          "grateful",
+          "reconnaissant"
+        ],
+        [
+          "forward",
+          "transmettre"
+        ],
+        [
+          "inquire",
+          "se renseigner"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "Can you quickly check the container number for ___ ?",
+      "options": [
+        "Awa",
+        "Mr",
+        "Mrs",
+        "Sir"
+      ],
+      "answer": 0,
+      "explain": "Dans un message direct et informel entre collègues, on utilise le prénom comme Awa."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Quel mot préférez-vous dans un e-mail formel de transit au lieu de 'about' ?",
+      "options": [
+        "on",
+        "regarding",
+        "around",
+        "with"
+      ],
+      "answer": 1,
+      "explain": "« Regarding » est plus soutenu et professionnel que « about » dans la correspondance écrite."
+    },
+    {
+      "type": "build",
+      "fr": "Concernant le fret de Lagos, veuillez trouver ci-joint les documents.",
+      "answer": "Regarding the Lagos freight please find attached the documents",
+      "extra": [
+        "about",
+        "send",
+        "here"
+      ],
+      "explain": "On commence par « regarding » pour structurer la phrase formellement."
+    },
+    {
+      "type": "listen",
+      "audio": "Regarding the transit clearance, please contact Mrs Okafor.",
+      "options": [
+        "Regarding the transit clearance, please contact Mrs Okafor.",
+        "Regarding the transit clearance, you can contact Mrs Okafor.",
+        "About the transit clearance, please contact Mrs Okafor.",
+        "Regarding the transport clearance, please contact Mrs Okafor."
+      ],
+      "answer": 0,
+      "explain": "La phrase audio utilise précisément « regarding » et « Mrs Okafor »."
+    },
+    {
+      "type": "speak",
+      "text": "I would be grateful if you could send the manifest.",
+      "fr": "Je vous serais reconnaissant de bien vouloir envoyer le manifeste."
+    }
+  ]
+}

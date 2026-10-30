@@ -1,0 +1,20 @@
+{
+  "model": "gemini-flash-lite-latest",
+  "issues": [
+    {
+      "where": "vocab[2][2]",
+      "problem": "IPA for 'freight' is incorrect (/freːt/ instead of /freɪt/)",
+      "fix": "/kɒst ənd freɪt/"
+    },
+    {
+      "where": "vocab[4][2]",
+      "problem": "IPA for 'carriage' contains a typo (/ˈkɑːdʌːdʒ/ instead of /ˈkærɪdʒ/)",
+      "fix": "/ˈkærɪdʒ/"
+    },
+    {
+      "where": "vocab[5][2]",
+      "problem": "IPA for 'transfer' contains a macron typo (/rɪsk ˈtrʌːnsfɜː/ instead of /rɪsk ˈtrænsfɜː/)",
+      "fix": "/rɪsk ˈtrænsfɜː/"
+    }
+  ]
+}

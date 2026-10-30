@@ -1,0 +1,185 @@
+{
+  "id": "s6u10",
+  "title": "Salon et réseautage",
+  "context": "Commerce",
+  "goal": "Se présenter et créer des contacts dans un salon.",
+  "points": [
+    "L'« elevator pitch » : te présenter en 30 secondes, qui tu es, ce que tu fais et pour qui.",
+    "Pour ouvrir la conversation : « What line of business are you in? » = dans quel secteur travaillez-vous ?",
+    "Échange les contacts : « Here's my card. » ou « Could I have your card? »",
+    "Relance après le salon : « It was a pleasure meeting you at the fair in Lagos. »"
+  ],
+  "examples": [
+    [
+      "What line of business are you in?",
+      "Dans quel secteur travaillez-vous ?"
+    ],
+    [
+      "We help importers move goods from Lomé to the Sahel.",
+      "Nous aidons les importateurs à acheminer leurs marchandises de Lomé vers le Sahel."
+    ],
+    [
+      "Here's my card. Let's keep in touch.",
+      "Voici ma carte. Restons en contact."
+    ],
+    [
+      "It was a pleasure meeting you at the fair.",
+      "Ce fut un plaisir de vous rencontrer au salon."
+    ]
+  ],
+  "vocab": [
+    [
+      "trade fair",
+      "salon professionnel",
+      "/treɪd feə/"
+    ],
+    [
+      "elevator pitch",
+      "présentation éclair",
+      "/ˈelɪveɪtə pɪtʃ/"
+    ],
+    [
+      "business card",
+      "carte de visite",
+      "/ˈbɪznəs kɑːd/"
+    ],
+    [
+      "to keep in touch",
+      "rester en contact",
+      "/kiːp ɪn tʌtʃ/"
+    ],
+    [
+      "line of business",
+      "secteur d'activité",
+      "/laɪn əv ˈbɪznəs/"
+    ],
+    [
+      "to follow up",
+      "faire un suivi",
+      "/ˈfɒləʊ ʌp/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Comment demandes-tu poliment le secteur d'activité de quelqu'un ?",
+      "options": [
+        "What line of business are you in?",
+        "What is your work line?",
+        "Which business you do?",
+        "In what business you are?"
+      ],
+      "answer": 0,
+      "explain": "Formule naturelle : « What line of business are you in? »."
+    },
+    {
+      "type": "fill",
+      "sentence": "I'll follow ___ with an email next week.",
+      "options": [
+        "up",
+        "on",
+        "after",
+        "in"
+      ],
+      "answer": 0,
+      "explain": "« to follow up » = relancer, faire un suivi."
+    },
+    {
+      "type": "listen",
+      "audio": "Here's my card. Let's keep in touch.",
+      "options": [
+        "Here's my card. Let's keep in touch.",
+        "Here's my car. Let's keep in touch.",
+        "Here's my card. Let's get in touch.",
+        "Here's my card. Let's keep in tune."
+      ],
+      "answer": 0,
+      "explain": "« to keep in touch » = rester en contact."
+    },
+    {
+      "type": "build",
+      "fr": "Ce fut un plaisir de vous rencontrer au salon.",
+      "answer": "It was a pleasure meeting you at the fair",
+      "extra": [
+        "met",
+        "on",
+        "salon"
+      ],
+      "explain": "« It was a pleasure meeting you » : formule de politesse après une rencontre."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "trade fair",
+          "salon professionnel"
+        ],
+        [
+          "business card",
+          "carte de visite"
+        ],
+        [
+          "to follow up",
+          "faire un suivi"
+        ],
+        [
+          "line of business",
+          "secteur d'activité"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "Could I ___ your business card, please?",
+      "options": [
+        "have",
+        "make",
+        "do",
+        "give"
+      ],
+      "answer": 0,
+      "explain": "« Could I have your card? » est la demande la plus naturelle et polie."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Quel est le meilleur début d'« elevator pitch » ?",
+      "options": [
+        "We help importers move goods from Lomé to the Sahel, quickly and safely.",
+        "My company was created in 2015 and we have many trucks and also an office.",
+        "I am very happy to be here today at this fair.",
+        "Do you want to buy something?"
+      ],
+      "answer": 0,
+      "explain": "Un bon pitch dit tout de suite ce que tu fais et pour qui."
+    },
+    {
+      "type": "build",
+      "fr": "Nous devrions rester en contact.",
+      "answer": "We should stay in touch",
+      "extra": [
+        "contact",
+        "on",
+        "stays"
+      ],
+      "explain": "« to stay in touch » ou « to keep in touch » = rester en contact."
+    },
+    {
+      "type": "listen",
+      "audio": "It was a pleasure meeting you at the fair in Lagos.",
+      "options": [
+        "It was a pleasure meeting you at the fair in Lagos.",
+        "It was a pleasure meeting you at the fair in Lomé.",
+        "It was a pleasure meeting you at the airport in Lagos.",
+        "It's a pleasure meeting you at the fair in Lagos."
+      ],
+      "answer": 0,
+      "explain": "Formule de relance après un salon professionnel."
+    },
+    {
+      "type": "speak",
+      "text": "What line of business are you in?",
+      "fr": "Dans quel secteur travaillez-vous ?"
+    }
+  ],
+  "author": "claude"
+}

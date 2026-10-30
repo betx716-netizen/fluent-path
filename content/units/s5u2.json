@@ -1,0 +1,184 @@
+{
+  "id": "s5u2",
+  "title": "Incoterms : DAP, DDP et risques",
+  "context": "Transit",
+  "goal": "Choisir le bon Incoterm et en expliquer les risques.",
+  "points": [
+    "Sous DAP, le vendeur supporte tous les risques jusqu'au lieu de destination convenu, comme un entrepôt à Ouagadougou. « The seller bears the risk until arrival. »",
+    "DPU implique que le vendeur décharge la marchandise au terminal désigné, par exemple au port de Tema. « The goods must be unloaded safely. »",
+    "DDP transfère un maximum d'obligations au vendeur, y inclus le paiement des droits d'importation. « DDP includes customs clearance and duties. »",
+    "FCA convient aux conteneurs au port d'Abidjan où le risque est transféré lors de la remise au transporteur. « Risk transfers upon handover. »"
+  ],
+  "examples": [
+    [
+      "Under DAP, the seller bears all risks until the goods are placed at the buyer's disposal at the destination.",
+      "Sous DAP, le vendeur supporte tous les risques jusqu'à ce que les marchandises soient mises à la disposition de l'acheteur à destination."
+    ],
+    [
+      "Mr Mensah prefers DDP because his client in Cotonou wants the freight delivered duty paid.",
+      "M. Mensah préfère le DDP parce que son client à Cotonou souhaite que le fret soit livré droits acquittés."
+    ],
+    [
+      "Under FCA Abidjan, the risk transfers to the carrier once the container is loaded.",
+      "Sous FCA Abidjan, le risque est transféré au transporteur une fois le conteneur chargé."
+    ],
+    [
+      "Awa confirmed that the terminal is responsible for unloading under DPU terms.",
+      "Awa a confirmé que le terminal est responsable du déchargement selon les conditions DPU."
+    ]
+  ],
+  "vocab": [
+    [
+      "bear the risk",
+      "supporter le risque",
+      "/bɛə ðə rɪsk/"
+    ],
+    [
+      "customs clearance",
+      "dédouanement",
+      "/ˈkʌstəmz ˈklɪərəns/"
+    ],
+    [
+      "import duties",
+      "droits d'importation",
+      "/ˈɪmpɔːt ˈdjuːtiz/"
+    ],
+    [
+      "handover",
+      "remise",
+      "/ˈhændəʊvə/"
+    ],
+    [
+      "unloaded",
+      "déchargé",
+      "/ˌʌnˈləʊdɪd/"
+    ],
+    [
+      "disposal",
+      "mise à disposition",
+      "/dɪˈspəʊzəl/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Quel Incoterm impose au vendeur le paiement des droits de douane à l'importation à Lomé ?",
+      "options": [
+        "DAP",
+        "FCA",
+        "DDP",
+        "EXW"
+      ],
+      "answer": 2,
+      "explain": "DDP (Delivered Duty Paid) signifie que le vendeur prend en charge les droits et taxes d'importation."
+    },
+    {
+      "type": "fill",
+      "sentence": "Under DAP, the seller bears the risk ___ the goods reach the agreed destination.",
+      "options": [
+        "until",
+        "before",
+        "since",
+        "during"
+      ],
+      "answer": 0,
+      "explain": "« Until » indique la limite temporelle et spatiale du transfert de risque pour le vendeur."
+    },
+    {
+      "type": "listen",
+      "audio": "The seller bears the risk until arrival.",
+      "options": [
+        "The seller bears the risk until arrival.",
+        "The buyer bears the risk until arrival.",
+        "The seller clears the risk until arrival.",
+        "The seller bears the cost until arrival."
+      ],
+      "answer": 0,
+      "explain": "L'audio énonce clairement que c'est le vendeur qui supporte le risque jusqu'à l'arrivée."
+    },
+    {
+      "type": "build",
+      "fr": "Le vendeur supporte tous les risques.",
+      "answer": "The seller bears all risks",
+      "extra": [
+        "buyer",
+        "takes",
+        "cost"
+      ],
+      "explain": "La structure sujet + verbe + complément se traduit par « The seller bears all risks »."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "import duties",
+          "droits d'importation"
+        ],
+        [
+          "customs clearance",
+          "dédouanement"
+        ],
+        [
+          "handover",
+          "remise"
+        ],
+        [
+          "unloaded",
+          "déchargé"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "Mrs Okafor prefers DDP to avoid any surprise regarding import ___.",
+      "options": [
+        "duties",
+        "risks",
+        "goods",
+        "terms"
+      ],
+      "answer": 0,
+      "explain": "Dans un contrat DDP, les « duties » (droits) sont payés par le vendeur."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Dans quel Incoterm le vendeur doit-il obligatoirement décharger la cargaison au terminal de Lagos ?",
+      "options": [
+        "DAP",
+        "DPU",
+        "FCA",
+        "FOB"
+      ],
+      "answer": 1,
+      "explain": "DPU (Delivered at Place Unloaded) est le seul Incoterm où le déchargement à destination incombe au vendeur."
+    },
+    {
+      "type": "build",
+      "fr": "Le risque est transféré au transporteur.",
+      "answer": "The risk transfers to the carrier",
+      "extra": [
+        "buyer",
+        "seller",
+        "port"
+      ],
+      "explain": "Traduction exacte pour l'Incoterm FCA : « The risk transfers to the carrier »."
+    },
+    {
+      "type": "listen",
+      "audio": "DDP includes customs clearance and duties.",
+      "options": [
+        "DAP includes customs clearance and duties.",
+        "DDP includes customs clearance and duties.",
+        "DDP excludes customs clearance and duties.",
+        "DPU includes customs clearance and duties."
+      ],
+      "answer": 1,
+      "explain": "L'audio confirme que DDP inclut le dédouanement et les droits."
+    },
+    {
+      "type": "speak",
+      "text": "Who pays the import duties under DAP terms?",
+      "fr": "Qui paie les droits d'importation selon les conditions DAP ?"
+    }
+  ]
+}

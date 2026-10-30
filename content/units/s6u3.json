@@ -1,0 +1,185 @@
+{
+  "id": "s6u3",
+  "title": "Nuancer son propos",
+  "context": "Pro",
+  "goal": "Exprimer une opinion avec nuance et prudence.",
+  "points": [
+    "« It would appear that… » ou « It seems that… » présentent un fait avec prudence.",
+    "« arguably » = on peut soutenir que : « This is arguably our best route. »",
+    "« to some extent » = dans une certaine mesure ; « tend to » = avoir tendance à.",
+    "« It might be worth considering… » propose une idée sans l'imposer."
+  ],
+  "examples": [
+    [
+      "It would appear that the delay was caused by the port.",
+      "Il semblerait que le retard soit dû au port."
+    ],
+    [
+      "This is arguably the safest corridor in the region.",
+      "C'est sans doute le corridor le plus sûr de la région."
+    ],
+    [
+      "Prices tend to rise before the harvest season.",
+      "Les prix ont tendance à monter avant la récolte."
+    ],
+    [
+      "It might be worth considering a second supplier.",
+      "Il pourrait être utile d'envisager un second fournisseur."
+    ]
+  ],
+  "vocab": [
+    [
+      "arguably",
+      "on peut soutenir que",
+      "/ˈɑːɡjuəbli/"
+    ],
+    [
+      "to some extent",
+      "dans une certaine mesure",
+      "/tə sʌm ɪkˈstent/"
+    ],
+    [
+      "to tend to",
+      "avoir tendance à",
+      "/tend tuː/"
+    ],
+    [
+      "likely",
+      "probable",
+      "/ˈlaɪkli/"
+    ],
+    [
+      "somewhat",
+      "quelque peu",
+      "/ˈsʌmwɒt/"
+    ],
+    [
+      "presumably",
+      "vraisemblablement",
+      "/prɪˈzjuːməbli/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Quelle phrase est la plus nuancée pour un rapport ?",
+      "options": [
+        "It would appear that demand is slowing down.",
+        "Demand is slowing down, it is sure.",
+        "Demand is completely dead.",
+        "Everybody knows demand is slowing down."
+      ],
+      "answer": 0,
+      "explain": "« It would appear that… » présente le constat avec prudence."
+    },
+    {
+      "type": "fill",
+      "sentence": "I agree with you to some ___, but the cost is still high.",
+      "options": [
+        "extent",
+        "extend",
+        "point",
+        "degree of"
+      ],
+      "answer": 0,
+      "explain": "L'expression est « to some extent » = dans une certaine mesure."
+    },
+    {
+      "type": "listen",
+      "audio": "Arguably, this is our most profitable route.",
+      "options": [
+        "Arguably, this is our most profitable route.",
+        "Arguably, this is our most probable route.",
+        "Argue, this is our most profitable route.",
+        "Arguably, this was our most profitable route."
+      ],
+      "answer": 0,
+      "explain": "« Arguably » = on peut soutenir que."
+    },
+    {
+      "type": "build",
+      "fr": "Il pourrait être utile d'envisager un autre transporteur.",
+      "answer": "It might be worth considering another carrier",
+      "extra": [
+        "useful",
+        "consider",
+        "to"
+      ],
+      "explain": "« It might be worth + -ing » propose une idée avec tact."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "arguably",
+          "on peut soutenir que"
+        ],
+        [
+          "likely",
+          "probable"
+        ],
+        [
+          "somewhat",
+          "quelque peu"
+        ],
+        [
+          "presumably",
+          "vraisemblablement"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "Small importers ___ to pay more for freight.",
+      "options": [
+        "tend",
+        "tends",
+        "tending",
+        "are tend"
+      ],
+      "answer": 0,
+      "explain": "« tend to + verbe » = avoir tendance à. Avec « importers » (pluriel) : « tend »."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Ton directeur propose une idée risquée. Comment exprimer ton désaccord avec nuance ?",
+      "options": [
+        "I see your point, but it might be worth considering the risks.",
+        "That's a bad idea.",
+        "No, this is wrong.",
+        "You don't understand the risks."
+      ],
+      "answer": 0,
+      "explain": "On reconnaît son point de vue, puis on nuance avec « it might be worth considering »."
+    },
+    {
+      "type": "build",
+      "fr": "Les prix ont tendance à monter en décembre.",
+      "answer": "Prices tend to rise in December",
+      "extra": [
+        "tends",
+        "on",
+        "raise"
+      ],
+      "explain": "« tend to » + base verbale ; « rise » (monter) n'a pas de complément, « raise » en demande un."
+    },
+    {
+      "type": "listen",
+      "audio": "The figures are somewhat lower than expected.",
+      "options": [
+        "The figures are somewhat lower than expected.",
+        "The figures are somewhat higher than expected.",
+        "The figures are some lower than expected.",
+        "The fingers are somewhat lower than expected."
+      ],
+      "answer": 0,
+      "explain": "« somewhat » = quelque peu : il adoucit la mauvaise nouvelle."
+    },
+    {
+      "type": "speak",
+      "text": "It would appear that the shipment was delayed at the border.",
+      "fr": "Il semblerait que l'envoi ait été retardé à la frontière."
+    }
+  ],
+  "author": "claude"
+}

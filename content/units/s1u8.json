@@ -1,0 +1,184 @@
+{
+  "id": "s1u8",
+  "title": "Au téléphone",
+  "context": "Pro",
+  "goal": "Répondre au téléphone et demander à parler à quelqu'un.",
+  "points": [
+    "Pour demander l'identité de l'interlocuteur, dites « Who is calling? » (« Qui est à l'appareil ? »).",
+    "Pour joindre un collègue, utilisez « Can I speak to...? » suivi de son nom, comme « Can I speak to Kodjo? ».",
+    "Pour faire patienter poliment un client au téléphone, dites « Hold on, please » (« Un instant, s'il vous plaît »).",
+    "Si vous devez raccrocher et recontacter la personne, dites « I will call you back » (« Je vous rappelle »)."
+  ],
+  "examples": [
+    [
+      "Who is calling, please?",
+      "Qui est à l'appareil, s'il vous plaît ?"
+    ],
+    [
+      "Can I speak to Mr Mensah?",
+      "Puis-je parler à M. Mensah ?"
+    ],
+    [
+      "Hold on, please.",
+      "Un instant, s'il vous plaît."
+    ],
+    [
+      "I will call you back today.",
+      "Je vous rappelle aujourd'hui."
+    ]
+  ],
+  "vocab": [
+    [
+      "call",
+      "appeler",
+      "/kɔːl/"
+    ],
+    [
+      "speak",
+      "parler",
+      "/spiːk/"
+    ],
+    [
+      "hold on",
+      "patienter",
+      "/həʊld ɒn/"
+    ],
+    [
+      "repeat",
+      "répéter",
+      "/rɪˈpiːt/"
+    ],
+    [
+      "who",
+      "qui",
+      "/huː/"
+    ],
+    [
+      "back",
+      "en retour",
+      "/bæk/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Un client du port de Cotonou appelle. Comment lui demander son identité poliment ?",
+      "options": [
+        "Where are you?",
+        "Who is calling, please?",
+        "What do you want?",
+        "Can I help him?"
+      ],
+      "answer": 1,
+      "explain": "« Who is calling, please? » signifie « Qui est à l'appareil, s'il vous plaît ? »."
+    },
+    {
+      "type": "fill",
+      "sentence": "Can I ___ to Mrs Okafor?",
+      "options": [
+        "speak",
+        "hear",
+        "calling",
+        "repeats"
+      ],
+      "answer": 0,
+      "explain": "Après l'auxiliaire modal « can », on emploie la base verbale « speak »."
+    },
+    {
+      "type": "listen",
+      "audio": "Hold on, please.",
+      "options": [
+        "Help on, please.",
+        "Hold out, please.",
+        "Hold on, please.",
+        "Call on, please."
+      ],
+      "answer": 2,
+      "explain": "« Hold on, please » signifie « Un instant, s'il vous plaît »."
+    },
+    {
+      "type": "build",
+      "fr": "Puis-je parler à Koffi ?",
+      "answer": "Can I speak to Koffi",
+      "extra": [
+        "call",
+        "you",
+        "at"
+      ],
+      "explain": "Pour demander à joindre une personne, on dit « Can I speak to... »."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "hold on",
+          "patienter"
+        ],
+        [
+          "who",
+          "qui"
+        ],
+        [
+          "repeat",
+          "répéter"
+        ],
+        [
+          "call back",
+          "rappeler"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "I will call you ___ this afternoon.",
+      "options": [
+        "on",
+        "back",
+        "to",
+        "for"
+      ],
+      "answer": 1,
+      "explain": "L'expression « call back » signifie « rappeler »."
+    },
+    {
+      "type": "mcq",
+      "prompt": "La ligne avec Abidjan grésille. Que dites-vous pour demander à l'agent de répéter ?",
+      "options": [
+        "I speak now.",
+        "Listen to me, please.",
+        "Hold on, Kodjo.",
+        "Can you repeat, please?"
+      ],
+      "answer": 3,
+      "explain": "« Can you repeat, please? » permet de demander poliment à quelqu'un de répéter."
+    },
+    {
+      "type": "build",
+      "fr": "Je vous rappelle aujourd'hui",
+      "answer": "I will call you back today",
+      "extra": [
+        "speak",
+        "now",
+        "on"
+      ],
+      "explain": "« I will call you back today » exprime l'action future de rappeler son interlocuteur dans la journée."
+    },
+    {
+      "type": "listen",
+      "audio": "Who is calling?",
+      "options": [
+        "Who is coming?",
+        "Who is calling?",
+        "How is calling?",
+        "Who is talking?"
+      ],
+      "answer": 1,
+      "explain": "« Who is calling? » signifie « Qui est à l'appareil ? »."
+    },
+    {
+      "type": "speak",
+      "text": "Can I speak to Mr Mensah, please?",
+      "fr": "Puis-je parler à M. Mensah, s'il vous plaît ?"
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "id": "s2u9",
+  "title": "Unités et mesures",
+  "context": "Transit",
+  "goal": "Donner un poids, une taille et un type de conteneur.",
+  "points": [
+    "Pour demander le poids, utilisez « How heavy is it? » ou « What is the weight? ».",
+    "Pour exprimer le poids, utilisez le verbe « to weigh » : « It weighs 500 kilos » ou « It weighs two tonnes ».",
+    "En transit maritime, on emploie les adjectifs composés « 20-foot container » (conteneur 20 pieds) ou « 40-foot container ».",
+    "Pour les dimensions et les volumes, utilisez « metre » (mètre) et « litre » (litre) avec l'orthographe britannique."
+  ],
+  "examples": [
+    [
+      "The shipment weighs twenty tonnes.",
+      "L'expédition pèse vingt tonnes."
+    ],
+    [
+      "How heavy is the cargo for Lomé?",
+      "Quel est le poids du fret pour Lomé ?"
+    ],
+    [
+      "We need a 40-foot container for Cotonou.",
+      "Nous avons besoin d'un conteneur de 40 pieds pour Cotonou."
+    ],
+    [
+      "Each wooden box is two metres long.",
+      "Chaque caisse en bois mesure deux mètres de long."
+    ]
+  ],
+  "vocab": [
+    [
+      "weigh",
+      "peser",
+      "/weɪ/"
+    ],
+    [
+      "weight",
+      "poids",
+      "/weɪt/"
+    ],
+    [
+      "tonne",
+      "tonne",
+      "/tʌn/"
+    ],
+    [
+      "metre",
+      "mètre",
+      "/ˈmiːtə/"
+    ],
+    [
+      "20-foot container",
+      "conteneur de 20 pieds",
+      "/ˌtwenti fʊt kənˈteɪnə/"
+    ],
+    [
+      "heavy",
+      "lourd",
+      "/ˈhevi/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Comment demande-t-on le poids d'un colis à un collègue ?",
+      "options": [
+        "How long is it?",
+        "How heavy is it?",
+        "How many is it?",
+        "How fast is it?"
+      ],
+      "answer": 1,
+      "explain": "« How heavy is it? » signifie « Quel est son poids ? » ou « Est-ce lourd ? »."
+    },
+    {
+      "type": "fill",
+      "sentence": "This wooden pallet ___ 450 kilos.",
+      "options": [
+        "weighs",
+        "weights",
+        "heavy",
+        "measures"
+      ],
+      "answer": 0,
+      "explain": "« Weighs » est le verbe « to weigh » conjugué avec un sujet singulier (« This wooden pallet »)."
+    },
+    {
+      "type": "listen",
+      "audio": "We booked a 20-foot container yesterday.",
+      "options": [
+        "We booked a 40-foot container yesterday.",
+        "We booked a 20-foot container yesterday.",
+        "We bought a 20-foot container yesterday.",
+        "We booked two 20-foot containers yesterday."
+      ],
+      "answer": 1,
+      "explain": "La phrase correcte entendue est : « We booked a 20-foot container yesterday. »"
+    },
+    {
+      "type": "build",
+      "fr": "Ce colis pèse quinze kilos.",
+      "answer": "This package weighs fifteen kilos",
+      "extra": [
+        "weight",
+        "heavy",
+        "is"
+      ],
+      "explain": "On emploie le verbe « weighs » directement après le sujet « This package »."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "tonne",
+          "tonne"
+        ],
+        [
+          "heavy",
+          "lourd"
+        ],
+        [
+          "metre",
+          "mètre"
+        ],
+        [
+          "weight",
+          "poids"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "Mr Mensah needs a 40-foot ___ for Tema port.",
+      "options": [
+        "kilo",
+        "litre",
+        "container",
+        "tonne"
+      ],
+      "answer": 2,
+      "explain": "Un « 40-foot container » est un conteneur maritime standard de 40 pieds."
+    },
+    {
+      "type": "mcq",
+      "prompt": "À Abidjan, Awa demande : « How heavy is the machine? ». Que répond Kodjo ?",
+      "options": [
+        "It is two metres long.",
+        "It arrived by truck.",
+        "It weighs five tonnes.",
+        "It has forty feet."
+      ],
+      "answer": 2,
+      "explain": "« How heavy » interroge sur le poids, la bonne réponse est donc : « It weighs five tonnes »."
+    },
+    {
+      "type": "build",
+      "fr": "Quel est le poids de la marchandise ?",
+      "answer": "What is the weight of the cargo",
+      "extra": [
+        "heavy",
+        "weighs",
+        "how"
+      ],
+      "explain": "Pour demander le poids en utilisant le nom, on dit « What is the weight of the cargo »."
+    },
+    {
+      "type": "listen",
+      "audio": "The truck carries thirty tonnes of cocoa.",
+      "options": [
+        "The truck carries thirteen tonnes of cocoa.",
+        "The track carries thirty tonnes of cocoa.",
+        "The truck carries thirty kilos of cocoa.",
+        "The truck carries thirty tonnes of cocoa."
+      ],
+      "answer": 3,
+      "explain": "On entend bien « thirty tonnes » (trente tonnes) et « truck » (camion)."
+    },
+    {
+      "type": "speak",
+      "text": "The shipment weighs twelve tonnes in total.",
+      "fr": "L'expédition pèse douze tonnes au total."
+    }
+  ]
+}

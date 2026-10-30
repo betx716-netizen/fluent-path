@@ -1,0 +1,185 @@
+{
+  "id": "s6u2",
+  "title": "Expressions idiomatiques",
+  "context": "Pro",
+  "goal": "Comprendre et placer les idiomes courants du business.",
+  "points": [
+    "« a ballpark figure » = un ordre de grandeur : « Can you give me a ballpark figure? »",
+    "« to cut corners » = bâcler pour gagner du temps ou de l'argent (sens négatif).",
+    "« to get the ball rolling » = lancer les choses ; « back to square one » = retour à la case départ.",
+    "« on the same page » = d'accord, sur la même longueur d'onde ; « a win-win » = gagnant-gagnant."
+  ],
+  "examples": [
+    [
+      "Can you give me a ballpark figure for the freight?",
+      "Pouvez-vous me donner un ordre de grandeur pour le fret ?"
+    ],
+    [
+      "We never cut corners on safety.",
+      "Nous ne rognons jamais sur la sécurité."
+    ],
+    [
+      "The bank refused the loan, so we are back to square one.",
+      "La banque a refusé le prêt, nous revenons donc à la case départ."
+    ],
+    [
+      "Let's make sure we are on the same page before the meeting.",
+      "Assurons-nous d'être d'accord avant la réunion."
+    ]
+  ],
+  "vocab": [
+    [
+      "a ballpark figure",
+      "un ordre de grandeur",
+      "/ə ˈbɔːlpɑːk ˈfɪɡə/"
+    ],
+    [
+      "to cut corners",
+      "bâcler, rogner sur la qualité",
+      "/tə kʌt ˈkɔːnəz/"
+    ],
+    [
+      "to get the ball rolling",
+      "lancer les choses",
+      "/tə ɡet ðə bɔːl ˈrəʊlɪŋ/"
+    ],
+    [
+      "back to square one",
+      "retour à la case départ",
+      "/bæk tə skweə wʌn/"
+    ],
+    [
+      "on the same page",
+      "sur la même longueur d'onde",
+      "/ɒn ðə seɪm peɪdʒ/"
+    ],
+    [
+      "a win-win",
+      "une situation gagnant-gagnant",
+      "/ə ˌwɪn ˈwɪn/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Ton client demande « a ballpark figure ». Il veut :",
+      "options": [
+        "un prix approximatif",
+        "un prix définitif signé",
+        "une remise",
+        "une facture"
+      ],
+      "answer": 0,
+      "explain": "« a ballpark figure » = une estimation, un ordre de grandeur."
+    },
+    {
+      "type": "fill",
+      "sentence": "Let's get the ball ___ with a short meeting on Monday.",
+      "options": [
+        "rolling",
+        "running",
+        "moving",
+        "going"
+      ],
+      "answer": 0,
+      "explain": "L'expression figée est « to get the ball rolling » : lancer les choses."
+    },
+    {
+      "type": "listen",
+      "audio": "We can't afford to cut corners on packaging.",
+      "options": [
+        "We can't afford to cut corners on packaging.",
+        "We can't afford to cut costs on packaging.",
+        "We can afford to cut corners on packaging.",
+        "We can't afford to cut corners on parking."
+      ],
+      "answer": 0,
+      "explain": "« to cut corners » = bâcler ; on ne peut pas se le permettre sur l'emballage."
+    },
+    {
+      "type": "build",
+      "fr": "Nous revenons à la case départ.",
+      "answer": "We are back to square one",
+      "extra": [
+        "box",
+        "in",
+        "return"
+      ],
+      "explain": "« back to square one » = retour à la case départ."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "a ballpark figure",
+          "un ordre de grandeur"
+        ],
+        [
+          "a win-win",
+          "gagnant-gagnant"
+        ],
+        [
+          "to cut corners",
+          "bâcler"
+        ],
+        [
+          "on the same page",
+          "d'accord"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "This deal is a win-___ for both companies.",
+      "options": [
+        "win",
+        "lose",
+        "won",
+        "gain"
+      ],
+      "answer": 0,
+      "explain": "« a win-win » = une situation où les deux parties gagnent."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Quelle phrase utilise correctement l'expression ?",
+      "options": [
+        "Before we sign, let's make sure we're on the same page.",
+        "Before we sign, let's make sure we're on the same book.",
+        "Before we sign, let's make sure we're in the same page.",
+        "Before we sign, let's make sure we're at the same paper."
+      ],
+      "answer": 0,
+      "explain": "L'expression exacte est « on the same page » : être d'accord."
+    },
+    {
+      "type": "build",
+      "fr": "Pouvez-vous me donner un ordre de grandeur ?",
+      "answer": "Can you give me a ballpark figure",
+      "extra": [
+        "park",
+        "an",
+        "do"
+      ],
+      "explain": "« a ballpark figure » = un chiffre approximatif."
+    },
+    {
+      "type": "listen",
+      "audio": "If the bank says no, we're back to square one.",
+      "options": [
+        "If the bank says no, we're back to square one.",
+        "If the bank says no, we're back to square two.",
+        "If the bank says so, we're back to square one.",
+        "If the bank says no, we're back to the square."
+      ],
+      "answer": 0,
+      "explain": "« back to square one » : il faudra tout recommencer."
+    },
+    {
+      "type": "speak",
+      "text": "Could you give me a ballpark figure by Friday?",
+      "fr": "Pourriez-vous me donner un ordre de grandeur d'ici vendredi ?"
+    }
+  ],
+  "author": "claude"
+}

@@ -1,0 +1,10 @@
+{
+  "model": "gemini-flash-lite-latest",
+  "issues": [
+    {
+      "where": "examples[3][1]",
+      "problem": "Grammar error in French translation: \"cet expédition\" should be \"cette expédition\" (feminine noun).",
+      "fix": "La prime pour cette expédition en transit a augmenté de cinq pour cent."
+    }
+  ]
+}

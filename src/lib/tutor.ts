@@ -4,7 +4,10 @@ import { askJson, type Turn } from "./ai";
 const LEVEL_STYLE: Record<Scenario["level"], string> = {
   A1: "Use very short, simple sentences (max 12 words) and only common words. Speak slowly and clearly.",
   A2: "Use short everyday sentences (max 16 words) and common business words.",
-  B1: "Use natural everyday business English, with a few useful professional expressions."
+  B1: "Use natural everyday business English, with a few useful professional expressions.",
+  B2: "Use fluent professional English with precise business vocabulary. Push back a little so the learner must argue.",
+  C1: "Use sophisticated, precise professional English, including domain terms. Challenge the learner's arguments politely but firmly.",
+  C2: "Speak like a demanding native professional: idiomatic, nuanced, fast-paced. Ask probing follow-up questions."
 };
 
 export interface TutorReply {

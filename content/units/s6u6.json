@@ -1,0 +1,185 @@
+{
+  "id": "s6u6",
+  "title": "Rédiger un rapport",
+  "context": "Pro",
+  "goal": "Rédiger un rapport clair et structuré.",
+  "points": [
+    "Un rapport commence par un « executive summary » : l'essentiel en quelques lignes.",
+    "Sections classiques : « Findings » (constats), « Conclusions », « Recommendations » (recommandations).",
+    "Style impersonnel : « It was found that… », « It is recommended that… » plutôt que « I think ».",
+    "Après « It is recommended that », le verbe reste à la base : « It is recommended that the company hire a second carrier. »"
+  ],
+  "examples": [
+    [
+      "This report examines delays on the Lomé–Ouagadougou corridor.",
+      "Ce rapport examine les retards sur le corridor Lomé–Ouagadougou."
+    ],
+    [
+      "It was found that most delays occur at the border.",
+      "Il a été constaté que la plupart des retards se produisent à la frontière."
+    ],
+    [
+      "It is recommended that the company use GPS tracking.",
+      "Il est recommandé que l'entreprise utilise le suivi GPS."
+    ],
+    [
+      "In conclusion, costs could be reduced by 15 per cent.",
+      "En conclusion, les coûts pourraient être réduits de 15 %."
+    ]
+  ],
+  "vocab": [
+    [
+      "executive summary",
+      "synthèse",
+      "/ɪɡˈzekjətɪv ˈsʌməri/"
+    ],
+    [
+      "findings",
+      "constats, résultats",
+      "/ˈfaɪndɪŋz/"
+    ],
+    [
+      "recommendation",
+      "recommandation",
+      "/ˌrekəmenˈdeɪʃn/"
+    ],
+    [
+      "to examine",
+      "examiner",
+      "/ɪɡˈzæmɪn/"
+    ],
+    [
+      "to occur",
+      "se produire",
+      "/əˈkɜː/"
+    ],
+    [
+      "appendix",
+      "annexe",
+      "/əˈpendɪks/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Quelle phrase convient le mieux dans un rapport formel ?",
+      "options": [
+        "It was found that delivery times increased by 20 per cent.",
+        "I think delivery is slower, maybe.",
+        "Delivery is super slow now!",
+        "We saw that delivery is bad."
+      ],
+      "answer": 0,
+      "explain": "Style impersonnel et précis : « It was found that… » + un chiffre."
+    },
+    {
+      "type": "fill",
+      "sentence": "It is recommended that the company ___ a second supplier.",
+      "options": [
+        "find",
+        "finds",
+        "found",
+        "will find"
+      ],
+      "answer": 0,
+      "explain": "Après « It is recommended that », on utilise la base verbale : « find »."
+    },
+    {
+      "type": "listen",
+      "audio": "The findings are summarised in the appendix.",
+      "options": [
+        "The findings are summarised in the appendix.",
+        "The findings are summarised in the appendices.",
+        "The finding is summarised in the appendix.",
+        "The findings are summarised in the abstract."
+      ],
+      "answer": 0,
+      "explain": "« findings » = constats ; « appendix » = annexe."
+    },
+    {
+      "type": "build",
+      "fr": "Ce rapport examine les coûts de transport.",
+      "answer": "This report examines transport costs",
+      "extra": [
+        "examine",
+        "on",
+        "from"
+      ],
+      "explain": "Sujet singulier (« this report ») : le verbe prend un -s, « examines »."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "findings",
+          "constats"
+        ],
+        [
+          "appendix",
+          "annexe"
+        ],
+        [
+          "executive summary",
+          "synthèse"
+        ],
+        [
+          "to occur",
+          "se produire"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "Most delays ___ at the border post.",
+      "options": [
+        "occur",
+        "occurs",
+        "happening",
+        "occured"
+      ],
+      "answer": 0,
+      "explain": "« delays » est au pluriel : « occur ». Au passé, attention à l'orthographe : « occurred » (deux r)."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Où places-tu l'essentiel du rapport, pour un directeur pressé ?",
+      "options": [
+        "Dans l'executive summary, au début",
+        "Dans l'annexe, à la fin",
+        "Dans le titre seulement",
+        "Dans une note de bas de page"
+      ],
+      "answer": 0,
+      "explain": "L'« executive summary » résume tout le rapport en début de document."
+    },
+    {
+      "type": "build",
+      "fr": "Il est recommandé que nous utilisions le suivi GPS.",
+      "answer": "It is recommended that we use GPS tracking",
+      "extra": [
+        "recommend",
+        "the",
+        "using"
+      ],
+      "explain": "Après « It is recommended that », le verbe reste à la base : « we use »."
+    },
+    {
+      "type": "listen",
+      "audio": "In conclusion, costs could be reduced by fifteen per cent.",
+      "options": [
+        "In conclusion, costs could be reduced by fifteen per cent.",
+        "In conclusion, costs could be reduced by fifty per cent.",
+        "In conclusion, costs could be produced by fifteen per cent.",
+        "In conclusion, costs would be reduced by fifteen per cent."
+      ],
+      "answer": 0,
+      "explain": "« reduced by fifteen per cent » = réduits de 15 %. Attention : fifteen (15) et fifty (50)."
+    },
+    {
+      "type": "speak",
+      "text": "It is recommended that we review our transport contracts.",
+      "fr": "Il est recommandé de revoir nos contrats de transport."
+    }
+  ],
+  "author": "claude"
+}

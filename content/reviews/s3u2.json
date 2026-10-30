@@ -1,0 +1,10 @@
+{
+  "model": "gemini-flash-latest",
+  "issues": [
+    {
+      "where": "vocab[1][1]",
+      "problem": "Typo in French translation: \"droita\" instead of \"droits\".",
+      "fix": "droits de douane"
+    }
+  ]
+}

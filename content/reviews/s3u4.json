@@ -1,0 +1,10 @@
+{
+  "model": "gemini-flash-lite-latest",
+  "issues": [
+    {
+      "where": "exercises[3].answer",
+      "problem": "The answer 'The vessel will berth at Lomé' leaves out 'port of' which is in the French sentence 'au port de Lomé', making the translation incomplete.",
+      "fix": "The vessel will berth at the port of Lomé"
+    }
+  ]
+}

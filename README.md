@@ -1,7 +1,7 @@
 # Fluent Path
 
 Application d'anglais personnelle, gamifiée, centrée sur le commerce, le transit et l'usage professionnel.
-Mascotte : Zazou le calao. Version **phase 3** (premium), coût : **0 €**.
+Mascotte : Zazou le calao. Version **phase 4** (contenu complet), coût : **0 €**.
 
 ## Ce que contient la phase 1
 
@@ -35,6 +35,28 @@ La voix utilise la reconnaissance vocale gratuite de Chrome (meilleure sur Andro
 - Zazou réagit à chaque réponse dans les leçons, « +10 XP » animé, 6 nouveaux trophées
 
 Note : les animations de Zazou sont en SVG et CSS. Rive demanderait de dessiner Zazou dans l'éditeur Rive ; ce sera possible plus tard sans changer le reste de l'app.
+
+## Ce qu'ajoute la phase 4 (contenu)
+
+- **60 unités** sur 6 sections, du niveau A1 au niveau C2, 600 exercices, toutes tournées vers le commerce, le transit et le travail (douane, Incoterms, crédit documentaire, surestaries, négociation, réunions…)
+- **20 jeux de rôle**, dont 10 nouveaux jusqu'au niveau C2 (Incoterms, litige sur surestaries, banquière nigériane, investisseuse londonienne, salon à Lagos)
+- **Tests de section** : 15 questions, 80 % pour ouvrir la section suivante ; ils servent aussi à **sauter une section** déjà maîtrisée
+- **30 trophées**
+- Bouton **« Signaler une erreur »** sous chaque correction ; la liste se retrouve dans Profil, prête à copier
+
+### Comment le contenu est fabriqué
+
+| Étape | Fichier |
+| --- | --- |
+| Programme pédagogique (titres, grammaire, objectifs) | `content/syllabus.json` |
+| Rédaction des unités par Gemini | `content/generate.mjs` |
+| Vérifications automatiques (une seule bonne réponse, phrases à construire possibles…) | `content/validate.mjs` |
+| Majuscules des phrases à construire | `content/normalize.mjs` |
+| Relecture par un « second professeur » IA | `content/review.mjs` → `content/reviews/` |
+| Corrections retenues | `content/apply-fixes.mjs` |
+| Unités finales chargées par l'app | `content/units/*.json` |
+
+Pour ajouter une unité : l'écrire dans `syllabus.json`, puis lancer `GEMINI_API_KEY=… node content/generate.mjs sXuY`.
 
 ## Activer le tuteur IA (gratuit)
 
@@ -92,4 +114,4 @@ Puis ouvre l'adresse affichée (par exemple http://localhost:5173).
 
 - ~~Phase 2 — Voix~~ : faite
 - ~~Phase 3 — Premium~~ : faite
-- **Phase 4 — Contenu** : 60 unités, 20 scénarios, tests de section
+- ~~Phase 4 — Contenu~~ : faite

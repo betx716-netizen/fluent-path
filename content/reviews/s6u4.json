@@ -1,0 +1,10 @@
+{
+  "model": "gemini-flash-lite-latest",
+  "issues": [
+    {
+      "where": "exercises[7].answer",
+      "problem": "Missing comma after introductory phrase 'With all due respect', which is standard in English writing.",
+      "fix": "With all due respect, this price is too high"
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "id": "s4u6",
+  "title": "Rapporter des propos",
+  "context": "Pro",
+  "goal": "Rapporter ce qu'un client ou un collègue a dit.",
+  "points": [
+    "Pour rapporter des propos au passé, on utilise souvent « said » (dire) ou « told » (dire à quelqu'un) suivi d'un changement de temps vers le passé.",
+    "Les temps reculent d'un cran : le présent devient le prétérit (ex: « is » devient « was »), et le passé devient le plus-que-parfait.",
+    "Pour les questions directes, on utilise « asked » suivi de « if » ou de mots interrogatifs comme « what » ou « where », sans inversion sujet-verbe.",
+    "Dans le commerce, on rapporte les consignes des clients ou des compagnies maritimes avec des verbes introductifs précis : « He said the container was ready »."
+  ],
+  "examples": [
+    [
+      "Mr Mensah said the customs clearance was delayed at the Port of Lomé.",
+      "Monsieur Mensah a dit que le dédouanement était retardé au port de Lomé."
+    ],
+    [
+      "Awa told me that the truck had already left for Ouagadougou.",
+      "Awa m'a dit que le camion était déjà parti pour Ouagadougou."
+    ],
+    [
+      "The client asked if the bill of lading was available in Cotonou.",
+      "Le client a demandé si le connaissement était disponible à Cotonou."
+    ],
+    [
+      "Koffi asked me what the shipping cost to Abidjan was.",
+      "Koffi m'a demandé quel était le coût du fret pour Abidjan."
+    ]
+  ],
+  "vocab": [
+    [
+      "reported speech",
+      "discours rapporté",
+      "/rɪˈpɔːtɪd spiːtʃ/"
+    ],
+    [
+      "backshift",
+      "recul des temps",
+      "/ˈbækʃɪft/"
+    ],
+    [
+      "customs clearance",
+      "dédouanement",
+      "/ˈkʌstəmz ˈklɪərəns/"
+    ],
+    [
+      "bill of lading",
+      "connaissement",
+      "/bɪl ɒv ˈleɪdɪŋ/"
+    ],
+    [
+      "freight forwarder",
+      "transitaire",
+      "/freɪt ˈfɔːwədə/"
+    ],
+    [
+      "shipping instruction",
+      "instruction d'expédition",
+      "/ˈʃɪpɪŋ ɪnˈstrʌkʃən/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Comment traduit-on « Awa a dit qu'elle était fatiguée » en anglais professionnel ?",
+      "options": [
+        "Awa said she was tired",
+        "Awa told that she is tired",
+        "Awa said me she was tired",
+        "Awa told she was tired"
+      ],
+      "answer": 0,
+      "explain": "On utilise « said » sans complément direct ou « told » avec un objet (ex: told me). Le présent « is » devient « was »."
+    },
+    {
+      "type": "fill",
+      "sentence": "Mr Mensah ___ that the cargo had arrived at Tema port.",
+      "options": [
+        "said",
+        "told",
+        "asked",
+        "speak"
+      ],
+      "answer": 0,
+      "explain": "On emploie « said » ici car il n'y a pas de pronom complément direct juste après le verbe."
+    },
+    {
+      "type": "listen",
+      "audio": "She told me the container was delayed.",
+      "options": [
+        "She told me the container was delayed.",
+        "She told me the container is delayed.",
+        "She told me the containers were delayed.",
+        "She tells me the container was delayed."
+      ],
+      "answer": 0,
+      "explain": "Écoutez bien le prétérit « was » et l'utilisation correcte de « told me »."
+    },
+    {
+      "type": "build",
+      "fr": "Koffi a dit que le navire était en retard.",
+      "answer": "Koffi said the vessel was late",
+      "extra": [
+        "told",
+        "is",
+        "has"
+      ],
+      "explain": "Structure standard du discours rapporté au passé : sujet + said + sujet + prétérit."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "He said",
+          "Il a dit"
+        ],
+        [
+          "She asked",
+          "Elle a demandé"
+        ],
+        [
+          "They told me",
+          "Ils m'ont dit"
+        ],
+        [
+          "We inquired",
+          "Nous avons enquêté"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "Ama asked me ___ the transit documents were ready.",
+      "options": [
+        "if",
+        "that",
+        "what",
+        "where"
+      ],
+      "answer": 0,
+      "explain": "Pour rapporter une question fermée (oui/non), on utilise « if » ou « whether »."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Quelqu'un vous demande en direct : « Where is the truck? ». Comment rapportez-vous cette question ?",
+      "options": [
+        "He asked where the truck was",
+        "He asked where was the truck",
+        "He said where is the truck",
+        "He asked me that where the truck was"
+      ],
+      "answer": 0,
+      "explain": "Dans une question rapportée, l'ordre des mots redevient sujet + verbe (pas d'inversion) et le temps recule."
+    },
+    {
+      "type": "build",
+      "fr": "Le client a demandé si les taxes étaient payées.",
+      "answer": "The client asked if the duties were paid",
+      "extra": [
+        "said",
+        "that",
+        "did"
+      ],
+      "explain": "On utilise « asked if » pour rapporter une question fermée avec un backshift au prétérit."
+    },
+    {
+      "type": "listen",
+      "audio": "The agent asked what time the vessel would dock.",
+      "options": [
+        "The agent asked what time the vessel would dock.",
+        "The agent said what time the vessel will dock.",
+        "The agent asked when the vessel dock.",
+        "The agent told what time the vessel docked."
+      ],
+      "answer": 0,
+      "explain": "Écoutez la structure « asked » + mot interrogatif + sujet + « would »."
+    },
+    {
+      "type": "speak",
+      "text": "The forwarder said the goods would arrive tomorrow.",
+      "fr": "Le transitaire a dit que les marchandises arriveraient demain."
+    }
+  ]
+}

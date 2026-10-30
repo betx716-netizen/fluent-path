@@ -1,0 +1,184 @@
+{
+  "id": "s4u1",
+  "title": "Faire une offre",
+  "context": "Commerce",
+  "goal": "Rédiger et présenter une offre commerciale.",
+  "points": [
+    "Pour ouvrir une offre professionnelle et polie, utilisez la formule classique « We are pleased to offer… ».",
+    "Précisez la durée de validité de votre proposition avec l'expression « valid until » suivie de la date limite.",
+    "Indiquez clairement le prix unitaire et la commande minimale avec les termes « unit price » et « minimum order ».",
+    "Annoncez les délais de livraison pour rassurer votre client grâce au terme professionnel « lead time »."
+  ],
+  "examples": [
+    [
+      "We are pleased to offer you 500 tonnes of cement for delivery to Abidjan.",
+      "Nous avons le plaisir de vous proposer 500 tonnes de ciment pour livraison à Abidjan."
+    ],
+    [
+      "This quotation remains valid until Friday next week.",
+      "Ce devis reste valable jusqu'à vendredi de la semaine prochaine."
+    ],
+    [
+      "The unit price is 150 USD per metric tonne.",
+      "Le prix unitaire est de 150 USD par tonne métrique."
+    ],
+    [
+      "Our standard lead time from Lomé port to Ouagadougou is five days.",
+      "Notre délai habituel du port de Lomé à Ouagadougou est de cinq jours."
+    ]
+  ],
+  "vocab": [
+    [
+      "quotation",
+      "un devis",
+      "/kwəʊˈteɪʃən/"
+    ],
+    [
+      "quote",
+      "une offre de prix",
+      "/kwəʊt/"
+    ],
+    [
+      "valid until",
+      "valable jusqu'au",
+      "/ˈvælɪd ənˈtɪl/"
+    ],
+    [
+      "unit price",
+      "le prix unitaire",
+      "/ˈjuːnɪt praɪs/"
+    ],
+    [
+      "minimum order",
+      "la commande minimale",
+      "/ˈmɪnɪməm ˈɔːdə/"
+    ],
+    [
+      "lead time",
+      "le délai de livraison",
+      "/liːd taɪm/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Quelle formule formelle et polie utiliser pour débuter une offre commerciale écrite ?",
+      "options": [
+        "We give you price...",
+        "We are pleased to offer…",
+        "You take this quote...",
+        "Here is your goods..."
+      ],
+      "answer": 1,
+      "explain": "« We are pleased to offer… » est la formule standard et très professionnelle pour présenter une offre."
+    },
+    {
+      "type": "fill",
+      "sentence": "This commercial quotation is valid ___ the end of this month.",
+      "options": [
+        "until",
+        "to",
+        "by",
+        "for"
+      ],
+      "answer": 0,
+      "explain": "On utilise l'expression « valid until » pour indiquer la date limite de validité d'une offre."
+    },
+    {
+      "type": "listen",
+      "audio": "Our minimum order for delivery to Cotonou is ten pallets.",
+      "options": [
+        "Our maximum order for delivery to Cotonou is ten pallets.",
+        "Our minimum order for delivery to Cotonou is ten pallets.",
+        "Your minimum order for delivery to Cotonou is ten pallets.",
+        "Our minimum order for delivery in Cotonou is two pallets."
+      ],
+      "answer": 1,
+      "explain": "La phrase correcte indique la quantité minimale requise pour la commande."
+    },
+    {
+      "type": "build",
+      "fr": "Le prix unitaire est de quatre cents dollars.",
+      "answer": "The unit price is four hundred dollars",
+      "extra": [
+        "total",
+        "order",
+        "port"
+      ],
+      "explain": "Structure correcte : sujet (« the unit price ») + verbe (« is ») + attribut (« four hundred dollars »)."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "quotation",
+          "devis"
+        ],
+        [
+          "lead time",
+          "délai de livraison"
+        ],
+        [
+          "unit price",
+          "prix unitaire"
+        ],
+        [
+          "minimum order",
+          "commande minimale"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "Mr Mensah needs to know the exact lead ___ before booking the freight.",
+      "options": [
+        "time",
+        "date",
+        "period",
+        "schedule"
+      ],
+      "answer": 0,
+      "explain": "Le terme « lead time » désigne le délai d'exécution ou de livraison en logistique."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Que signifie le terme « quotation » dans le cadre d'une négociation à Tema port ?",
+      "options": [
+        "Une réclamation de douane",
+        "Un devis ou une offre de prix",
+        "Un connaissement maritime",
+        "Un bon de sortie du port"
+      ],
+      "answer": 1,
+      "explain": "« Quotation » se traduit par devis ou proposition tarifaire formelle."
+    },
+    {
+      "type": "build",
+      "fr": "Nous avons le plaisir de vous offrir ce tarif.",
+      "answer": "We are pleased to offer this rate",
+      "extra": [
+        "high",
+        "bad",
+        "must"
+      ],
+      "explain": "On emploie « We are pleased to offer » suivi de l'élément proposé."
+    },
+    {
+      "type": "listen",
+      "audio": "What is the lead time for shipping containers to Lagos?",
+      "options": [
+        "What is the lead time for shipping containers to Lagos?",
+        "When is the lead time for shipping containers to Lagos?",
+        "What was the lead time for shipping cargo to Lagos?",
+        "Where is the lead time for shipping containers to Lagos?"
+      ],
+      "answer": 0,
+      "explain": "La question exacte interroge sur le délai d'acheminement vers la destination."
+    },
+    {
+      "type": "speak",
+      "text": "The quotation remains valid until Friday.",
+      "fr": "Le devis reste valable jusqu'à vendredi."
+    }
+  ]
+}

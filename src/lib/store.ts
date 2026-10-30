@@ -49,6 +49,8 @@ export interface State {
   writings: { count: number; best: number };
   outfits: { owned: string[]; worn: string | null };
   zazouAt: string | null;
+  bosses: Record<string, { best: number; passed: boolean }>;
+  reports: { at: string; unit: string; text: string }[];
   updatedAt: string;
 }
 
@@ -77,6 +79,8 @@ export const initialState = (): State => ({
   writings: { count: 0, best: 0 },
   outfits: { owned: [], worn: null },
   zazouAt: null,
+  bosses: {},
+  reports: [],
   updatedAt: new Date().toISOString()
 });
 

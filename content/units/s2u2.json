@@ -1,0 +1,184 @@
+{
+  "id": "s2u2",
+  "title": "Verbes irréguliers du commerce",
+  "context": "Commerce",
+  "goal": "Utiliser les verbes irréguliers les plus courants du commerce.",
+  "points": [
+    "Les verbes irréguliers changent au prétérit : « buy » devient « bought » et « sell » devient « sold ».",
+    "Pour les transactions : « send » (envoyer) devient « sent » et « pay » (payer) devient « paid ».",
+    "D'autres verbes clés : « take » devient « took », « make » devient « made », et « get » devient « got ».",
+    "Au négatif, utilisez « didn't » suivi de la base verbale : « didn't pay » (et non pas « didn't paid »)."
+  ],
+  "examples": [
+    [
+      "Kodjo bought three containers in Lomé yesterday.",
+      "Kodjo a acheté trois conteneurs à Lomé hier."
+    ],
+    [
+      "We sent the shipping documents to Cotonou.",
+      "Nous avons envoyé les documents d'expédition à Cotonou."
+    ],
+    [
+      "Mrs Okafor paid the supplier by bank transfer.",
+      "Mme Okafor a payé le fournisseur par virement bancaire."
+    ],
+    [
+      "Awa didn't get the receipt this morning.",
+      "Awa n'a pas reçu le reçu ce matin."
+    ]
+  ],
+  "vocab": [
+    [
+      "bought",
+      "acheté",
+      "/bɔːt/"
+    ],
+    [
+      "sold",
+      "vendu",
+      "/səʊld/"
+    ],
+    [
+      "sent",
+      "envoyé",
+      "/sent/"
+    ],
+    [
+      "paid",
+      "payé",
+      "/peɪd/"
+    ],
+    [
+      "made",
+      "fait / fabriqué",
+      "/meɪd/"
+    ],
+    [
+      "got",
+      "obtenu / reçu",
+      "/ɡɒt/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Quelle est la forme passée correcte du verbe « to sell » (vendre) ?",
+      "options": [
+        "selled",
+        "sold",
+        "sole",
+        "selling"
+      ],
+      "answer": 1,
+      "explain": "« Sell » est irrégulier : sa forme au prétérit est « sold »."
+    },
+    {
+      "type": "fill",
+      "sentence": "Mr Mensah ___ the freight bill on Monday.",
+      "options": [
+        "paid",
+        "payed",
+        "pays",
+        "paying"
+      ],
+      "answer": 0,
+      "explain": "Le prétérit de « pay » s'écrit de manière irrégulière : « paid »."
+    },
+    {
+      "type": "listen",
+      "audio": "We sent the cargo to Abidjan.",
+      "options": [
+        "We send the cargo to Abidjan.",
+        "We sent the cargo to Abidjan.",
+        "We spend the cargo to Abidjan.",
+        "We sent the car to Abidjan."
+      ],
+      "answer": 1,
+      "explain": "« Sent » est le prétérit de « send ». La phrase signifie « Nous avons envoyé la marchandise à Abidjan. »"
+    },
+    {
+      "type": "build",
+      "fr": "Kodjo a fait une bonne affaire hier.",
+      "answer": "Kodjo made a good deal yesterday",
+      "extra": [
+        "make",
+        "did",
+        "bought"
+      ],
+      "explain": "On emploie « made » (passé de « make ») pour exprimer « a fait une affaire »."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "bought",
+          "acheté"
+        ],
+        [
+          "sold",
+          "vendu"
+        ],
+        [
+          "paid",
+          "payé"
+        ],
+        [
+          "took",
+          "pris"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "The transit agent didn't ___ the customs clearance.",
+      "options": [
+        "got",
+        "get",
+        "getting",
+        "gets"
+      ],
+      "answer": 1,
+      "explain": "Après l'auxiliaire « didn't », on utilise toujours la base verbale « get »."
+    },
+    {
+      "type": "mcq",
+      "prompt": "À Tema, Awa veut dire qu'elle n'a pas reçu les conteneurs. Quelle phrase est correcte ?",
+      "options": [
+        "I not got the containers.",
+        "I didn't got the containers.",
+        "I didn't get the containers.",
+        "I didn't getting the containers."
+      ],
+      "answer": 2,
+      "explain": "La négation au prétérit se forme avec « didn't » + verbe à l'infinitif sans to (« get »)."
+    },
+    {
+      "type": "build",
+      "fr": "Awa n'a pas envoyé la facture.",
+      "answer": "Awa did not send the invoice",
+      "extra": [
+        "sent",
+        "sends",
+        "buying"
+      ],
+      "explain": "Après « did not », le verbe reste à la base verbale (« send » et non « sent »)."
+    },
+    {
+      "type": "listen",
+      "audio": "They sold five trucks in Lagos.",
+      "options": [
+        "They hold five trucks in Lagos.",
+        "They sold five tracks in Lagos.",
+        "They sold five trucks in Lagos.",
+        "They sell five trucks in Lagos."
+      ],
+      "answer": 2,
+      "explain": "« They sold five trucks in Lagos. » signifie « Ils ont vendu cinq camions à Lagos. »"
+    },
+    {
+      "type": "speak",
+      "text": "We paid the transit fees at Tema port.",
+      "fr": "Nous avons payé les frais de transit au port de Tema."
+    }
+  ]
+}

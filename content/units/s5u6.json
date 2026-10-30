@@ -1,0 +1,184 @@
+{
+  "id": "s5u6",
+  "title": "Litiges et surestaries",
+  "context": "Transit",
+  "goal": "Défendre sa position dans un litige sur des frais portuaires.",
+  "points": [
+    "Utilisez « demurrage » pour les surestaries de conteneurs au port et « detention » pour les retards hors du port de Lomé. Ex: « Demurrage charges apply. »",
+    "Maîtrisez « free time » pour désigner la franchise accordée par la compagnie maritime à Abidjan. Ex: « The free time expired yesterday. »",
+    "Exprimez le refus de responsabilité de manière formelle avec « we are not liable for… » à Cotonou. Ex: « We are not liable for this delay. »",
+    "Proposez l'arbitrage ou demandez l'annulation des pénalités avec « waive » lors de litiges complexes à Tema. Ex: « Please waive these fees. »"
+  ],
+  "examples": [
+    [
+      "We are not liable for demurrage incurred due to customs delays at the port of Lomé.",
+      "Nous ne sommes pas responsables des surestaries encourues en raison des retards douaniers au port de Lomé."
+    ],
+    [
+      "Mr Mensah requested the shipping line to waive the detention fees for the transit to Ouagadougou.",
+      "M. Mensah a demandé à la compagnie maritime d'annuler les frais de détention pour le transit vers Ouagadougou."
+    ],
+    [
+      "The free time of seven days expired before Awa could collect the containers at Abidjan terminal.",
+      "La franchise de sept jours a expiré avant qu'Awa ne puisse récupérer les conteneurs au terminal d'Abidjan."
+    ],
+    [
+      "We formally dispute these port charges as the vessel delay was beyond our control.",
+      "Nous contestons formellement ces frais portuaires car le retard du navire était hors de notre contrôle."
+    ]
+  ],
+  "vocab": [
+    [
+      "demurrage",
+      "surestaries (conteneur au port)",
+      "/dɪˈmʌr.ɪdʒ/"
+    ],
+    [
+      "detention",
+      "frais de détention (hors du port)",
+      "/dɪˈten.ʃən/"
+    ],
+    [
+      "free time",
+      "délai de franchise",
+      "/friː taɪm/"
+    ],
+    [
+      "dispute",
+      "contester / litige",
+      "/dɪˈspjuːt/"
+    ],
+    [
+      "arbitration",
+      "arbitrage",
+      "/ˌɑː.bɪˈtreɪ.ʃən/"
+    ],
+    [
+      "waive",
+      "abandonner / renoncer à (des frais)",
+      "/weɪv/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Comment nomme-t-on les pénalités de retard pour l'utilisation d'un conteneur à l'intérieur du port de Cotonou ?",
+      "options": [
+        "Storage",
+        "Demurrage",
+        "Detention",
+        "Handling"
+      ],
+      "answer": 1,
+      "explain": "Le terme « demurrage » désigne spécifiquement les pénalités pour le dépassement du délai d'immobilisation des conteneurs dans l'enceinte portuaire."
+    },
+    {
+      "type": "fill",
+      "sentence": "We are not ___ for the delay caused by the port strike.",
+      "options": [
+        "liable",
+        "guilty",
+        "responsible",
+        "chargeable"
+      ],
+      "answer": 0,
+      "explain": "L'expression consacrée en droit maritime et transit est « to be liable for » (être responsable/engagé)."
+    },
+    {
+      "type": "listen",
+      "audio": "Please waive the demurrage charges for this transit shipment.",
+      "options": [
+        "Please wave the demurrage charges for this transit shipment.",
+        "Please waive the demurrage charges for this transit shipment.",
+        "Please pay the demurrage charges for this transit shipment.",
+        "Please change the demurrage charges for this transit shipment."
+      ],
+      "answer": 1,
+      "explain": "La phrase correcte utilise « waive » (renoncer à, annuler) et non « wave » (faire signe)."
+    },
+    {
+      "type": "build",
+      "fr": "Nous contestons ces frais de surestaries injustifiés.",
+      "answer": "We dispute these unjustified demurrage charges",
+      "extra": [
+        "accept",
+        "paid",
+        "waive"
+      ],
+      "explain": "Structure directe pour contester un montant : sujet + verbe « dispute » + complément."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "demurrage",
+          "surestaries"
+        ],
+        [
+          "detention",
+          "détention"
+        ],
+        [
+          "free time",
+          "franchise"
+        ],
+        [
+          "arbitration",
+          "arbitrage"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "The ___ time for these containers expired before customs clearance was completed.",
+      "options": [
+        "open",
+        "free",
+        "extra",
+        "long"
+      ],
+      "answer": 1,
+      "explain": "« Free time » est le terme technique pour la période de franchise accordée par la compagnie maritime."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Que signifie l'action de « waive » des frais de port dans un dossier de transit à Lomé ?",
+      "options": [
+        "Augmenter les taxes",
+        "Rembourser en espèces",
+        "Abandonner ou annuler la créance",
+        "Transférer les conteneurs"
+      ],
+      "answer": 2,
+      "explain": "« To waive » signifie renoncer officiellement à réclamer le paiement de frais."
+    },
+    {
+      "type": "build",
+      "fr": "Veuillez annuler les frais de détention pour notre client à Ouagadougou.",
+      "answer": "Please waive the detention fees for our client",
+      "extra": [
+        "pay",
+        "increase",
+        "accept"
+      ],
+      "explain": "Formule polie de demande d'annulation : « Please waive + [frais] + pour [client] »."
+    },
+    {
+      "type": "listen",
+      "audio": "We are not liable for any extra storage costs.",
+      "options": [
+        "We are not liable for any extra storage costs.",
+        "We are now liable for any extra storage costs.",
+        "We were not liable for any extra storage costs.",
+        "We are not able for any extra storage costs."
+      ],
+      "answer": 0,
+      "explain": "La phrase exprime clairement la non-responsabilité (« not liable for »)."
+    },
+    {
+      "type": "speak",
+      "text": "We formally dispute these demurrage charges.",
+      "fr": "Nous contestons formellement ces frais de surestaries."
+    }
+  ]
+}

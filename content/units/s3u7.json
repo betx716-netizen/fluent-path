@@ -1,0 +1,184 @@
+{
+  "id": "s3u7",
+  "title": "Route et frontières",
+  "context": "Transit",
+  "goal": "Organiser un transport routier qui passe une frontière.",
+  "points": [
+    "Pour parler du camion et du chauffeur sur le corridor Lomé-Ouagadougou, utilisez le vocabulaire du transport routier. Exemple : « The truck driver reached the border post. »",
+    "La lettre de voiture et le poste frontière sont essentiels pour le transit. Exemple : « The waybill must accompany the cargo to Bamako. »",
+    "Pour mentionner les contrôles douaniers en cours de route, utilisez les termes adaptés. Exemple : « The convoy stopped at the checkpoint. »",
+    "Pour planifier un transit international depuis le port de Tema, structurez vos phrases clairement. Exemple : « Mr Mensah organised the transit corridor to Ouagadougou. »"
+  ],
+  "examples": [
+    [
+      "The truck driver must present the waybill at the border post.",
+      "Le chauffeur routier doit présenter la lettre de voiture au poste frontière."
+    ],
+    [
+      "Our convoy of trucks stopped at the final checkpoint in Cotonou.",
+      "Notre convoi de camions s'est arrêté au poste de contrôle final à Cotonou."
+    ],
+    [
+      "Mrs Okafor manages the transit corridor from Abidjan to Bamako.",
+      "Madame Okafor gère le corridor de transit d'Abidjan à Bamako."
+    ],
+    [
+      "Kodjo checked all documents before the truck left the port of Tema.",
+      "Kodjo a vérifié tous les documents avant que le camion ne quitte le port de Tema."
+    ]
+  ],
+  "vocab": [
+    [
+      "truck",
+      "camion",
+      "/trʌk/"
+    ],
+    [
+      "driver",
+      "chauffeur",
+      "/ˈdraɪvə(r)/"
+    ],
+    [
+      "border post",
+      "poste frontière",
+      "/ˈbɔːdə(r) pəʊst/"
+    ],
+    [
+      "waybill",
+      "lettre de voiture",
+      "/ˈweɪbɪl/"
+    ],
+    [
+      "checkpoint",
+      "poste de contrôle",
+      "/ˈtʃekpɔɪnt/"
+    ],
+    [
+      "convoy",
+      "convoi",
+      "/ˈkɒnvɔɪ/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Comment dit-on « lettre de voiture » en anglais dans le contexte du transport ?",
+      "options": [
+        "waybill",
+        "checkpoint",
+        "driver",
+        "border"
+      ],
+      "answer": 0,
+      "explain": "« Waybill » est le terme exact pour désigner la lettre de voiture."
+    },
+    {
+      "type": "fill",
+      "sentence": "The truck driver showed the ___ at the border post.",
+      "options": [
+        "waybill",
+        "port",
+        "convoy",
+        "road"
+      ],
+      "answer": 0,
+      "explain": "Le chauffeur présente la lettre de voiture (« waybill ») au poste frontière."
+    },
+    {
+      "type": "listen",
+      "audio": "The convoy passed the checkpoint safely.",
+      "options": [
+        "The convoy passed the checkpoint safely.",
+        "The company passed the checkpoint safely.",
+        "The convoy missed the checkpoint safely.",
+        "The truck passed the checkpoint safely."
+      ],
+      "answer": 0,
+      "explain": "Écoutez attentivement les termes « convoy » et « checkpoint »."
+    },
+    {
+      "type": "build",
+      "fr": "Le chauffeur a arrêté le camion au poste de contrôle.",
+      "answer": "The driver stopped the truck at the checkpoint",
+      "extra": [
+        "waybill",
+        "port",
+        "convoy"
+      ],
+      "explain": "Ordre standard : sujet (the driver) + verbe (stopped) + objet (the truck) + lieu (at the checkpoint)."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "truck",
+          "camion"
+        ],
+        [
+          "driver",
+          "chauffeur"
+        ],
+        [
+          "border post",
+          "poste frontière"
+        ],
+        [
+          "waybill",
+          "lettre de voiture"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "Koffi manages the transit ___ from Lomé to Ouagadougou.",
+      "options": [
+        "corridor",
+        "driver",
+        "waybill",
+        "truck"
+      ],
+      "answer": 0,
+      "explain": "« Transit corridor » signifie corridor de transit."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Quel mot désigne un groupe de véhicules voyageant ensemble pour des raisons de sécurité ?",
+      "options": [
+        "waybill",
+        "convoy",
+        "driver",
+        "post"
+      ],
+      "answer": 1,
+      "explain": "Un « convoy » est un convoi de camions."
+    },
+    {
+      "type": "build",
+      "fr": "Awa a vérifié la lettre de voiture au poste frontière.",
+      "answer": "Awa checked the waybill at the border post",
+      "extra": [
+        "truck",
+        "driver",
+        "convoy"
+      ],
+      "explain": "Sujet (Awa) + verbe (checked) + objet (the waybill) + lieu (at the border post)."
+    },
+    {
+      "type": "listen",
+      "audio": "The border post is open for transit.",
+      "options": [
+        "The border post is open for transit.",
+        "The border post is closed for transit.",
+        "The border port is open for transit.",
+        "The border post is open for transport."
+      ],
+      "answer": 0,
+      "explain": "La phrase correcte indique que le poste frontière est ouvert pour le transit."
+    },
+    {
+      "type": "speak",
+      "text": "The truck must stop at the checkpoint.",
+      "fr": "Le camion doit s'arrêter au poste de contrôle."
+    }
+  ]
+}

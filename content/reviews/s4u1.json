@@ -1,0 +1,20 @@
+{
+  "model": "gemini-3.5-flash",
+  "issues": [
+    {
+      "where": "examples[1][1]",
+      "problem": "French grammar error: 'jusqu'vendredi' is incorrect before a consonant; it must be 'jusqu'à vendredi'.",
+      "fix": "Ce devis reste valable jusqu'à vendredi de la semaine prochaine."
+    },
+    {
+      "where": "exercises[7].extra[0]",
+      "problem": "The extra word 'today' can be appended to form another grammatically correct sentence ('We are pleased to offer this rate today').",
+      "fix": "high"
+    },
+    {
+      "where": "exercises[9].fr",
+      "problem": "French grammar error: 'jusqu'vendredi' is incorrect before a consonant; it must be 'jusqu'à vendredi'.",
+      "fix": "Le devis reste valable jusqu'à vendredi."
+    }
+  ]
+}

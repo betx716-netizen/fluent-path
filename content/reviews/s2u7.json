@@ -1,0 +1,10 @@
+{
+  "model": "gemini-flash-latest",
+  "issues": [
+    {
+      "where": "exercises[5].options[0]",
+      "problem": "\"The client must pay the driver before Friday\" is grammatically correct and contextually plausible in transport/freight, making \"driver\" an ambiguous distractor.",
+      "fix": "container"
+    }
+  ]
+}

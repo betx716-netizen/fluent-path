@@ -1,0 +1,21 @@
+{
+  "model": "gemini-flash-latest",
+  "issues": [
+    {
+      "where": "exercises[5]",
+      "problem": "The question tests geographical trivia rather than English language skills, and the distractors (Tema, Lagos, Cotonou) are grammatically and logistically plausible corridor endpoints from Lomé, meaning they are not clearly wrong.",
+      "fix": {
+        "type": "fill",
+        "sentence": "Koffi manages the transit ___ from Lomé to Ouagadougou.",
+        "options": [
+          "corridor",
+          "driver",
+          "waybill",
+          "truck"
+        ],
+        "answer": 0,
+        "explain": "« Transit corridor » signifie corridor de transit."
+      }
+    }
+  ]
+}

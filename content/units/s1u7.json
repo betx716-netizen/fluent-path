@@ -1,0 +1,184 @@
+{
+  "id": "s1u7",
+  "title": "Dates et mois",
+  "context": "Pro",
+  "goal": "Dire et comprendre une date de livraison ou de rendez-vous.",
+  "points": [
+    "Pour indiquer un mois seul, utilisez la préposition « in » : « The ship arrives in June. »",
+    "Pour une date précise avec le jour, utilisez « on » : « The delivery is on the 5th of May. »",
+    "En anglais, les dates utilisent les ordinaux : « 1st » (first), « 2nd » (second), « 3rd » (third).",
+    "Pour demander la date du jour, demandez simplement : « What is the date today? »"
+  ],
+  "examples": [
+    [
+      "The ship arrives in Lomé in June.",
+      "Le navire arrive à Lomé en juin."
+    ],
+    [
+      "The delivery is on the 3rd of May.",
+      "La livraison est le 3 mai."
+    ],
+    [
+      "What is the date of the meeting?",
+      "Quelle est la date de la réunion ?"
+    ],
+    [
+      "Mr Mensah arrives on Monday the 1st.",
+      "Monsieur Mensah arrive lundi le premier."
+    ]
+  ],
+  "vocab": [
+    [
+      "in June",
+      "en juin",
+      "/ɪn dʒuːn/"
+    ],
+    [
+      "on the 5th of May",
+      "le 5 mai",
+      "/ɒn ðə fɪfθ əv meɪ/"
+    ],
+    [
+      "the date",
+      "la date",
+      "/ðə deɪt/"
+    ],
+    [
+      "first",
+      "premier",
+      "/fɜːst/"
+    ],
+    [
+      "today",
+      "aujourd'hui",
+      "/təˈdeɪ/"
+    ],
+    [
+      "delivery",
+      "livraison",
+      "/dɪˈlɪvəri/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Quelle préposition utilise-t-on devant un mois sans jour précis ?",
+      "options": [
+        "at July",
+        "in July",
+        "on July",
+        "to July"
+      ],
+      "answer": 1,
+      "explain": "On utilise toujours la préposition « in » devant un mois seul."
+    },
+    {
+      "type": "fill",
+      "sentence": "The truck arrives in Abidjan ___ the 4th of August.",
+      "options": [
+        "in",
+        "on",
+        "at",
+        "to"
+      ],
+      "answer": 1,
+      "explain": "On utilise « on » devant une date précise comprenant le jour."
+    },
+    {
+      "type": "listen",
+      "audio": "The cargo arrives on the 2nd of May.",
+      "options": [
+        "The cargo arrives in the 2nd of May.",
+        "The cargo arrives on the 2nd of May.",
+        "The cargo arrives at the 2nd of May.",
+        "The cargo arrives on the 2nd of March."
+      ],
+      "answer": 1,
+      "explain": "La phrase correcte entendue est « The cargo arrives on the 2nd of May. »"
+    },
+    {
+      "type": "build",
+      "fr": "Quelle est la date aujourd'hui ?",
+      "answer": "What is the date today",
+      "extra": [
+        "when",
+        "in",
+        "day"
+      ],
+      "explain": "La formule courante pour demander la date est « What is the date today »."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "in June",
+          "en juin"
+        ],
+        [
+          "the date",
+          "la date"
+        ],
+        [
+          "today",
+          "aujourd'hui"
+        ],
+        [
+          "first",
+          "premier"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "Mr Mensah expects the goods ___ July.",
+      "options": [
+        "on",
+        "at",
+        "in",
+        "from"
+      ],
+      "answer": 2,
+      "explain": "On utilise « in » devant un mois lorsqu'il n'y a pas de date précise."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Awa demande à Kodjo la date de livraison à Cotonou. Que répond Kodjo ?",
+      "options": [
+        "It is at Tuesday.",
+        "It is on the 1st of June.",
+        "It is in the 1st of June.",
+        "It is on June."
+      ],
+      "answer": 1,
+      "explain": "Pour une date précise, on dit « on the 1st of June »."
+    },
+    {
+      "type": "build",
+      "fr": "La livraison est le 5 mai.",
+      "answer": "The delivery is on the 5th of May",
+      "extra": [
+        "in",
+        "at",
+        "ship"
+      ],
+      "explain": "On construit la phrase : « The delivery is on the 5th of May »."
+    },
+    {
+      "type": "listen",
+      "audio": "The meeting in Tema is in October.",
+      "options": [
+        "The meeting in Tema is on October.",
+        "The meeting in Tema is in October.",
+        "The meeting in Tema is at October.",
+        "The meeting in Lomé is in October."
+      ],
+      "answer": 1,
+      "explain": "On utilise « in » avec un mois seul : « The meeting in Tema is in October. »"
+    },
+    {
+      "type": "speak",
+      "text": "The delivery is on the 1st of June.",
+      "fr": "La livraison est le premier juin."
+    }
+  ]
+}

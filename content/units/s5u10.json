@@ -1,0 +1,184 @@
+{
+  "id": "s5u10",
+  "title": "Négociation avancée",
+  "context": "Commerce",
+  "goal": "Mener une négociation complexe avec diplomatie.",
+  "points": [
+    "Utilisez « bottom line » pour fixer votre limite financière absolue au port de Lomé ou d'Abidjan sans paraître rigide. Exemple : « Our bottom line on storage fees is firm. »",
+    "Exprimez un désaccord ferme mais poli avec « I'm afraid that's non-negotiable » lors d'un litige douanier à Cotonou. Exemple : « I'm afraid that's non-negotiable for this transit shipment. »",
+    "Proposez une alternative constructive avec « Let's explore other options » pour sauver un accord commercial à Lagos. Exemple : « Let's explore other options regarding the freight schedule. »",
+    "Métriez la notion de « leverage » (levier de négociation) et de « deal-breaker » (point bloquant) avec Mrs Okafor. Exemple : « Timely delivery is our main leverage. »"
+  ],
+  "examples": [
+    [
+      "I am afraid that is non-negotiable given current port congestion.",
+      "Je crains que cela ne soit pas négociable compte tenu de la congestion portuaire actuelle."
+    ],
+    [
+      "Let us explore other options to reduce customs clearance delays in Tema.",
+      "Explorons d'autres options pour réduire les retards de dédouanement à Tema."
+    ],
+    [
+      "If you grant a concession on storage, we can finalize the transit to Ouagadougou.",
+      "Si vous faites une concession sur le stockage, nous pouvons finaliser le transit vers Ouagaddougou."
+    ],
+    [
+      "That payment term is a deal-breaker for our freight forwarding agency.",
+      "Cette condition de paiement est un point bloquant pour notre agence de transit."
+    ]
+  ],
+  "vocab": [
+    [
+      "bottom line",
+      "limite financière absolue",
+      "/ˈbɒtəm laɪn/"
+    ],
+    [
+      "concession",
+      "concession",
+      "/kənˈseʃn/"
+    ],
+    [
+      "deal-breaker",
+      "point bloquant",
+      "/ˈdiːl breɪkə(r)/"
+    ],
+    [
+      "leverage",
+      "levier de négociation",
+      "/ˈliːvərɪdʒ/"
+    ],
+    [
+      "non-negotiable",
+      "non négociable",
+      "/nɒn nɪˈɡəʊʃiəbl/"
+    ],
+    [
+      "transit",
+      "transit",
+      "/ˈtrænzɪt/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Comment exprimez-vous poliment qu'un point tarifaire ne peut pas être modifié avec Mr Mensah à Abidjan ?",
+      "options": [
+        "I am afraid that is non-negotiable.",
+        "Let us drop the price completely.",
+        "We can negotiate this tomorrow.",
+        "That sounds acceptable to everyone."
+      ],
+      "answer": 0,
+      "explain": "« I'm afraid that's non-negotiable » est la formule professionnelle idéale pour marquer une limite ferme."
+    },
+    {
+      "type": "fill",
+      "sentence": "If you offer a transit ___, we will sign the agency contract today.",
+      "options": [
+        "concession",
+        "leverage",
+        "bottom",
+        "breaker"
+      ],
+      "answer": 0,
+      "explain": "« Concession » désigne un avantage accordé pour faire avancer les négociations."
+    },
+    {
+      "type": "listen",
+      "audio": "Let us explore other options for the freight forwarding.",
+      "options": [
+        "Let us explore other options for the freight forwarding.",
+        "Let us exploit other options for the freight forwarding.",
+        "Let us explain other options for the freight forwarding.",
+        "Let us export other options for the freight forwarding."
+      ],
+      "answer": 0,
+      "explain": "Écoutez bien la prononciation exacte du verbe « explore » dans ce contexte d'affaires."
+    },
+    {
+      "type": "build",
+      "fr": "Notre limite financière absolue est très claire pour le port de Tema.",
+      "answer": "Our bottom line is very clear",
+      "extra": [
+        "high",
+        "negotiate",
+        "transit"
+      ],
+      "explain": "Construction correcte de la phrase avec « bottom line »."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "bottom line",
+          "limite financière absolue"
+        ],
+        [
+          "deal-breaker",
+          "point bloquant"
+        ],
+        [
+          "leverage",
+          "levier"
+        ],
+        [
+          "non-negotiable",
+          "non négociable"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "Strict payment terms are a real ___ for our transit company in Lomé.",
+      "options": [
+        "deal-breaker",
+        "concession",
+        "bottom",
+        "leverage"
+      ],
+      "answer": 0,
+      "explain": "Un « deal-breaker » est un élément qui met fin à la négociation s'il n'est pas résolu."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Que dites-vous avec Awa pour proposer une alternative constructive lors d'un blocage ?",
+      "options": [
+        "Let us explore other options.",
+        "This is completely hopeless now.",
+        "We reject all your cargo terms.",
+        "Take it or leave the port."
+      ],
+      "answer": 0,
+      "explain": "« Let's explore other options » permet de relancer la discussion de manière diplomate."
+    },
+    {
+      "type": "build",
+      "fr": "Ce délai de douane est un point bloquant pour Koffi.",
+      "answer": "This delay is a deal-breaker",
+      "extra": [
+        "concession",
+        "line",
+        "transit"
+      ],
+      "explain": "Traduction directe et professionnelle pour exprimer un refus catégorique."
+    },
+    {
+      "type": "listen",
+      "audio": "I am afraid that is non-negotiable for us.",
+      "options": [
+        "I am afraid that is non-negotiable for us.",
+        "I am afraid that is now negotiable for us.",
+        "I am aware that is non-negotiable for us.",
+        "I am afraid that is non-negotiable for them."
+      ],
+      "answer": 0,
+      "explain": "Attention à la nuance entre « afraid » et « aware », ainsi qu'à la structure « non-negotiable »."
+    },
+    {
+      "type": "speak",
+      "text": "Let us explore other options regarding the transit.",
+      "fr": "Explorons d'autres options concernant le transit."
+    }
+  ]
+}

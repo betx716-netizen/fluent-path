@@ -1,0 +1,184 @@
+{
+  "id": "s3u6",
+  "title": "Entrepôt et stock",
+  "context": "Transit",
+  "goal": "Parler du stock et des opérations d'entrepôt.",
+  "points": [
+    "Pour parler du rangement dans l'entrepôt, utilisez le verbe « to store » (stocker) et le nom « shelf » (étagère) pour les marchandises.",
+    "Dans la zone de transit de Lomé, on utilise le chariot élévateur (« forklift ») pour déplacer les palettes (« pallet »).",
+    "Pour faire l'inventaire au port de Cotonou, vérifiez le stock (« stock ») et signalez les articles épuisés (« out of stock »).",
+    "Lorsqu'un camion arrive d'Abidjan, les dockers doivent décharger (« to unload ») la marchandise rapidement."
+  ],
+  "examples": [
+    [
+      "Mr Mensah, the forklift driver, is storing the pallets on the top shelf.",
+      "Monsieur Mensah, le cariste, stocke les palettes sur l'étagère supérieure."
+    ],
+    [
+      "We need to unload the container from Tema port this morning.",
+      "Nous devons décharger le conteneur du port de Tema ce matin."
+    ],
+    [
+      "Our inventory shows that these spare parts are out of stock.",
+      "Notre inventaire montre que ces pièces de rechange sont en rupture de stock."
+    ],
+    [
+      "Awa manages the warehouse stock for our clients in Lomé.",
+      "Awa gère le stock de l'entrepôt pour nos clients à Lomé."
+    ]
+  ],
+  "vocab": [
+    [
+      "pallet",
+      "palette",
+      "/ˈpælɪt/"
+    ],
+    [
+      "forklift",
+      "chariot élévateur",
+      "/ˈfɔːklɪft/"
+    ],
+    [
+      "shelf",
+      "étagère",
+      "/ʃɛlf/"
+    ],
+    [
+      "stock",
+      "stock",
+      "/stɒk/"
+    ],
+    [
+      "inventory",
+      "inventaire",
+      "/ˈɪnvəntri/"
+    ],
+    [
+      "to unload",
+      "décharger",
+      "/tuː ʌnˈləʊd/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Quel équipement utilise-t-on dans l'entrepôt pour soulever les palettes lourdes à Abidjan ?",
+      "options": [
+        "Une étagère",
+        "Un chariot élévateur",
+        "Une facture",
+        "Un conteneur"
+      ],
+      "answer": 1,
+      "explain": "Le chariot élévateur se traduit par « forklift » en anglais."
+    },
+    {
+      "type": "fill",
+      "sentence": "Koffi must ___ the truck before it leaves for Ouagadougou.",
+      "options": [
+        "store",
+        "unload",
+        "shelf",
+        "pallet"
+      ],
+      "answer": 1,
+      "explain": "On utilise le verbe « to unload » (décharger) pour un camion."
+    },
+    {
+      "type": "listen",
+      "audio": "The warehouse inventory is correct today.",
+      "options": [
+        "The warehouse inventory is correct today.",
+        "The warehouse inventory was correct today.",
+        "The warehouse delivery is correct today.",
+        "The warehouse inventory is direct today."
+      ],
+      "answer": 0,
+      "explain": "Écoutez bien la phrase exacte sur l'inventaire de l'entrepôt."
+    },
+    {
+      "type": "build",
+      "fr": "Awa range les palettes sur l'étagère.",
+      "answer": "Awa stores the pallets on the shelf",
+      "extra": [
+        "unload",
+        "forklift",
+        "out"
+      ],
+      "explain": "Sujet (Awa) + verbe (stores) + complément (the pallets) + lieu (on the shelf)."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "pallet",
+          "palette"
+        ],
+        [
+          "shelf",
+          "étagère"
+        ],
+        [
+          "inventory",
+          "inventaire"
+        ],
+        [
+          "out of stock",
+          "épuisé"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "Those electronic items are currently out of ___.",
+      "options": [
+        "stock",
+        "shelf",
+        "pallet",
+        "forklift"
+      ],
+      "answer": 0,
+      "explain": "L'expression pour dire que les articles manquent est « out of stock »."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Que fait Kodjo quand il place les marchandises sur les étagères de l'entrepôt à Lagos ?",
+      "options": [
+        "He is unloading",
+        "He is storing",
+        "He is driving",
+        "He is buying"
+      ],
+      "answer": 1,
+      "explain": "Le verbe « to store » signifie stocker ou ranger."
+    },
+    {
+      "type": "build",
+      "fr": "Le cariste décharge le camion au port de Cotonou.",
+      "answer": "The forklift driver unloads the truck",
+      "extra": [
+        "shelf",
+        "inventory",
+        "pallets"
+      ],
+      "explain": "Sujet (The forklift driver) + verbe (unloads) + complément (the truck)."
+    },
+    {
+      "type": "listen",
+      "audio": "We need more pallets in the transit zone.",
+      "options": [
+        "We need more pallets in the transit zone.",
+        "We need more parcels in the transit zone.",
+        "We need more pallets in the transit zone today.",
+        "You need more pallets in the transit zone."
+      ],
+      "answer": 0,
+      "explain": "Écoutez la phrase exacte concernant les palettes dans la zone de transit."
+    },
+    {
+      "type": "speak",
+      "text": "Please check the stock inventory on the top shelf.",
+      "fr": "Veuillez vérifier l'inventaire du stock sur l'étagère supérieure."
+    }
+  ]
+}

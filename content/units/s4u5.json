@@ -1,0 +1,184 @@
+{
+  "id": "s4u5",
+  "title": "Répondre à une réclamation",
+  "context": "Pro",
+  "goal": "Répondre à un client mécontent et garder sa confiance.",
+  "points": [
+    "Utiliser « We sincerely apologise for » pour présenter des excuses formelles concernant un problème de fret ou de conteneur.",
+    "Le verbe « look into » ou « investigate » indique au client que vous examinez attentivement l'origine de l'erreur logistique.",
+    "Pour rétablir la confiance, proposez de régler le litige (« resolve ») en offrant parfois un geste commercial (« goodwill gesture »).",
+    "Rassurez votre partenaire en garantissant que le problème ne se reproduira plus (« It will not happen again »)."
+  ],
+  "examples": [
+    [
+      "We sincerely apologise for the delay at Tema port.",
+      "Nous vous présentons nos sincères excuses pour le retard au port de Tema."
+    ],
+    [
+      "Our team in Abidjan will look into this matter immediately.",
+      "Notre équipe à Abidjan va examiner cette affaire immédiatement."
+    ],
+    [
+      "We intend to resolve this dispute and offer a goodwill gesture.",
+      "Nous comptons régler ce litige et offrir un geste commercial."
+    ],
+    [
+      "Please rest assured that it will not happen again.",
+      "Soyez assuré que cela ne se reproduira plus."
+    ]
+  ],
+  "vocab": [
+    [
+      "apologise",
+      "présenter des excuses",
+      "/əˈpɒl.ə.dʒaɪz/"
+    ],
+    [
+      "investigate",
+      "enquêter / examiner",
+      "/ɪnˈves.tɪ.ɡeɪt/"
+    ],
+    [
+      "look into",
+      "analyser / étudier",
+      "/lʊk ˈɪn.tuː/"
+    ],
+    [
+      "resolve",
+      "résoudre / régler",
+      "/rɪˈzɒlv/"
+    ],
+    [
+      "goodwill gesture",
+      "geste commercial",
+      "/ɡʊdˈwɪl ˈdʒes.tʃər/"
+    ],
+    [
+      "complaint",
+      "réclamation / plainte",
+      "/kəmˈpleɪnt/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Comment formulez-vous des excuses officielles et professionnelles à un client après un blocage en douane à Cotonou ?",
+      "options": [
+        "It is not our fault at all.",
+        "We sincerely apologise for the delay.",
+        "You should have checked the paperwork.",
+        "We do not accept complaints."
+      ],
+      "answer": 1,
+      "explain": "« We sincerely apologise for... » est la formule professionnelle adéquate pour présenter des excuses au nom de l'entreprise."
+    },
+    {
+      "type": "fill",
+      "sentence": "Mr Mensah will ___ this transit error right away.",
+      "options": [
+        "look after",
+        "look out",
+        "look into",
+        "look at"
+      ],
+      "answer": 2,
+      "explain": "« Look into » signifie examiner ou enquêter sur un problème spécifique."
+    },
+    {
+      "type": "listen",
+      "audio": "We are taking full responsibility to resolve this issue.",
+      "options": [
+        "We are taking full responsibility to remove this issue.",
+        "We are making full responsibility to resolve this issue.",
+        "We are taking full response to resolve this tissue.",
+        "We are taking full responsibility to resolve this issue."
+      ],
+      "answer": 3,
+      "explain": "La phrase exacte est : « We are taking full responsibility to resolve this issue. »"
+    },
+    {
+      "type": "build",
+      "fr": "Nous offrirons un geste commercial pour ce retard.",
+      "answer": "We will offer a goodwill gesture for this delay",
+      "extra": [
+        "made",
+        "make",
+        "an"
+      ],
+      "explain": "« We will offer a goodwill gesture for this delay » exprime clairement la proposition d'un geste commercial."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "goodwill gesture",
+          "geste commercial"
+        ],
+        [
+          "look into",
+          "examiner"
+        ],
+        [
+          "resolve",
+          "résoudre"
+        ],
+        [
+          "complaint",
+          "réclamation"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "We assure Kodjo that this problem ___ happen again.",
+      "options": [
+        "will not",
+        "cannot",
+        "should not",
+        "does not"
+      ],
+      "answer": 0,
+      "explain": "« Will not » s'utilise pour donner la garantie absolue que l'erreur ne se reproduira pas."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Awa a reçu un conteneur endommagé au port de Lomé. Quelle réponse montre votre réactivité ?",
+      "options": [
+        "Damage is standard in transit.",
+        "Please call the shipping line yourself.",
+        "We will investigate the cause and fix the issue.",
+        "You must pay extra to solve this dispute."
+      ],
+      "answer": 2,
+      "explain": "Indiquer que vous allez enquêter (« investigate ») et régler le souci (« fix the issue ») rassurerait immédiatement le client."
+    },
+    {
+      "type": "build",
+      "fr": "Notre équipe à Abidjan va régler le litige.",
+      "answer": "Our team in Abidjan will resolve the dispute",
+      "extra": [
+        "problem",
+        "solve",
+        "at"
+      ],
+      "explain": "« Our team in Abidjan will resolve the dispute » traduit fidèlement la phrase sans contraction."
+    },
+    {
+      "type": "listen",
+      "audio": "Please accept our sincere apologies for the inconvenience.",
+      "options": [
+        "Please accept our severe apologies for the inconvenience.",
+        "Please accept our sincere apologies for the inconvenience.",
+        "Please accept our sincere apologies for the intervention.",
+        "Please expect our sincere apologies for the inconvenience."
+      ],
+      "answer": 1,
+      "explain": "« Sincere apologies » et « inconvenience » sont les mots clés prononcés."
+    },
+    {
+      "type": "speak",
+      "text": "We sincerely apologise for the delay in Ouagadougou.",
+      "fr": "Nous nous excusons sincèrement pour le retard à Ouagadougou."
+    }
+  ]
+}

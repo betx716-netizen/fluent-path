@@ -127,6 +127,7 @@ export function Profile({ session, toast }: { session: Session | null; toast: (m
       </div>
 
       <AiCard toast={toast} />
+      <ReportsCard toast={toast} />
       <CloudCard session={session} toast={toast} />
     </div>
   );
@@ -281,6 +282,31 @@ function Shop({ toast }: { toast: (m: string) => void }) {
           {item && gems < item.price ? `Encore ${item.price - gems} gemmes` : `Acheter pour ${item?.price} gemmes`}
         </button>
       )}
+    </div>
+  );
+}
+
+function ReportsCard({ toast }: { toast: (m: string) => void }) {
+  const reports = useStore(x => x.reports);
+  if (!reports.length) return null;
+  const text = reports.map(r => `[${r.unit}] ${r.text}`).join("\n");
+  return (
+    <div className="card" style={{ display: "grid", gap: 8 }}>
+      <h3>Erreurs signalées ({reports.length})</h3>
+      <p className="muted small">Copie cette liste et envoie-la à Claude pour corriger les exercices.</p>
+      <pre className="report-list">{text}</pre>
+      <div className="row">
+        <button
+          className="btn3d"
+          style={{ flex: 1 }}
+          onClick={() => {
+            navigator.clipboard?.writeText(text).then(() => toast("Liste copiée"), () => toast("Copie impossible : sélectionne le texte à la main"));
+          }}
+        >
+          Copier la liste
+        </button>
+        <button className="btn3d ghost" style={{ flex: 1 }} onClick={() => setState(x => ({ ...x, reports: [] }))}>Vider</button>
+      </div>
     </div>
   );
 }

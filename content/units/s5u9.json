@@ -1,0 +1,185 @@
+{
+  "id": "s5u9",
+  "title": "Inversion et emphase",
+  "context": "Pro",
+  "goal": "Mettre en valeur une idée importante.",
+  "points": [
+    "Après « Not only », « Never », « Rarely » en début de phrase, on inverse auxiliaire et sujet : « Not only did they pay late… »",
+    "« Never have we… » = jamais nous n'avons… : « Never have we lost a container. »",
+    "La phrase clivée « What we need is… » met une idée en avant : « What we need is a reliable carrier. »",
+    "« It was … who/that… » insiste sur un élément : « It was the driver who found the leak. »"
+  ],
+  "examples": [
+    [
+      "Not only is our service fast, but it is also cheaper.",
+      "Non seulement notre service est rapide, mais il est aussi moins cher."
+    ],
+    [
+      "Never have we missed a delivery to Ouagadougou.",
+      "Jamais nous n'avons manqué une livraison à Ouagadougou."
+    ],
+    [
+      "What our clients want is transparency.",
+      "Ce que veulent nos clients, c'est la transparence."
+    ],
+    [
+      "It was Mrs Okafor who negotiated the deal.",
+      "C'est Mme Okafor qui a négocié l'accord."
+    ]
+  ],
+  "vocab": [
+    [
+      "not only … but also",
+      "non seulement … mais aussi",
+      "/nɒt ˈəʊnli bət ˈɔːlsəʊ/"
+    ],
+    [
+      "rarely",
+      "rarement",
+      "/ˈreəli/"
+    ],
+    [
+      "seldom",
+      "rarement (soutenu)",
+      "/ˈseldəm/"
+    ],
+    [
+      "reliable",
+      "fiable",
+      "/rɪˈlaɪəbl/"
+    ],
+    [
+      "to stress",
+      "souligner",
+      "/stres/"
+    ],
+    [
+      "above all",
+      "surtout",
+      "/əˈbʌv ɔːl/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Quelle phrase utilise correctement l'inversion ?",
+      "options": [
+        "Never we have seen such delays.",
+        "Never have we seen such delays.",
+        "Never we saw such delays.",
+        "Never have seen we such delays."
+      ],
+      "answer": 1,
+      "explain": "Après « Never » en début de phrase, on inverse : auxiliaire + sujet (« have we »)."
+    },
+    {
+      "type": "fill",
+      "sentence": "Not only ___ they deliver late, but they also lost two pallets.",
+      "options": [
+        "did",
+        "they",
+        "were",
+        "have"
+      ],
+      "answer": 0,
+      "explain": "Au passé simple, l'inversion se fait avec « did » : « Not only did they deliver late »."
+    },
+    {
+      "type": "listen",
+      "audio": "What we need is a reliable carrier.",
+      "options": [
+        "What we need is a reliable carrier.",
+        "What we need is a reliable career.",
+        "What we need are reliable carriers.",
+        "We need a reliable carrier."
+      ],
+      "answer": 0,
+      "explain": "« What we need is… » met en valeur l'idée principale. « carrier » = transporteur."
+    },
+    {
+      "type": "build",
+      "fr": "C'est le chauffeur qui a trouvé la fuite.",
+      "answer": "It was the driver who found the leak",
+      "extra": [
+        "which",
+        "find",
+        "were"
+      ],
+      "explain": "« It was … who … » insiste sur la personne qui a fait l'action."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "rarely",
+          "rarement"
+        ],
+        [
+          "reliable",
+          "fiable"
+        ],
+        [
+          "to stress",
+          "souligner"
+        ],
+        [
+          "above all",
+          "surtout"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "Rarely ___ a shipment cleared customs so quickly.",
+      "options": [
+        "has",
+        "have",
+        "it has",
+        "is"
+      ],
+      "answer": 0,
+      "explain": "Après « Rarely », inversion : « has a shipment cleared » (sujet singulier)."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Pour insister sur la ponctualité dans une présentation, tu dis :",
+      "options": [
+        "What makes us different is our punctuality.",
+        "What makes us different our punctuality is.",
+        "That makes us different is our punctuality.",
+        "What does make us different is our punctuality is."
+      ],
+      "answer": 0,
+      "explain": "La phrase clivée « What makes us different is… » met en avant l'argument clé."
+    },
+    {
+      "type": "build",
+      "fr": "Jamais nous n'avons perdu un conteneur.",
+      "answer": "Never have we lost a container",
+      "extra": [
+        "do",
+        "has",
+        "losing"
+      ],
+      "explain": "« Never » en tête de phrase entraîne l'inversion : « Never have we lost »."
+    },
+    {
+      "type": "listen",
+      "audio": "Not only did we cut costs, but we also saved time.",
+      "options": [
+        "Not only did we cut costs, but we also saved time.",
+        "Not only we cut costs, but we also saved time.",
+        "Not only did we cut cost, but we also save time.",
+        "Not only did we cut costs, and we also saved time."
+      ],
+      "answer": 0,
+      "explain": "« Not only did we… but we also… » : inversion avec « did » dans la première partie."
+    },
+    {
+      "type": "speak",
+      "text": "What our clients value above all is reliability.",
+      "fr": "Ce que nos clients apprécient avant tout, c'est la fiabilité."
+    }
+  ],
+  "author": "claude"
+}

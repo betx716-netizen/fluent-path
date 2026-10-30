@@ -1,0 +1,185 @@
+{
+  "id": "s6u9",
+  "title": "Négocier entre cultures",
+  "context": "Commerce",
+  "goal": "Adapter sa négociation à la culture de l'autre.",
+  "points": [
+    "Certaines cultures disent les choses directement, d'autres indirectement : « That might be difficult » peut vouloir dire « non ».",
+    "Préserver la face (« to save face ») : ne mets jamais quelqu'un en défaut devant son équipe.",
+    "En Afrique de l'Ouest et en Asie, on construit souvent la relation avant de parler prix.",
+    "Refuse poliment : « I'm afraid we can't accept that, but perhaps we could… »"
+  ],
+  "examples": [
+    [
+      "I'm afraid we can't accept that, but perhaps we could meet halfway.",
+      "Je crains que nous ne puissions pas l'accepter, mais nous pourrions peut-être couper la poire en deux."
+    ],
+    [
+      "That might be difficult for us at this stage.",
+      "Cela pourrait être difficile pour nous à ce stade."
+    ],
+    [
+      "Let's discuss this privately after the meeting.",
+      "Parlons-en en privé après la réunion."
+    ],
+    [
+      "We value a long-term relationship with your company.",
+      "Nous tenons à une relation durable avec votre entreprise."
+    ]
+  ],
+  "vocab": [
+    [
+      "to save face",
+      "sauver la face",
+      "/seɪv feɪs/"
+    ],
+    [
+      "indirect",
+      "indirect",
+      "/ˌɪndəˈrekt/"
+    ],
+    [
+      "rapport",
+      "bonne entente",
+      "/ræˈpɔː/"
+    ],
+    [
+      "to meet halfway",
+      "couper la poire en deux",
+      "/miːt ˌhɑːfˈweɪ/"
+    ],
+    [
+      "long-term",
+      "à long terme",
+      "/ˌlɒŋ ˈtɜːm/"
+    ],
+    [
+      "tactful",
+      "plein de tact",
+      "/ˈtæktfl/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Un partenaire répond « That might be difficult ». Il veut sans doute dire :",
+      "options": [
+        "Non, poliment.",
+        "Oui, avec plaisir.",
+        "Il ne comprend pas.",
+        "Il veut signer tout de suite."
+      ],
+      "answer": 0,
+      "explain": "Dans une culture indirecte, « That might be difficult » est souvent un refus poli."
+    },
+    {
+      "type": "fill",
+      "sentence": "We should build ___ with the client before talking about prices.",
+      "options": [
+        "rapport",
+        "report",
+        "rapports",
+        "support"
+      ],
+      "answer": 0,
+      "explain": "« rapport » (prononcé « rapô ») = une bonne entente. Ne pas confondre avec « report » (rapport écrit)."
+    },
+    {
+      "type": "listen",
+      "audio": "I'm afraid we can't accept that, but perhaps we could meet halfway.",
+      "options": [
+        "I'm afraid we can't accept that, but perhaps we could meet halfway.",
+        "I'm afraid we can accept that, but perhaps we could meet halfway.",
+        "I'm afraid we can't accept that, but perhaps we could meet half a day.",
+        "I'm afraid we can't expect that, but perhaps we could meet halfway."
+      ],
+      "answer": 0,
+      "explain": "Refus poli + proposition : « but perhaps we could… »."
+    },
+    {
+      "type": "build",
+      "fr": "Nous pourrions en parler en privé.",
+      "answer": "We could discuss this in private",
+      "extra": [
+        "discussion",
+        "on",
+        "talks"
+      ],
+      "explain": "« to discuss something » se construit sans « about »."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "to save face",
+          "sauver la face"
+        ],
+        [
+          "tactful",
+          "plein de tact"
+        ],
+        [
+          "long-term",
+          "à long terme"
+        ],
+        [
+          "indirect",
+          "indirect"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "Never criticise a partner in front of his team: he needs to save ___.",
+      "options": [
+        "face",
+        "head",
+        "name",
+        "eyes"
+      ],
+      "answer": 0,
+      "explain": "« to save face » = ne pas être humilié en public."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Au premier rendez-vous avec un client à Kumasi, que fais-tu d'abord ?",
+      "options": [
+        "Prendre le temps de faire connaissance avant de parler de prix",
+        "Annoncer tout de suite ton prix final",
+        "Montrer le contrat à signer",
+        "Parler uniquement des pénalités"
+      ],
+      "answer": 0,
+      "explain": "Dans beaucoup de cultures d'Afrique de l'Ouest, la relation passe avant la négociation."
+    },
+    {
+      "type": "build",
+      "fr": "Nous tenons à une relation à long terme.",
+      "answer": "We value a long-term relationship",
+      "extra": [
+        "relation",
+        "the",
+        "keep"
+      ],
+      "explain": "« to value » = tenir à, accorder de l'importance à ; « relationship » = relation (humaine ou commerciale)."
+    },
+    {
+      "type": "listen",
+      "audio": "That might be difficult for us at this stage.",
+      "options": [
+        "That might be difficult for us at this stage.",
+        "That might be different for us at this stage.",
+        "That must be difficult for us at this stage.",
+        "That might be difficult for us at this stadium."
+      ],
+      "answer": 0,
+      "explain": "« That might be difficult » : formule indirecte pour dire non."
+    },
+    {
+      "type": "speak",
+      "text": "We value our long-term relationship with your company.",
+      "fr": "Nous tenons à notre relation durable avec votre entreprise."
+    }
+  ],
+  "author": "claude"
+}

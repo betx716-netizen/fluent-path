@@ -1,0 +1,184 @@
+{
+  "id": "s1u9",
+  "title": "Décrire un produit",
+  "context": "Commerce",
+  "goal": "Décrire la couleur, la taille et la matière d'un produit.",
+  "points": [
+    "En anglais, l'adjectif qualificatif se place toujours avant le nom : on dit « a red bag » et jamais « a bag red ».",
+    "Pour indiquer la taille d'une marchandise, utilisez « small » (petit), « medium » (moyen) ou « large » (grand) avant le nom.",
+    "Pour exprimer la matière d'un produit, utilisez l'expression « made of » : « It is made of cotton » (C'est en coton).",
+    "Si vous combinez la taille et la couleur, placez la taille d'abord : « a big blue box » (une grande boîte bleue)."
+  ],
+  "examples": [
+    [
+      "This is a large yellow box.",
+      "Ceci est une grande boîte jaune."
+    ],
+    [
+      "The shirts are made of cotton.",
+      "Les chemises sont faites en coton."
+    ],
+    [
+      "Koffi buys a small black bag.",
+      "Koffi achète un petit sac noir."
+    ],
+    [
+      "We have medium plastic containers.",
+      "Nous avons des conteneurs en plastique moyens."
+    ]
+  ],
+  "vocab": [
+    [
+      "cotton",
+      "coton",
+      "/ˈkɒt.ən/"
+    ],
+    [
+      "plastic",
+      "plastique",
+      "/ˈplæs.tɪk/"
+    ],
+    [
+      "small",
+      "petit",
+      "/smɔːl/"
+    ],
+    [
+      "large",
+      "grand",
+      "/lɑːdʒ/"
+    ],
+    [
+      "yellow",
+      "jaune",
+      "/ˈjel.əʊ/"
+    ],
+    [
+      "bag",
+      "sac",
+      "/bæɡ/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Comment dit-on « un sac rouge » en anglais ?",
+      "options": [
+        "a bag red",
+        "a red bag",
+        "an red bag",
+        "red a bag"
+      ],
+      "answer": 1,
+      "explain": "En anglais, l'adjectif de couleur se place toujours avant le nom : « a red bag »."
+    },
+    {
+      "type": "fill",
+      "sentence": "This shirt is made ___ cotton.",
+      "options": [
+        "in",
+        "with",
+        "of",
+        "to"
+      ],
+      "answer": 2,
+      "explain": "On utilise « made of » suivi du matériau pour indiquer la matière d'un article."
+    },
+    {
+      "type": "listen",
+      "audio": "We have a big blue box.",
+      "options": [
+        "We have a big new box.",
+        "We have a pig blue box.",
+        "We had a big blue box.",
+        "We have a big blue box."
+      ],
+      "answer": 3,
+      "explain": "« We have a big blue box » signifie « Nous avons une grande boîte bleue »."
+    },
+    {
+      "type": "build",
+      "fr": "C'est un grand sac noir.",
+      "answer": "It is a large black bag",
+      "extra": [
+        "small",
+        "box",
+        "are"
+      ],
+      "explain": "L'ordre est : pronom + verbe + article + taille + couleur + nom."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "cotton",
+          "coton"
+        ],
+        [
+          "large",
+          "grand"
+        ],
+        [
+          "yellow",
+          "jaune"
+        ],
+        [
+          "small",
+          "petit"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "Kodjo ships three ___ wooden boxes to Lomé.",
+      "options": [
+        "larges",
+        "large",
+        "largely",
+        "larger"
+      ],
+      "answer": 1,
+      "explain": "Les adjectifs qualificatifs sont invariables en anglais : ils ne prennent jamais de « s » au pluriel."
+    },
+    {
+      "type": "mcq",
+      "prompt": "À Abidjan, Awa veut commander un conteneur en plastique de taille moyenne. Que dit-elle ?",
+      "options": [
+        "I need a plastic medium container.",
+        "I need container medium.",
+        "I need a medium plastic container.",
+        "I need a medium of plastic container."
+      ],
+      "answer": 2,
+      "explain": "On place d'abord la taille (« medium »), puis la matière (« plastic »), et enfin le nom (« container »)."
+    },
+    {
+      "type": "build",
+      "fr": "Le sac est fait de plastique.",
+      "answer": "The bag is made of plastic",
+      "extra": [
+        "in",
+        "cotton",
+        "are"
+      ],
+      "explain": "On utilise la structure « is made of » suivie de la matière."
+    },
+    {
+      "type": "listen",
+      "audio": "Awa sells small yellow shirts.",
+      "options": [
+        "Ama sells small yellow shirts.",
+        "Awa sells small yellow shirts.",
+        "Awa sells small yellow shorts.",
+        "Awa sends small yellow shirts."
+      ],
+      "answer": 1,
+      "explain": "« Awa sells small yellow shirts » signifie « Awa vend de petites chemises jaunes »."
+    },
+    {
+      "type": "speak",
+      "text": "The new stock is made of pure cotton.",
+      "fr": "Le nouveau stock est fait de pur coton."
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "id": "s3u8",
+  "title": "Retards et causes",
+  "context": "Transit",
+  "goal": "Expliquer la cause d'un retard et ses conséquences.",
+  "points": [
+    "Utilisez « because » suivi d'une phrase complète (sujet + verbe) pour donner une raison. Exemple : « The cargo is delayed because the vessel arrived late. »",
+    "Utilisez « because of » ou « due to » suivi d'un nom pour une cause. Exemple : « The shipment is behind schedule due to port congestion. »",
+    "Utilisez « as a result » pour introduire une conséquence logique. Exemple : « Customs clearance was slow; as a result, delivery is postponed. »",
+    "Utilisez « so » pour lier une action à sa conséquence directe. Exemple : « The paperwork was missing, so we had to wait. »"
+  ],
+  "examples": [
+    [
+      "The transit to Ouagadougou is delayed because of heavy rain.",
+      "Le transit vers Ouagadougou est retardé à cause de fortes pluies."
+    ],
+    [
+      "The vessel from Lagos is behind schedule due to bad weather.",
+      "Le navire en provenance de Lagos a du retard en raison du mauvais temps."
+    ],
+    [
+      "Customs inspections took longer, so the containers are still at the port.",
+      "Les contrôles douaniers ont pris plus de temps, donc les conteneurs sont toujours au port."
+    ],
+    [
+      "Mrs Okafor postponed the shipment as a result of the strike in Cotonou.",
+      "Mme Okafor a reporté l'expédition suite à la grève à Cotonou."
+    ]
+  ],
+  "vocab": [
+    [
+      "delay",
+      "retard",
+      "/dɪˈleɪ/"
+    ],
+    [
+      "postpone",
+      "reporter",
+      "/pəʊˈspəʊn/"
+    ],
+    [
+      "behind schedule",
+      "en retard sur le calendrier",
+      "/bɪˈhaɪnd ˈʃɛdjuːl/"
+    ],
+    [
+      "because of",
+      "à cause de",
+      "/bɪˈkɒz ɒv/"
+    ],
+    [
+      "due to",
+      "en raison de",
+      "/djuː tuː/"
+    ],
+    [
+      "as a result",
+      "par conséquent",
+      "/æz ə rɪˈzʌlt/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Quelle expression utilise-t-on directement avant un nom pour expliquer une cause ?",
+      "options": [
+        "because",
+        "because of",
+        "so",
+        "as"
+      ],
+      "answer": 1,
+      "explain": "« Because of » est suivi d'un nom, tandis que « because » est suivi d'une phrase avec un verbe."
+    },
+    {
+      "type": "fill",
+      "sentence": "The truck from Abidjan is ___ schedule due to heavy traffic.",
+      "options": [
+        "under",
+        "behind",
+        "over",
+        "late"
+      ],
+      "answer": 1,
+      "explain": "« Behind schedule » signifie en retard par rapport au planning prévu."
+    },
+    {
+      "type": "listen",
+      "audio": "The shipment to Lomé was postponed because of custom issues.",
+      "options": [
+        "The shipment to Lomé was postponed because of custom issues.",
+        "The shipment from Lomé was postponed because of custom issues.",
+        "The shipment to Lomé is postponed because of custom issues.",
+        "The shipment to Lagos was postponed because of custom issues."
+      ],
+      "answer": 0,
+      "explain": "La phrase correcte exacte prononcée est « The shipment to Lomé was postponed because of custom issues. »"
+    },
+    {
+      "type": "build",
+      "fr": "Le conteneur a du retard à cause de la grève.",
+      "answer": "The container is delayed because of the strike",
+      "extra": [
+        "due",
+        "so",
+        "postponed"
+      ],
+      "explain": "On traduit « est retardé » par « is delayed », puis on ajoute « because of » suivi du nom « the strike »."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "delay",
+          "retard"
+        ],
+        [
+          "postpone",
+          "reporter"
+        ],
+        [
+          "behind schedule",
+          "en retard sur le calendrier"
+        ],
+        [
+          "as a result",
+          "par conséquent"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "Customs clearance was slow, ___ we missed the vessel departure.",
+      "options": [
+        "because",
+        "so",
+        "due",
+        "cause"
+      ],
+      "answer": 1,
+      "explain": "On utilise « so » pour exprimer la conséquence directe d'une situation."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Koffi veut dire que le fret est retardé en raison de la congestion au port de Tema. Que choisit-il ?",
+      "options": [
+        "The freight is delayed because of port congestion at Tema.",
+        "The freight is delayed so port congestion at Tema.",
+        "The freight is delayed because port congestion at Tema.",
+        "The freight is delayed as a result port congestion at Tema."
+      ],
+      "answer": 0,
+      "explain": "« Because of » est suivi du groupe nominal « port congestion at Tema »."
+    },
+    {
+      "type": "build",
+      "fr": "Awa a reporté l'envoi suite aux intempéries.",
+      "answer": "Awa postponed the shipment due to bad weather",
+      "extra": [
+        "because",
+        "delayed",
+        "was"
+      ],
+      "explain": "« Postponed » signifie a reporté, et « due to » indique la cause nominale."
+    },
+    {
+      "type": "listen",
+      "audio": "As a result, the delivery to Cotonou is delayed.",
+      "options": [
+        "As a result, the delivery to Cotonou is delayed.",
+        "As a result, the delivery from Cotonou is delayed.",
+        "As a result, the delivery to Cotonou was delayed.",
+        "As a result, the delivery to Lagos is delayed."
+      ],
+      "answer": 0,
+      "explain": "La phrase exacte correspond au premier choix : « As a result, the delivery to Cotonou is delayed. »"
+    },
+    {
+      "type": "speak",
+      "text": "The cargo is behind schedule due to port congestion.",
+      "fr": "La cargaison a du retard en raison de la congestion portuaire."
+    }
+  ]
+}

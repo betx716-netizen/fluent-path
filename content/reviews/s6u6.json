@@ -1,0 +1,10 @@
+{
+  "model": "gemini-flash-lite-latest",
+  "issues": [
+    {
+      "where": "exercises[7].answer",
+      "problem": "Dans la leçon, le point grammatical indique explicitement : « Après « It is recommended that », le verbe reste à la base : « It is recommended that the company hire a second carrier. » » et l'exemple montre l'utilisation de « that ». L'exercice de construction demande « Il est recommandé d'utiliser le suivi GPS » mais la structure proposée dans la réponse (« It is recommended to use... ») contredit la règle enseignée juste avant, et la structure avec « that » (« It is recommended that we use... » ou « It is recommended that one use... ») serait plus cohérente. Cependant, « It is recommended to use » est grammaticalement possible, mais l'exercice suivant (speak) utilise « It is recommended that we review... ». Changeons la phrase française ou la réponse pour être cohérent avec la leçon.",
+      "fix": "It is recommended that we use GPS tracking"
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "id": "s6u7",
+  "title": "Gérer une crise",
+  "context": "Pro",
+  "goal": "Communiquer calmement pendant une crise.",
+  "points": [
+    "Montre que tu es au courant : « We are fully aware of the situation. »",
+    "Assume tes responsabilités : « We take full responsibility » ; n'accuse personne en public.",
+    "Rassure avec des actions concrètes : « Our priority is… », « We have already… ».",
+    "Promets un suivi précis : « We will keep you updated every two hours. »"
+  ],
+  "examples": [
+    [
+      "We are fully aware of the fire at the warehouse.",
+      "Nous sommes pleinement informés de l'incendie à l'entrepôt."
+    ],
+    [
+      "Our priority is the safety of our staff.",
+      "Notre priorité est la sécurité de notre personnel."
+    ],
+    [
+      "We take full responsibility for the delay.",
+      "Nous assumons l'entière responsabilité du retard."
+    ],
+    [
+      "We will keep you updated every two hours.",
+      "Nous vous tiendrons informés toutes les deux heures."
+    ]
+  ],
+  "vocab": [
+    [
+      "to reassure",
+      "rassurer",
+      "/ˌriːəˈʃʊə/"
+    ],
+    [
+      "transparency",
+      "transparence",
+      "/trænsˈpærənsi/"
+    ],
+    [
+      "to take responsibility",
+      "assumer la responsabilité",
+      "/teɪk rɪˌspɒnsəˈbɪləti/"
+    ],
+    [
+      "statement",
+      "déclaration",
+      "/ˈsteɪtmənt/"
+    ],
+    [
+      "to contain",
+      "maîtriser, limiter",
+      "/kənˈteɪn/"
+    ],
+    [
+      "update",
+      "point d'information",
+      "/ˈʌpdeɪt/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Un incendie touche ton entrepôt. Quelle première phrase choisis-tu face aux clients ?",
+      "options": [
+        "We are fully aware of the situation and our priority is everyone's safety.",
+        "It's not our fault, the electricity company is responsible.",
+        "No comment.",
+        "Everything is fine, nothing happened."
+      ],
+      "answer": 0,
+      "explain": "En crise : reconnaître la situation et montrer sa priorité, sans accuser ni nier."
+    },
+    {
+      "type": "fill",
+      "sentence": "We take full ___ for the error in the invoice.",
+      "options": [
+        "responsibility",
+        "responsible",
+        "response",
+        "respond"
+      ],
+      "answer": 0,
+      "explain": "« to take full responsibility » = assumer l'entière responsabilité."
+    },
+    {
+      "type": "listen",
+      "audio": "We will keep you updated every two hours.",
+      "options": [
+        "We will keep you updated every two hours.",
+        "We will keep you updated every few hours.",
+        "We will keep you up to date every two days.",
+        "We will keep you updated every hour."
+      ],
+      "answer": 0,
+      "explain": "« to keep you updated » = vous tenir informé."
+    },
+    {
+      "type": "build",
+      "fr": "Notre priorité est la sécurité du personnel.",
+      "answer": "Our priority is the safety of the staff",
+      "extra": [
+        "priorities",
+        "are",
+        "for"
+      ],
+      "explain": "« safety » = sécurité des personnes ; « priority » au singulier avec « is »."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "statement",
+          "déclaration"
+        ],
+        [
+          "to reassure",
+          "rassurer"
+        ],
+        [
+          "transparency",
+          "transparence"
+        ],
+        [
+          "update",
+          "point d'information"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "The fire has been ___ and nobody was injured.",
+      "options": [
+        "contained",
+        "contain",
+        "containing",
+        "contents"
+      ],
+      "answer": 0,
+      "explain": "« The fire has been contained » = l'incendie a été maîtrisé (voix passive)."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Un journaliste te demande qui est responsable. La meilleure réponse est :",
+      "options": [
+        "An investigation is under way; we will share the results transparently.",
+        "The driver is guilty.",
+        "I don't know and I don't care.",
+        "Ask the police."
+      ],
+      "answer": 0,
+      "explain": "On évite d'accuser publiquement et on s'engage à la transparence."
+    },
+    {
+      "type": "build",
+      "fr": "Nous avons déjà prévenu tous nos clients.",
+      "answer": "We have already informed all our clients",
+      "extra": [
+        "prevented",
+        "warn",
+        "yet"
+      ],
+      "explain": "Attention au faux ami : « prévenir » (informer) se dit « inform » ou « warn », pas « prevent » (empêcher)."
+    },
+    {
+      "type": "listen",
+      "audio": "We sincerely apologise for any inconvenience caused.",
+      "options": [
+        "We sincerely apologise for any inconvenience caused.",
+        "We sincerely apologise for any convenience caused.",
+        "We simply apologise for any inconvenience caused.",
+        "We sincerely apologise for every inconvenience caused."
+      ],
+      "answer": 0,
+      "explain": "Formule officielle d'excuse : « We sincerely apologise for any inconvenience caused »."
+    },
+    {
+      "type": "speak",
+      "text": "We are fully aware of the situation and are taking action.",
+      "fr": "Nous sommes pleinement conscients de la situation et nous agissons."
+    }
+  ],
+  "author": "claude"
+}

@@ -1,0 +1,184 @@
+{
+  "id": "s4u10",
+  "title": "Convaincre un client",
+  "context": "Commerce",
+  "goal": "Convaincre un client avec des arguments clairs.",
+  "points": [
+    "Pour convaincre, présentez les avantages pour le client et non seulement les caractéristiques: « This will save you time at the port of Lomé. »",
+    "Exprimez votre assurance avec la formule professionnelle: « I'm confident that our transit service is the best in Abidjan. »",
+    "Pour contrer une objection sur le prix, mettez en avant la valeur à long terme: « Although the cost is slightly higher, you will avoid delays. »",
+    "Utilisez des verbes d'action précis pour inciter à la décision rapide: « Let us handle your paperwork for the shipment to Ouagadougou. »"
+  ],
+  "examples": [
+    [
+      "This will save you valuable days at Cotonou port.",
+      "Cela vous fera gagner des jours précieux au port de Cotonou."
+    ],
+    [
+      "I'm confident that our freight forwarding team will meet your deadlines.",
+      "Je suis convaincu que notre équipe de transit respectera vos délais."
+    ],
+    [
+      "Although our rates are competitive, the true benefit is zero customs delay.",
+      "Bien que nos tarifs soient compétitifs, le vrai avantage est l'absence de retard en douane."
+    ],
+    [
+      "Let us secure your containers for the transit to Lagos.",
+      "Laissez-nous sécuriser vos conteneurs pour le transit vers Lagos."
+    ]
+  ],
+  "vocab": [
+    [
+      "save",
+      "économiser",
+      "/seɪv/"
+    ],
+    [
+      "confident",
+      "confiant",
+      "/ˈkɒnfɪdənt/"
+    ],
+    [
+      "benefit",
+      "avantage",
+      "/ˈbenɪfɪt/"
+    ],
+    [
+      "feature",
+      "caractéristique",
+      "/ˈfiːtʃə(r)/"
+    ],
+    [
+      "objection",
+      "objection",
+      "/əbˈdʒekʃn/"
+    ],
+    [
+      "reliable",
+      "fiable",
+      "/rɪˈlaɪəbl/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Quelle expression utiliser pour exprimer votre certitude quant à la qualité d'un service de transit ?",
+      "options": [
+        "I'm confident that",
+        "I doubt that",
+        "Maybe we can",
+        "I don't know if"
+      ],
+      "answer": 0,
+      "explain": "« I'm confident that » montre un fort professionnalisme et rassure le client de Lomé ou Abidjan."
+    },
+    {
+      "type": "fill",
+      "sentence": "This solution will ___ you hours of waiting at the Tema port.",
+      "options": [
+        "save",
+        "spend",
+        "lose",
+        "waste"
+      ],
+      "answer": 0,
+      "explain": "« Save » est le verbe idéal pour indiquer une économie de temps ou d'argent."
+    },
+    {
+      "type": "listen",
+      "audio": "I am confident that this transit route will prevent delays.",
+      "options": [
+        "I am confident that this transit route will prevent delays.",
+        "I am confident that this freight route will create delays.",
+        "I am doubtful that this transit route will prevent delays.",
+        "We are confident that this trade route will stop delivery."
+      ],
+      "answer": 0,
+      "explain": "La phrase correcte exprime la confiance dans l'itinéraire de transit."
+    },
+    {
+      "type": "build",
+      "fr": "Je suis convaincu que nos tarifs vont vous aider.",
+      "answer": "I am confident that our rates will help you",
+      "extra": [
+        "doubtful",
+        "problem",
+        "delay"
+      ],
+      "explain": "Structurez la phrase avec « I am confident that » suivi du sujet et du verbe."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "benefit",
+          "avantage"
+        ],
+        [
+          "feature",
+          "caractéristique"
+        ],
+        [
+          "objection",
+          "objection"
+        ],
+        [
+          "reliable",
+          "fiable"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "Although the freight cost is higher, the ___ is guaranteed safety.",
+      "options": [
+        "benefit",
+        "problem",
+        "trouble",
+        "danger"
+      ],
+      "answer": 0,
+      "explain": "« Benefit » désigne l'avantage qui justifie un coût plus élevé."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Comment présenter un avantage plutôt qu'une simple caractéristique à Mr Mensah à Cotonou ?",
+      "options": [
+        "This will save you time at customs.",
+        "Our office has three printers.",
+        "We use paper documents.",
+        "The warehouse is very old."
+      ],
+      "answer": 0,
+      "explain": "Mettre l'accent sur le gain de temps (« save you time ») est un argument axé sur le bénéfice client."
+    },
+    {
+      "type": "build",
+      "fr": "Cela va vous faire gagner un temps précieux.",
+      "answer": "This will save you valuable time",
+      "extra": [
+        "money",
+        "hours",
+        "days"
+      ],
+      "explain": "Traduisez fidèlement avec « This will save you » et « valuable time »."
+    },
+    {
+      "type": "listen",
+      "audio": "This will save you valuable time at the border.",
+      "options": [
+        "This will save you valuable time at the border.",
+        "This will cost you valuable time at the border.",
+        "This will give you more work at the border.",
+        "This will take away time at the border."
+      ],
+      "answer": 0,
+      "explain": "L'écoute correcte met en avant l'économie de temps à la frontière."
+    },
+    {
+      "type": "speak",
+      "text": "I am confident that our service will meet your expectations.",
+      "fr": "Je suis convaincu que notre service répondra à vos attentes."
+    }
+  ]
+}

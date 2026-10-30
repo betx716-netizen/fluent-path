@@ -1,0 +1,184 @@
+{
+  "id": "s3u3",
+  "title": "Où en est l'expédition ?",
+  "context": "Transit",
+  "goal": "Faire le point sur l'avancement d'une expédition.",
+  "points": [
+    "« Just » se place entre l'auxiliaire et le participe pour une action très récente : « The vessel has just berthed. »",
+    "« Already » indique qu'une étape est déjà franchie, souvent plus tôt que prévu : « We have already received the documents. »",
+    "« Yet » s'emploie en fin de phrase interrogative pour demander si l'action est faite : « Has it cleared customs yet? »",
+    "Dans une phrase négative, « yet » signifie « pas encore » et se place en fin de phrase : « It has not arrived yet. »"
+  ],
+  "examples": [
+    [
+      "The container has just arrived at Lomé port.",
+      "Le conteneur vient d'arriver au port de Lomé."
+    ],
+    [
+      "Mr Mensah has already signed the delivery order.",
+      "M. Mensah a déjà signé le bon de livraison."
+    ],
+    [
+      "The goods have not cleared customs yet.",
+      "Les marchandises n'ont pas encore été dédouanées."
+    ],
+    [
+      "Have you received the shipping documents yet?",
+      "Avez-vous déjà reçu les documents d'expédition ?"
+    ]
+  ],
+  "vocab": [
+    [
+      "customs clearance",
+      "dédouanement",
+      "/ˈkʌstəmz ˈklɪərəns/"
+    ],
+    [
+      "bill of lading",
+      "connaissement",
+      "/ˌbɪl əv ˈleɪdɪŋ/"
+    ],
+    [
+      "delivery order",
+      "bon à délivrer",
+      "/dɪˈlɪvəri ˈɔːdə/"
+    ],
+    [
+      "freight forwarder",
+      "transitaire",
+      "/freɪt ˈfɔːwədə/"
+    ],
+    [
+      "consignment",
+      "expédition ou envoi",
+      "/kənˈsaɪnmənt/"
+    ],
+    [
+      "bonded warehouse",
+      "entrepôt sous douane",
+      "/ˌbɒndɪd ˈweəhaʊs/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Choisissez la phrase correcte pour dire qu'un camion vient tout juste d'arriver au terminal :",
+      "options": [
+        "The truck has yet entered the terminal.",
+        "The truck has just entered the terminal.",
+        "The truck has already entering the terminal.",
+        "The truck just has enter the terminal."
+      ],
+      "answer": 1,
+      "explain": "On place « just » entre l'auxiliaire « has » et le participe passé pour une action immédiate."
+    },
+    {
+      "type": "fill",
+      "sentence": "Mrs Okafor has ___ processed the transit declaration for Cotonou.",
+      "options": [
+        "already",
+        "yet",
+        "ever",
+        "still"
+      ],
+      "answer": 0,
+      "explain": "On utilise « already » entre l'auxiliaire et le verbe pour indiquer qu'une action est déjà faite."
+    },
+    {
+      "type": "listen",
+      "audio": "The vessel has just discharged the containers.",
+      "options": [
+        "The vessel has just dispatched the containers.",
+        "The vessel has just discharged the containers.",
+        "The vessel has not discharged the containers.",
+        "The vessel has just discharged their container."
+      ],
+      "answer": 1,
+      "explain": "« Discharged » signifie déchargé dans le vocabulaire maritime."
+    },
+    {
+      "type": "build",
+      "fr": "Le camion n'a pas encore quitté le terminal.",
+      "answer": "The truck has not left the terminal yet",
+      "extra": [
+        "already",
+        "just",
+        "leaving"
+      ],
+      "explain": "« Yet » se met à la fin de la phrase négative pour traduire « pas encore »."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "clear customs",
+          "dédouaner"
+        ],
+        [
+          "bill of lading",
+          "connaissement"
+        ],
+        [
+          "bonded warehouse",
+          "entrepôt sous douane"
+        ],
+        [
+          "freight forwarder",
+          "transitaire"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "Have the customs officers released the cargo ___?",
+      "options": [
+        "just",
+        "already",
+        "yet",
+        "since"
+      ],
+      "answer": 2,
+      "explain": "En fin de question au present perfect, on emploie « yet » pour demander si l'action a eu lieu."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Kodjo informe un client à Ouagadougou. Que dit-il pour annoncer la réception très récente des documents ?",
+      "options": [
+        "We have yet received your documents.",
+        "We have just received your documents.",
+        "We already have receive your documents.",
+        "We just have received your documents."
+      ],
+      "answer": 1,
+      "explain": "« Have just received » exprime une action qui vient tout juste de se produire."
+    },
+    {
+      "type": "build",
+      "fr": "Awa a déjà payé les frais de port.",
+      "answer": "Awa has already paid the port fees",
+      "extra": [
+        "yet",
+        "pay",
+        "paying"
+      ],
+      "explain": "« Already » se place entre l'auxiliaire « has » et le participe passé « paid »."
+    },
+    {
+      "type": "listen",
+      "audio": "Has the consignment cleared customs yet?",
+      "options": [
+        "Has the consignment cleared customs yet?",
+        "Has the consignment cleared customs now?",
+        "Have the consignments cleared customs yet?",
+        "Has the consignment cleaned customs yet?"
+      ],
+      "answer": 0,
+      "explain": "On entend bien « Has the consignment cleared customs yet? » avec l'expression « clear customs »."
+    },
+    {
+      "type": "speak",
+      "text": "The shipment has just arrived at the port.",
+      "fr": "L'expédition vient d'arriver au port."
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "id": "s2u6",
+  "title": "Le futur des livraisons",
+  "context": "Transit",
+  "goal": "Annoncer des plans et faire des promesses de livraison.",
+  "points": [
+    "Utilisez « going to » pour un plan déjà organisé : « The truck is going to leave at 6 ».",
+    "Utilisez « will » pour une décision spontanée ou une promesse : « I will call you tomorrow ».",
+    "À l'oral, « will » se contracte souvent en « 'll » : « I'll send the documents ».",
+    "« Going to » s'utilise avec le verbe « be » : « am », « is » ou « are going to »."
+  ],
+  "examples": [
+    [
+      "The truck is going to leave Lomé at six.",
+      "Le camion va quitter Lomé à six heures."
+    ],
+    [
+      "I will call Mr Mensah before noon.",
+      "J'appellerai M. Mensah avant midi."
+    ],
+    [
+      "We are going to inspect the containers today.",
+      "Nous allons inspecter les conteneurs aujourd'hui."
+    ],
+    [
+      "I will send the waybill right now.",
+      "Je vais envoyer la lettre de voiture tout de suite."
+    ]
+  ],
+  "vocab": [
+    [
+      "waybill",
+      "lettre de voiture",
+      "/ˈweɪbɪl/"
+    ],
+    [
+      "warehouse",
+      "entrepôt",
+      "/ˈweəhaʊs/"
+    ],
+    [
+      "to deliver",
+      "livrer",
+      "/tə dɪˈlɪvə/"
+    ],
+    [
+      "delay",
+      "retard",
+      "/dɪˈleɪ/"
+    ],
+    [
+      "customs clearance",
+      "dédouanement",
+      "/ˈkʌstəmz ˌklɪərəns/"
+    ],
+    [
+      "shipment",
+      "cargaison",
+      "/ˈʃɪpmənt/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Quelle phrase exprime une promesse ferme faite à un client d'Abidjan ?",
+      "options": [
+        "I delivering the goods on Monday.",
+        "I am deliver the goods on Monday.",
+        "I will deliver the goods on Monday.",
+        "I to deliver the goods on Monday."
+      ],
+      "answer": 2,
+      "explain": "« Will » exprime une promesse ou un engagement ferme envers le client."
+    },
+    {
+      "type": "fill",
+      "sentence": "The driver is ___ to arrive in Cotonou tonight.",
+      "options": [
+        "will",
+        "going",
+        "go",
+        "goes"
+      ],
+      "answer": 1,
+      "explain": "Pour exprimer un plan programmé avec « is », on emploie « going to »."
+    },
+    {
+      "type": "listen",
+      "audio": "I will check the shipment for Mr Mensah.",
+      "options": [
+        "I will pack the shipment for Mr Mensah.",
+        "I will ship the check for Mr Mensah.",
+        "I won't check the shipment for Mr Mensah.",
+        "I will check the shipment for Mr Mensah."
+      ],
+      "answer": 3,
+      "explain": "L'enregistrement dit bien « I will check the shipment for Mr Mensah »."
+    },
+    {
+      "type": "build",
+      "fr": "Le camion va partir pour Ouagadougou.",
+      "answer": "The truck is going to leave for Ouagadougou",
+      "extra": [
+        "will",
+        "are",
+        "leaving"
+      ],
+      "explain": "La structure d'un plan prévu est « is going to » suivi de la base verbale « leave »."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "warehouse",
+          "entrepôt"
+        ],
+        [
+          "delay",
+          "retard"
+        ],
+        [
+          "waybill",
+          "lettre de voiture"
+        ],
+        [
+          "shipment",
+          "cargaison"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "Don't worry, Kodjo ___ send the invoice immediately.",
+      "options": [
+        "is going",
+        "going to",
+        "will",
+        "are"
+      ],
+      "answer": 2,
+      "explain": "« Will » s'utilise pour une décision ou promesse immédiate sans « to »."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Awa a planifié une inspection au port de Tema. Que dit-elle ?",
+      "options": [
+        "I will to inspect the cargo at Tema.",
+        "I am going to inspect the cargo tomorrow.",
+        "I inspect tomorrow the cargo at Tema.",
+        "I am will inspect the cargo tomorrow."
+      ],
+      "answer": 1,
+      "explain": "« I am going to inspect » indique un plan déjà organisé à l'avance."
+    },
+    {
+      "type": "build",
+      "fr": "J'appellerai Madame Okafor cet après-midi.",
+      "answer": "I will call Mrs Okafor this afternoon",
+      "extra": [
+        "am",
+        "calling",
+        "going"
+      ],
+      "explain": "Pour une promesse ou intention volontaire, utilisez « will » + verbe."
+    },
+    {
+      "type": "listen",
+      "audio": "We are going to clear the goods tomorrow.",
+      "options": [
+        "We are going to clear the goods tomorrow.",
+        "We will clear the goods today.",
+        "We are clearing the goods now.",
+        "We are going to collect the goods tomorrow."
+      ],
+      "answer": 0,
+      "explain": "La phrase entendue est « We are going to clear the goods tomorrow »."
+    },
+    {
+      "type": "speak",
+      "text": "I will track the container and call you back.",
+      "fr": "Je vais suivre le conteneur et je vous rappelle."
+    }
+  ]
+}

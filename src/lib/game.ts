@@ -28,11 +28,84 @@ export function unitState(s: State, section: Section, index: number): NodeState 
   return (s.units[prev.id]?.stars ?? 0) >= PASS_STARS ? "current" : "locked";
 }
 
+// Une section s'ouvre quand le test de la précédente est réussi
+// (ou quand on a sauté jusqu'ici grâce à son propre test).
 export function sectionOpen(s: State, section: Section): boolean {
   const i = SECTIONS.indexOf(section);
-  if (i <= 0) return true;
+  if (i <= 0 || s.bosses[section.id]?.passed) return true;
   const prev = SECTIONS[i - 1];
-  return prev.units.length > 0 && prev.units.every(u => (s.units[u.id]?.stars ?? 0) >= PASS_STARS);
+  if (s.bosses[prev.id]?.passed) return true;
+  // Progression faite avant l'arrivée des tests : on ne la rebloque pas.
+  return prev.units.length > 0 && prev.units.every(u => (s.units[u.id]?.stars ?? 0) >= PASS_STARS) && section.units.some(u => s.units[u.id]);
+}
+
+export const sectionUnitsDone = (s: State, section: Section) =>
+  section.units.length > 0 && section.units.every(u => (s.units[u.id]?.stars ?? 0) >= PASS_STARS);
+
+// ---------- Tests de section ----------
+export const TEST_SIZE = 15;
+export const TEST_PASS = 0.8;
+export const XP_TEST = 50;
+export const GEMS_TEST = 30;
+
+// 15 questions tirées au hasard dans toutes les unités de la section
+// (QCM, trous, écoute, phrases à construire ; ni paires ni oral).
+export function buildTest(section: Section): Unit {
+  const pool = section.units.flatMap(u =>
+    u.exercises.filter(e => e.type === "mcq" || e.type === "fill" || e.type === "listen" || e.type === "build")
+  );
+  return {
+    id: `${section.id}-test`,
+    title: `Test · ${section.title}`,
+    context: "Pro",
+    goal: `Réussis ${Math.ceil(TEST_SIZE * TEST_PASS)} questions sur ${TEST_SIZE} pour valider la section ${section.cefr}.`,
+    points: [],
+    examples: [],
+    vocab: [],
+    exercises: shuffle(pool).slice(0, TEST_SIZE)
+  };
+}
+
+export interface TestOutcome {
+  passed: boolean;
+  score: number;
+  xp: number;
+  gems: number;
+  jumped: boolean;
+  newAchievements: string[];
+  streakUp: boolean;
+  streak: number;
+}
+
+export function finishTest(s: State, section: Section, firstTry: number, total: number, seconds: number): { next: State; outcome: TestOutcome } {
+  const score = total ? firstTry / total : 0;
+  const passed = score >= TEST_PASS;
+  const jumped = passed && !sectionUnitsDone(s, section);
+  let next: State = { ...s, bosses: { ...s.bosses, [section.id]: { best: Math.max(s.bosses[section.id]?.best ?? 0, Math.round(score * 100)), passed: passed || !!s.bosses[section.id]?.passed } } };
+  if (passed) {
+    // Saut de niveau : toutes les unités jusqu'à cette section sont validées.
+    const upto = SECTIONS.slice(0, SECTIONS.indexOf(section) + 1);
+    const units = { ...next.units };
+    const bosses = { ...next.bosses };
+    for (const sec of upto) {
+      for (const u of sec.units) {
+        if ((units[u.id]?.stars ?? 0) < PASS_STARS) units[u.id] = { stars: PASS_STARS, best: units[u.id]?.best ?? 0, plays: units[u.id]?.plays ?? 0, completedAt: new Date().toISOString() };
+      }
+      bosses[sec.id] = { best: bosses[sec.id]?.best ?? 0, passed: true };
+    }
+    next = { ...next, units, bosses, gems: next.gems + GEMS_TEST };
+  }
+  const xp = passed ? XP_TEST : firstTry * 2;
+  const act = addActivity(next, xp, seconds);
+  const res = withAchievements(s, act.next);
+  const extra: string[] = [];
+  if (passed && score === 1 && !s.achievements.perfect_test) extra.push("perfect_test");
+  if (jumped && !s.achievements.jump) extra.push("jump");
+  const finalState = { ...res.next, achievements: { ...res.next.achievements, ...Object.fromEntries(extra.map(a => [a, new Date().toISOString()])) } };
+  return {
+    next: finalState,
+    outcome: { passed, score, xp, gems: passed ? GEMS_TEST : 0, jumped, newAchievements: [...res.unlocked, ...extra], streakUp: act.streakUp, streak: finalState.streak }
+  };
 }
 
 // Un coffre après la 5e unité de chaque section.
@@ -82,7 +155,18 @@ export const ACHIEVEMENTS: Record<string, { title: string; desc: string }> = {
   dictation_10: { title: "Scribe", desc: "Faire 10 dictées" },
   writer: { title: "Plume", desc: "Faire corriger un premier texte" },
   writer_90: { title: "Belle plume", desc: "Obtenir 90/100 ou plus à l'écrit" },
-  outfit: { title: "Élégant", desc: "Offrir une tenue à Zazou" }
+  outfit: { title: "Élégant", desc: "Offrir une tenue à Zazou" },
+  first_test: { title: "Examen réussi", desc: "Réussir un premier test de section" },
+  perfect_test: { title: "Major de promo", desc: "Réussir un test de section sans faute" },
+  jump: { title: "Saute-mouton", desc: "Sauter une section grâce à son test" },
+  section_2: { title: "Commerçant", desc: "Réussir le test de la section 2 (A2)" },
+  section_3: { title: "Transitaire", desc: "Réussir le test de la section 3 (B1)" },
+  section_4: { title: "Négociateur", desc: "Réussir le test de la section 4 (B2)" },
+  section_5: { title: "Expert", desc: "Réussir le test de la section 5 (C1)" },
+  section_6: { title: "Maître de l'anglais", desc: "Réussir le test de la section 6 (C2)" },
+  units_30: { title: "Mi-parcours", desc: "Valider 30 unités" },
+  xp_2000: { title: "2 000 XP", desc: "Gagner 2 000 XP" },
+  streak_100: { title: "Centurion", desc: "100 jours de suite" }
 };
 
 export function finishLesson(s: State, r: LessonResult, now = today()): { next: State; reward: Reward } {
@@ -143,6 +227,11 @@ export function checkAchievements(before: State, after: State, accuracy?: number
   add("chest_1", Object.keys(after.chests).length > 0);
   add("section_1", SECTIONS[0].units.every(u => (after.units[u.id]?.stars ?? 0) >= PASS_STARS));
   add("first_talk", Object.keys(after.roleplays).length > 0);
+  add("first_test", Object.values(after.bosses).some(b => b.passed));
+  SECTIONS.slice(1).forEach((sec, k) => add(`section_${k + 2}`, !!after.bosses[sec.id]?.passed));
+  add("units_30", Object.values(after.units).filter(u => u.stars >= PASS_STARS).length >= 30);
+  add("xp_2000", after.xpTotal >= 2000);
+  add("streak_100", after.streak >= 100);
   add("talk_5", Object.keys(after.roleplays).length >= 5);
   add("talk_90", Object.values(after.roleplays).some(r => r.best >= 90));
   add("reviews_50", Object.values(after.cards).reduce((a, c) => a + c.reps, 0) >= 50);

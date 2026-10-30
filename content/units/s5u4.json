@@ -1,0 +1,184 @@
+{
+  "id": "s5u4",
+  "title": "Assurance marchandises",
+  "context": "Transit",
+  "goal": "Déclarer un sinistre et parler de couverture d'assurance.",
+  "points": [
+    "Pour désigner le montant payé pour la police d'assurance, utilisez le terme « premium ».",
+    "La police « all risks » offre la couverture la plus large pour vos marchandises en transit.",
+    "Pour réclamer une indemnisation après un dommage, on utilise l'expression « to file a claim ».",
+    "Un « surveyor » est l'expert indépendant chargé d'évaluer les pertes et dommages sur le port."
+  ],
+  "examples": [
+    [
+      "Mr Mensah had to file a claim after the container was damaged at Lomé port.",
+      "M. Mensah a dû déclarer un sinistre après que le conteneur a été endommagé au port de Lomé."
+    ],
+    [
+      "The insurance policy covers all risks from Abidjan to Ouagadougou.",
+      "La police d'assurance couvre tous les risques d'Abidjan à Ouagadougou."
+    ],
+    [
+      "We are still waiting for the independent surveyor to inspect the cargo.",
+      "Nous attendons toujours que l'expert indépendant inspecte la cargaison."
+    ],
+    [
+      "The premium for this transit shipment has increased by five percent.",
+      "La prime pour cette expédition en transit a augmenté de cinq pour cent."
+    ]
+  ],
+  "vocab": [
+    [
+      "policy",
+      "police d'assurance",
+      "/ˈpɒləsi/"
+    ],
+    [
+      "premium",
+      "prime d'assurance",
+      "/ˈpriːmiəm/"
+    ],
+    [
+      "cover",
+      "couverture",
+      "/ˈkʌvə(r)/"
+    ],
+    [
+      "claim",
+      "sinistre / réclamation",
+      "/kleɪm/"
+    ],
+    [
+      "surveyor",
+      "expert d'assurances",
+      "/səˈveɪə(r)/"
+    ],
+    [
+      "damage",
+      "dommage / avarie",
+      "/ˈdæmɪdʒ/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Comment appelle-t-on l'expert indépendant qui évalue les avaries sur le port de Cotonou ?",
+      "options": [
+        "A customs officer",
+        "A surveyor",
+        "A broker",
+        "A stevedore"
+      ],
+      "answer": 1,
+      "explain": "Le « surveyor » est l'expert maritime ou d'assurances qui constate les dommages."
+    },
+    {
+      "type": "fill",
+      "sentence": "Awa needs to ___ a claim with the insurer regarding the missing cargo.",
+      "options": [
+        "make",
+        "file",
+        "write",
+        "send"
+      ],
+      "answer": 1,
+      "explain": "On utilise l'expression consacrée « to file a claim » pour déclarer un sinistre."
+    },
+    {
+      "type": "listen",
+      "audio": "The insurance premium for the transit to Bamako was paid yesterday.",
+      "options": [
+        "The insurance premium for the transit to Bamako was paid yesterday.",
+        "The insurance premium for the transport to Bamako was paid yesterday.",
+        "The insurance policy for the transit to Bamako was paid yesterday.",
+        "The insurance premium for the transit to Bamako is paid today."
+      ],
+      "answer": 0,
+      "explain": "Écoutez attentivement les termes précis : « insurance premium » et « transit »."
+    },
+    {
+      "type": "build",
+      "fr": "Kodjo a déclaré un sinistre après l'avarie.",
+      "answer": "Kodjo filed a claim after the damage",
+      "extra": [
+        "made",
+        "before",
+        "policy"
+      ],
+      "explain": "Structure correcte : sujet + verbe au prétérit + complément (« filed a claim »)."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "policy",
+          "police"
+        ],
+        [
+          "premium",
+          "prime"
+        ],
+        [
+          "cover",
+          "couverture"
+        ],
+        [
+          "loss",
+          "perte"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "Mrs Okafor requested an 'all ___' policy for the fragile goods going to Lagos.",
+      "options": [
+        "damages",
+        "risks",
+        "losses",
+        "claims"
+      ],
+      "answer": 1,
+      "explain": "L'expression standard est « all risks » (tous risques)."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Que représente le « premium » dans une transaction d'assurance ?",
+      "options": [
+        "Le montant de l'indemnisation versée",
+        "La prime payée à la compagnie",
+        "Le rapport d'expertise",
+        "La franchise douanière"
+      ],
+      "answer": 1,
+      "explain": "Le « premium » correspond à la prime d'assurance que l'assuré règle à l'assureur."
+    },
+    {
+      "type": "build",
+      "fr": "L'expert a inspecté la cargaison endommagée au port.",
+      "answer": "The surveyor inspected the damaged cargo at the port",
+      "extra": [
+        "policy",
+        "premium",
+        "file"
+      ],
+      "explain": "Ordre des mots : Sujet + verbe + objet + lieu (« The surveyor inspected the damaged cargo at the port »)."
+    },
+    {
+      "type": "listen",
+      "audio": "We must submit the surveyor report before Friday.",
+      "options": [
+        "We must submit the surveyor report before Friday.",
+        "We must submit the survey report before Friday.",
+        "We should submit the surveyor report before Friday.",
+        "We must submit the surveyor report before Monday."
+      ],
+      "answer": 0,
+      "explain": "La phrase exacte utilise « surveyor report » et « before Friday »."
+    },
+    {
+      "type": "speak",
+      "text": "We need to file an insurance claim immediately.",
+      "fr": "Nous devons déclarer un sinistre immédiatement."
+    }
+  ]
+}

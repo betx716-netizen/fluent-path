@@ -1,0 +1,14 @@
+{
+  "model": "gemini-3.5-flash",
+  "issues": [
+    {
+      "where": "exercises[3].extra",
+      "problem": "The extra words 'prices' and 'fees' are valid synonyms for 'rates' in this context, allowing multiple valid correct answers.",
+      "fix": [
+        "doubtful",
+        "problem",
+        "delay"
+      ]
+    }
+  ]
+}

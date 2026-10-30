@@ -1,0 +1,184 @@
+{
+  "id": "s2u3",
+  "title": "Comparer les prix",
+  "context": "Commerce",
+  "goal": "Comparer des produits et des offres de fournisseurs.",
+  "points": [
+    "Adjectifs courts : on ajoute « -er » suivi de « than » pour comparer deux offres. Exemple : « Lomé is cheaper than Cotonou. »",
+    "Adjectifs longs : on place « more » devant l'adjectif pour comparer. Exemple : « Air freight is more expensive than sea freight. »",
+    "Superlatifs : on emploie « the » avec « -est » ou « most » pour le niveau extrême. Exemple : « This is the best price. »",
+    "Égalité : la structure « as … as » exprime des conditions équivalentes. Exemple : « Our quote is as cheap as theirs. »"
+  ],
+  "examples": [
+    [
+      "This quote is cheaper than that one.",
+      "Ce devis est moins cher que celui-là."
+    ],
+    [
+      "Sea transport is more expensive this month.",
+      "Le transport maritime est plus cher ce mois-ci."
+    ],
+    [
+      "Mr Mensah offers the best rate in Lomé.",
+      "M. Mensah propose le meilleur tarif à Lomé."
+    ],
+    [
+      "The new fee is not as high as Lagos.",
+      "Les nouveaux frais ne sont pas aussi élevés qu'à Lagos."
+    ]
+  ],
+  "vocab": [
+    [
+      "cheaper",
+      "moins cher",
+      "/ˈtʃiː.pər/"
+    ],
+    [
+      "more expensive",
+      "plus cher",
+      "/mɔːr ɪkˈspen.sɪv/"
+    ],
+    [
+      "the cheapest",
+      "le moins cher",
+      "/ðə ˈtʃiː.pɪst/"
+    ],
+    [
+      "the best",
+      "le meilleur",
+      "/ðə best/"
+    ],
+    [
+      "price quote",
+      "devis de prix",
+      "/praɪs kwəʊt/"
+    ],
+    [
+      "as cheap as",
+      "aussi avantageux que",
+      "/əz tʃiːp əz/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Quelle phrase compare correctement le prix de deux conteneurs ?",
+      "options": [
+        "This container is more cheap than that one.",
+        "This container is cheaper than that one.",
+        "This container is cheapest than that one.",
+        "This container is as cheap than that one."
+      ],
+      "answer": 1,
+      "explain": "Avec l'adjectif court « cheap », on forme le comparatif régulier en ajoutant « -er » : « cheaper than »."
+    },
+    {
+      "type": "fill",
+      "sentence": "Air freight to Abidjan is ___ expensive than sea freight.",
+      "options": [
+        "more",
+        "most",
+        "as",
+        "much"
+      ],
+      "answer": 0,
+      "explain": "« Expensive » est un adjectif long ; on utilise « more » pour dire « plus cher que »."
+    },
+    {
+      "type": "listen",
+      "audio": "Kodjo has the best price in Lomé.",
+      "options": [
+        "Kodjo has the best place in Lomé.",
+        "Kodjo has the west price in Lomé.",
+        "Kodjo has the best price in Lomé.",
+        "Kodjo has the fast price in Lomé."
+      ],
+      "answer": 2,
+      "explain": "L'enregistrement dit précisément « Kodjo has the best price in Lomé. » (Kodjo a le meilleur prix à Lomé)."
+    },
+    {
+      "type": "build",
+      "fr": "Ce devis est le moins cher.",
+      "answer": "This quote is the cheapest",
+      "extra": [
+        "cheaper",
+        "more",
+        "than"
+      ],
+      "explain": "Le superlatif d'un adjectif court prend la forme « the cheapest » (le moins cher)."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "cheaper",
+          "moins cher"
+        ],
+        [
+          "the best",
+          "le meilleur"
+        ],
+        [
+          "more expensive",
+          "plus cher"
+        ],
+        [
+          "as cheap as",
+          "aussi avantageux que"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "Mrs Okafor offers a rate as good ___ ours.",
+      "options": [
+        "than",
+        "as",
+        "that",
+        "like"
+      ],
+      "answer": 1,
+      "explain": "La structure d'égalité complète est « as ... as » (aussi bon que)."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Au port de Tema, vous voulez indiquer que le tarif B est le plus élevé de tous. Que dites-vous ?",
+      "options": [
+        "Rate B is more expensive in all.",
+        "Rate B is the expensive rate.",
+        "Rate B is as expensive as all.",
+        "Rate B is the most expensive rate."
+      ],
+      "answer": 3,
+      "explain": "Pour exprimer le degré maximal avec un adjectif long, on utilise « the most expensive »."
+    },
+    {
+      "type": "build",
+      "fr": "Cotonou est moins cher que Lagos.",
+      "answer": "Cotonou is cheaper than Lagos",
+      "extra": [
+        "more",
+        "as",
+        "cheap"
+      ],
+      "explain": "Pour comparer deux villes avec un adjectif court, on formule « Cotonou is cheaper than Lagos »."
+    },
+    {
+      "type": "listen",
+      "audio": "Our transit fee is as cheap as theirs.",
+      "options": [
+        "Our transit fee is as cheap as theirs.",
+        "Our transit fee is as deep as theirs.",
+        "Our transit free is as cheap as theirs.",
+        "Our transit fee is as cheap as there."
+      ],
+      "answer": 0,
+      "explain": "La phrase correcte entendue est « Our transit fee is as cheap as theirs. »"
+    },
+    {
+      "type": "speak",
+      "text": "This supplier offers the cheapest rate for Ouagadougou.",
+      "fr": "Ce fournisseur propose le tarif le moins cher pour Ouagadougou."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "model": "gemini-3.5-flash",
+  "issues": [
+    {
+      "where": "exercises[3].fr",
+      "problem": "The French verb 'demandons' does not accurately translate 'expect' (which means 'attendons'), creating confusion with the extra word 'want'.",
+      "fix": "Nous attendons une compensation financière pour ces marchandises endommagées."
+    },
+    {
+      "where": "exercises[3].extra",
+      "problem": "The extra word 'want' can replace 'expect' to form another grammatically correct sentence ('We want financial compensation for these damaged goods').",
+      "fix": [
+        "were",
+        "loss",
+        "at"
+      ]
+    },
+    {
+      "where": "exercises[7].extra",
+      "problem": "The extra word 'today' can be added to the end of the answer to form another valid sentence ('I am writing to complain about the shipment delay today').",
+      "fix": [
+        "was",
+        "were",
+        "been"
+      ]
+    }
+  ]
+}

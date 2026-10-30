@@ -1,0 +1,10 @@
+{
+  "model": "gemini-flash-latest",
+  "issues": [
+    {
+      "where": "exercises[1].options[0]",
+      "problem": "\"finish\" is grammatically and semantically valid in \"Let's finish with the transit delays...\", meaning the question has more than one correct answer.",
+      "fix": "discuss"
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "id": "s5u5",
+  "title": "Crédit documentaire",
+  "context": "Commerce",
+  "goal": "Expliquer le fonctionnement d'un crédit documentaire.",
+  "points": [
+    "Le crédit documentaire implique l'acheteur (applicant) et le vendeur (beneficiary) pour sécuriser le paiement international « applicant and beneficiary »",
+    "La banque émettrice (issuing bank) et la banque confirmatrice (confirming bank) garantissent le transfert des fonds « issuing bank and confirming bank »",
+    "La stricte conformité des documents présentés (documents presented) est exigée avant la date d'expiration « expiry date »",
+    "Toute anomalie ou divergence (discrepancy) peut bloquer le paiement de votre cargaison à Lomé « discrepancy »"
+  ],
+  "examples": [
+    [
+      "The applicant must instruct the issuing bank to open the documentary credit before shipment from Abidjan.",
+      "L'acheteur doit donner instruction à la banque émettrice d'ouvrir le crédit documentaire avant l'expédition depuis Abidjan."
+    ],
+    [
+      "The beneficiary must present shipping documents that strictly comply with the terms of the credit.",
+      "Le bénéficiaire doit présenter des documents d'expédition conformes aux termes du crédit."
+    ],
+    [
+      "Any minor discrepancy found by the confirming bank will delay the release of the funds.",
+      "Toute anomalie mineure trouvée par la banque confirmatrice retardera le déblocage des fonds."
+    ],
+    [
+      "Please check the expiry date of the letter of credit before booking cargo via Cotonou port.",
+      "Veuillez vérifier la date d'expiration de la lettre de crédit avant de réserver le fret via le port de Cotonou."
+    ]
+  ],
+  "vocab": [
+    [
+      "applicant",
+      "donneur d'ordre (acheteur)",
+      "/ˈæplɪkənt/"
+    ],
+    [
+      "beneficiary",
+      "bénéficiaire (vendeur)",
+      "/ˌbɛnɪˈfɪʃəri/"
+    ],
+    [
+      "issuing bank",
+      "banque émettrice",
+      "/ˈɪʃuɪŋ bæŋk/"
+    ],
+    [
+      "confirming bank",
+      "banque confirmatrice",
+      "/kənˈfɜːmɪŋ bæŋk/"
+    ],
+    [
+      "discrepancy",
+      "divergence / anomalie",
+      "/dɪˈskrɛpənsi/"
+    ],
+    [
+      "expiry date",
+      "date d'expiration",
+      "/ɪkˈspaɪəri deɪt/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Quel terme désigne l'acheteur qui demande l'ouverture du crédit documentaire à sa banque à Lomé ?",
+      "options": [
+        "The beneficiary",
+        "The applicant",
+        "The freight forwarder",
+        "The carrier"
+      ],
+      "answer": 1,
+      "explain": "L'acheteur qui initie la demande est l'« applicant », tandis que le vendeur est le « beneficiary »."
+    },
+    {
+      "type": "fill",
+      "sentence": "The ___ must prepare all shipping documents exactly as requested in the letter of credit.",
+      "options": [
+        "applicant",
+        "beneficiary",
+        "carrier",
+        "customs"
+      ],
+      "answer": 1,
+      "explain": "Le vendeur ou bénéficiaire (« beneficiary ») prépare les documents d'expédition."
+    },
+    {
+      "type": "listen",
+      "audio": "The confirming bank will pay if documents presented are compliant.",
+      "options": [
+        "The confirming bank will pay if documents presented are compliant.",
+        "The confirming bank may pay if documents presented are compliant.",
+        "The confirming bank will pay when documents presented are rejected.",
+        "The confirming bank should pay if documents presented are compliant."
+      ],
+      "answer": 0,
+      "explain": "Écoutez bien l'auxiliaire « will » et l'expression « documents presented are compliant »."
+    },
+    {
+      "type": "build",
+      "fr": "La banque émettrice doit vérifier la date d'expiration.",
+      "answer": "The issuing bank must check the expiry date",
+      "extra": [
+        "will",
+        "applicant",
+        "discrepancy"
+      ],
+      "explain": "Structure de base : sujet + verbe modal + verbe à l'infinitif + complément."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "applicant",
+          "donneur d'ordre"
+        ],
+        [
+          "beneficiary",
+          "bénéficiaire"
+        ],
+        [
+          "issuing bank",
+          "banque émettrice"
+        ],
+        [
+          "expiry date",
+          "date d'expiration"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "Any financial ___ found in the bill of lading will stop the payment.",
+      "options": [
+        "discrepancy",
+        "applicant",
+        "credit",
+        "transit"
+      ],
+      "answer": 0,
+      "explain": "Une divergence ou anomalie dans les documents se traduit par « discrepancy »."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Que fait la banque confirmatrice (confirming bank) dans une opération de transit à Abidjan ?",
+      "options": [
+        "Elle transporte les marchandises par camion",
+        "Elle ajoute sa garantie de paiement irrévocable",
+        "Elle signe le manifeste douanier",
+        "Elle assure la cargaison contre le vol"
+      ],
+      "answer": 1,
+      "explain": "La banque confirmatrice ajoute sa propre garantie de paiement à celle de la banque émettrice."
+    },
+    {
+      "type": "build",
+      "fr": "Awa a trouvé une divergence dans les documents présentés.",
+      "answer": "Awa found a discrepancy in the documents presented",
+      "extra": [
+        "bank",
+        "expiry",
+        "applicant"
+      ],
+      "explain": "Sujet (Awa) + verbe au prétérit (found) + complément d'objet + complément de lieu/état."
+    },
+    {
+      "type": "listen",
+      "audio": "Check every document carefully to avoid any delay before the expiry date.",
+      "options": [
+        "Check every document carefully to avoid any delay before the expiry date.",
+        "Check every document carefully to avoid any delay after the expiry date.",
+        "Check each document carefully to avoid any fault before the expiry date.",
+        "Check every shipment carefully to avoid any delay before the expiry date."
+      ],
+      "answer": 0,
+      "explain": "La phrase correcte met l'accent sur la vérification minutieuse avant la date d'expiration."
+    },
+    {
+      "type": "speak",
+      "text": "Please resolve this discrepancy before the expiry date.",
+      "fr": "Veuillez résoudre cette divergence avant la date d'expiration."
+    }
+  ]
+}

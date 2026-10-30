@@ -1,0 +1,184 @@
+{
+  "id": "s5u3",
+  "title": "Lire un contrat",
+  "context": "Pro",
+  "goal": "Comprendre les clauses principales d'un contrat commercial.",
+  "points": [
+    "« Shall » exprime l'obligation légale contraignante dans les contrats internationaux, équivalent à un engagement ferme comme le paiement des frais de transit à Lomé.",
+    "« Liable » et « liability » désignent la responsabilité juridique et financière en cas de perte de marchandises au port de Tema ou d'Abidjan.",
+    "« Terminate » et « breach » concernent la rupture et la violation des termes du contrat, par exemple lors d'un retard de livraison à Ouagadougou.",
+    "« In accordance with » signifie « conformément à » et garantit le respect des réglementations douanières et maritimes en Afrique de l'Ouest."
+  ],
+  "examples": [
+    [
+      "The freight forwarder shall ensure secure transit to Ouagadougou.",
+      "Le transitaire doit assurer un transit sécurisé vers Ouagadougou."
+    ],
+    [
+      "The carrier shall be liable for any cargo damage at Cotonou port.",
+      "Le transporteur sera responsable de tout dommage à la cargaison au port de Cotonou."
+    ],
+    [
+      "Either party may terminate the agreement upon written notice.",
+      "Chaque partie peut résilier l'accord moyennant un préavis écrit."
+    ],
+    [
+      "Operations shall be conducted in accordance with regional transit laws.",
+      "Les opérations doivent être menées conformément aux lois régionales sur le transit."
+    ]
+  ],
+  "vocab": [
+    [
+      "shall",
+      "doit (obligation contractuelle)",
+      "/ʃæl/"
+    ],
+    [
+      "liable",
+      "responsable (légalement)",
+      "/ˈlaɪəbl/"
+    ],
+    [
+      "liability",
+      "responsabilité (civile/pénale)",
+      "/ˌlaɪəˈbɪləti/"
+    ],
+    [
+      "terminate",
+      "résilier / mettre fin",
+      "/ˈtɜːmɪneɪt/"
+    ],
+    [
+      "breach",
+      "violation / manquement",
+      "/briːtʃ/"
+    ],
+    [
+      "force majeure",
+      "force majeure",
+      "/ˌfɔːs mæˈʒʊə/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Quel terme anglais traduit l'obligation stricte d'une partie dans un contrat de fret ?",
+      "options": [
+        "may",
+        "shall",
+        "might",
+        "could"
+      ],
+      "answer": 1,
+      "explain": "« Shall » est utilisé dans les contrats formels pour exprimer une obligation légale impérative."
+    },
+    {
+      "type": "fill",
+      "sentence": "Mr Mensah will be ___ for any delay during the transit to Bamako.",
+      "options": [
+        "liable",
+        "liability",
+        "term",
+        "breach"
+      ],
+      "answer": 0,
+      "explain": "« Liable » est l'adjectif requis pour signifier qu'une personne est responsable juridiquement."
+    },
+    {
+      "type": "listen",
+      "audio": "The agent shall terminate the contract in case of a serious breach.",
+      "options": [
+        "The agent should terminate the contract in case of a serious breach.",
+        "The agent shall terminate the contract in case of a serious breach.",
+        "The agent must terminate the agreement in case of a serious breach.",
+        "The agent will terminate the contract in case of a serious breach."
+      ],
+      "answer": 1,
+      "explain": "L'audio prononce exactement « The agent shall terminate the contract in case of a serious breach. »"
+    },
+    {
+      "type": "build",
+      "fr": "Le transitaire est responsable de la cargaison.",
+      "answer": "The forwarder is liable for the cargo",
+      "extra": [
+        "shall",
+        "terminate",
+        "breach"
+      ],
+      "explain": "La structure correcte est sujet + verbe + adjectif + préposition + complément."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "shall",
+          "doit"
+        ],
+        [
+          "liable",
+          "responsable"
+        ],
+        [
+          "terminate",
+          "résilier"
+        ],
+        [
+          "breach",
+          "violation"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "All customs procedures must be performed ___ with local regulations.",
+      "options": [
+        "accordance",
+        "accord",
+        "according",
+        "agreed"
+      ],
+      "answer": 0,
+      "explain": "L'expression fixe est « in accordance with » pour dire « conformément à »."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Comment appelle-t-on la clause qui exonère les parties en cas d'événement imprévisible et insurmontable au port d'Abidjan ?",
+      "options": [
+        "liability clause",
+        "force majeure clause",
+        "termination clause",
+        "payment clause"
+      ],
+      "answer": 1,
+      "explain": "La clause de « force majeure » protège les parties en cas de circonstances exceptionnelles."
+    },
+    {
+      "type": "build",
+      "fr": "Awa peut résilier le contrat.",
+      "answer": "Awa may terminate the contract",
+      "extra": [
+        "liable",
+        "breach",
+        "shall"
+      ],
+      "explain": "« May » exprime une permission ou une possibilité contractuelle."
+    },
+    {
+      "type": "listen",
+      "audio": "This liability shall not exceed the total freight value.",
+      "options": [
+        "This liability shall not exceed the total freight value.",
+        "This liability will not exceed the total freight value.",
+        "Their liability shall not exceed the total freight value.",
+        "This liability should not exceed the total freight value."
+      ],
+      "answer": 0,
+      "explain": "L'audio correspond parfaitement à la phrase avec « shall not exceed »."
+    },
+    {
+      "type": "speak",
+      "text": "The carrier shall not be liable for unavoidable port delays.",
+      "fr": "Le transporteur ne sera pas responsable des retards portuaires inévitables."
+    }
+  ]
+}

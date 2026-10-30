@@ -1,0 +1,185 @@
+{
+  "id": "s6u8",
+  "title": "Diriger une réunion",
+  "context": "Pro",
+  "goal": "Animer une réunion et la faire aboutir.",
+  "points": [
+    "Ouvre et cadre : « Let's get started. The aim of today's meeting is… »",
+    "Fais avancer : « Let's move on to the next point. » ; recentre : « Could we stick to the agenda? »",
+    "Interromps poliment : « Sorry to interrupt, but… » ; donne la parole : « Koffi, what's your view? »",
+    "Conclus : « To sum up… » ou « So, to recap, the action points are… »"
+  ],
+  "examples": [
+    [
+      "The aim of today's meeting is to choose a new carrier.",
+      "L'objectif de la réunion d'aujourd'hui est de choisir un nouveau transporteur."
+    ],
+    [
+      "Let's move on to the next point on the agenda.",
+      "Passons au point suivant de l'ordre du jour."
+    ],
+    [
+      "Sorry to interrupt, but we are running out of time.",
+      "Désolé de vous interrompre, mais nous manquons de temps."
+    ],
+    [
+      "To sum up, Awa will contact the bank by Friday.",
+      "Pour résumer, Awa contactera la banque d'ici vendredi."
+    ]
+  ],
+  "vocab": [
+    [
+      "agenda",
+      "ordre du jour",
+      "/əˈdʒendə/"
+    ],
+    [
+      "to move on",
+      "passer à la suite",
+      "/muːv ɒn/"
+    ],
+    [
+      "to sum up",
+      "résumer",
+      "/sʌm ʌp/"
+    ],
+    [
+      "action point",
+      "action à mener",
+      "/ˈækʃn pɔɪnt/"
+    ],
+    [
+      "to chair",
+      "présider",
+      "/tʃeə/"
+    ],
+    [
+      "consensus",
+      "consensus",
+      "/kənˈsensəs/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "La discussion s'éloigne du sujet. Que dis-tu ?",
+      "options": [
+        "Could we stick to the agenda, please?",
+        "Stop talking now.",
+        "Could we glue to the agenda?",
+        "You are out of the subject."
+      ],
+      "answer": 0,
+      "explain": "« Could we stick to the agenda? » recentre la réunion poliment."
+    },
+    {
+      "type": "fill",
+      "sentence": "Let's move ___ to the next item.",
+      "options": [
+        "on",
+        "in",
+        "up",
+        "off"
+      ],
+      "answer": 0,
+      "explain": "« to move on » = passer à la suite."
+    },
+    {
+      "type": "listen",
+      "audio": "Sorry to interrupt, but we're running out of time.",
+      "options": [
+        "Sorry to interrupt, but we're running out of time.",
+        "Sorry to interrupt, but we're running out of tea.",
+        "Sorry to interrupt, but we're running on time.",
+        "Sorry, I interrupt, but we're running out of time."
+      ],
+      "answer": 0,
+      "explain": "« running out of time » = manquer de temps."
+    },
+    {
+      "type": "build",
+      "fr": "Pour résumer, nous changeons de transporteur.",
+      "answer": "To sum up we are changing carriers",
+      "extra": [
+        "resume",
+        "summary",
+        "is"
+      ],
+      "explain": "« To sum up » = pour résumer (« resume » est un faux ami)."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "agenda",
+          "ordre du jour"
+        ],
+        [
+          "to chair",
+          "présider"
+        ],
+        [
+          "action point",
+          "action à mener"
+        ],
+        [
+          "consensus",
+          "consensus"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "Koffi, what's your ___ on this proposal?",
+      "options": [
+        "view",
+        "sight",
+        "look",
+        "vision"
+      ],
+      "answer": 0,
+      "explain": "« What's your view on…? » = quel est ton avis sur… ?"
+    },
+    {
+      "type": "mcq",
+      "prompt": "Comment ouvres-tu la réunion ?",
+      "options": [
+        "Let's get started. The aim of today's meeting is to agree on the budget.",
+        "Okay, so, yes, hmm, budget.",
+        "We begin the meeting of the budget.",
+        "Start! Budget now."
+      ],
+      "answer": 0,
+      "explain": "On lance la réunion et on annonce clairement son objectif."
+    },
+    {
+      "type": "build",
+      "fr": "Qui est responsable de cette action ?",
+      "answer": "Who is responsible for this action point",
+      "extra": [
+        "of",
+        "which",
+        "responsibility"
+      ],
+      "explain": "« responsible for » (et non « of ») = responsable de."
+    },
+    {
+      "type": "listen",
+      "audio": "So, to recap, Awa will call the bank on Friday.",
+      "options": [
+        "So, to recap, Awa will call the bank on Friday.",
+        "So, to recap, Ama will call the bank on Friday.",
+        "So, to recap, Awa will call the bank on Thursday.",
+        "So, to recap, Awa called the bank on Friday."
+      ],
+      "answer": 0,
+      "explain": "« to recap » = pour récapituler."
+    },
+    {
+      "type": "speak",
+      "text": "Let's move on to the next point on the agenda.",
+      "fr": "Passons au point suivant de l'ordre du jour."
+    }
+  ],
+  "author": "claude"
+}

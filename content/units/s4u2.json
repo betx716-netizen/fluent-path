@@ -1,0 +1,184 @@
+{
+  "id": "s4u2",
+  "title": "Négocier un prix",
+  "context": "Commerce",
+  "goal": "Négocier un prix et trouver un accord.",
+  "points": [
+    "Pour demander une réduction de prix de manière professionnelle, utilisez l'expression polie : « Could you do better on the price? »",
+    "Pour proposer un compromis commercial attractif, employez la structure conditionnelle : « If you order more, we can… »",
+    "Pour exprimer l'idée de faire un compromis et couper la poire en deux, utilisez l'expression : « meet halfway ».",
+    "Pour signaler qu'il s'agit de votre dernière proposition avant la rupture des discussions, dites : « final offer » ou « deal »."
+  ],
+  "examples": [
+    [
+      "Could you do better on containers arriving at the port of Lomé?",
+      "Pouvez-vous faire un effort sur les conteneurs arrivant au port de Lomé ?"
+    ],
+    [
+      "If you order more transit clearance services, we can reduce port fees.",
+      "Si vous commandez plus de services de dédouanement, nous pouvons réduire les frais portuaires."
+    ],
+    [
+      "Let's meet halfway on the freight forwarding rates for Abidjan.",
+      "Faisons un compromis sur les tarifs de transit pour Abidjan."
+    ],
+    [
+      "This is our final offer for the cargo delivery to Cotonou. Do we have a deal?",
+      "C'est notre offre finale pour la livraison de la cargaison à Cotonou. Sommes-nous d'accord ?"
+    ]
+  ],
+  "vocab": [
+    [
+      "Could you do better on the price?",
+      "Pouvez-vous faire un meilleur prix ?",
+      "/kʊd ju du ˈbɛtər ɒn ðə praɪs/"
+    ],
+    [
+      "If you order more, we can…",
+      "Si vous commandez plus, nous pouvons…",
+      "/ɪf ju ˈɔːdə mɔː, wi kæn/"
+    ],
+    [
+      "meet halfway",
+      "faire un compromis / couper la poire en deux",
+      "/ˌhɑːfˈweɪ/"
+    ],
+    [
+      "final offer",
+      "offre finale",
+      "/ˈfaɪnəl ˈɒfə/"
+    ],
+    [
+      "deal",
+      "accord / marché conclu",
+      "/diːl/"
+    ],
+    [
+      "freight forwarding",
+      "commission de transport / transit",
+      "/freɪt ˈfɔːwədɪŋ/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Comment demandez-vous poliment une réduction de prix à Mr Mensah à Accra ?",
+      "options": [
+        "Lower your price now.",
+        "Could you do better on the price?",
+        "Give me cheap rates.",
+        "Your price is too bad."
+      ],
+      "answer": 1,
+      "explain": "« Could you do better on the price? » est la formule professionnelle et courtoise en anglais des affaires."
+    },
+    {
+      "type": "fill",
+      "sentence": "If you order more containers, we ___ offer a discount on transit fees.",
+      "options": [
+        "can",
+        "will not",
+        "must",
+        "shouldn't"
+      ],
+      "answer": 0,
+      "explain": "On utilise « can » dans la proposition principale pour exprimer une possibilité commerciale."
+    },
+    {
+      "type": "listen",
+      "audio": "Let us meet halfway on the shipping costs to Tema port.",
+      "options": [
+        "Let us meet yesterday on the shipping costs to Tema port.",
+        "Let us meet halfway on the shipping costs to Tema port.",
+        "Let us meet halfway on the shopping costs to Tema port.",
+        "Let us miss halfway on the shipping costs to Tema port."
+      ],
+      "answer": 1,
+      "explain": "La phrase correcte utilise « meet halfway » et « shipping costs »."
+    },
+    {
+      "type": "build",
+      "fr": "C'est notre offre finale pour Cotonou.",
+      "answer": "This is our final offer for Cotonou",
+      "extra": [
+        "price",
+        "bad",
+        "always"
+      ],
+      "explain": "Structure de base pour présenter une offre finale : « This is our final offer for Cotonou »."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "deal",
+          "accord"
+        ],
+        [
+          "final offer",
+          "offre finale"
+        ],
+        [
+          "meet halfway",
+          "faire un compromis"
+        ],
+        [
+          "freight forwarding",
+          "transit"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "This is our final ___, take it or leave it.",
+      "options": [
+        "offer",
+        "port",
+        "truck",
+        "ship"
+      ],
+      "answer": 0,
+      "explain": "« Final offer » signifie offre finale dans une négociation."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Que signifie l'expression « Do we have a deal? » prononcée par Awa à Abidjan ?",
+      "options": [
+        "Est-ce que nous livrons la marchandise ?",
+        "Sommes-nous d'accord / Affaire conclue ?",
+        "Où est le conteneur ?",
+        "Pouvez-vous payer en espèces ?"
+      ],
+      "answer": 1,
+      "explain": "« Do we have a deal? » sert à sceller un accord commercial."
+    },
+    {
+      "type": "build",
+      "fr": "Si vous commandez plus, nous pouvons baisser les frais.",
+      "answer": "If you order more we can reduce fees",
+      "extra": [
+        "never",
+        "buy",
+        "port"
+      ],
+      "explain": "Traduction directe de la structure conditionnelle enseignée : « If you order more we can reduce fees »."
+    },
+    {
+      "type": "listen",
+      "audio": "Could you do better on the price for Ouagadougou?",
+      "options": [
+        "Could you do better on the price for Ouagadougou?",
+        "Can you do bitter on the price for Ouagadougou?",
+        "Could you do better on the prize for Ouagadougou?",
+        "Could we do better on the price for Ouagadougou?"
+      ],
+      "answer": 0,
+      "explain": "Écoutez bien l'auxiliaire « Could » et le mot « price »."
+    },
+    {
+      "type": "speak",
+      "text": "Let us meet halfway on this shipment to Lagos.",
+      "fr": "Faisons un compromis sur cet envoi vers Lagos."
+    }
+  ]
+}

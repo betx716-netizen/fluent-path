@@ -11,7 +11,8 @@ import { Talk } from "./screens/Talk";
 import { BottomNav, TopBar, type Tab } from "./components/Chrome";
 import { Chest, Gem } from "./components/Icons";
 import { Zazou } from "./components/Zazou";
-import { GEMS_PER_CHEST, finishLesson, openChest, type LessonResult, type Reward } from "./lib/game";
+import { GEMS_PER_CHEST, buildTest, finishLesson, finishTest, openChest, type LessonResult, type Reward, type TestOutcome } from "./lib/game";
+import { TestResult } from "./screens/TestResult";
 import { getState, setState, useStore } from "./lib/store";
 import { sfx } from "./lib/sfx";
 import { logSession, startSync } from "./lib/sync";
@@ -26,7 +27,9 @@ type View =
   | { kind: "roleplay"; sc: Scenario }
   | { kind: "report"; sc: Scenario; outcome: RoleplayOutcome }
   | { kind: "lesson"; unit: Unit }
-  | { kind: "victory"; reward: Reward; seconds: number };
+  | { kind: "victory"; reward: Reward; seconds: number }
+  | { kind: "test"; section: Section; unit: Unit }
+  | { kind: "testResult"; section: Section; outcome: TestOutcome };
 
 export default function App() {
   const onboarded = useStore(s => s.profile.onboarded);
@@ -68,6 +71,30 @@ export default function App() {
       </div>
     );
   }
+  const startTest = (section: Section) => setView({ kind: "test", section, unit: buildTest(section) });
+  if (view.kind === "test") {
+    return (
+      <div className="app">
+        <Lesson
+          test
+          unit={view.unit}
+          onExit={() => setView({ kind: "tabs" })}
+          onDone={r => {
+            const { next, outcome } = finishTest(getState(), view.section, r.firstTry, r.total, r.seconds);
+            setState(() => syncUnitCards(next));
+            setView({ kind: "testResult", section: view.section, outcome });
+          }}
+        />
+      </div>
+    );
+  }
+  if (view.kind === "testResult") {
+    return (
+      <div className="app">
+        <TestResult section={view.section} outcome={view.outcome} onRetry={() => startTest(view.section)} onDone={() => setView({ kind: "tabs" })} />
+      </div>
+    );
+  }
   if (view.kind === "roleplay") {
     return (
       <div className="app">
@@ -98,7 +125,7 @@ export default function App() {
     <div className="app">
       <TopBar />
       <main style={{ flex: 1, display: "flex", flexDirection: "column" }}>
-        {tab === "learn" && <PathMap onStart={unit => setView({ kind: "lesson", unit })} onChest={setChest} />}
+        {tab === "learn" && <PathMap onStart={unit => setView({ kind: "lesson", unit })} onChest={setChest} onTest={startTest} />}
         {tab === "review" && <ReviewTab toast={setToastMsg} />}
         {tab === "talk" && <Talk onStart={sc => setView({ kind: "roleplay", sc })} />}
         {tab === "accent" && <Accents toast={setToastMsg} />}

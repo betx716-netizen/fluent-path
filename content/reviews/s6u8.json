@@ -1,0 +1,10 @@
+{
+  "model": "gemini-flash-lite-latest",
+  "issues": [
+    {
+      "where": "exercises[3].answer",
+      "problem": "Missing comma after 'To sum up', making the sentence grammatically incorrect.",
+      "fix": "To sum up, we are changing carriers"
+    }
+  ]
+}

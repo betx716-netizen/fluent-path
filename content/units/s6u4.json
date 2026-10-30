@@ -1,0 +1,185 @@
+{
+  "id": "s6u4",
+  "title": "Humour et sous-entendus",
+  "context": "Pro",
+  "goal": "Décoder ce que veulent vraiment dire les Britanniques.",
+  "points": [
+    "Les Britanniques minimisent : « not ideal » ou « a bit of a problem » peut vouloir dire « très grave ».",
+    "« With all due respect… » annonce souvent un désaccord fort.",
+    "« I'll bear it in mind » signifie souvent « je ne le ferai sans doute pas ».",
+    "« That's an interesting idea » ou « quite good » peuvent cacher une réserve : écoute le ton."
+  ],
+  "examples": [
+    [
+      "The container fell into the sea? That's not ideal.",
+      "Le conteneur est tombé à la mer ? Ce n'est pas idéal. (= c'est grave)"
+    ],
+    [
+      "With all due respect, your figures are wrong.",
+      "Sauf votre respect, vos chiffres sont faux."
+    ],
+    [
+      "I'll bear it in mind.",
+      "J'y penserai. (= sans doute pas)"
+    ],
+    [
+      "We have a slight issue with the payment.",
+      "Nous avons un léger souci avec le paiement. (= c'est sérieux)"
+    ]
+  ],
+  "vocab": [
+    [
+      "understatement",
+      "litote, euphémisme",
+      "/ˌʌndəˈsteɪtmənt/"
+    ],
+    [
+      "not ideal",
+      "pas idéal (= mauvais)",
+      "/nɒt aɪˈdɪəl/"
+    ],
+    [
+      "with all due respect",
+      "sauf votre respect",
+      "/wɪð ɔːl djuː rɪˈspekt/"
+    ],
+    [
+      "to bear in mind",
+      "garder à l'esprit",
+      "/beər ɪn maɪnd/"
+    ],
+    [
+      "a slight issue",
+      "un léger souci",
+      "/ə slaɪt ˈɪʃuː/"
+    ],
+    [
+      "fair enough",
+      "d'accord, c'est juste",
+      "/feər ɪˈnʌf/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Ton client britannique dit : « The delay is a bit of a problem for us. » Il veut probablement dire :",
+      "options": [
+        "Le retard est un gros problème pour eux.",
+        "Le retard ne les gêne pas.",
+        "Ils veulent annuler sans raison.",
+        "Ils trouvent le retard amusant."
+      ],
+      "answer": 0,
+      "explain": "Litote britannique : « a bit of a problem » cache souvent un problème sérieux."
+    },
+    {
+      "type": "fill",
+      "sentence": "With all due ___, I think your offer is too low.",
+      "options": [
+        "respect",
+        "regards",
+        "honour",
+        "polite"
+      ],
+      "answer": 0,
+      "explain": "« With all due respect » annonce poliment un désaccord."
+    },
+    {
+      "type": "listen",
+      "audio": "Well, that's not ideal.",
+      "options": [
+        "Well, that's not ideal.",
+        "Well, that's an idea.",
+        "Well, that's ideal.",
+        "Well, that's not the deal."
+      ],
+      "answer": 0,
+      "explain": "« not ideal » = c'est mauvais, dit avec retenue."
+    },
+    {
+      "type": "build",
+      "fr": "Je garderai cela à l'esprit.",
+      "answer": "I will bear that in mind",
+      "extra": [
+        "head",
+        "on",
+        "have"
+      ],
+      "explain": "« to bear in mind » = garder à l'esprit."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "understatement",
+          "litote"
+        ],
+        [
+          "fair enough",
+          "d'accord, c'est juste"
+        ],
+        [
+          "a slight issue",
+          "un léger souci"
+        ],
+        [
+          "not ideal",
+          "pas idéal"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "That's an ___ idea — let me think about it.",
+      "options": [
+        "interesting",
+        "interested",
+        "interest",
+        "interestingly"
+      ],
+      "answer": 0,
+      "explain": "« That's an interesting idea » peut cacher une réserve polie ; « interesting » est l'adjectif qui convient."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Un partenaire répond « I'll bear it in mind » à ta proposition. Que faire ?",
+      "options": [
+        "Comprendre qu'il n'est sans doute pas convaincu, et relancer avec un argument",
+        "Considérer que c'est accepté",
+        "Envoyer le contrat signé",
+        "Arrêter de lui parler"
+      ],
+      "answer": 0,
+      "explain": "« I'll bear it in mind » est souvent un refus poli : il faut reformuler ou convaincre."
+    },
+    {
+      "type": "build",
+      "fr": "Sauf votre respect, ce prix est trop élevé.",
+      "answer": "With all due respect this price is too high",
+      "extra": [
+        "regard",
+        "very",
+        "expensive"
+      ],
+      "explain": "« With all due respect » introduit un désaccord poli."
+    },
+    {
+      "type": "listen",
+      "audio": "Fair enough, we can talk about it next week.",
+      "options": [
+        "Fair enough, we can talk about it next week.",
+        "Far enough, we can talk about it next week.",
+        "Fair enough, we can't talk about it next week.",
+        "Fair enough, we can walk about it next week."
+      ],
+      "answer": 0,
+      "explain": "« Fair enough » = d'accord, c'est raisonnable."
+    },
+    {
+      "type": "speak",
+      "text": "With all due respect, I think we should reconsider the price.",
+      "fr": "Sauf votre respect, je pense que nous devrions revoir le prix."
+    }
+  ],
+  "author": "claude"
+}

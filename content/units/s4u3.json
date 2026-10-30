@@ -1,0 +1,184 @@
+{
+  "id": "s4u3",
+  "title": "Conditions de paiement",
+  "context": "Commerce",
+  "goal": "Discuter des conditions et des délais de paiement.",
+  "points": [
+    "Pour demander un acompte avant l'expédition depuis Lomé, utilisez le terme « deposit » ou « advance payment ».",
+    "Exprimez un délai de règlement à 30 jours avec l'expression « 30 days net » ou « net 30 days ».",
+    "Pour sécuriser une transaction importante à Abidjan, mentionnez le « letter of credit » (crédit documentaire).",
+    "En cas de retard de paiement, appliquez des pénalités nommées « late payment fee » pour les factures « overdue »."
+  ],
+  "examples": [
+    [
+      "We require a 30% deposit before loading the containers at Tema port.",
+      "Nous exigeons un acompte de 30 % avant le chargement des conteneurs au port de Tema."
+    ],
+    [
+      "The balance is payable in three equal instalments upon arrival in Ouagadougou.",
+      "Le solde est payable en trois versements égaux à l'arrivée à Ouagadougou."
+    ],
+    [
+      "Mr Mensah offered us 30 days net for this freight forwarding contract.",
+      "M. Mensah nous a offert un délai de paiement net de 30 jours pour ce contrat de transit."
+    ],
+    [
+      "An overdue invoice will automatically incur a late payment fee.",
+      "Une facture en retard entraînera automatiquement des pénalités de retard."
+    ]
+  ],
+  "vocab": [
+    [
+      "deposit",
+      "acompte",
+      "/ˈdɛpɒzɪt/"
+    ],
+    [
+      "advance payment",
+      "paiement anticipé",
+      "/ədˈvɑːns ˈpeɪmənt/"
+    ],
+    [
+      "instalments",
+      "versements / échéances",
+      "/ɪnˈstɔːlmənts/"
+    ],
+    [
+      "30 days net",
+      "30 jours net",
+      "/ˈθɜːti deɪz nɛt/"
+    ],
+    [
+      "letter of credit",
+      "crédit documentaire",
+      "/ˈlɛtər ɒv ˈkrɛdɪt/"
+    ],
+    [
+      "overdue",
+      "en retard / échu",
+      "/ˌəʊvəˈduː/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Comment dit-on « acompte » en anglais professionnel pour une commande à Cotonou ?",
+      "options": [
+        "gift",
+        "deposit",
+        "debt",
+        "loan"
+      ],
+      "answer": 1,
+      "explain": "Le terme 'deposit' désigne un acompte versé à la commande."
+    },
+    {
+      "type": "fill",
+      "sentence": "Mrs Okafor requested an ___ payment of 50 percent before shipping the goods.",
+      "options": [
+        "advance",
+        "late",
+        "free",
+        "bad"
+      ],
+      "answer": 0,
+      "explain": "'Advance payment' signifie un paiement anticipé."
+    },
+    {
+      "type": "listen",
+      "audio": "The invoice is now overdue and subject to penalties.",
+      "options": [
+        "The invoice is now overdue and subject to penalties.",
+        "The invoice is now over due and subject to penalties.",
+        "The invoice is not overdue and subject to penalties.",
+        "The invoice is now outdated and subject to penalties."
+      ],
+      "answer": 0,
+      "explain": "La phrase correcte indique clairement que la facture est en retard ('overdue')."
+    },
+    {
+      "type": "build",
+      "fr": "Nous payons en trois versements.",
+      "answer": "We pay in three instalments",
+      "extra": [
+        "cash",
+        "delayed",
+        "never"
+      ],
+      "explain": "Construction correcte : sujet + verbe + préposition + nombre + nom."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "deposit",
+          "acompte"
+        ],
+        [
+          "instalments",
+          "versements"
+        ],
+        [
+          "overdue",
+          "en retard"
+        ],
+        [
+          "late payment fee",
+          "frais de retard"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "Kodjo agreed to terms of thirty days ___ for the transit operation.",
+      "options": [
+        "net",
+        "hard",
+        "fast",
+        "slow"
+      ],
+      "answer": 0,
+      "explain": "'30 days net' est l'expression standard pour désigner un délai de règlement net."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Quel terme désigne un mode de paiement sécurisé par les banques pour le commerce international à Lagos ?",
+      "options": [
+        "letter of credit",
+        "pocket money",
+        "open ledger",
+        "hand shake"
+      ],
+      "answer": 0,
+      "explain": "Le 'letter of credit' (crédit documentaire) sécurise les transactions internationales."
+    },
+    {
+      "type": "build",
+      "fr": "Cette facture est en retard.",
+      "answer": "This invoice is overdue",
+      "extra": [
+        "paid",
+        "early",
+        "tomorrow"
+      ],
+      "explain": "Structure : 'This invoice' (sujet) + 'is' + 'overdue' (attribut)."
+    },
+    {
+      "type": "listen",
+      "audio": "A late payment fee will be applied to your account.",
+      "options": [
+        "A late payment fee will be applied to your account.",
+        "A last payment fee will be applied to your account.",
+        "A late payment fee will be display on your account.",
+        "The late payment fee will be applied to your account."
+      ],
+      "answer": 0,
+      "explain": "Écoutez bien 'late payment fee' (frais de retard)."
+    },
+    {
+      "type": "speak",
+      "text": "Can we negotiate a letter of credit for this shipment?",
+      "fr": "Pouvons-nous négocier un crédit documentaire pour cette expédition ?"
+    }
+  ]
+}

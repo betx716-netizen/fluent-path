@@ -1,0 +1,15 @@
+{
+  "model": "gemini-flash-lite-latest",
+  "issues": [
+    {
+      "where": "vocab[5][2]",
+      "problem": "British IPA for force majeure uses /mæˈʒʊə/ or French-derived pronunciation, not American /ˈmæʒɜːr/",
+      "fix": "/ˌfɔːs mæˈʒʊə/"
+    },
+    {
+      "where": "exercises[7].answer",
+      "problem": "Capital 'May' is incorrect in the middle of a sentence",
+      "fix": "Awa may terminate the contract"
+    }
+  ]
+}

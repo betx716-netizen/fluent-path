@@ -1,0 +1,184 @@
+{
+  "id": "s2u7",
+  "title": "Paiement et factures",
+  "context": "Commerce",
+  "goal": "Parler d'une facture, d'une échéance et d'un moyen de paiement.",
+  "points": [
+    "« Invoice » signifie facture. Pour dire payer, on utilise « pay » et au passé « paid ».",
+    "L'échéance se dit « due date ». C'est la date limite pour régler le montant.",
+    "Pour payer, on utilise « bank transfer » (virement), « cash » (espèces) ou « mobile money ».",
+    "Le document de preuve est un « receipt » (reçu), et le montant restant est la « balance »."
+  ],
+  "examples": [
+    [
+      "Please pay the invoice before the due date.",
+      "Veuillez payer la facture avant la date d'échéance."
+    ],
+    [
+      "Kodjo sent the money by mobile money yesterday.",
+      "Kodjo a envoyé l'argent par mobile money hier."
+    ],
+    [
+      "I need a receipt for this bank transfer.",
+      "J'ai besoin d'un reçu pour ce virement bancaire."
+    ],
+    [
+      "The remaining balance for Cotonou port is paid.",
+      "Le solde restant pour le port de Cotonou est payé."
+    ]
+  ],
+  "vocab": [
+    [
+      "invoice",
+      "facture",
+      "/ˈɪn.vɔɪs/"
+    ],
+    [
+      "due date",
+      "date d'échéance",
+      "/ˈdʒuː deɪt/"
+    ],
+    [
+      "bank transfer",
+      "virement bancaire",
+      "/bæŋk ˈtræns.fɜː/"
+    ],
+    [
+      "receipt",
+      "reçu / quittance",
+      "/rɪˈsiːt/"
+    ],
+    [
+      "balance",
+      "solde restant",
+      "/ˈbæl.əns/"
+    ],
+    [
+      "cash",
+      "espèces / argent liquide",
+      "/kæʃ/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Comment dit-on « date d'échéance » en anglais des affaires ?",
+      "options": [
+        "Due date",
+        "Delivery note",
+        "Port tax",
+        "Bill date"
+      ],
+      "answer": 0,
+      "explain": "« Due date » désigne précisément la date limite de paiement d'une facture."
+    },
+    {
+      "type": "fill",
+      "sentence": "Mr Mensah sent the payment by bank ___ this morning.",
+      "options": [
+        "cash",
+        "transfer",
+        "receipt",
+        "balance"
+      ],
+      "answer": 1,
+      "explain": "L'expression « bank transfer » correspond à un virement bancaire."
+    },
+    {
+      "type": "listen",
+      "audio": "Awa paid the full balance by mobile money.",
+      "options": [
+        "Awa paid the full balance by mobile money.",
+        "Awa paid the full balance by mobile phone.",
+        "Awa pays the full balance by mobile money.",
+        "Ama paid the full balance by mobile money."
+      ],
+      "answer": 0,
+      "explain": "La phrase entendue est : « Awa paid the full balance by mobile money. »"
+    },
+    {
+      "type": "build",
+      "fr": "Veuillez envoyer le reçu à Lomé.",
+      "answer": "Please send the receipt to Lomé",
+      "extra": [
+        "pays",
+        "cash",
+        "invoice"
+      ],
+      "explain": "« Receipt » est le reçu. L'ordre impératif commence par « Please send »."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "receipt",
+          "reçu"
+        ],
+        [
+          "invoice",
+          "facture"
+        ],
+        [
+          "due date",
+          "date d'échéance"
+        ],
+        [
+          "balance",
+          "solde restant"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "The client must pay the ___ before Friday.",
+      "options": [
+        "container",
+        "paid",
+        "invoice",
+        "transit"
+      ],
+      "answer": 2,
+      "explain": "On paie une facture, en anglais « invoice »."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Koffi a réglé la marchandise au port. Quel document prouve son paiement ?",
+      "options": [
+        "A passport",
+        "A receipt",
+        "A container",
+        "A balance"
+      ],
+      "answer": 1,
+      "explain": "« A receipt » est une quittance ou un reçu qui prouve le paiement effectué."
+    },
+    {
+      "type": "build",
+      "fr": "Kodjo a payé la facture en espèces.",
+      "answer": "Kodjo paid the invoice in cash",
+      "extra": [
+        "pays",
+        "transfer",
+        "due"
+      ],
+      "explain": "« Paid » est la forme passée de « pay », et « in cash » signifie en espèces."
+    },
+    {
+      "type": "listen",
+      "audio": "The invoice due date is tomorrow.",
+      "options": [
+        "The invoice due date is today.",
+        "The invoice new date is tomorrow.",
+        "The invoice due date is tomorrow.",
+        "The balance due date is tomorrow."
+      ],
+      "answer": 2,
+      "explain": "On entend : « The invoice due date is tomorrow. »"
+    },
+    {
+      "type": "speak",
+      "text": "I will pay the balance by bank transfer today.",
+      "fr": "Je paierai le solde par virement bancaire aujourd'hui."
+    }
+  ]
+}

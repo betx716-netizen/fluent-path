@@ -1,0 +1,184 @@
+{
+  "id": "s3u9",
+  "title": "Réunion d'équipe",
+  "context": "Pro",
+  "goal": "Participer à une réunion simple en anglais.",
+  "points": [
+    "Pour ouvrir la réunion, dites « Let's start with... » pour aborder le premier point de l'ordre du jour (« agenda »).",
+    "Le compte-rendu s'appelle « the minutes ». On désigne le rédacteur avec « Who can take the minutes? ».",
+    "Pour attribuer une tâche (« action point »), demandez « Who is responsible for this task? ».",
+    "À la fin de la réunion, demandez s'il y a d'autres sujets avec « Any other business? »."
+  ],
+  "examples": [
+    [
+      "Let's start with the transit delays at Tema port.",
+      "Commençons par les retards de transit au port de Tema."
+    ],
+    [
+      "Awa will take the minutes for today's meeting.",
+      "Awa prendra le compte-rendu pour la réunion d'aujourd'hui."
+    ],
+    [
+      "Who is responsible for checking the customs documents?",
+      "Qui est responsable de la vérification des documents douaniers ?"
+    ],
+    [
+      "Is there any other business before we finish?",
+      "Y a-t-il d'autres questions diverses avant de terminer ?"
+    ]
+  ],
+  "vocab": [
+    [
+      "agenda",
+      "ordre du jour",
+      "/əˈdʒɛn.də/"
+    ],
+    [
+      "minutes",
+      "compte-rendu de réunion",
+      "/ˈmɪn.ɪts/"
+    ],
+    [
+      "action point",
+      "action à mener",
+      "/ˈæk.ʃən pɔɪnt/"
+    ],
+    [
+      "responsible for",
+      "responsable de",
+      "/rɪˈspɒn.sə.bəl fɔː/"
+    ],
+    [
+      "any other business",
+      "questions diverses",
+      "/ˈɛn.i ˈʌð.ə ˈbɪz.nɪs/"
+    ],
+    [
+      "chair a meeting",
+      "présider une réunion",
+      "/tʃɛər ə ˈmiː.tɪŋ/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Comment demandez-vous qui prendra le compte-rendu de la réunion ?",
+      "options": [
+        "Who will write the agenda?",
+        "Who wants to open the meeting?",
+        "Who will take the minutes?",
+        "Who is late for transit?"
+      ],
+      "answer": 2,
+      "explain": "En anglais professionnel, « take the minutes » signifie prendre le compte-rendu."
+    },
+    {
+      "type": "fill",
+      "sentence": "Let's ___ with the transit delays at Lomé port.",
+      "options": [
+        "discuss",
+        "start",
+        "cancel",
+        "delay"
+      ],
+      "answer": 1,
+      "explain": " On utilise l'expression « Let's start with... » pour aborder le premier sujet."
+    },
+    {
+      "type": "listen",
+      "audio": "Who is responsible for updating the shipping schedule?",
+      "options": [
+        "Who is responsible for updating the shipping schedule?",
+        "Who is response for updating the shipping schedule?",
+        "Who is responsible for update the shipping schedule?",
+        "Who is responsible for updating the shipping scale?"
+      ],
+      "answer": 0,
+      "explain": "« Responsible for » est suivi du verbe en -ing (« updating »)."
+    },
+    {
+      "type": "build",
+      "fr": "Kodjo est responsable du suivi des conteneurs.",
+      "answer": "Kodjo is responsible for tracking the containers",
+      "extra": [
+        "on",
+        "makes",
+        "delay"
+      ],
+      "explain": "On dit « responsible for » suivi d'un verbe terminé par -ing."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "agenda",
+          "ordre du jour"
+        ],
+        [
+          "minutes",
+          "compte-rendu"
+        ],
+        [
+          "action point",
+          "action à mener"
+        ],
+        [
+          "other business",
+          "questions diverses"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "Is there any other ___ before we close the meeting?",
+      "options": [
+        "agenda",
+        "minutes",
+        "action",
+        "business"
+      ],
+      "answer": 3,
+      "explain": "« Any other business » (AOB) désigne les questions diverses en fin de réunion."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Mr Mensah veut passer au point suivant de l'ordre du jour pour le port de Cotonou. Que dit-il ?",
+      "options": [
+        "Is there any other business on the table?",
+        "Let's move to the next item on the agenda.",
+        "Who is responsible for Cotonou port?",
+        "Who will take the minutes for Cotonou?"
+      ],
+      "answer": 1,
+      "explain": "« Let's move to the next item on the agenda » permet d'avancer dans la réunion."
+    },
+    {
+      "type": "build",
+      "fr": "Mrs Okafor va rédiger les actions à mener.",
+      "answer": "Mrs Okafor will write the action points",
+      "extra": [
+        "is",
+        "taking",
+        "minutes"
+      ],
+      "explain": "« Action points » désigne la liste des tâches attribuées pendant la réunion."
+    },
+    {
+      "type": "listen",
+      "audio": "We need to agree on the main action points.",
+      "options": [
+        "We need to agree on the main action plan.",
+        "We need to degree on the main action points.",
+        "We need to agree on the main action points.",
+        "We need to agree for the main action points."
+      ],
+      "answer": 2,
+      "explain": "On dit « agree on » pour indiquer qu'on se met d'accord sur un sujet."
+    },
+    {
+      "type": "speak",
+      "text": "Let us review the agenda before we start the meeting.",
+      "fr": "Révisons l'ordre du jour avant de commencer la réunion."
+    }
+  ]
+}

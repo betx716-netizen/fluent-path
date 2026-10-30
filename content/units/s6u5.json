@@ -1,0 +1,185 @@
+{
+  "id": "s6u5",
+  "title": "L'anglais d'Afrique de l'Ouest",
+  "context": "Commerce",
+  "goal": "Comprendre les tournures de tes partenaires nigérians et ghanéens.",
+  "points": [
+    "Au Nigeria et au Ghana, « I'm coming » veut souvent dire « je reviens tout de suite », pas « j'arrive ».",
+    "« Flash me » = fais-moi un appel manqué, pour que je te rappelle.",
+    "« How far? » (Nigeria) est une salutation : « Quoi de neuf ? ». Tu peux répondre « Fine, and you? ».",
+    "« Well done! » sert à saluer quelqu'un qui travaille ; « to reach » s'emploie souvent pour « arriver »."
+  ],
+  "examples": [
+    [
+      "Wait for me, I'm coming.",
+      "Attends-moi, je reviens tout de suite."
+    ],
+    [
+      "Flash me when you reach the port.",
+      "Fais-moi un appel manqué quand tu arrives au port."
+    ],
+    [
+      "How far? Did the goods arrive?",
+      "Quoi de neuf ? La marchandise est arrivée ?"
+    ],
+    [
+      "Well done, madam! How is business today?",
+      "Bon courage, madame ! Comment vont les affaires aujourd'hui ?"
+    ]
+  ],
+  "vocab": [
+    [
+      "I'm coming",
+      "je reviens tout de suite (Afrique de l'Ouest)",
+      "/aɪm ˈkʌmɪŋ/"
+    ],
+    [
+      "to flash someone",
+      "faire un appel manqué",
+      "/tə flæʃ ˈsʌmwʌn/"
+    ],
+    [
+      "How far?",
+      "quoi de neuf ? (Nigeria)",
+      "/haʊ fɑː/"
+    ],
+    [
+      "Well done!",
+      "bon courage ! (salutation)",
+      "/wel dʌn/"
+    ],
+    [
+      "to reach",
+      "arriver à",
+      "/riːtʃ/"
+    ],
+    [
+      "to dash",
+      "donner un petit cadeau",
+      "/dæʃ/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Ton partenaire nigérian dit « I'm coming » puis quitte la pièce. Il veut dire :",
+      "options": [
+        "Je reviens tout de suite.",
+        "J'arrive chez toi demain.",
+        "Je pars définitivement.",
+        "Je viens avec toi."
+      ],
+      "answer": 0,
+      "explain": "En Afrique de l'Ouest, « I'm coming » signifie souvent « je reviens dans un instant »."
+    },
+    {
+      "type": "fill",
+      "sentence": "___ me when you get to Tema, and I will call you back.",
+      "options": [
+        "Flash",
+        "Flush",
+        "Flesh",
+        "Fly"
+      ],
+      "answer": 0,
+      "explain": "« Flash me » = fais-moi un appel manqué pour que je te rappelle."
+    },
+    {
+      "type": "listen",
+      "audio": "How far, my brother? Has the truck left?",
+      "options": [
+        "How far, my brother? Has the truck left?",
+        "How far, my brother? Has the truck lift?",
+        "How far is my brother? Has the truck left?",
+        "How fast, my brother? Has the truck left?"
+      ],
+      "answer": 0,
+      "explain": "« How far? » est une salutation nigériane : « Quoi de neuf ? »."
+    },
+    {
+      "type": "build",
+      "fr": "Appelle-moi quand tu arrives au port.",
+      "answer": "Call me when you reach the port",
+      "extra": [
+        "arrives",
+        "to",
+        "will"
+      ],
+      "explain": "En Afrique de l'Ouest, on dit souvent « reach » pour « arriver à »."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "I'm coming",
+          "je reviens tout de suite"
+        ],
+        [
+          "How far?",
+          "quoi de neuf ?"
+        ],
+        [
+          "to dash",
+          "donner un petit cadeau"
+        ],
+        [
+          "to reach",
+          "arriver à"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "In Ghana, a customer may greet a busy trader with « Well ___! ».",
+      "options": [
+        "done",
+        "made",
+        "come",
+        "good"
+      ],
+      "answer": 0,
+      "explain": "« Well done! » sert de salutation pour encourager quelqu'un qui travaille."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Un fournisseur ghanéen t'écrit : « Please flash me ». Que fais-tu ?",
+      "options": [
+        "Je l'appelle et je raccroche avant qu'il réponde, pour qu'il me rappelle.",
+        "Je lui envoie une photo.",
+        "Je lui fais un virement.",
+        "J'allume mes phares."
+      ],
+      "answer": 0,
+      "explain": "« Flash me » = fais-moi un appel manqué ; il te rappellera."
+    },
+    {
+      "type": "build",
+      "fr": "Le chauffeur est arrivé à la frontière.",
+      "answer": "The driver has reached the border",
+      "extra": [
+        "reach",
+        "on",
+        "is"
+      ],
+      "explain": "« has reached » = est arrivé (present perfect de « to reach »)."
+    },
+    {
+      "type": "listen",
+      "audio": "Don't worry, I'm coming. Just two minutes.",
+      "options": [
+        "Don't worry, I'm coming. Just two minutes.",
+        "Don't worry, I'm coming. Just ten minutes.",
+        "Don't worry, I'm calling. Just two minutes.",
+        "Don't worry, I'm running. Just two minutes."
+      ],
+      "answer": 0,
+      "explain": "Ici, « I'm coming » = je reviens dans deux minutes."
+    },
+    {
+      "type": "speak",
+      "text": "Well done, sir! How is business today?",
+      "fr": "Bon courage, monsieur ! Comment vont les affaires aujourd'hui ?"
+    }
+  ],
+  "author": "claude"
+}

@@ -1,0 +1,184 @@
+{
+  "id": "s1u10",
+  "title": "Il y a / il n'y a pas",
+  "context": "Transit",
+  "goal": "Dire ce qu'il y a (ou non) dans un entrepôt ou un camion.",
+  "points": [
+    "Pour un seul objet, utilisez « there is » (il y a). Exemple : « There is a truck. »",
+    "Pour plusieurs objets, utilisez « there are » (il y a). Exemple : « There are five boxes. »",
+    "Pour poser une question, inversez : « Is there...? » au singulier ou « Are there...? » au pluriel.",
+    "Pour la négation au pluriel, utilisez « there aren't any » (il n'y a pas de)."
+  ],
+  "examples": [
+    [
+      "There is a truck in Lomé.",
+      "Il y a un camion à Lomé."
+    ],
+    [
+      "There are ten boxes here.",
+      "Il y a dix cartons ici."
+    ],
+    [
+      "Is there a pallet inside?",
+      "Y a-t-il une palette à l'intérieur ?"
+    ],
+    [
+      "There aren't any trucks today.",
+      "Il n'y a pas de camions aujourd'hui."
+    ]
+  ],
+  "vocab": [
+    [
+      "a box",
+      "un carton / une boîte",
+      "/ə bɒks/"
+    ],
+    [
+      "a pallet",
+      "une palette",
+      "/ə ˈpælɪt/"
+    ],
+    [
+      "a truck",
+      "un camion",
+      "/ə trʌk/"
+    ],
+    [
+      "a warehouse",
+      "un entrepôt",
+      "/ə ˈweəhaʊs/"
+    ],
+    [
+      "there is",
+      "il y a (singulier)",
+      "/ðeər ɪz/"
+    ],
+    [
+      "there are",
+      "il y a (pluriel)",
+      "/ðeər ɑː/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Comment dit-on « Il y a un carton dans l'entrepôt » ?",
+      "options": [
+        "There is a box in the warehouse.",
+        "There are a box in the warehouse.",
+        "Is there a box in the warehouse.",
+        "There isn't a box in the warehouse."
+      ],
+      "answer": 0,
+      "explain": "On utilise « there is » devant un nom singulier (« a box »)."
+    },
+    {
+      "type": "fill",
+      "sentence": "There ___ ten pallets in the truck.",
+      "options": [
+        "is",
+        "are",
+        "be",
+        "has"
+      ],
+      "answer": 1,
+      "explain": "Avec un nom au pluriel (« ten pallets »), on emploie « are »."
+    },
+    {
+      "type": "listen",
+      "audio": "Is there a truck in Cotonou?",
+      "options": [
+        "Is there a track in Cotonou?",
+        "Is there a truck in Cotonou?",
+        "Are there a truck in Cotonou?",
+        "Is there a truck in Lomé?"
+      ],
+      "answer": 1,
+      "explain": "« Is there a truck in Cotonou? » signifie « Y a-t-il un camion à Cotonou ? »."
+    },
+    {
+      "type": "build",
+      "fr": "Il y a une palette ici.",
+      "answer": "There is a pallet here",
+      "extra": [
+        "are",
+        "pallets",
+        "truck"
+      ],
+      "explain": "Pour un objet unique (« a pallet »), on commence par « there is »."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "a pallet",
+          "une palette"
+        ],
+        [
+          "a warehouse",
+          "un entrepôt"
+        ],
+        [
+          "a truck",
+          "un camion"
+        ],
+        [
+          "a box",
+          "un carton"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "There aren't ___ boxes in Abidjan.",
+      "options": [
+        "a",
+        "one",
+        "any",
+        "some"
+      ],
+      "answer": 2,
+      "explain": "Dans une phrase négative au pluriel, on emploie « any » pour dire « de »."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Mr Mensah demande : « Y a-t-il des camions au port ? » Que dit-il ?",
+      "options": [
+        "There are trucks at the port?",
+        "Are there trucks at the port?",
+        "Is there trucks at the port?",
+        "There is trucks at the port?"
+      ],
+      "answer": 1,
+      "explain": "Pour poser une question au pluriel, on inverse le verbe : « Are there... ? »."
+    },
+    {
+      "type": "build",
+      "fr": "Il n'y a pas de cartons.",
+      "answer": "There are not any boxes",
+      "extra": [
+        "is",
+        "a",
+        "pallet"
+      ],
+      "explain": "Sans contraction, la forme négative plurielle s'écrit « there are not any boxes »."
+    },
+    {
+      "type": "listen",
+      "audio": "There are four boxes today.",
+      "options": [
+        "There is four boxes today.",
+        "There are for boxes today.",
+        "There are four pallets today.",
+        "There are four boxes today."
+      ],
+      "answer": 3,
+      "explain": "On entend distinctement le mot « boxes » (cartons) et « four » (quatre)."
+    },
+    {
+      "type": "speak",
+      "text": "There is a new truck in the warehouse.",
+      "fr": "Il y a un nouveau camion dans l'entrepôt."
+    }
+  ]
+}

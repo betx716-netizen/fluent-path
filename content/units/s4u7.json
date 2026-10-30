@@ -1,0 +1,184 @@
+{
+  "id": "s4u7",
+  "title": "Phrasal verbs du business",
+  "context": "Pro",
+  "goal": "Comprendre et utiliser les phrasal verbs les plus fréquents.",
+  "points": [
+    "Les phrasal verbs associent un verbe et une particule. Par exemple, « set up » signifie créer ou organiser une réunion.",
+    "« Follow up » sert à faire un suivi (« follow up on a delivery ») et « look into » veut dire examiner un problème.",
+    "« Call off » veut dire annuler, alors que « put off » signifie reporter une tâche ou un rendez-vous à plus tard.",
+    "« Carry out » signifie exécuter une tâche, « sort out » régler un problème, et « take over » prendre la gestion."
+  ],
+  "examples": [
+    [
+      "Kodjo will set up a meeting with the customs team in Lomé.",
+      "Kodjo organisera une réunion avec l'équipe des douanes à Lomé."
+    ],
+    [
+      "We need to look into the delay at Tema port immediately.",
+      "Nous devons examiner immédiatement le retard au port de Tema."
+    ],
+    [
+      "Mrs Okafor decided to put off the inspection until tomorrow.",
+      "Mme Okafor a décidé de reporter l'inspection à demain."
+    ],
+    [
+      "Awa has to sort out the shipping documents for Cotonou.",
+      "Awa doit régler le problème des documents d'expédition pour Cotonou."
+    ]
+  ],
+  "vocab": [
+    [
+      "set up",
+      "créer / organiser",
+      "/sɛt ʌp/"
+    ],
+    [
+      "follow up",
+      "suivre / relancer",
+      "/ˈfɒl.əʊ ʌp/"
+    ],
+    [
+      "call off",
+      "annuler",
+      "/kɔːl ɒf/"
+    ],
+    [
+      "put off",
+      "reporter",
+      "/pʊt ɒf/"
+    ],
+    [
+      "sort out",
+      "résoudre / régler",
+      "/sɔːt aʊt/"
+    ],
+    [
+      "look into",
+      "examiner / enquêter",
+      "/lʊk ˈɪn.tuː/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Que signifie le phrasal verb « call off » dans le secteur du transport ?",
+      "options": [
+        "Reporter une inspection",
+        "Annuler une commande ou un départ",
+        "Examiner un dossier",
+        "Reprendre la gestion d'un navire"
+      ],
+      "answer": 1,
+      "explain": "« Call off » signifie annuler définitivement un événement ou une opération."
+    },
+    {
+      "type": "fill",
+      "sentence": "Mr Mensah will ___ into the missing cargo issue at Abidjan port.",
+      "options": [
+        "set",
+        "look",
+        "take",
+        "call"
+      ],
+      "answer": 1,
+      "explain": "« Look into » signifie examiner ou enquêter sur un problème."
+    },
+    {
+      "type": "listen",
+      "audio": "Awa needs to follow up on the customs clearance status.",
+      "options": [
+        "Awa needs to follow out on the customs clearance status.",
+        "Awa needs to follow up on the custom clearance statics.",
+        "Awa needs to follow up on the customs clearance status.",
+        "Ama needs to follow up on the customs clearance status."
+      ],
+      "answer": 2,
+      "explain": "L'enregistrement énonce exactement : « Awa needs to follow up on the customs clearance status. »"
+    },
+    {
+      "type": "build",
+      "fr": "Koffi doit régler ce problème de douane.",
+      "answer": "Koffi must sort out this customs issue",
+      "extra": [
+        "put",
+        "off",
+        "into"
+      ],
+      "explain": "« Sort out » signifie régler ou résoudre un problème."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "put off",
+          "reporter"
+        ],
+        [
+          "set up",
+          "organiser"
+        ],
+        [
+          "sort out",
+          "régler"
+        ],
+        [
+          "call off",
+          "annuler"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "The transit team had to ___ off the shipment due to severe weather in Lagos.",
+      "options": [
+        "carry",
+        "take",
+        "look",
+        "call"
+      ],
+      "answer": 3,
+      "explain": "« Call off » est utilisé ici pour signifier l'annulation de l'expédition."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Ama doit exécuter un contrôle sur les conteneurs au port de Tema. Quel verbe convient ?",
+      "options": [
+        "take over",
+        "carry out",
+        "put off",
+        "set up"
+      ],
+      "answer": 1,
+      "explain": "« Carry out » signifie exécuter ou effectuer un contrôle, une tâche ou une inspection."
+    },
+    {
+      "type": "build",
+      "fr": "Nous allons reporter la réunion de transit.",
+      "answer": "We will put off the transit meeting",
+      "extra": [
+        "call",
+        "sort",
+        "out"
+      ],
+      "explain": "« Put off » signifie reporter une réunion ou une activité à plus tard."
+    },
+    {
+      "type": "listen",
+      "audio": "Kodjo plans to set up a new branch in Ouagadougou.",
+      "options": [
+        "Kodjo plans to set out a new branch in Ouagadougou.",
+        "Kodjo plans to set up a new beach in Ouagadougou.",
+        "Kodjo plans to set up a new branch in Ouagadougou.",
+        "Kodjo plans to sit up a new branch in Ouagadougou."
+      ],
+      "answer": 2,
+      "explain": "La phrase correcte est : « Kodjo plans to set up a new branch in Ouagadougou. »"
+    },
+    {
+      "type": "speak",
+      "text": "I will follow up on the shipment to Ouagadougou tomorrow.",
+      "fr": "Je ferai le suivi de l'expédition pour Ouagadougou demain."
+    }
+  ]
+}

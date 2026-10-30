@@ -1,0 +1,184 @@
+{
+  "id": "s4u8",
+  "title": "Entretien d'embauche",
+  "context": "Pro",
+  "goal": "Se présenter et défendre sa candidature en entretien.",
+  "points": [
+    "Exprimez une action commencée dans le passé et qui continue avec le présent perfect continuous : « I have been working in logistics for five years. »",
+    "Parlez de vos forces professionnelles avec assurance en utilisant des adjectifs précis : « I am proactive, detail-oriented, and highly adaptable to complex transit operations. »",
+    "Mentionnez vos axes d'amélioration de façon constructive : « My main weakness used to be time management, but I have improved it. »",
+    "Mettez en avant votre expérience régionale en douane et fret : « I have successfully managed cross-border shipments between Lomé, Abidjan, and Ouagadougou. »"
+  ],
+  "examples": [
+    [
+      "I have been coordinating transit operations at Tema port for over three years.",
+      "Je coordonne les opérations de transit au port de Tema depuis plus de trois ans."
+    ],
+    [
+      "My greatest strength is my ability to solve customs clearance issues swiftly.",
+      "Ma plus grande force est ma capacité à résoudre rapidement les problèmes de dédouanement."
+    ],
+    [
+      "Je travaille dans le transit depuis 2018.",
+      "Je travaille dans la transitaire depuis 2018."
+    ],
+    [
+      "I am rigorous and used to handling high-volume documentation.",
+      "Je suis rigoureux et habitué à traiter de la documentation à fort volume."
+    ]
+  ],
+  "vocab": [
+    [
+      "freight forwarding",
+      "le transit / l'expédition de fret",
+      "/ˈfreɪt ˈfɔːwədɪŋ/"
+    ],
+    [
+      "strength",
+      "un point fort",
+      "/streŋθ/"
+    ],
+    [
+      "weakness",
+      "un point faible",
+      "/ˈwiːknəs/"
+    ],
+    [
+      "customs clearance",
+      "le dédouanement",
+      "/ˈkʌstəmz ˈklɪərəns/"
+    ],
+    [
+      "shipment",
+      "un chargement / une expédition",
+      "/ˈʃɪpmənt/"
+    ],
+    [
+      "reliable",
+      "fiable",
+      "/rɪˈlaɪəbl/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Comment dire que vous travaillez dans la logistique depuis 5 ans et continuez ?",
+      "options": [
+        "I work in logistics for five years.",
+        "I have been working in logistics for five years.",
+        "I am working in logistics since five years.",
+        "I worked in logistics for five years."
+      ],
+      "answer": 1,
+      "explain": "On utilise le present perfect continuous (have been -ing) pour une action qui a débuté dans le passé et se poursuit dans le présent."
+    },
+    {
+      "type": "fill",
+      "sentence": "I have ___ managing customs clearance for four years at the port of Cotonou.",
+      "options": [
+        "been",
+        "be",
+        "being",
+        "was"
+      ],
+      "answer": 0,
+      "explain": "La structure du present perfect continuous est 'have been' suivi du verbe en '-ing' (managing)."
+    },
+    {
+      "type": "listen",
+      "audio": "My greatest strength is my deep knowledge of West African trade regulations.",
+      "options": [
+        "My greatest strength is my deep knowledge of West African trade regulations.",
+        "My greatest strength was my deep knowledge of West African trade regulations.",
+        "My greatest strength is my deep knowledge of West African freight regulations.",
+        "My greatest weakness is my deep knowledge of West African trade regulations."
+      ],
+      "answer": 0,
+      "explain": "Écoutez bien les mots 'strength', 'is' et 'trade regulations' qui correspondent exactement à la phrase audio."
+    },
+    {
+      "type": "build",
+      "fr": "Je gère des expéditions de fret depuis trois ans.",
+      "answer": "I have been managing freight shipments for three years",
+      "extra": [
+        "was",
+        "worked",
+        "since"
+      ],
+      "explain": "Structure : sujet + have been + verbe en -ing + complément + for + durée."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "strength",
+          "point fort"
+        ],
+        [
+          "weakness",
+          "point faible"
+        ],
+        [
+          "shipment",
+          "expédition"
+        ],
+        [
+          "reliable",
+          "fiable"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "Mr Mensah asked me about my strengths and ___ during the job interview.",
+      "options": [
+        "weaknesses",
+        "weakness",
+        "strong",
+        "ports"
+      ],
+      "answer": 0,
+      "explain": "On associe 'strengths' au pluriel avec 'weaknesses' pour parler des forces et des faiblesses."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Quel terme désigne le processus pour faire passer les marchandises par la douane ?",
+      "options": [
+        "freight forwarding",
+        "customs clearance",
+        "warehousing",
+        "transit time"
+      ],
+      "answer": 1,
+      "explain": "'Customs clearance' se traduit par le dédouanement, indispensable dans les ports de la région."
+    },
+    {
+      "type": "build",
+      "fr": "Je travaille à Abidjan depuis cinq ans.",
+      "answer": "I have been working in Abidjan for five years",
+      "extra": [
+        "worked",
+        "since",
+        "at"
+      ],
+      "explain": "Utilisez le present perfect continuous pour une durée continue avec 'for'."
+    },
+    {
+      "type": "listen",
+      "audio": "I am very adaptable to fast-paced transit environments in Lomé.",
+      "options": [
+        "I am very adaptable to fast-paced transit environments in Lomé.",
+        "I am very adaptable to slow transit environments in Lomé.",
+        "I was very adaptable to fast-paced transit environments in Lomé.",
+        "I am quite adaptable to fast-paced transport environments in Lomé."
+      ],
+      "answer": 0,
+      "explain": "La phrase correcte emploie 'very adaptable', 'fast-paced transit environments' et 'Lomé'."
+    },
+    {
+      "type": "speak",
+      "text": "I have been coordinating transit operations in Lagos for six years.",
+      "fr": "Je coordonne les opérations de transit à Lagos depuis six ans."
+    }
+  ]
+}

@@ -1,14 +1,18 @@
-import type { Section } from "./types";
+import type { Section, Unit } from "./types";
+import syllabus from "../../content/syllabus.json";
 
-// Section 1 est complète. Les sections 2 à 6 sont prévues pour la phase 4 (contenu).
-export const SECTIONS: Section[] = [
+// Unités rédigées (Gemini), vérifiées par content/validate.mjs puis relues.
+const generated = import.meta.glob<Unit>("../../content/units/*.json", { eager: true, import: "default" });
+const byId = new Map(Object.values(generated).map(u => [u.id, u]));
+
+const BASE: Section[] = [
   {
     id: "s1",
     level: "Débutant",
     cefr: "A1",
     title: "Premiers contacts pro",
     theme: "sable",
-    plannedUnits: 6,
+    plannedUnits: 10,
     units: [
       {
         id: "s1u1",
@@ -243,5 +247,12 @@ export const SECTIONS: Section[] = [
   { id: "s5", level: "Avancé", cefr: "C1", title: "Contrats et Incoterms", theme: "nuit", plannedUnits: 10, units: [] },
   { id: "s6", level: "Avancé", cefr: "C2", title: "Convaincre à l'international", theme: "nuit", plannedUnits: 10, units: [] }
 ];
+
+// Chaque section reçoit, dans l'ordre du programme, les unités déjà rédigées.
+export const SECTIONS: Section[] = BASE.map(section => {
+  const plan = (syllabus as Record<string, { units: { id: string }[] }>)[section.id]?.units ?? [];
+  const extra = plan.map(p => byId.get(p.id)).filter((u): u is Unit => !!u);
+  return { ...section, units: [...section.units, ...extra] };
+});
 
 export const allUnits = SECTIONS.flatMap(s => s.units);

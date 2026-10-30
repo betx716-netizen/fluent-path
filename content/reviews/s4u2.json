@@ -1,0 +1,25 @@
+{
+  "model": "gemini-3.5-flash",
+  "issues": [
+    {
+      "where": "vocab[1][2]",
+      "problem": "IPA uses American rhotic pronunciation (/ˈɔːdər mɔːr/) instead of British English IPA.",
+      "fix": "/ɪf ju ˈɔːdə mɔː, wi kæn/"
+    },
+    {
+      "where": "vocab[2][2]",
+      "problem": "IPA uses American vowel /æ/ (/ˈhæfˌweɪ/) instead of British English /ɑː/.",
+      "fix": "/ˌhɑːfˈweɪ/"
+    },
+    {
+      "where": "vocab[3][2]",
+      "problem": "IPA uses American rhotic pronunciation (/ˈɒfər/) instead of British English IPA.",
+      "fix": "/ˈfaɪnəl ˈɒfə/"
+    },
+    {
+      "where": "exercises[3].fr",
+      "problem": "French prompt mentions 'le port de Cotonou', but 'port' is omitted in the English answer ('for Cotonou').",
+      "fix": "C'est notre offre finale pour Cotonou."
+    }
+  ]
+}

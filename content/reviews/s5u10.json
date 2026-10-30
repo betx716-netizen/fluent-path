@@ -1,0 +1,15 @@
+{
+  "model": "gemini-flash-lite-latest",
+  "issues": [
+    {
+      "where": "examples[0].[1]",
+      "problem": "Omission de la négation dans la traduction française (« ne soit négociable » au lieu de « ne soit non négociable » ou « ne puisse pas être négocié »).",
+      "fix": "Je crains que cela ne soit pas négociable compte tenu de la congestion portuaire actuelle."
+    },
+    {
+      "where": "exercises[7].answer",
+      "problem": "Le vocabulaire introduit « deal-breaker » avec un trait d'union, mais la réponse de l'exercice utilise « deal breaker » sans trait d'union.",
+      "fix": "This delay is a deal-breaker"
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "id": "s3u10",
+  "title": "Si… : conditionnels 1 et 2",
+  "context": "Pro",
+  "goal": "Parler des possibilités réelles et imaginaires.",
+  "points": [
+    "Le conditionnel 1 exprime une situation réelle ou probable dans le futur. On utilise « if + présent, will + verbe ».",
+    "Exemple : « If the ship arrives today, we will clear customs tomorrow. »",
+    "Le conditionnel 2 exprime une situation imaginaire ou irréalisable dans le présent. On utilise « if + prétérit, would + verbe ».",
+    "Exemple : « If we had more trucks, we would deliver to Ouagadougou faster. »"
+  ],
+  "examples": [
+    [
+      "If Mr Mensah signs the bill of lading, we will release the containers.",
+      "Si M. Mensah signe le connaissement, nous libérerons les conteneurs."
+    ],
+    [
+      "If Ama checks the manifest, she will find the missing pallet.",
+      "Si Ama vérifie le manifeste, elle trouvera la palette manquante."
+    ],
+    [
+      "If we had a bigger warehouse in Lomé, we would store more goods.",
+      "Si nous avions un plus grand entrepôt à Lomé, nous stockerions plus de marchandises."
+    ],
+    [
+      "If Koffi spoke better English, he would manage the transit office at Tema port.",
+      "Si Koffi parlait mieux anglais, il dirigerait le bureau de transit au port de Tema."
+    ]
+  ],
+  "vocab": [
+    [
+      "bill of lading",
+      "connaissement",
+      "/bɪl ɒv ˈleɪdɪŋ/"
+    ],
+    [
+      "customs clearance",
+      "dédouanement",
+      "/ˈkʌstəmz ˈklɪərəns/"
+    ],
+    [
+      "manifest",
+      "manifeste (cargaison)",
+      "/ˈmænɪfɛst/"
+    ],
+    [
+      "warehouse",
+      "entrepôt",
+      "/ˈwɛəhaʊs/"
+    ],
+    [
+      "forwarding agent",
+      "transitaire",
+      "/ˈfɔːwədɪŋ ˈeɪdʒənt/"
+    ],
+    [
+      "freight",
+      "fret / marchandise",
+      "/freɪt/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Quel temps utilise-t-on dans la clause avec « if » pour une situation réelle (conditionnel 1) ?",
+      "options": [
+        "Le prétérit",
+        "Le présent simple",
+        "Le futur will",
+        "Le conditionnel"
+      ],
+      "answer": 1,
+      "explain": "Pour le premier conditionnel, la proposition avec « if » utilise le présent simple."
+    },
+    {
+      "type": "fill",
+      "sentence": "If the vessel arrives on time, we ___ start unloading at Abidjan port.",
+      "options": [
+        "would",
+        "will",
+        "had",
+        "did"
+      ],
+      "answer": 1,
+      "explain": "C'est une situation réelle (conditionnel 1), on utilise « will » dans la proposition principale."
+    },
+    {
+      "type": "listen",
+      "audio": "If we had more drivers, we would transport the freight to Cotonou.",
+      "options": [
+        "If we have more drivers, we will transport the freight to Cotonou.",
+        "If we had more drivers, we would transport the freight to Cotonou.",
+        "If we had more drivers, we will transport the freight to Cotonou.",
+        "If we have more drivers, we would transport the freight to Cotonou."
+      ],
+      "answer": 1,
+      "explain": "Écoutez bien le prétérit « had » et le modal « would » du conditionnel 2."
+    },
+    {
+      "type": "build",
+      "fr": "Si Awa appelle le client, nous obtiendrons les documents.",
+      "answer": "If Awa calls the client we will get the documents",
+      "extra": [
+        "would",
+        "had",
+        "called"
+      ],
+      "explain": "Structure du conditionnel 1 : If + présent simple (calls), will + verbe (will get)."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "bill of lading",
+          "connaissement"
+        ],
+        [
+          "customs clearance",
+          "dédouanement"
+        ],
+        [
+          "warehouse",
+          "entrepôt"
+        ],
+        [
+          "freight",
+          "fret"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "If Mrs Okafor ___ the documents, customs clearance would be faster.",
+      "options": [
+        "sign",
+        "signed",
+        "will sign",
+        "signing"
+      ],
+      "answer": 1,
+      "explain": "C'est le conditionnel 2 (situation irréelle), on utilise le prétérit « signed » après « if »."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Que traduit la phrase : « If we had a bigger fleet, we would cover Lagos » ?",
+      "options": [
+        "Si nous avions une plus grande flotte, nous couvririons Lagos.",
+        "Si nous avons une plus grande flotte, nous couvrirons Lagos.",
+        "Si nous aurions une flotte, nous couvrons Lagos.",
+        "Si nous avions une flotte, nous avons couvert Lagos."
+      ],
+      "answer": 0,
+      "explain": "« If had » (prétérit) + « would cover » exprime une hypothèse irréelle dans le présent (conditionnel 2)."
+    },
+    {
+      "type": "build",
+      "fr": "Si le navire arrivait aujourd'hui, nous déchargerions les conteneurs.",
+      "answer": "If the ship arrived today we would unload the containers",
+      "extra": [
+        "will",
+        "arrives",
+        "have"
+      ],
+      "explain": "Conditionnel 2 : If + prétérit (arrived) + would + verbe (would unload)."
+    },
+    {
+      "type": "listen",
+      "audio": "If Kodjo finishes the paperwork, the truck will depart for Bamako.",
+      "options": [
+        "If Kodjo finished the paperwork, the truck would depart for Bamako.",
+        "If Kodjo finishes the paperwork, the truck will depart for Bamako.",
+        "If Kodjo finish the paperwork, the truck will depart for Bamako.",
+        "If Kodjo finishes the paperwork, the truck would depart for Bamako."
+      ],
+      "answer": 1,
+      "explain": "La phrase correcte utilise le présent « finishes » et le futur « will » (conditionnel 1)."
+    },
+    {
+      "type": "speak",
+      "text": "If we get the permit today, we will clear the goods.",
+      "fr": "Si nous obtenons le permis aujourd'hui, nous dédouanerons les marchandises."
+    }
+  ]
+}

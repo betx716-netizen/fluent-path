@@ -1,0 +1,184 @@
+{
+  "id": "s2u8",
+  "title": "Se plaindre poliment",
+  "context": "Commerce",
+  "goal": "Signaler un problème de marchandise poliment.",
+  "points": [
+    "Pour signaler un problème poliment, utilisez « There is a problem with... ». Exemple : « There is a problem with the container. »",
+    "Pour décrire l'état de la marchandise, utilisez « damaged » (endommagé), « broken » (cassé) ou « missing » (manquant). Exemple : « One box is missing. »",
+    "Pour demander une solution poliment, utilisez « I would like... ». Exemple : « I would like a refund, please. »",
+    "Pour demander un échange de marchandise, dites « I would like a replacement. ». Exemple : « We need a replacement in Lomé. »"
+  ],
+  "examples": [
+    [
+      "There is a problem with the cargo.",
+      "Il y a un problème avec la cargaison."
+    ],
+    [
+      "The goods arrived damaged in Abidjan.",
+      "Les marchandises sont arrivées endommagées à Abidjan."
+    ],
+    [
+      "Three boxes are missing from the shipment.",
+      "Trois cartons sont manquants dans l'expédition."
+    ],
+    [
+      "I would like a replacement for this batch.",
+      "Je voudrais un remplacement pour ce lot."
+    ]
+  ],
+  "vocab": [
+    [
+      "damaged",
+      "endommagé",
+      "/ˈdæm.ɪdʒd/"
+    ],
+    [
+      "missing",
+      "manquant",
+      "/ˈmɪs.ɪŋ/"
+    ],
+    [
+      "refund",
+      "remboursement",
+      "/ˈriː.fʌnd/"
+    ],
+    [
+      "replacement",
+      "remplacement",
+      "/rɪˈpleɪs.mənt/"
+    ],
+    [
+      "shipment",
+      "expédition",
+      "/ˈʃɪp.mənt/"
+    ],
+    [
+      "problem",
+      "problème",
+      "/ˈprɒb.ləm/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Comment dire poliment « Il y a un problème avec le conteneur » ?",
+      "options": [
+        "There is a problem with the container.",
+        "The container is very bad.",
+        "Give me another container now.",
+        "I do not want this container."
+      ],
+      "answer": 0,
+      "explain": "« There is a problem with... » est la formule standard et polie en anglais des affaires."
+    },
+    {
+      "type": "fill",
+      "sentence": "Two boxes are ___ from the delivery to Cotonou.",
+      "options": [
+        "missed",
+        "lacking",
+        "missing",
+        "losted"
+      ],
+      "answer": 2,
+      "explain": "En anglais commercial, « missing » est l'adjectif correct pour indiquer qu'un élément est manquant."
+    },
+    {
+      "type": "listen",
+      "audio": "I would like a refund for the damaged goods.",
+      "options": [
+        "I would like a refund for the damaged goods.",
+        "I would like a replace for the damaged goods.",
+        "I will like a refund for the damage goods.",
+        "I would like a refund for that damage goods."
+      ],
+      "answer": 0,
+      "explain": "L'enregistrement dit exactement : « I would like a refund for the damaged goods. »"
+    },
+    {
+      "type": "build",
+      "fr": "Je voudrais un remplacement pour cette commande.",
+      "answer": "I would like a replacement for this order",
+      "extra": [
+        "we",
+        "boxes",
+        "problem"
+      ],
+      "explain": "« I would like a replacement for this order » traduit fidèlement la phrase sans contraction."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "damaged",
+          "endommagé"
+        ],
+        [
+          "refund",
+          "remboursement"
+        ],
+        [
+          "replacement",
+          "remplacement"
+        ],
+        [
+          "missing",
+          "manquant"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "The goods are ___ so we cannot accept them.",
+      "options": [
+        "damages",
+        "damaged",
+        "damage",
+        "damaging"
+      ],
+      "answer": 1,
+      "explain": "« Damaged » est l'adjectif utilisé pour qualifier une marchandise abîmée ou endommagée."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Awa travaille au port de Tema. Elle constate que des sacs de riz sont déchirés. Que dit-elle au fournisseur ?",
+      "options": [
+        "Your rice is terrible.",
+        "You must pay me now.",
+        "There is a problem with the rice bags.",
+        "I refuse all your trucks."
+      ],
+      "answer": 2,
+      "explain": "« There is a problem with the rice bags. » permet de signaler le souci de manière professionnelle."
+    },
+    {
+      "type": "build",
+      "fr": "Il y a un problème avec la livraison à Ouagadougou.",
+      "answer": "There is a problem with the delivery to Ouagadougou",
+      "extra": [
+        "are",
+        "missing",
+        "refund"
+      ],
+      "explain": "L'expression fixe pour introduire un problème est « There is a problem with... »."
+    },
+    {
+      "type": "listen",
+      "audio": "Mr Mensah needs a replacement as soon as possible.",
+      "options": [
+        "Mr Mensah need a replacement as soon as possible.",
+        "Mrs Mensah needs a replacement as soon as possible.",
+        "Mr Mensah needs a refunding as soon as possible.",
+        "Mr Mensah needs a replacement as soon as possible."
+      ],
+      "answer": 3,
+      "explain": "L'enregistrement dit : « Mr Mensah needs a replacement as soon as possible. »"
+    },
+    {
+      "type": "speak",
+      "text": "I would like a refund for the missing items.",
+      "fr": "Je voudrais un remboursement pour les articles manquants."
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "id": "s6u1",
+  "title": "Pitch à des investisseurs",
+  "context": "Commerce",
+  "goal": "Présenter un projet à des investisseurs de façon percutante.",
+  "points": [
+    "Ouvre par le problème et l'opportunité : « Thousands of containers leave Lomé every month for the Sahel. »",
+    "Annonce clairement ta demande : « We are seeking 200,000 dollars for a 15 per cent stake. »",
+    "« traction » = preuves de démarrage (clients, chiffre d'affaires) ; « scalable » = capable de grandir vite.",
+    "« What sets us apart is… » ou « Our edge is… » présentent ton avantage concurrentiel."
+  ],
+  "examples": [
+    [
+      "We are seeking 200,000 dollars for a 15 per cent stake.",
+      "Nous cherchons 200 000 dollars contre 15 % du capital."
+    ],
+    [
+      "What sets us apart is our network of trusted drivers.",
+      "Ce qui nous distingue, c'est notre réseau de chauffeurs de confiance."
+    ],
+    [
+      "We already have twelve paying clients in Lomé and Lagos.",
+      "Nous avons déjà douze clients payants à Lomé et à Lagos."
+    ],
+    [
+      "Our model is scalable across the whole corridor.",
+      "Notre modèle peut se développer sur tout le corridor."
+    ]
+  ],
+  "vocab": [
+    [
+      "stake",
+      "participation (au capital)",
+      "/steɪk/"
+    ],
+    [
+      "return on investment",
+      "retour sur investissement",
+      "/rɪˈtɜːn ɒn ɪnˈvestmənt/"
+    ],
+    [
+      "traction",
+      "preuves de démarrage",
+      "/ˈtrækʃn/"
+    ],
+    [
+      "scalable",
+      "capable de grandir vite",
+      "/ˈskeɪləbl/"
+    ],
+    [
+      "revenue",
+      "chiffre d'affaires",
+      "/ˈrevənjuː/"
+    ],
+    [
+      "to break even",
+      "atteindre l'équilibre",
+      "/breɪk ˈiːvn/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Comment annonces-tu clairement ta demande de financement ?",
+      "options": [
+        "We are seeking 150,000 dollars for a 10 per cent stake.",
+        "We search 150,000 dollars for 10 per cent of us.",
+        "We would like maybe some money if possible.",
+        "We are asking 150,000 dollars against 10 per cent capital."
+      ],
+      "answer": 0,
+      "explain": "Formule standard : « We are seeking [montant] for a [x] per cent stake »."
+    },
+    {
+      "type": "fill",
+      "sentence": "We expect to ___ even within eighteen months.",
+      "options": [
+        "break",
+        "make",
+        "reach",
+        "get"
+      ],
+      "answer": 0,
+      "explain": "« to break even » = atteindre le seuil de rentabilité."
+    },
+    {
+      "type": "listen",
+      "audio": "Our revenue has doubled in the last six months.",
+      "options": [
+        "Our revenue has doubled in the last six months.",
+        "Our revenue has doubled in the next six months.",
+        "Our revenue has troubled in the last six months.",
+        "Our revenues have doubled in the last six weeks."
+      ],
+      "answer": 0,
+      "explain": "« revenue » = chiffre d'affaires ; « has doubled » = a doublé."
+    },
+    {
+      "type": "build",
+      "fr": "Ce qui nous distingue, c'est notre réseau.",
+      "answer": "What sets us apart is our network",
+      "extra": [
+        "that",
+        "are",
+        "set"
+      ],
+      "explain": "« What sets us apart is… » présente ton avantage concurrentiel."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "stake",
+          "participation"
+        ],
+        [
+          "revenue",
+          "chiffre d'affaires"
+        ],
+        [
+          "scalable",
+          "capable de grandir vite"
+        ],
+        [
+          "traction",
+          "preuves de démarrage"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "Investors will ask about your return on ___.",
+      "options": [
+        "investment",
+        "investor",
+        "invest",
+        "investing"
+      ],
+      "answer": 0,
+      "explain": "« return on investment » (ROI) = retour sur investissement."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Un investisseur demande : « What traction do you have? ». Il veut savoir :",
+      "options": [
+        "quelles preuves de démarrage tu as (clients, ventes)",
+        "quels camions tu utilises",
+        "combien tu veux emprunter",
+        "où se trouve ton bureau"
+      ],
+      "answer": 0,
+      "explain": "« traction » désigne les résultats concrets déjà obtenus : clients, chiffre d'affaires, croissance."
+    },
+    {
+      "type": "build",
+      "fr": "Notre modèle peut se développer dans toute la région.",
+      "answer": "Our model is scalable across the region",
+      "extra": [
+        "scale",
+        "are",
+        "into"
+      ],
+      "explain": "« scalable » = qui peut grandir vite sans tout réinventer."
+    },
+    {
+      "type": "listen",
+      "audio": "We are not just a transport company; we are a data company.",
+      "options": [
+        "We are not just a transport company; we are a data company.",
+        "We are not just a transport company; we are a date company.",
+        "We are just a transport company; we are a data company.",
+        "We are not just a transport company; we have a data company."
+      ],
+      "answer": 0,
+      "explain": "« We are not just X; we are Y » : une formule de pitch pour repositionner son entreprise."
+    },
+    {
+      "type": "speak",
+      "text": "We are seeking investment to expand across the corridor.",
+      "fr": "Nous cherchons un investissement pour nous développer sur tout le corridor."
+    }
+  ],
+  "author": "claude"
+}

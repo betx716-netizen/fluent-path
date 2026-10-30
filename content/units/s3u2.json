@@ -1,0 +1,184 @@
+{
+  "id": "s3u2",
+  "title": "Déclarer en douane",
+  "context": "Transit",
+  "goal": "Expliquer les étapes du dédouanement.",
+  "points": [
+    "Pour dire « déclarer » une marchandise à l'arrivée au port de Lomé, utilisez le verbe « to declare ».",
+    "La taxe douanière se dit « customs duty », et la taxe générale sur la valeur ajoutée se traduit par « tax ».",
+    "Pour classer la cargaison, on utilise le code SH qu'on appelle « HS code » en anglais professionnel.",
+    "Une fois que la douane libère les conteneurs, les marchandises sont « cleared » et prêtes pour Ouagadougou."
+  ],
+  "examples": [
+    [
+      "We need to declare this transit cargo at the Port of Abidjan today.",
+      "Nous devons déclarer cette cargaison en transit au port d'Abidjan aujourd'hui."
+    ],
+    [
+      "Mr Mensah must pay the customs duty before the physical inspection.",
+      "M. Mensah doit payer les droits de douane avant l'inspection physique."
+    ],
+    [
+      "Check the HS code to calculate the correct tax and avoid delays.",
+      "Vérifiez le code SH pour calculer la bonne taxe et éviter les retards."
+    ],
+    [
+      "The shipment is finally cleared and ready for release to the client.",
+      "L'expédition est enfin dédouanée et prête à être libérée pour le client."
+    ]
+  ],
+  "vocab": [
+    [
+      "declare",
+      "déclarer",
+      "/dɪˈkleə/"
+    ],
+    [
+      "customs duty",
+      "droits de douane",
+      "/ˈkʌstəmz ˈdjuːti/"
+    ],
+    [
+      "tax",
+      "taxe",
+      "/tæks/"
+    ],
+    [
+      "HS code",
+      "code SH",
+      "/eɪtʃ ɛs kəʊd/"
+    ],
+    [
+      "inspection",
+      "inspection",
+      "/ɪnˈspɛkʃən/"
+    ],
+    [
+      "cleared",
+      "dédouané",
+      "/klɪəd/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Quel terme anglais utilise-t-on pour dire « déclarer » des marchandises en douane à Tema port ?",
+      "options": [
+        "to hide",
+        "to declare",
+        "to ignore",
+        "to refuse"
+      ],
+      "answer": 1,
+      "explain": "Le verbe correct pour faire sa déclaration en douane est « to declare »."
+    },
+    {
+      "type": "fill",
+      "sentence": "Awa must pay the ___ before the goods leave Cotonou port.",
+      "options": [
+        "customs duty",
+        "recipe",
+        "ticket",
+        "menu"
+      ],
+      "answer": 0,
+      "explain": "« Customs duty » désigne les droits de douane obligatoires."
+    },
+    {
+      "type": "listen",
+      "audio": "The containers are cleared and ready for release.",
+      "options": [
+        "The containers are cleared and ready for release.",
+        "The containers are clean and ready for release.",
+        "The contractors are cleared and ready for release.",
+        "The containers are closed and ready for release."
+      ],
+      "answer": 0,
+      "explain": "Écoutez bien la différence entre « cleared » (dédouané) et « clean »."
+    },
+    {
+      "type": "build",
+      "fr": "Veuillez vérifier le code SH pour cette cargaison.",
+      "answer": "Check the HS code for this cargo",
+      "extra": [
+        "hide",
+        "price",
+        "ticket"
+      ],
+      "explain": "L'ordre correct est « check the HS code for this cargo »."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "declare",
+          "déclarer"
+        ],
+        [
+          "inspection",
+          "inspection"
+        ],
+        [
+          "tax",
+          "taxe"
+        ],
+        [
+          "release",
+          "libération"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "Kodjo needs the correct ___ to classify the transit goods.",
+      "options": [
+        "HS code",
+        "password",
+        "hotel key",
+        "phone number"
+      ],
+      "answer": 0,
+      "explain": "Le « HS code » est indispensable pour la classification douanière."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Que signifie le mot « cleared » dans un contexte de transit à Abidjan ?",
+      "options": [
+        "perdu",
+        "dédouané",
+        "volé",
+        "endommagé"
+      ],
+      "answer": 1,
+      "explain": "« Cleared » signifie que les marchandises ont passé la douane avec succès."
+    },
+    {
+      "type": "build",
+      "fr": "L'inspection physique aura lieu demain matin.",
+      "answer": "The physical inspection will take place tomorrow morning",
+      "extra": [
+        "yesterday",
+        "night",
+        "small"
+      ],
+      "explain": "Traduisez par « the physical inspection will take place tomorrow morning »."
+    },
+    {
+      "type": "listen",
+      "audio": "Mrs Okafor will pay the tax today.",
+      "options": [
+        "Mrs Okafor will pay the tax today.",
+        "Mr Mensah will play the tax today.",
+        "Mrs Okafor will pay the text today.",
+        "Miss Ama will pay the tax today."
+      ],
+      "answer": 0,
+      "explain": "La phrase correcte est « Mrs Okafor will pay the tax today. »"
+    },
+    {
+      "type": "speak",
+      "text": "The shipment is cleared and ready for release.",
+      "fr": "L'expédition est dédouanée et prête pour la libération."
+    }
+  ]
+}

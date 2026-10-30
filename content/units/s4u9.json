@@ -1,0 +1,184 @@
+{
+  "id": "s4u9",
+  "title": "Présenter des chiffres",
+  "context": "Pro",
+  "goal": "Commenter des chiffres de ventes ou de volumes.",
+  "points": [
+    "Pour exprimer une hausse en affaires, utilisez des verbes comme « rise », « increase » ou des noms comme « growth ».",
+    "Pour exprimer une baisse, utilisez « fall », « decrease » ou « drop ». Précisez l'ampleur avec des adverbes comme « sharply ».",
+    "Pour indiquer une progression régulière, utilisez l'adverbe « steadily ». Exemple : « Volumes at Abidjan port increased steadily. »",
+    "Pour mentionner un sommet, utilisez l'expression « reach a peak ». Pour quantifier, utilisez « by » suivi du pourcentage « by 15 % »."
+  ],
+  "examples": [
+    [
+      "Container traffic at Lomé port rose sharply in the third quarter.",
+      "Le trafic de conteneurs au port de Lomé a augmenté fortement au troisième trimestre."
+    ],
+    [
+      "Transit times to Ouagadougou fell by 10 % following new customs procedures.",
+      "Les délais de transit vers Ouagadougou ont baissé de 10 % suite aux nouvelles procédures douanières."
+    ],
+    [
+      "Export volumes for cocoa in Cotonou reached a peak in November.",
+      "Les volumes d'exportation de cacao à Cotonou ont atteint un pic en novembre."
+    ],
+    [
+      "Mr Mensah noted that freight rates increased slightly across the corridor.",
+      "M. Mensah a fait remarquer que les tarifs de fret ont légèrement augmenté le long du corridor."
+    ]
+  ],
+  "vocab": [
+    [
+      "rise",
+      "augmenter / hausse",
+      "/raɪz/"
+    ],
+    [
+      "fall",
+      "chuter / baisse",
+      "/fɔːl/"
+    ],
+    [
+      "sharply",
+      "fortement / nettement",
+      "/ˈʃɑːp.li/"
+    ],
+    [
+      "steadily",
+      "régulièrement",
+      "/ˈsted.ɪ.li/"
+    ],
+    [
+      "reach a peak",
+      "atteindre un pic",
+      "/riːtʃ ə piːk/"
+    ],
+    [
+      "by 10 %",
+      "de 10 pour cent",
+      "/baɪ ten pəˈsent/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Comment dites-vous que les volumes de fret ont augmenté fortement à Tema port ?",
+      "options": [
+        "Freight volumes rose sharply at Tema port.",
+        "Freight volumes fell slightly at Tema port.",
+        "Freight volumes reached a peak at Tema port slowly.",
+        "Freight volumes decreased by 10 % at Tema port."
+      ],
+      "answer": 0,
+      "explain": "« Rose sharply » exprime une forte hausse, ce qui correspond à « augmenté fortement »."
+    },
+    {
+      "type": "fill",
+      "sentence": "Transit times from Lagos ___ by 15 % after the border reopening.",
+      "options": [
+        "increased",
+        "fell",
+        "rose",
+        "peaked"
+      ],
+      "answer": 1,
+      "explain": "Avec « by 15 % » et un contexte d'amélioration des délais, « fell » (ont baissé) est le choix logique."
+    },
+    {
+      "type": "listen",
+      "audio": "Export revenues in Abidjan reached a peak in December.",
+      "options": [
+        "Export revenues in Abidjan reached a peak in December.",
+        "Import revenues in Abidjan reached a peak in December.",
+        "Export revenues in Abidjan fell sharply in December.",
+        "Export revenues in Cotonou reached a peak in December."
+      ],
+      "answer": 0,
+      "explain": "La phrase correcte mentionne les revenus d'exportation à Abidjan atteignant un pic en décembre."
+    },
+    {
+      "type": "build",
+      "fr": "Les volumes de cacao ont augmenté régulièrement au Togo.",
+      "answer": "Cocoa volumes increased steadily in Togo",
+      "extra": [
+        "fell",
+        "sharply",
+        "dropped"
+      ],
+      "explain": "Ordre sujet + verbe + adverbe + complément : « cocoa volumes increased steadily in Togo »."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "rise",
+          "augmenter"
+        ],
+        [
+          "fall",
+          "chuter"
+        ],
+        [
+          "steadily",
+          "régulièrement"
+        ],
+        [
+          "sharply",
+          "fortement"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "Kodjo reported that shipments to Ouagadougou increased ___ last month.",
+      "options": [
+        "steadily",
+        "peak",
+        "fall",
+        "drop"
+      ],
+      "answer": 0,
+      "explain": "L'adverbe « steadily » qualifie la manière dont les envois ont augmenté."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Mrs Okafor wants to say that storage costs dropped by 10 %. Which sentence is correct?",
+      "options": [
+        "Storage costs rose by 10 %.",
+        "Storage costs fell by 10 %.",
+        "Storage costs reached 10 % peak.",
+        "Storage costs increased steadily."
+      ],
+      "answer": 1,
+      "explain": "« Fell by 10 % » traduit correctement une baisse de 10 pour cent."
+    },
+    {
+      "type": "build",
+      "fr": "Le trafic portuaire a atteint un pic en octobre.",
+      "answer": "Port traffic reached a peak in October",
+      "extra": [
+        "fell",
+        "steadily",
+        "increased"
+      ],
+      "explain": "Traduction directe de l'expression : « port traffic reached a peak in October »."
+    },
+    {
+      "type": "listen",
+      "audio": "Our transit volume rose by 20 % this quarter.",
+      "options": [
+        "Our transit volume rose by 20 % this quarter.",
+        "Our transit volume fell by 20 % this quarter.",
+        "Our transit volume reached a peak this quarter.",
+        "Our transit volume increased slightly last quarter."
+      ],
+      "answer": 0,
+      "explain": "L'audio indique clairement une hausse de vingt pour cent ce trimestre (« rose by 20 % this quarter »)."
+    },
+    {
+      "type": "speak",
+      "text": "Transit times fell sharply across the corridor.",
+      "fr": "Les délais de transit ont fortement baissé le long du corridor."
+    }
+  ]
+}

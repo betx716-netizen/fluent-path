@@ -1,0 +1,10 @@
+{
+  "model": "gemini-flash-lite-latest",
+  "issues": [
+    {
+      "where": "vocab[4][2]",
+      "problem": "British IPA for discrepancy is /dɪˈskrɛpənsi/ (with a short e in the second syllable), not /dɪˈskriːpənsi/",
+      "fix": "/dɪˈskrɛpənsi/"
+    }
+  ]
+}

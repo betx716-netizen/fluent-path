@@ -1,0 +1,184 @@
+{
+  "id": "s3u1",
+  "title": "Documents d'expédition",
+  "context": "Transit",
+  "goal": "Nommer et demander les documents d'une expédition.",
+  "points": [
+    "Le « bill of lading » (connaissement) est le document de transport maritime principal. Exemple : « The bill of lading is ready. »",
+    "La « commercial invoice » et la « packing list » détaillent le prix et le contenu du conteneur. Exemple : « We need the packing list. »",
+    "Le « certificate of origin » et le « delivery note » prouvent l'origine et la livraison. Exemple : « Check the delivery note. »",
+    "Pour demander un document, utilisez la formule « We need a copy of... ». Exemple : « We need a copy of the invoice. »"
+  ],
+  "examples": [
+    [
+      "We need a copy of the bill of lading for customs clearance in Lomé.",
+      "Nous avons besoin d'une copie du connaissement pour le dédouanement à Lomé."
+    ],
+    [
+      "Please send the packing list before the container arrives in Abidjan.",
+      "Veuillez envoyer la liste de colisage avant que le conteneur n'arrive à Abidjan."
+    ],
+    [
+      "Mr Mensah requested a signed delivery note for the goods in Cotonou.",
+      "M. Mensah a demandé un bon de livraison signé pour les marchandises à Cotonou."
+    ],
+    [
+      "The certificate of origin is mandatory for this shipment to Tema port.",
+      "Le certificat d'origine est obligatoire pour cette expédition vers le port de Tema."
+    ]
+  ],
+  "vocab": [
+    [
+      "bill of lading",
+      "connaissement",
+      "/bɪl əv ˈleɪdɪŋ/"
+    ],
+    [
+      "commercial invoice",
+      "facture commerciale",
+      "/kəˈmɜːʃl ˈɪnvɔɪs/"
+    ],
+    [
+      "packing list",
+      "liste de colisage",
+      "/ˈpækɪŋ lɪst/"
+    ],
+    [
+      "certificate of origin",
+      "certificat d'origine",
+      "/səˈtɪfɪkət əv ˈɒrɪdʒɪn/"
+    ],
+    [
+      "delivery note",
+      "bon de livraison",
+      "/dɪˈlɪvəri nəʊt/"
+    ],
+    [
+      "shipment",
+      "expédition / cargaison",
+      "/ˈʃɪpmənt/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Comment dit-on « connaissement » en anglais dans le domaine maritime ?",
+      "options": [
+        "delivery note",
+        "bill of lading",
+        "packing list",
+        "commercial invoice"
+      ],
+      "answer": 1,
+      "explain": "« Bill of lading » (souvent abrégé B/L) désigne le connaissement maritime."
+    },
+    {
+      "type": "fill",
+      "sentence": "We need a copy of the ___ invoice for the customs agent in Cotonou.",
+      "options": [
+        "commercial",
+        "delivered",
+        "packing",
+        "origin"
+      ],
+      "answer": 0,
+      "explain": "« Commercial invoice » signifie « facture commerciale »."
+    },
+    {
+      "type": "listen",
+      "audio": "Please email the packing list to Awa.",
+      "options": [
+        "Please email the packing list to Awa.",
+        "Please email the delivery list to Awa.",
+        "Please send the packing list to Ama.",
+        "Please email a packing list to Kodjo."
+      ],
+      "answer": 0,
+      "explain": "La phrase exacte énoncée est « Please email the packing list to Awa. »"
+    },
+    {
+      "type": "build",
+      "fr": "Nous avons besoin d'une copie du connaissement.",
+      "answer": "We need a copy of the bill of lading",
+      "extra": [
+        "send",
+        "for",
+        "invoice"
+      ],
+      "explain": "« We need a copy of » signifie « Nous avons besoin d'une copie de »."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "bill of lading",
+          "connaissement"
+        ],
+        [
+          "packing list",
+          "liste de colisage"
+        ],
+        [
+          "delivery note",
+          "bon de livraison"
+        ],
+        [
+          "commercial invoice",
+          "facture commerciale"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "Kodjo asked for a signed delivery ___ before releasing the goods.",
+      "options": [
+        "bill",
+        "note",
+        "list",
+        "paper"
+      ],
+      "answer": 1,
+      "explain": "« Delivery note » signifie « bon de livraison »."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Awa travaille au port de Tema. Elle doit vérifier le pays de fabrication des marchandises. Quel document demande-t-elle ?",
+      "options": [
+        "The packing list",
+        "The delivery note",
+        "The certificate of origin",
+        "The commercial invoice"
+      ],
+      "answer": 2,
+      "explain": "Le « certificate of origin » atteste du pays de fabrication ou d'origine de la marchandise."
+    },
+    {
+      "type": "build",
+      "fr": "Veuillez envoyer le certificat d'origine à M. Mensah.",
+      "answer": "Please send the certificate of origin to Mr Mensah",
+      "extra": [
+        "for",
+        "with",
+        "note"
+      ],
+      "explain": "« Please send [document] to [personne] » se traduit par « Veuillez envoyer [document] à [personne] »."
+    },
+    {
+      "type": "listen",
+      "audio": "The container is ready at Abidjan port.",
+      "options": [
+        "The container is ready at Tema port.",
+        "The container is ready at Abidjan port.",
+        "The shipment is ready at Abidjan port.",
+        "The container was ready at Abidjan port."
+      ],
+      "answer": 1,
+      "explain": "L'enregistrement dit bien « The container is ready at Abidjan port. »"
+    },
+    {
+      "type": "speak",
+      "text": "We need a copy of the certificate of origin.",
+      "fr": "Nous avons besoin d'une copie du certificat d'origine."
+    }
+  ]
+}

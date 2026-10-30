@@ -6,12 +6,31 @@ import { ExerciseView, SpeakButton, explanation, isCorrect, solution, title, typ
 import { sfx } from "../lib/sfx";
 import type { LessonResult } from "../lib/game";
 import { canListen } from "../lib/listen";
+import { setState } from "../lib/store";
+
+// « Signaler » : garde l'exercice dans Profil → Erreurs signalées.
+function ReportLink({ unitId, ex }: { unitId: string; ex: Unit["exercises"][number] }) {
+  const [sent, setSent] = useState(false);
+  const label = "prompt" in ex ? ex.prompt : "sentence" in ex ? ex.sentence : "fr" in ex ? ex.fr : "audio" in ex ? ex.audio : ex.pairs.map(p => p.join(" = ")).join(", ");
+  return (
+    <button
+      className="linkbtn report-link"
+      disabled={sent}
+      onClick={() => {
+        setState(s => ({ ...s, reports: [...s.reports, { at: new Date().toISOString(), unit: unitId, text: `${title(ex)} : ${label}${solution(ex) ? ` → ${solution(ex)}` : ""}` }].slice(-100) }));
+        setSent(true);
+      }}
+    >
+      {sent ? "Merci, c'est noté" : "Signaler une erreur dans cet exercice"}
+    </button>
+  );
+}
 
 const CHEERS = ["Excellent !", "Bravo !", "Parfait !", "Bien joué !", "Super !"];
 
-export function Lesson({ unit, onExit, onDone }: { unit: Unit; onExit: () => void; onDone: (r: LessonResult) => void }) {
+export function Lesson({ unit, onExit, onDone, test = false }: { unit: Unit; onExit: () => void; onDone: (r: LessonResult) => void; test?: boolean }) {
   const started = useRef(Date.now());
-  const [intro, setIntro] = useState(true);
+  const [intro, setIntro] = useState(!test);
   const [queue, setQueue] = useState<number[]>(() =>
     unit.exercises.map((_, i) => i).filter(i => unit.exercises[i].type !== "speak" || canListen())
   );
@@ -21,6 +40,7 @@ export function Lesson({ unit, onExit, onDone }: { unit: Unit; onExit: () => voi
   const [verdict, setVerdict] = useState<null | boolean>(null);
   const [missed, setMissed] = useState<Set<number>>(new Set());
   const [solved, setSolved] = useState(0);
+  const [answered, setAnswered] = useState(0);
   const [combo, setCombo] = useState(0);
   const [quit, setQuit] = useState(false);
   const cheer = useMemo(() => CHEERS[Math.floor(Math.random() * CHEERS.length)], [pos]);
@@ -32,6 +52,7 @@ export function Lesson({ unit, onExit, onDone }: { unit: Unit; onExit: () => voi
     if (a === null || verdict !== null) return;
     const ok = isCorrect(ex, a);
     setVerdict(ok);
+    setAnswered(n => n + 1);
     if (ok) {
       sfx.correct();
       setSolved(n => n + 1);
@@ -40,7 +61,8 @@ export function Lesson({ unit, onExit, onDone }: { unit: Unit; onExit: () => voi
       sfx.wrong();
       setCombo(0);
       setMissed(m => new Set(m).add(idx));
-      setQueue(q => [...q, idx]);
+      // En test, pas de seconde chance : l'erreur compte et on avance.
+      if (!test) setQueue(q => [...q, idx]);
     }
   };
 
@@ -74,7 +96,7 @@ export function Lesson({ unit, onExit, onDone }: { unit: Unit; onExit: () => voi
     if (ex.type === "pairs" && a !== null) check(a);
   };
 
-  const progress = intro ? 0 : solved / total;
+  const progress = intro ? 0 : (test ? answered : solved) / total;
 
   return (
     <div className="lesson">
@@ -85,7 +107,11 @@ export function Lesson({ unit, onExit, onDone }: { unit: Unit; onExit: () => voi
         <div className={`progress${combo >= 3 ? " combo" : ""}`} role="progressbar" aria-valuenow={Math.round(progress * 100)} aria-valuemin={0} aria-valuemax={100}>
           <i style={{ width: `${Math.max(progress * 100, 3)}%` }} />
         </div>
-        {combo >= 3 && <span className="combo-label">{combo} d'affilée</span>}
+        {test ? (
+          <span className="combo-label" style={{ color: "var(--muted)" }}>{Math.min(answered + (verdict === null ? 1 : 0), total)}/{total}</span>
+        ) : (
+          combo >= 3 && <span className="combo-label">{combo} d'affilée</span>
+        )}
       </div>
 
       {intro ? (
@@ -161,17 +187,18 @@ export function Lesson({ unit, onExit, onDone }: { unit: Unit; onExit: () => voi
               <div className="fb-zazou" aria-hidden>
                 <Zazou mood={verdict ? "cheer" : "sad"} size={64} />
               </div>
-              {verdict && <span className="xp-pop" aria-hidden>+10 XP</span>}
+              {verdict && !test && <span className="xp-pop" aria-hidden>+10 XP</span>}
               <h3>
                 {verdict ? <Check /> : <Cross />}
                 {verdict ? cheer : ex.type === "pairs" ? "Quelques erreurs" : "Bonne réponse :"}
               </h3>
               {!verdict && solution(ex) && <p className="fb-text" style={{ fontWeight: 700 }}>{solution(ex)}</p>}
               {explanation(ex) && <p className="fb-text">{explanation(ex)}</p>}
-              {!verdict && <p className="fb-text muted">Cette question reviendra à la fin.</p>}
+              {!verdict && !test && <p className="fb-text muted">Cette question reviendra à la fin.</p>}
               <button className={`btn3d ${verdict ? "mint" : "coral"}`} onClick={next} autoFocus>
                 Continuer
               </button>
+              <ReportLink unitId={unit.id} ex={ex} key={pos} />
             </div>
           )}
         </>

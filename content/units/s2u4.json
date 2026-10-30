@@ -1,0 +1,184 @@
+{
+  "id": "s2u4",
+  "title": "Quantités",
+  "context": "Commerce",
+  "goal": "Parler de quantités de marchandises sans erreur.",
+  "points": [
+    "Utilisez « many » avec les noms comptables au pluriel (boîtes, sacs) et « much » avec les indénombrables (riz, argent) dans les questions et négations. Exemple : « How much rice? »",
+    "Utilisez « a lot of » pour une grande quantité avec les deux types de noms, surtout dans les phrases affirmatives. Exemple : « We have a lot of boxes. »",
+    "Utilisez « some » dans les phrases affirmatives pour une quantité indéfinie (« I need some money ») et « any » pour les questions et négations (« Do you have any bags? »).",
+    "Utilisez « a few » pour un petit nombre (comptables) et « a little » pour une petite quantité (indénombrables). Exemple : « Just a little sugar. »"
+  ],
+  "examples": [
+    [
+      "How many containers are arriving at Abidjan port today?",
+      "Combien de conteneurs arrivent au port d'Abidjan aujourd'hui ?"
+    ],
+    [
+      "Mr Mensah does not have much time to check the cargo.",
+      "Monsieur Mensah n'a pas beaucoup de temps pour vérifier la cargaison."
+    ],
+    [
+      "Awa bought some bags of rice in Lomé market.",
+      "Awa a acheté quelques sacs de riz au marché de Lomé."
+    ],
+    [
+      "We only need a little money for customs clearance.",
+      "Nous avons juste besoin d'un peu d'argent pour le dédouanement."
+    ]
+  ],
+  "vocab": [
+    [
+      "rice",
+      "riz",
+      "/raɪs/"
+    ],
+    [
+      "money",
+      "argent",
+      "/ˈmʌni/"
+    ],
+    [
+      "bags",
+      "sacs",
+      "/bæɡz/"
+    ],
+    [
+      "boxes",
+      "boîtes",
+      "/ˈbɒksɪz/"
+    ],
+    [
+      "cargo",
+      "cargaison",
+      "/ˈkɑːɡəʊ/"
+    ],
+    [
+      "customs",
+      "douane",
+      "/ˈkʌstəmz/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Quel mot utilise-t-on avec un nom indénombrable comme « rice » dans une phrase négative ?",
+      "options": [
+        "many",
+        "much",
+        "few",
+        "these"
+      ],
+      "answer": 1,
+      "explain": "On utilise « much » avec les noms indénombrables dans les négations et les questions."
+    },
+    {
+      "type": "fill",
+      "sentence": "Kodjo has ___ boxes of frozen fish in his warehouse.",
+      "options": [
+        "much",
+        "any",
+        "a lot of",
+        "little"
+      ],
+      "answer": 2,
+      "explain": "« Boxes » est un nom comptable pluriel, et « a lot of » s'emploie parfaitement dans une phrase affirmative."
+    },
+    {
+      "type": "listen",
+      "audio": "How many containers are on the truck?",
+      "options": [
+        "How much containers are on the truck?",
+        "How many containers are on the truck?",
+        "How many container is on the truck?",
+        "How much container are on the truck?"
+      ],
+      "answer": 1,
+      "explain": "« Containers » est comptable pluriel, donc on utilise « How many »."
+    },
+    {
+      "type": "build",
+      "fr": "Awa a acheté beaucoup de sacs de riz.",
+      "answer": "Awa bought many bags of rice",
+      "extra": [
+        "much",
+        "box",
+        "any"
+      ],
+      "explain": "Sujet + verbe au passé (bought) + many + nom pluriel (bags) + of + nom (rice)."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "rice",
+          "riz"
+        ],
+        [
+          "money",
+          "argent"
+        ],
+        [
+          "bags",
+          "sacs"
+        ],
+        [
+          "boxes",
+          "boîtes"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "Mrs Okafor needs ___ time to finish the transit documents.",
+      "options": [
+        "many",
+        "a few",
+        "a little",
+        "these"
+      ],
+      "answer": 2,
+      "explain": "« Time » est un nom indénombrable, on utilise donc « a little » pour dire « un peu de »."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Pour demander la quantité de sacs de cacao à Cotonou, on dit :",
+      "options": [
+        "How much bags of cocoa?",
+        "How many bags of cocoa?",
+        "How a lot of bags?",
+        "How any bags of cocoa?"
+      ],
+      "answer": 1,
+      "explain": "« Bags » est un nom comptable, on pose la question avec « How many »."
+    },
+    {
+      "type": "build",
+      "fr": "Nous avons besoin de quelques boîtes pour la cargaison.",
+      "answer": "We need some boxes for the cargo",
+      "extra": [
+        "much",
+        "any",
+        "rice"
+      ],
+      "explain": "Structure affirmative : We need + some + nom pluriel (boxes) + complément."
+    },
+    {
+      "type": "listen",
+      "audio": "There is not much money for customs.",
+      "options": [
+        "There is not many money for customs.",
+        "There is not much money for customs.",
+        "There are not much money for customs.",
+        "There is no much money for customs."
+      ],
+      "answer": 1,
+      "explain": "« Money » est indénombrable et s'emploie avec « much » dans une phrase négative (« not much »)."
+    },
+    {
+      "type": "speak",
+      "text": "How many boxes are in the warehouse?",
+      "fr": "Combien de boîtes y a-t-il dans l'entrepôt ?"
+    }
+  ]
+}

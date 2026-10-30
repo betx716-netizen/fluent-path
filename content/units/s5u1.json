@@ -1,0 +1,184 @@
+{
+  "id": "s5u1",
+  "title": "Incoterms : EXW, FOB, CIF",
+  "context": "Transit",
+  "goal": "Expliquer qui paie quoi selon l'Incoterm choisi.",
+  "points": [
+    "EXW (Ex Works) impose la charge et le risque maximaux à l'acheteur dès l'entrepôt, par exemple à Lomé : « The buyer bears all risks from the warehouse ».",
+    "FOB (Free On Board) transfère le risque à bord du navire au port de départ, comme à Abidjan : « Risk passes when goods are on board ».",
+    "CFR (Cost and Freight) oblige le vendeur à payer le transport principal, mais le risque est transféré au chargement : « The seller pays freight to the port ».",
+    "CIF (Cost, Insurance and Freight) ajoute l'obligation pour le vendeur de souscrire une assurance maritime minimale : « The seller provides cargo insurance »."
+  ],
+  "examples": [
+    [
+      "Under EXW, Mr Mensah collects the container directly from our depot in Cotonou.",
+      "Selon EXW, M. Mensah récupère le conteneur directement depuis notre dépôt à Cotonou."
+    ],
+    [
+      "FOB Tema means we load the goods onto the vessel at our own expense.",
+      "FOB Tema signifie que nous chargeons les marchandises à bord du navire à nos propres frais."
+    ],
+    [
+      "CIF Lagos includes both the main carriage and the minimum marine insurance.",
+      "CIF Lagos inclut à la fois le transport principal et l'assurance maritime minimale."
+    ],
+    [
+      "CFR requires the seller to pay for transport up to the destination port, excluding insurance.",
+      "CFR exige que le vendeur paie le transport jusqu'au port de destination, hors assurance."
+    ]
+  ],
+  "vocab": [
+    [
+      "Ex Works",
+      "départ usine",
+      "/ˈeks ˈwɜːks/"
+    ],
+    [
+      "Free On Board",
+      "franco à bord",
+      "/friː ɒn bɔːd/"
+    ],
+    [
+      "Cost and Freight",
+      "coût et fret",
+      "/kɒst ənd freɪt/"
+    ],
+    [
+      "Insurance",
+      "assurance",
+      "/ˈɪnsʌəns/"
+    ],
+    [
+      "Main carriage",
+      "transport principal",
+      "/ˈkærɪdʒ/"
+    ],
+    [
+      "Risk transfer",
+      "transfert de risque",
+      "/rɪsk ˈtrænsfɜː/"
+    ]
+  ],
+  "exercises": [
+    {
+      "type": "mcq",
+      "prompt": "Quel Incoterm met la responsabilité maximale de transport et d'assurance à la charge du vendeur jusqu'au port de destination ?",
+      "options": [
+        "EXW",
+        "FOB",
+        "CIF",
+        "FAS"
+      ],
+      "answer": 2,
+      "explain": "CIF (Cost, Insurance and Freight) oblige le vendeur à payer le fret et l'assurance jusqu'au port d'arrivée."
+    },
+    {
+      "type": "fill",
+      "sentence": "Under FOB Abidjan, the risk transfers the moment the goods are ___ on board the vessel.",
+      "options": [
+        "loaded",
+        "unloaded",
+        "stored",
+        "inspected"
+      ],
+      "answer": 0,
+      "explain": "En FOB, le risque passe à l'acheteur quand la marchandise est chargée à bord (« placed on board » dans le texte officiel)."
+    },
+    {
+      "type": "listen",
+      "audio": "The seller pays the freight to the destination port.",
+      "options": [
+        "The seller pays the freight to the destination port.",
+        "The buyer pays the freight to the destination port.",
+        "The seller pays the freight from the destination port.",
+        "The buyer plays the freight to the destination port."
+      ],
+      "answer": 0,
+      "explain": "Écoutez bien le sujet (« seller ») et le verbe (« pays ») en lien avec le CFR/CIF."
+    },
+    {
+      "type": "build",
+      "fr": "Le vendeur organise le transport principal.",
+      "answer": "The seller arranges main carriage",
+      "extra": [
+        "buyer",
+        "insurance",
+        "port"
+      ],
+      "explain": "Traduction exacte sans contraction : « The seller arranges main carriage »."
+    },
+    {
+      "type": "pairs",
+      "pairs": [
+        [
+          "EXW",
+          "Départ usine"
+        ],
+        [
+          "FOB",
+          "Franco à bord"
+        ],
+        [
+          "CIF",
+          "Coût, assurance et fret"
+        ],
+        [
+          "CFR",
+          "Coût et fret"
+        ]
+      ]
+    },
+    {
+      "type": "fill",
+      "sentence": "Unlike CFR, the CIF term requires the seller to provide cargo ___.",
+      "options": [
+        "freight",
+        "customs",
+        "insurance",
+        "storage"
+      ],
+      "answer": 2,
+      "explain": "La lettre 'I' dans CIF signifie Insurance (assurance)."
+    },
+    {
+      "type": "mcq",
+      "prompt": "Dans une transaction EXW gérée par Awa à Lomé, qui supporte le coût du chargement initial à l'entrepôt ?",
+      "options": [
+        "L'acheteur",
+        "Le vendeur",
+        "L'armateur",
+        "Le transitaire maritime"
+      ],
+      "answer": 0,
+      "explain": "En EXW (Ex Works), l'acheteur prend tout en charge dès l'entrepôt du vendeur."
+    },
+    {
+      "type": "build",
+      "fr": "Le risque est transféré à bord du navire.",
+      "answer": "Risk passes on board the vessel",
+      "extra": [
+        "buyer",
+        "seller",
+        "port"
+      ],
+      "explain": "En FOB, CFR et CIF, le risque passe à l'acheteur une fois la marchandise à bord du navire."
+    },
+    {
+      "type": "listen",
+      "audio": "Who pays for marine insurance under CFR terms?",
+      "options": [
+        "Who pays for marine insurance under CFR terms?",
+        "Who pays for main carriage under CFR terms?",
+        "Where does risk pass under CIF terms?",
+        "Who pays for marine assurance under CFR terms?"
+      ],
+      "answer": 0,
+      "explain": "La phrase correcte interroge sur l'assurance maritime en régime CFR."
+    },
+    {
+      "type": "speak",
+      "text": "Please confirm if this shipment is FOB or CIF.",
+      "fr": "Veuillez confirmer si cette expédition est en FOB ou CIF."
+    }
+  ]
+}

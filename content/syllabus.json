@@ -1,0 +1,86 @@
+{
+  "s1": {
+    "cefr": "A1",
+    "units": [
+      { "id": "s1u7", "title": "Dates et mois", "context": "Pro", "focus": "days, months, ordinal numbers and dates: 'on the 5th of May', 'in June', 'What's the date today?'", "goal": "Dire et comprendre une date de livraison ou de rendez-vous." },
+      { "id": "s1u8", "title": "Au téléphone", "context": "Pro", "focus": "basic phone phrases: 'Who's calling?', 'Can I speak to…?', 'Hold on, please', 'I'll call you back', 'Can you repeat, please?'", "goal": "Répondre au téléphone et demander à parler à quelqu'un." },
+      { "id": "s1u9", "title": "Décrire un produit", "context": "Commerce", "focus": "adjectives before nouns, colours, sizes, materials: 'a big blue bag', 'It's made of cotton', 'small, medium, large'", "goal": "Décrire la couleur, la taille et la matière d'un produit." },
+      { "id": "s1u10", "title": "Il y a / il n'y a pas", "context": "Transit", "focus": "there is / there are / is there…? / there aren't any, in a warehouse: boxes, pallets, trucks", "goal": "Dire ce qu'il y a (ou non) dans un entrepôt ou un camion." }
+    ]
+  },
+  "s2": {
+    "cefr": "A2",
+    "units": [
+      { "id": "s2u1", "title": "Raconter une livraison", "context": "Transit", "focus": "past simple of regular verbs (delivered, arrived, loaded, checked) and time markers (yesterday, last week, ago)", "goal": "Raconter au passé comment s'est passée une livraison." },
+      { "id": "s2u2", "title": "Verbes irréguliers du commerce", "context": "Commerce", "focus": "irregular past simple: bought, sold, sent, paid, took, gave, made, got; negative 'didn't' + base verb", "goal": "Utiliser les verbes irréguliers les plus courants du commerce." },
+      { "id": "s2u3", "title": "Comparer les prix", "context": "Commerce", "focus": "comparatives and superlatives: cheaper, more expensive, the best, the cheapest, 'as … as'", "goal": "Comparer des produits et des offres de fournisseurs." },
+      { "id": "s2u4", "title": "Quantités", "context": "Commerce", "focus": "some / any / much / many / a lot of / a few / a little with countable and uncountable nouns (rice, money, bags, boxes)", "goal": "Parler de quantités de marchandises sans erreur." },
+      { "id": "s2u5", "title": "Commander par e-mail", "context": "Commerce", "focus": "polite requests in emails: 'I would like to order…', 'Could you send…?', 'Please find attached', 'Best regards'", "goal": "Écrire un e-mail de commande court et poli." },
+      { "id": "s2u6", "title": "Le futur des livraisons", "context": "Transit", "focus": "future with will (decisions, promises) and going to (plans): 'The truck is going to leave at 6', 'I'll call you tomorrow'", "goal": "Annoncer des plans et faire des promesses de livraison." },
+      { "id": "s2u7", "title": "Paiement et factures", "context": "Commerce", "focus": "payment vocabulary: invoice, pay, paid, due date, cash, bank transfer, mobile money, receipt, balance", "goal": "Parler d'une facture, d'une échéance et d'un moyen de paiement." },
+      { "id": "s2u8", "title": "Se plaindre poliment", "context": "Commerce", "focus": "simple complaints: 'There's a problem with…', 'It's broken / damaged / missing', 'I'd like a refund / a replacement'", "goal": "Signaler un problème de marchandise poliment." },
+      { "id": "s2u9", "title": "Unités et mesures", "context": "Transit", "focus": "weights and measures: kilo, tonne, metre, litre, 20-foot / 40-foot container, 'How heavy is it?', 'It weighs…'", "goal": "Donner un poids, une taille et un type de conteneur." },
+      { "id": "s2u10", "title": "Discuter avec un client", "context": "Pro", "focus": "small talk: weather, weekend, family, travel; 'How was your trip?', 'Did you have a good weekend?'", "goal": "Faire la conversation avant de parler affaires." }
+    ]
+  },
+  "s3": {
+    "cefr": "B1",
+    "units": [
+      { "id": "s3u1", "title": "Documents d'expédition", "context": "Transit", "focus": "shipping documents: bill of lading (B/L), commercial invoice, packing list, certificate of origin, delivery note; 'We need a copy of…'", "goal": "Nommer et demander les documents d'une expédition." },
+      { "id": "s3u2", "title": "Déclarer en douane", "context": "Transit", "focus": "customs vocabulary: declare, customs duty, tax, HS code, inspection, clearance, cleared, release", "goal": "Expliquer les étapes du dédouanement." },
+      { "id": "s3u3", "title": "Où en est l'expédition ?", "context": "Transit", "focus": "present perfect with already / yet / just: 'The container has just arrived', 'It hasn't cleared customs yet'", "goal": "Faire le point sur l'avancement d'une expédition." },
+      { "id": "s3u4", "title": "Suivre un conteneur", "context": "Transit", "focus": "tracking vocabulary: ETA, ETD, vessel, berth, port of loading, port of discharge, tracking number, on schedule", "goal": "Suivre un conteneur et donner une date d'arrivée." },
+      { "id": "s3u5", "title": "La voix passive", "context": "Transit", "focus": "passive voice in present and past: 'The goods are inspected', 'The container was loaded yesterday', 'by + agent'", "goal": "Décrire un processus logistique avec la voix passive." },
+      { "id": "s3u6", "title": "Entrepôt et stock", "context": "Transit", "focus": "warehouse vocabulary: pallet, forklift, shelf, stock, out of stock, inventory, to store, to unload", "goal": "Parler du stock et des opérations d'entrepôt." },
+      { "id": "s3u7", "title": "Route et frontières", "context": "Transit", "focus": "road transport: truck, driver, border post, waybill, checkpoint, convoy, transit corridor (Lomé–Ouagadougou, Abidjan–Bamako)", "goal": "Organiser un transport routier qui passe une frontière." },
+      { "id": "s3u8", "title": "Retards et causes", "context": "Transit", "focus": "giving reasons: because, because of, due to, as a result, so; delay, postpone, behind schedule", "goal": "Expliquer la cause d'un retard et ses conséquences." },
+      { "id": "s3u9", "title": "Réunion d'équipe", "context": "Pro", "focus": "meeting language: agenda, minutes, action points, 'Let's start with…', 'Any other business?', 'Who is responsible for…?'", "goal": "Participer à une réunion simple en anglais." },
+      { "id": "s3u10", "title": "Si… : conditionnels 1 et 2", "context": "Pro", "focus": "first conditional (If the ship arrives today, we will…) and second conditional (If we had more trucks, we would…)", "goal": "Parler des possibilités réelles et imaginaires." }
+    ]
+  },
+  "s4": {
+    "cefr": "B2",
+    "units": [
+      { "id": "s4u1", "title": "Faire une offre", "context": "Commerce", "focus": "quotations: quotation, quote, valid until, unit price, minimum order, lead time, 'We are pleased to offer…'", "goal": "Rédiger et présenter une offre commerciale." },
+      { "id": "s4u2", "title": "Négocier un prix", "context": "Commerce", "focus": "negotiation phrases: 'Could you do better on the price?', 'If you order more, we can…', meet halfway, final offer, deal", "goal": "Négocier un prix et trouver un accord." },
+      { "id": "s4u3", "title": "Conditions de paiement", "context": "Commerce", "focus": "payment terms: deposit, advance payment, instalments, 30 days net, letter of credit, overdue, late payment fee", "goal": "Discuter des conditions et des délais de paiement." },
+      { "id": "s4u4", "title": "Réclamation formelle", "context": "Commerce", "focus": "formal complaint writing: 'I am writing to complain about…', 'I would appreciate it if…', compensation, unacceptable", "goal": "Écrire une réclamation formelle et efficace." },
+      { "id": "s4u5", "title": "Répondre à une réclamation", "context": "Pro", "focus": "handling complaints: 'We sincerely apologise for…', investigate, look into, resolve, goodwill gesture, 'It won't happen again'", "goal": "Répondre à un client mécontent et garder sa confiance." },
+      { "id": "s4u6", "title": "Rapporter des propos", "context": "Pro", "focus": "reported speech: said / told / asked, tense backshift (He said the truck was late), reported questions", "goal": "Rapporter ce qu'un client ou un collègue a dit." },
+      { "id": "s4u7", "title": "Phrasal verbs du business", "context": "Pro", "focus": "business phrasal verbs: set up, follow up, call off, carry out, put off, sort out, look into, take over", "goal": "Comprendre et utiliser les phrasal verbs les plus fréquents." },
+      { "id": "s4u8", "title": "Entretien d'embauche", "context": "Pro", "focus": "job interview: strengths, weaknesses, experience, 'I have been working in logistics for five years', present perfect continuous", "goal": "Se présenter et défendre sa candidature en entretien." },
+      { "id": "s4u9", "title": "Présenter des chiffres", "context": "Pro", "focus": "describing trends: increase, decrease, rise, fall, sharply, slightly, steadily, reach a peak, by 10 %", "goal": "Commenter des chiffres de ventes ou de volumes." },
+      { "id": "s4u10", "title": "Convaincre un client", "context": "Commerce", "focus": "persuasion: benefits vs features, 'This will save you…', 'I'm confident that…', handling objections", "goal": "Convaincre un client avec des arguments clairs." }
+    ]
+  },
+  "s5": {
+    "cefr": "C1",
+    "units": [
+      { "id": "s5u1", "title": "Incoterms : EXW, FOB, CIF", "context": "Transit", "focus": "Incoterms 2020 EXW, FOB, CFR, CIF: who pays freight and insurance, where risk passes", "goal": "Expliquer qui paie quoi selon l'Incoterm choisi." },
+      { "id": "s5u2", "title": "Incoterms : DAP, DDP et risques", "context": "Transit", "focus": "Incoterms DAP, DPU, DDP, FCA; transfer of risk, import duties, 'the seller bears the risk until…'", "goal": "Choisir le bon Incoterm et en expliquer les risques." },
+      { "id": "s5u3", "title": "Lire un contrat", "context": "Pro", "focus": "contract language: shall, liable, liability, terminate, clause, breach, force majeure, 'in accordance with'", "goal": "Comprendre les clauses principales d'un contrat commercial." },
+      { "id": "s5u4", "title": "Assurance marchandises", "context": "Transit", "focus": "cargo insurance: policy, premium, cover, claim, loss, damage, surveyor, 'all risks', 'to file a claim'", "goal": "Déclarer un sinistre et parler de couverture d'assurance." },
+      { "id": "s5u5", "title": "Crédit documentaire", "context": "Commerce", "focus": "letters of credit: applicant, beneficiary, issuing bank, confirming bank, discrepancy, documents presented, expiry date", "goal": "Expliquer le fonctionnement d'un crédit documentaire." },
+      { "id": "s5u6", "title": "Litiges et surestaries", "context": "Transit", "focus": "disputes: demurrage, detention, free time, dispute, arbitration, waive, 'we are not liable for…'", "goal": "Défendre sa position dans un litige sur des frais portuaires." },
+      { "id": "s5u7", "title": "Regrets et conditionnel 3", "context": "Pro", "focus": "third conditional and mixed conditionals: 'If we had shipped earlier, we would have avoided…', 'I wish we had…', should have", "goal": "Analyser une erreur passée et ce qu'il aurait fallu faire." },
+      { "id": "s5u8", "title": "Formel ou informel", "context": "Pro", "focus": "register: formal emails vs casual messages; 'I would be grateful if…' vs 'Can you…?'; 'regarding' vs 'about'", "goal": "Adapter son niveau de langue à l'interlocuteur." },
+      { "id": "s5u9", "title": "Inversion et emphase", "context": "Pro", "focus": "emphasis: 'Not only… but also', 'Never have we…', cleft sentences 'What we need is…', 'It was the driver who…'", "goal": "Mettre en valeur une idée importante." },
+      { "id": "s5u10", "title": "Négociation avancée", "context": "Commerce", "focus": "advanced negotiation: concession, leverage, deal-breaker, bottom line, 'I'm afraid that's non-negotiable', 'Let's explore other options'", "goal": "Mener une négociation complexe avec diplomatie." }
+    ]
+  },
+  "s6": {
+    "cefr": "C2",
+    "units": [
+      { "id": "s6u1", "title": "Pitch à des investisseurs", "context": "Commerce", "focus": "pitching: market opportunity, scalable, return on investment, traction, 'We are seeking…', 'Our edge is…'", "goal": "Présenter un projet à des investisseurs de façon percutante." },
+      { "id": "s6u2", "title": "Expressions idiomatiques", "context": "Pro", "focus": "business idioms: ballpark figure, cut corners, get the ball rolling, back to square one, on the same page, a win-win", "goal": "Comprendre et placer les idiomes courants du business." },
+      { "id": "s6u3", "title": "Nuancer son propos", "context": "Pro", "focus": "hedging: arguably, it would appear that, to some extent, tend to, it might be worth considering", "goal": "Exprimer une opinion avec nuance et prudence." },
+      { "id": "s6u4", "title": "Humour et sous-entendus", "context": "Pro", "focus": "British understatement and politeness: 'not ideal', 'a bit of a problem', 'with all due respect', what people really mean", "goal": "Décoder ce que veulent vraiment dire les Britanniques." },
+      { "id": "s6u5", "title": "L'anglais d'Afrique de l'Ouest", "context": "Commerce", "focus": "West African English in business (Nigeria, Ghana): 'I'm coming' (= I'll be right back), 'flash me' (= give me a missed call), 'How far?' (= how are you / what's the news), 'Well done' as a greeting at work; compared with standard English", "goal": "Comprendre les tournures de tes partenaires nigérians et ghanéens." },
+      { "id": "s6u6", "title": "Rédiger un rapport", "context": "Pro", "focus": "report writing: executive summary, findings, recommendations, 'It is recommended that…', impersonal style", "goal": "Rédiger un rapport clair et structuré." },
+      { "id": "s6u7", "title": "Gérer une crise", "context": "Pro", "focus": "crisis communication: reassure, take responsibility, transparency, 'We are fully aware of…', 'Our priority is…'", "goal": "Communiquer calmement pendant une crise." },
+      { "id": "s6u8", "title": "Diriger une réunion", "context": "Pro", "focus": "chairing: 'Let's move on', 'To sum up', 'Could we stick to the agenda?', interrupting politely, reaching a decision", "goal": "Animer une réunion et la faire aboutir." },
+      { "id": "s6u9", "title": "Négocier entre cultures", "context": "Commerce", "focus": "intercultural negotiation: directness, saving face, building relationships first, reading between the lines, polite refusals", "goal": "Adapter sa négociation à la culture de l'autre." },
+      { "id": "s6u10", "title": "Salon et réseautage", "context": "Commerce", "focus": "networking: elevator pitch, business card, 'What line of business are you in?', following up after an event", "goal": "Se présenter et créer des contacts dans un salon." }
+    ]
+  }
+}
