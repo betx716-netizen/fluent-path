@@ -62,6 +62,7 @@ export interface State {
   // Ligue de la semaine : palier et numéro de semaine en cours.
   league: { tier: number; week: number; last: { week: number; rank: number; change: -1 | 0 | 1 } | null };
   spokenSeconds: number;
+  grammar: Record<string, { cursor: number; since: number; quizzes: number; passed: number }>;
   updatedAt: string;
 }
 
@@ -97,6 +98,7 @@ export const initialState = (): State => ({
   sounds: {},
   league: { tier: 0, week: 0, last: null },
   spokenSeconds: 0,
+  grammar: {},
   updatedAt: new Date().toISOString()
 });
 

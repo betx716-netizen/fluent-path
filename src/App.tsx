@@ -14,6 +14,8 @@ import { League } from "./screens/League";
 import { PlacementTest } from "./screens/PlacementTest";
 import { applyPlacement } from "./lib/placement";
 import { rollLeague } from "./lib/league";
+import { recordQuiz } from "./lib/grammar";
+import { Grammar } from "./screens/Grammar";
 import { BottomNav, TopBar, type Tab } from "./components/Chrome";
 import { Chest, Gem } from "./components/Icons";
 import { Zazou } from "./components/Zazou";
@@ -45,6 +47,7 @@ export default function App() {
   const [chest, setChest] = useState<Section | null>(null);
   const [session, setSession] = useState<Session | null>(null);
   const [toastMsg, setToastMsg] = useState<string | null>(null);
+  const [gramTopic, setGramTopic] = useState<string | null>(null);
 
   useEffect(() => startSync(setSession), []);
   // Nouvelle semaine : montée ou descente de ligue.
@@ -72,7 +75,8 @@ export default function App() {
 
   const done = (r: LessonResult) => {
     const { next, reward } = finishLesson(getState(), r);
-    setState(() => syncUnitCards(next));
+    // Mini-exercice de grammaire : il compte pour l'XP et la série, pas pour le parcours.
+    setState(() => syncUnitCards(recordQuiz(next, r.unit.id, reward.stars)));
     void logSession(r.unit.id, r.seconds, reward.xp);
     setView({ kind: "victory", reward, seconds: r.seconds, unit: r.unit });
   };
@@ -161,7 +165,8 @@ export default function App() {
     <div className="app">
       <TopBar />
       <main style={{ flex: 1, display: "flex", flexDirection: "column" }}>
-        {tab === "learn" && <PathMap onStart={unit => setView({ kind: "lesson", unit })} onChest={setChest} onTest={startTest} onReview={() => setTab("review")} />}
+        {tab === "learn" && <PathMap onStart={unit => setView({ kind: "lesson", unit })} onChest={setChest} onTest={startTest} onReview={() => setTab("review")} onGrammar={() => setTab("grammar")} />}
+        {tab === "grammar" && <SubScreen back={gramTopic ? "Grammaire" : "Accueil"} onBack={() => (gramTopic ? setGramTopic(null) : setTab("learn"))}><Grammar topicId={gramTopic} onTopic={setGramTopic} onQuiz={unit => setView({ kind: "lesson", unit })} /></SubScreen>}
         {tab === "review" && <SubScreen back="Accueil" onBack={() => setTab("learn")}><ReviewTab toast={setToastMsg} /></SubScreen>}
         {tab === "talk" && <Talk onStart={sc => setView({ kind: "roleplay", sc })} />}
         {tab === "sounds" && <Sounds onAccents={() => setTab("accent")} />}

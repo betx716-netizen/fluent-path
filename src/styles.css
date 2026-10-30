@@ -1220,3 +1220,21 @@ input[type="tel"] { font: inherit; width: 100%; padding: 14px 16px; border: 2px 
 .back-link { appearance: none; border: 0; background: none; cursor: pointer; align-self: flex-start; padding: 12px 16px 0; font-weight: 900; color: var(--indigo); }
 .review-link { appearance: none; cursor: pointer; display: flex; align-items: center; gap: 10px; padding: 12px 14px; border-radius: 16px; border: 2px solid var(--line); background: var(--surface); color: var(--ink); box-shadow: 0 4px 0 var(--line); }
 .review-link svg { color: var(--blue); }
+
+/* ---------- Grammaire ---------- */
+.grammar-link svg { color: var(--indigo) !important; }
+.topic-card { --c: var(--indigo); --cs: var(--indigo-soft); appearance: none; cursor: pointer; display: flex; gap: 12px; align-items: flex-start; text-align: left; padding: 14px; border: 2px solid var(--line); border-radius: 18px; background: var(--surface); box-shadow: 0 4px 0 var(--line); }
+.topic-card.blue { --c: var(--blue); --cs: var(--blue-soft); }
+.topic-card.mint { --c: var(--mint); --cs: var(--mint-soft); }
+.topic-card.sun { --c: var(--sun-dark); --cs: var(--sun-soft); }
+.topic-card > span:last-child { display: grid; gap: 5px; }
+.topic-card b { font-size: 1.1rem; }
+.topic-card small { color: var(--muted); font-weight: 600; line-height: 1.25; }
+.topic-card .goal-icon { background: var(--c); color: #fff; }
+.review-steps { display: grid; grid-template-columns: repeat(10, 1fr); gap: 4px; }
+.review-steps i { height: 10px; border-radius: 99px; background: var(--line); }
+.review-steps i.on { background: var(--indigo); }
+.gram-card { display: grid; gap: 14px; }
+.gram-word { font-size: 1.7rem; font-weight: 900; display: block; line-height: 1.1; }
+.gram-ex { display: flex; gap: 10px; align-items: flex-start; padding: 12px; border-radius: 14px; background: var(--surface-2); }
+.quiz-call { display: grid; gap: 10px; justify-items: center; text-align: center; }

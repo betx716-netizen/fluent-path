@@ -43,9 +43,9 @@ Note : les animations de Zazou sont en SVG et CSS. Rive demanderait de dessiner 
 
 Réglages repris du programme : leçons de 5 à 7 min, objectif quotidien de 5, 10, 15 ou 20 min, 5 vies, note de prononciation en couleur (≥ 85 parfait, 60–84 presque, < 60 réessaie), seuil de réussite propre à chaque phrase (70, ou 65 pour la traduction à l'oral).
 
-## Le prétérit (unité 12)
+## Grammaire (espace à part)
 
-L'unité 12 « Le week-end dernier » (chapitre 3) est rédigée : verbes en -ed et leur prononciation, verbes irréguliers, was / were, questions et négation avec did / didn't, puis une conversation avec une collègue. Les leçons de grammaire affichent les règles avant les exercices et ajoutent 3 phrases à compléter. Elle s'ouvre après le test de l'unité 5, par un saut de niveau ou avec le test de niveau (A1 et plus).
+Depuis l'Accueil, carte « Grammaire » : 4 thèmes de 20 cartes (prétérit, verbes essentiels, adjectifs qualificatifs, connecteurs logiques), chacun avec ses règles « À retenir ». On révise les cartes une par une (mot, prononciation, exemple audio) ; toutes les 10 cartes, un mini-exercice de 6 questions (2 sens, 2 phrases à compléter, 2 phrases à dire au micro) doit être réussi à 70 % pour passer aux 10 suivantes. Le parcours garde l'unité 12 « Le week-end dernier » comme prévue au programme.
 
 ## Écrans ajoutés (inscription, test oral, sons, ligue, profil)
 

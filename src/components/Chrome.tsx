@@ -6,8 +6,8 @@ import { Flame, Gem, Heart, NavLeague, NavLearn, NavProfile, NavSounds, NavTalk 
 import { LIVES } from "../lib/game";
 
 // « review » et « accent » sont des sous-écrans (Accueil et Sons).
-export type Tab = "learn" | "talk" | "sounds" | "league" | "profile" | "review" | "accent";
-const PARENT: Partial<Record<Tab, Tab>> = { review: "learn", accent: "sounds" };
+export type Tab = "learn" | "talk" | "sounds" | "league" | "profile" | "review" | "accent" | "grammar";
+const PARENT: Partial<Record<Tab, Tab>> = { review: "learn", accent: "sounds", grammar: "learn" };
 
 export function TopBar() {
   const s = useStore(x => x);

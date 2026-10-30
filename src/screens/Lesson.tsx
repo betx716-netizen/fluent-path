@@ -32,7 +32,7 @@ const CHEERS = ["Excellent !", "Bravo !", "Parfait !", "Bien joué !", "Super !"
 
 export function Lesson({ unit, onExit, onDone, test = false }: { unit: Unit; onExit: () => void; onDone: (r: LessonResult) => void; test?: boolean }) {
   const started = useRef(Date.now());
-  const [intro, setIntro] = useState(!test && (unit.exercises[0]?.type !== "discover" || !!unit.grammarIntro));
+  const [intro, setIntro] = useState(!test && !unit.noIntro && (unit.exercises[0]?.type !== "discover" || !!unit.grammarIntro));
   const [queue, setQueue] = useState<number[]>(() =>
     unit.exercises.map((_, i) => i).filter(i => !isSpoken(unit.exercises[i]) || canListen())
   );

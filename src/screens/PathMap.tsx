@@ -1,7 +1,7 @@
 import { Fragment, useLayoutEffect, useRef, useState } from "react";
 import { sectionsOf } from "../data/units";
 import type { Section, Unit } from "../data/types";
-import { Check, Chest, Crown, Guide, Lock, Mic, NavReview, Star } from "../components/Icons";
+import { Book, Check, Chest, Crown, Guide, Lock, Mic, NavReview, Star } from "../components/Icons";
 import { dueCards } from "../lib/review";
 import { SpeakButton } from "../exercises/Exercises";
 import { Zazou } from "../components/Zazou";
@@ -29,7 +29,7 @@ function perchFor(s: State): string | null {
 
 const PERCH = 64; // taille de Zazou sur la carte
 
-export function PathMap({ onStart, onChest, onTest, onReview }: { onStart: (u: Unit) => void; onChest: (s: Section) => void; onTest: (s: Section) => void; onReview: () => void }) {
+export function PathMap({ onStart, onChest, onTest, onReview, onGrammar }: { onStart: (u: Unit) => void; onChest: (s: Section) => void; onTest: (s: Section) => void; onReview: () => void; onGrammar: () => void }) {
   const s = useStore(x => x);
   const [preview, setPreview] = useState<Unit | null>(null);
   const [testFor, setTestFor] = useState<Section | null>(null);
@@ -129,6 +129,13 @@ export function PathMap({ onStart, onChest, onTest, onReview }: { onStart: (u: U
         <NavReview width={26} height={26} />
         <span style={{ flex: 1, textAlign: "left" }}>
           <b>Révisions</b> · {due ? `${due} mot${due > 1 ? "s" : ""} à revoir` : "rien à revoir pour l'instant"}
+        </span>
+        <span aria-hidden>›</span>
+      </button>
+      <button className="review-link grammar-link" onClick={onGrammar}>
+        <Book width={26} height={26} />
+        <span style={{ flex: 1, textAlign: "left" }}>
+          <b>Grammaire</b> · prétérit, verbes, adjectifs, connecteurs
         </span>
         <span aria-hidden>›</span>
       </button>

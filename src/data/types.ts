@@ -28,6 +28,8 @@ export interface Unit {
   minutes?: string;
   // Leçon de grammaire : on montre les règles avant les exercices.
   grammarIntro?: boolean;
+  // Mini-exercice : pas d'écran d'introduction.
+  noIntro?: boolean;
 }
 
 export interface Section {
