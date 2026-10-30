@@ -1,4 +1,4 @@
-import { CHAPTER1, COURSE_SETTINGS, PLAN, type CourseLesson, type CourseUnit } from "./course";
+import { COURSE_SETTINGS, PLAN, READY_UNITS, type CourseLesson, type CourseUnit } from "./course";
 import type { Exercise, Section, Unit } from "./types";
 import type { Scenario, Voice } from "./scenarios";
 
@@ -29,6 +29,10 @@ export function buildLessonExercises(lesson: CourseLesson): Exercise[] {
       explain: `« ${wd.en} » = ${wd.fr}. On le prononce à peu près « ${wd.say} ».`
     });
   }
+  for (const dr of lesson.drills ?? []) {
+    const options = shuffle(dr.options);
+    ex.push({ type: "fill", sentence: dr.sentence, options, answer: options.indexOf(dr.answer), explain: dr.explain });
+  }
   for (const ph of lesson.phrases.slice(0, 2)) {
     const answer = orderAnswer(ph.en);
     ex.push({ type: "listen_order", audio: ph.en, fr: ph.fr, tiles: answer.split(" "), answer });
@@ -45,7 +49,7 @@ function toUnit(unit: CourseUnit, lesson: CourseLesson): Unit {
     title: lesson.title,
     context: "Quotidien",
     goal: lesson.goal,
-    points: [
+    points: lesson.rules ?? [
       lesson.goal,
       `Grammaire de l'unité : ${unit.grammar}.`,
       ...lesson.words.slice(0, 2).map(wd => `« ${wd.en} » = ${wd.fr} (se dit « ${wd.say} »).`)
@@ -54,13 +58,14 @@ function toUnit(unit: CourseUnit, lesson: CourseLesson): Unit {
     vocab: lesson.words.map(wd => [wd.en, wd.fr, wd.say]),
     exercises: buildLessonExercises(lesson),
     roleplay: lesson.roleplay,
+    grammarIntro: !!lesson.rules,
     minutes: COURSE_SETTINGS.lessonMinutes.replace("-", " à ")
   };
 }
 
 // Chaque unité du programme devient une « section » de la carte, chaque leçon une étape.
 export const GENERAL_SECTIONS: Section[] = PLAN.flatMap(ch => {
-  const ready = CHAPTER1.filter(u => ch.units.some(pu => pu.id === u.id));
+  const ready = READY_UNITS.filter(u => ch.units.some(pu => pu.id === u.id));
   const sections: Section[] = ready.map(u => ({
     id: u.id,
     track: "general",
@@ -106,7 +111,7 @@ export function scenarioFromLesson(unit: Unit): Scenario | null {
   return {
     id: unit.id,
     title: r.title,
-    level: "A1",
+    level: (PLAN.find(c => unit.id.startsWith(`${c.id}-`))?.level.slice(0, 2) ?? "A1") as Scenario["level"],
     context: "Quotidien",
     partner: { name: name.trim(), role: rest.join(",").trim() || "interlocuteur", voice, origin },
     setting: `${r.title}. You play ${r.zazou_role} (French description).`,

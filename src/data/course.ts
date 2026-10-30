@@ -32,6 +32,9 @@ export interface CourseLesson {
   words: Word[];
   phrases: Phrase[];
   roleplay?: RoleplayDef;
+  // Leçons de grammaire : règles affichées avant les exercices et phrases à compléter.
+  rules?: string[];
+  drills?: { sentence: string; options: string[]; answer: string; explain: string }[];
 }
 export interface CourseUnit {
   id: string;
@@ -47,7 +50,7 @@ export interface PlanChapter { id: string; number: number; title: string; level:
 
 const w = (en: string, fr: string, say: string): Word => ({ en, fr, say });
 const p = (en: string, fr: string): Phrase => ({ en, fr });
-const rp = (title: string, zazou_role: string, user_goal: string, opening: string, targets: string[], unit: string): RoleplayDef => ({
+const rp = (title: string, zazou_role: string, user_goal: string, opening: string, targets: string[], unit: string, level = "A1"): RoleplayDef => ({
   title,
   zazou_role,
   user_goal,
@@ -55,7 +58,7 @@ const rp = (title: string, zazou_role: string, user_goal: string, opening: strin
   targets,
   max_turns: 8,
   free_minutes: 2,
-  system_prompt: `Tu es Zazou, le tuteur d'anglais de l'application ZAZOU. Joue le rôle suivant : ${zazou_role}. Scène : ${title}. L'élève est un francophone de niveau A1 ; son objectif : ${user_goal}. Parle UNIQUEMENT en anglais très simple (phrases de 4 à 10 mots, vocabulaire de l'unité « ${unit} »). Pose une seule question à la fois. Si l'élève fait une erreur, reformule correctement sa phrase dans ta réponse sans le gronder. Si l'élève écrit en français ou dit qu'il ne comprend pas, donne une courte aide en français entre crochets puis reviens à l'anglais. Essaie de lui faire utiliser : ${targets.join(", ")}. Termine après 6 à 8 échanges par une phrase d'au revoir.`
+  system_prompt: `Tu es Zazou, le tuteur d'anglais de l'application ZAZOU. Joue le rôle suivant : ${zazou_role}. Scène : ${title}. L'élève est un francophone de niveau ${level} ; son objectif : ${user_goal}. Parle UNIQUEMENT en anglais très simple (phrases de 4 à 10 mots, vocabulaire de l'unité « ${unit} »). Pose une seule question à la fois. Si l'élève fait une erreur, reformule correctement sa phrase dans ta réponse sans le gronder. Si l'élève écrit en français ou dit qu'il ne comprend pas, donne une courte aide en français entre crochets puis reviens à l'anglais. Essaie de lui faire utiliser : ${targets.join(", ")}. Termine après 6 à 8 échanges par une phrase d'au revoir.`
 });
 
 export const PLAN: PlanChapter[] = [
@@ -75,7 +78,7 @@ export const PLAN: PlanChapter[] = [
   ] },
   { id: "c3", number: 3, title: "Communiquer", level: "A2.1", units: [
     { id: "c3-u1", number: 11, title: "Au téléphone", situations: "Appels, WhatsApp, laisser un message", grammar: "can / could", status: "planned" },
-    { id: "c3-u2", number: 12, title: "Le week-end dernier", situations: "Raconter ce qu'on a fait", grammar: "prétérit", status: "planned" },
+    { id: "c3-u2", number: 12, title: "Le week-end dernier", situations: "Raconter ce qu'on a fait", grammar: "prétérit", status: "ready" },
     { id: "c3-u3", number: 13, title: "Loisirs", situations: "Foot, musique, sorties, goûts", grammar: "like + -ing, fréquence", status: "planned" },
     { id: "c3-u4", number: 14, title: "En voyage", situations: "Aéroport, hôtel, réservation", grammar: "going to", status: "planned" },
     { id: "c3-u5", number: 15, title: "Invitations", situations: "Inviter, accepter, refuser poliment", grammar: "will, let's", status: "planned" }
@@ -210,3 +213,71 @@ export const CHAPTER1: CourseUnit[] = [
     ]
   }
 ];
+
+// Chapitre 3, unité 12 : le prétérit (raconter ce qu'on a fait).
+const d = (sentence: string, options: string[], answer: string, explain: string) => ({ sentence, options, answer, explain });
+
+export const PRETERIT: CourseUnit = {
+  id: "c3-u2", number: 12, title: "Le week-end dernier", title_en: "Last weekend", goal: "Raconter ce qu'on a fait : hier, le week-end dernier, il y a deux jours.", grammar: "prétérit : -ed, verbes irréguliers, was / were, did / didn't",
+  lessons: [
+    { id: "c3-u2-l1", title: "Hier, j'ai travaillé", goal: "Former le prétérit des verbes réguliers avec -ed.", xp: 10, type: "standard",
+      rules: [
+        "Le prétérit raconte une action finie dans le passé : yesterday, last week, in 2020. Il traduit le passé composé (j'ai travaillé) et souvent l'imparfait (je travaillais).",
+        "Verbes réguliers : on ajoute -ed. work → worked, watch → watched. La forme est la même pour I, you, he, she, we, they.",
+        "Prononciation de -ed : « t » après p, k, ch, sh (worked ≈ « weurkt ») ; « d » après une voyelle ou un son doux (called ≈ « kold ») ; « id » seulement après t ou d (visited ≈ « vi-zi-tid »)."
+      ],
+      words: [w("yesterday", "hier", "YÈS-teur-déï"), w("worked", "a travaillé", "WEURKT"), w("watched", "a regardé", "WOTCHT"), w("visited", "a rendu visite", "VI-zi-tid"), w("called", "a appelé", "KOLD")],
+      phrases: [p("I worked all day yesterday.", "J'ai travaillé toute la journée hier."), p("We watched the match on TV.", "Nous avons regardé le match à la télé."), p("She visited her mother in Bouaké.", "Elle a rendu visite à sa mère à Bouaké."), p("He called me last night.", "Il m'a appelé hier soir.")],
+      drills: [
+        d("Yesterday I ___ at the market.", ["work", "worked", "working"], "worked", "Action finie (yesterday) : verbe + -ed."),
+        d("Last night we ___ a film.", ["watched", "watch", "watches"], "watched", "last night = passé : watch → watched."),
+        d("She ___ her friend on Sunday.", ["call", "calls", "called"], "called", "Même forme avec she : called, sans -s.")
+      ] },
+    { id: "c3-u2-l2", title: "Je suis allé…", goal: "Utiliser les verbes irréguliers les plus courants.", xp: 10, type: "standard",
+      rules: [
+        "Les verbes les plus utilisés sont irréguliers : leur prétérit s'apprend par cœur.",
+        "go → went, eat → ate, see → saw, buy → bought, have → had, make → made, get → got, come → came.",
+        "Comme pour -ed, une seule forme pour toutes les personnes : I went, she went, they went."
+      ],
+      words: [w("went", "est allé / suis allé", "OUÈNT"), w("ate", "a mangé", "ÉÏT"), w("saw", "a vu", "SO"), w("bought", "a acheté", "BOT"), w("had", "a eu / avait", "HÈD")],
+      phrases: [p("I went to the beach on Saturday.", "Je suis allé à la plage samedi."), p("We ate attiéké and fish.", "Nous avons mangé de l'attiéké et du poisson."), p("I saw my cousin at the market.", "J'ai vu mon cousin au marché."), p("She bought a new dress.", "Elle a acheté une nouvelle robe.")],
+      drills: [
+        d("On Sunday, we ___ to church.", ["go", "goed", "went"], "went", "go est irrégulier : go → went (jamais « goed »)."),
+        d("I ___ rice for lunch.", ["ate", "eated", "eat"], "ate", "eat → ate."),
+        d("He ___ a phone at the market.", ["buyed", "bought", "buy"], "bought", "buy → bought, prononcé « bot ».")
+      ] },
+    { id: "c3-u2-l3", title: "C'était bien !", goal: "Dire comment c'était et où on était avec was / were.", xp: 10, type: "standard",
+      rules: [
+        "Le verbe to be au prétérit : I / he / she / it was ; you / we / they were.",
+        "ago se place après la durée : two days ago = il y a deux jours.",
+        "Être né se dit avec be : I was born in Daloa (jamais « I born »)."
+      ],
+      words: [w("was", "était / étais", "OUOZ"), w("were", "étaient / étions", "OUEUR"), w("last week", "la semaine dernière", "LAST OUÏK"), w("ago", "il y a (durée)", "eu-GO"), w("born", "né(e)", "BORN")],
+      phrases: [p("The party was great!", "La fête était super !"), p("We were tired after the trip.", "Nous étions fatigués après le voyage."), p("I was born in Daloa.", "Je suis né à Daloa."), p("I was in Accra two weeks ago.", "J'étais à Accra il y a deux semaines.")],
+      drills: [
+        d("The weather ___ hot yesterday.", ["were", "was", "is"], "was", "the weather = it → was."),
+        d("My friends ___ at the maquis.", ["were", "was", "are"], "were", "my friends = they → were."),
+        d("I came to Abidjan three years ___.", ["last", "before", "ago"], "ago", "Durée + ago = il y a trois ans.")
+      ] },
+    { id: "c3-u2-l4", title: "Did you…? I didn't…", goal: "Poser une question et dire non au prétérit avec did.", xp: 10, type: "standard",
+      rules: [
+        "Question : Did + sujet + verbe de base. Did you go? (jamais « Did you went? »).",
+        "Négation : didn't + verbe de base. I didn't eat (jamais « I didn't ate »). did porte déjà le passé.",
+        "Réponses courtes : Yes, I did. / No, I didn't. Avec un mot interrogatif : What did you do? Where did you go?"
+      ],
+      words: [w("did", "auxiliaire du passé (questions)", "DID"), w("didn't", "ne … pas (passé)", "DI-deunt"), w("what did", "qu'est-ce que … (passé)", "OUOT did"), w("where did", "où … (passé)", "OUÈR did"), w("when did", "quand … (passé)", "OUÈN did")],
+      phrases: [p("Did you go out last night?", "Tu es sorti hier soir ?"), p("No, I didn't.", "Non."), p("What did you do on Sunday?", "Qu'as-tu fait dimanche ?"), p("I didn't see the message.", "Je n'ai pas vu le message.")],
+      drills: [
+        d("___ you watch the match?", ["Do", "Did", "Were"], "Did", "Question au passé : Did + sujet + verbe."),
+        d("I didn't ___ to work yesterday.", ["went", "goes", "go"], "go", "Après didn't, verbe de base : didn't go."),
+        d("What did she ___ at the market?", ["buy", "bought", "buys"], "buy", "Après did, verbe de base : did she buy.")
+      ] },
+    { id: "c3-u2-l5", title: "Conversation : lundi au bureau", goal: "Raconter ton week-end à une collègue et lui poser la question.", xp: 20, type: "conversation",
+      words: [w("weekend", "week-end", "OUÏK-ènd"), w("great", "super", "GRÉÏT"), w("fun", "amusant", "FAN"), w("boring", "ennuyeux", "BO-ring"), w("tired", "fatigué", "TAÏ-eurd")],
+      phrases: [p("How was your weekend?", "C'était comment, ton week-end ?"), p("It was great, thanks!", "C'était super, merci !"), p("I went to a wedding in Grand-Bassam.", "Je suis allé à un mariage à Grand-Bassam."), p("What did you do?", "Et toi, qu'est-ce que tu as fait ?")],
+      roleplay: rp("Lundi matin au bureau", "Mrs. Johnson, une collègue américaine curieuse", "Raconter ton week-end (où tu es allé, ce que tu as fait, si c'était bien) puis lui poser la question", "Good morning! How was your weekend?", ["It was…", "I went to…", "I ate / I saw / I bought…", "I didn't…", "What did you do?"], "Le week-end dernier", "A2") }
+  ]
+};
+
+// Unités du programme déjà rédigées.
+export const READY_UNITS: CourseUnit[] = [...CHAPTER1, PRETERIT];

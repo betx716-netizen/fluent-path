@@ -43,6 +43,10 @@ Note : les animations de Zazou sont en SVG et CSS. Rive demanderait de dessiner 
 
 Réglages repris du programme : leçons de 5 à 7 min, objectif quotidien de 5, 10, 15 ou 20 min, 5 vies, note de prononciation en couleur (≥ 85 parfait, 60–84 presque, < 60 réessaie), seuil de réussite propre à chaque phrase (70, ou 65 pour la traduction à l'oral).
 
+## Le prétérit (unité 12)
+
+L'unité 12 « Le week-end dernier » (chapitre 3) est rédigée : verbes en -ed et leur prononciation, verbes irréguliers, was / were, questions et négation avec did / didn't, puis une conversation avec une collègue. Les leçons de grammaire affichent les règles avant les exercices et ajoutent 3 phrases à compléter. Elle s'ouvre après le test de l'unité 5, par un saut de niveau ou avec le test de niveau (A1 et plus).
+
 ## Écrans ajoutés (inscription, test oral, sons, ligue, profil)
 
 - **Inscription en 3 étapes** : prénom, numéro WhatsApp (+225), objectif (Travail, Voyages, Études, Business), temps par jour, puis test de niveau. La connexion par code SMS passe par Supabase Auth (téléphone) : elle demande la sauvegarde en ligne et un fournisseur SMS branché dans Supabase (payant). Sans eux, le numéro reste sur le téléphone.

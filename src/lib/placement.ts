@@ -64,8 +64,9 @@ const PRO_CEFR: Record<Level, string> = { A0: "A1", A1: "A1", A2: "A2", B1: "B1"
 
 export function startInfo(level: Level) {
   const chapter = PLAN.find(c => c.number === START_CHAPTER[level])!;
-  const firstUnit = chapter.units[0];
-  return { chapter, unitTitle: `${firstUnit.number}. ${firstUnit.title}`, ready: firstUnit.status !== "planned" };
+  // Première unité déjà rédigée du chapitre, sinon la première tout court.
+  const unit = chapter.units.find(u => u.status === "ready") ?? chapter.units[0];
+  return { chapter, unitTitle: `${unit.number}. ${unit.title}`, ready: unit.status === "ready" };
 }
 
 // Le niveau final fixe l'unité de départ : on ouvre les sections qui précèdent

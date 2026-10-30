@@ -26,6 +26,8 @@ export interface Unit {
   exercises: Exercise[];
   roleplay?: RoleplayDef;
   minutes?: string;
+  // Leçon de grammaire : on montre les règles avant les exercices.
+  grammarIntro?: boolean;
 }
 
 export interface Section {
