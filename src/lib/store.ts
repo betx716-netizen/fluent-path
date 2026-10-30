@@ -48,6 +48,7 @@ export interface State {
   accents: { heard: string[]; pairsBest: number; dictations: number };
   writings: { count: number; best: number };
   outfits: { owned: string[]; worn: string | null };
+  zazouAt: string | null;
   updatedAt: string;
 }
 
@@ -75,6 +76,7 @@ export const initialState = (): State => ({
   accents: { heard: [], pairsBest: 0, dictations: 0 },
   writings: { count: 0, best: 0 },
   outfits: { owned: [], worn: null },
+  zazouAt: null,
   updatedAt: new Date().toISOString()
 });
 

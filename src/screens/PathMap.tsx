@@ -1,23 +1,104 @@
-import { Fragment, useState } from "react";
+import { Fragment, useLayoutEffect, useRef, useState } from "react";
 import { SECTIONS } from "../data/units";
 import type { Section, Unit } from "../data/types";
 import { Book, Check, Chest, Crown, Lock, Star } from "../components/Icons";
 import { Zazou } from "../components/Zazou";
 import { CHEST_AFTER, PASS_STARS, chestId, chestReady, sectionOpen, unitState } from "../lib/game";
-import { dailyGoalXp, useStore } from "../lib/store";
+import { dailyGoalXp, setState, useStore, type State } from "../lib/store";
 import { today } from "../lib/day";
 
 // Zigzag : décalage horizontal de chaque pastille (en px).
 const OFFSETS = [0, 52, 78, 52, 0, -52, -78, -52];
+
+// L'étape où Zazou se pose : l'unité en cours, sinon la dernière validée.
+function perchFor(s: State): string | null {
+  let last: string | null = null;
+  for (const section of SECTIONS) {
+    for (let i = 0; i < section.units.length; i++) {
+      const st = unitState(s, section, i);
+      if (st === "current") return section.units[i].id;
+      if (st === "done") last = section.units[i].id;
+    }
+  }
+  return last;
+}
+
+const PERCH = 64; // taille de Zazou sur la carte
 
 export function PathMap({ onStart, onChest }: { onStart: (u: Unit) => void; onChest: (s: Section) => void }) {
   const s = useStore(x => x);
   const [preview, setPreview] = useState<Unit | null>(null);
   const goal = dailyGoalXp(s.profile.minutes);
   const todayXp = s.xpByDay[today()] ?? 0;
+  const container = useRef<HTMLDivElement>(null);
+  const bird = useRef<HTMLDivElement>(null);
+  const nodes = useRef(new Map<string, HTMLElement>());
+  const target = perchFor(s);
+  const [hopping, setHopping] = useState(false);
+
+  // Position (dans la carte) où Zazou se tient debout sur une pastille.
+  const spot = (id: string | null) => {
+    const el = id ? nodes.current.get(id) : null;
+    const box = container.current?.getBoundingClientRect();
+    if (!el || !box) return null;
+    const r = el.getBoundingClientRect();
+    return { x: r.left - box.left + r.width / 2 - PERCH / 2 + 14, y: r.top - box.top - PERCH + 10 };
+  };
+
+  useLayoutEffect(() => {
+    const el = bird.current;
+    const to = spot(target);
+    if (!el || !to) return;
+    const place = (p: { x: number; y: number }) => {
+      el.style.transform = `translate(${p.x}px, ${p.y}px)`;
+    };
+    const from = spot(s.zazouAt);
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!from || s.zazouAt === target || reduce) {
+      place(to);
+      if (s.zazouAt !== target) setState(x => ({ ...x, zazouAt: target }));
+      const onResize = () => { const p = spot(target); if (p) place(p); };
+      window.addEventListener("resize", onResize);
+      void document.fonts?.ready.then(onResize);
+      return () => window.removeEventListener("resize", onResize);
+    }
+    // Nouvelle étape débloquée : Zazou part de l'ancienne et saute sur la nouvelle.
+    place(from);
+    nodes.current.get(target!)?.scrollIntoView({ behavior: "smooth", block: "center" });
+    let anim: Animation | null = null;
+    const t = window.setTimeout(() => {
+      setHopping(true);
+      const peak = Math.min(from.y, to.y) - 90;
+      const mid = (a: number, b: number, k: number) => a + (b - a) * k;
+      anim = el.animate(
+        [
+          { transform: `translate(${from.x}px, ${from.y}px) scale(1, 1)` },
+          { transform: `translate(${from.x}px, ${from.y + 6}px) scale(1.12, 0.85)`, offset: 0.12 },
+          { transform: `translate(${mid(from.x, to.x, 0.5)}px, ${peak}px) scale(0.95, 1.08)`, offset: 0.55 },
+          { transform: `translate(${to.x}px, ${to.y + 6}px) scale(1.15, 0.82)`, offset: 0.88 },
+          { transform: `translate(${to.x}px, ${to.y}px) scale(1, 1)` }
+        ],
+        { duration: 950, easing: "ease-in-out" }
+      );
+      anim.onfinish = () => {
+        place(to);
+        setHopping(false);
+        setState(x => ({ ...x, zazouAt: target }));
+      };
+    }, 700);
+    return () => {
+      window.clearTimeout(t);
+      anim?.cancel();
+    };
+  }, [target]);
 
   return (
-    <div className="screen">
+    <div className="screen" ref={container} style={{ position: "relative" }}>
+      {target && (
+        <div className="perch" ref={bird} aria-hidden>
+          <Zazou mood={hopping ? "cheer" : "happy"} size={PERCH} />
+        </div>
+      )}
       <div className="card row" style={{ gap: 12 }}>
         <Zazou mood={todayXp >= goal ? "cheer" : "happy"} size={64} />
         <div style={{ flex: 1, minWidth: 0 }}>
@@ -48,7 +129,12 @@ export function PathMap({ onStart, onChest }: { onStart: (u: Unit) => void; onCh
               </span>
             </div>
             {section.units.length > 0 ? (
-              <SectionPath section={section} onPick={setPreview} onChest={onChest} />
+              <SectionPath
+                section={section}
+                onPick={setPreview}
+                onChest={onChest}
+                nodeRef={(id, el) => (el ? nodes.current.set(id, el) : nodes.current.delete(id))}
+              />
             ) : (
               <p className="muted" style={{ textAlign: "center", padding: "4px 0 12px" }}>
                 {section.plannedUnits} unités prévues dans la phase 4
@@ -73,7 +159,12 @@ export function PathMap({ onStart, onChest }: { onStart: (u: Unit) => void; onCh
   );
 }
 
-function SectionPath({ section, onPick, onChest }: { section: Section; onPick: (u: Unit) => void; onChest: (s: Section) => void }) {
+function SectionPath({ section, onPick, onChest, nodeRef }: {
+  section: Section;
+  onPick: (u: Unit) => void;
+  onChest: (s: Section) => void;
+  nodeRef: (id: string, el: HTMLElement | null) => void;
+}) {
   const s = useStore(x => x);
   const nodes: JSX.Element[] = [];
   let n = 0;
@@ -85,9 +176,9 @@ function SectionPath({ section, onPick, onChest }: { section: Section; onPick: (
     const x = offset();
     nodes.push(
       <div className="node-wrap" key={unit.id} style={{ transform: `translateX(${x}px)` }}>
-        {st === "current" && <span className="start-bubble">{stars ? "REFAIRE" : "COMMENCER"}</span>}
         {st === "current" && <span className="node-ring current" />}
         <button
+          ref={el => nodeRef(unit.id, el)}
           className={`node ${st}`}
           style={st !== "locked" && st !== "done" ? ({ "--c": `var(--${section.theme})`, "--cd": `var(--${section.theme}-dark)` } as React.CSSProperties) : undefined}
           aria-label={`${unit.title}${st === "locked" ? " (verrouillée)" : ""}`}
