@@ -97,6 +97,24 @@ export const Snow = (p: P) => (
   </svg>
 );
 
+export const Mic = (p: P) => (
+  <svg {...base} {...p}>
+    <rect x="8.5" y="2" width="7" height="12.5" rx="3.5" fill="currentColor" />
+    <path fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" d="M5 11a7 7 0 0 0 14 0M12 18v3.5" />
+  </svg>
+);
+export const Keyboard = (p: P) => (
+  <svg {...base} {...p}>
+    <rect x="2" y="5" width="20" height="14" rx="3" fill="none" stroke="currentColor" strokeWidth="2" />
+    <path fill="currentColor" d="M6 9h2v2H6zm4 0h2v2h-2zm4 0h2v2h-2zM6 13h2v2H6zm10-4h2v2h-2zm-6 4h6v2h-6zm6 0h2v2h-2z" />
+  </svg>
+);
+export const Send = (p: P) => (
+  <svg {...base} {...p}>
+    <path fill="currentColor" d="M3 20.5 21 12 3 3.5l2.5 7L15 12l-9.5 1.5z" />
+  </svg>
+);
+
 // Icônes de navigation
 export const NavLearn = (p: P) => (
   <svg {...base} {...p}>

@@ -72,7 +72,11 @@ export const ACHIEVEMENTS: Record<string, { title: string; desc: string }> = {
   xp_100: { title: "100 XP", desc: "Gagner 100 XP" },
   xp_500: { title: "500 XP", desc: "Gagner 500 XP" },
   chest_1: { title: "Chercheur d'or", desc: "Ouvrir un premier coffre" },
-  section_1: { title: "Premiers contacts", desc: "Valider toute la section 1" }
+  section_1: { title: "Premiers contacts", desc: "Valider toute la section 1" },
+  first_talk: { title: "Premier échange", desc: "Terminer un premier jeu de rôle" },
+  talk_5: { title: "Bavard", desc: "Terminer 5 jeux de rôle différents" },
+  talk_90: { title: "Comme un pro", desc: "Obtenir 90/100 ou plus dans un jeu de rôle" },
+  reviews_50: { title: "Mémoire d'éléphant", desc: "Réviser 50 cartes" }
 };
 
 export function finishLesson(s: State, r: LessonResult, now = today()): { next: State; reward: Reward } {
@@ -132,6 +136,10 @@ export function checkAchievements(before: State, after: State, accuracy?: number
   add("xp_500", after.xpTotal >= 500);
   add("chest_1", Object.keys(after.chests).length > 0);
   add("section_1", SECTIONS[0].units.every(u => (after.units[u.id]?.stars ?? 0) >= PASS_STARS));
+  add("first_talk", Object.keys(after.roleplays).length > 0);
+  add("talk_5", Object.keys(after.roleplays).length >= 5);
+  add("talk_90", Object.values(after.roleplays).some(r => r.best >= 90));
+  add("reviews_50", Object.values(after.cards).reduce((a, c) => a + c.reps, 0) >= 50);
   return out;
 }
 
@@ -154,3 +162,34 @@ export function shuffle<T>(arr: T[]): T[] {
   }
   return a;
 }
+
+// Activité hors leçon (jeu de rôle, révisions) : XP, objectif du jour et série.
+export function addActivity(s: State, xp: number, seconds: number, now = today()): { next: State; streakUp: boolean } {
+  let streak = s.streak;
+  let streakUp = false;
+  if (s.lastActiveDay !== now) {
+    streak = s.lastActiveDay === now - 1 ? s.streak + 1 : 1;
+    streakUp = true;
+  }
+  const next: State = {
+    ...s,
+    xpTotal: s.xpTotal + xp,
+    streak,
+    streakBest: Math.max(s.streakBest, streak),
+    lastActiveDay: now,
+    minutesTotal: s.minutesTotal + Math.round(seconds / 60),
+    xpByDay: { ...s.xpByDay, [now]: (s.xpByDay[now] ?? 0) + xp }
+  };
+  return { next, streakUp };
+}
+
+export function withAchievements(before: State, after: State): { next: State; unlocked: string[] } {
+  const unlocked = checkAchievements(before, after);
+  return {
+    next: { ...after, achievements: { ...after.achievements, ...Object.fromEntries(unlocked.map(a => [a, new Date().toISOString()])) } },
+    unlocked
+  };
+}
+
+export const XP_ROLEPLAY = 20;
+export const XP_OBJECTIVE = 5;

@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import type { Session } from "@supabase/supabase-js";
 import { allUnits } from "../data/units";
-import { Bolt, Book, Clock, Flame, Gem, Snow, Trophy } from "../components/Icons";
+import { Bolt, Book, Clock, Flame, Gem, Mic, NavTalk, Snow, Trophy } from "../components/Icons";
+import { detectMode, type AiMode } from "../lib/ai";
 import { Zazou } from "../components/Zazou";
 import { ACHIEVEMENTS, FREEZE_PRICE, PASS_STARS, buyFreeze } from "../lib/game";
 import { dailyGoalXp, initialState, replaceState, setState, useStore } from "../lib/store";
@@ -31,6 +32,8 @@ export function Profile({ session, toast }: { session: Session | null; toast: (m
         <div className="stat-card"><Bolt style={{ color: "var(--indigo)" }} /><div><b>{s.xpTotal}</b><small>XP au total</small></div></div>
         <div className="stat-card"><Book style={{ color: "var(--mint)" }} /><div><b>{unitsDone}</b><small>unités validées</small></div></div>
         <div className="stat-card"><Clock style={{ color: "var(--coral)" }} /><div><b>{s.minutesTotal}</b><small>minutes apprises</small></div></div>
+        <div className="stat-card"><Mic style={{ color: "var(--mint)" }} /><div><b>{s.speechScores.length ? Math.round(s.speechScores.reduce((a, b) => a + b, 0) / s.speechScores.length) : "–"}</b><small>prononciation /100</small></div></div>
+        <div className="stat-card"><NavTalk style={{ color: "var(--indigo)" }} /><div><b>{Object.keys(s.roleplays).length}</b><small>jeux de rôle faits</small></div></div>
       </div>
 
       <div className="card" style={{ display: "grid", gap: 12 }}>
@@ -120,6 +123,7 @@ export function Profile({ session, toast }: { session: Session | null; toast: (m
         </div>
       </div>
 
+      <AiCard toast={toast} />
       <CloudCard session={session} toast={toast} />
     </div>
   );
@@ -170,6 +174,54 @@ function CloudCard({ session, toast }: { session: Session | null; toast: (m: str
           <button className="btn3d" disabled={busy}>Recevoir le lien</button>
         </form>
       )}
+    </div>
+  );
+}
+
+const MODE_LABEL: Record<AiMode, string> = {
+  claude: "Actif : IA de ton compte Claude (aperçu)",
+  "gemini-key": "Actif : Gemini, avec ta clé gratuite",
+  server: "Actif : serveur de l'app (Vercel)"
+};
+
+function AiCard({ toast }: { toast: (m: string) => void }) {
+  const ai = useStore(x => x.ai);
+  const [mode, setMode] = useState<AiMode | null | undefined>(undefined);
+  const [key, setKey] = useState(ai.geminiKey);
+  const [passcode, setPasscode] = useState(ai.passcode);
+  const [model, setModel] = useState(ai.model);
+  useEffect(() => {
+    void detectMode().then(setMode);
+  }, [ai]);
+
+  return (
+    <div className="card" style={{ display: "grid", gap: 10 }}>
+      <h3>Tuteur IA</h3>
+      <p className={mode ? "notice info" : "notice"}>
+        {mode === undefined ? "Recherche du tuteur…" : mode ? MODE_LABEL[mode] : "Aucun tuteur configuré : les jeux de rôle ne marcheront pas."}
+      </p>
+      <p className="muted small">
+        Gratuit : crée une clé sur aistudio.google.com (menu « Get API key »), sans carte bancaire, puis colle-la ici. Elle reste sur ce téléphone. Évite d'écrire des informations confidentielles : sur l'offre gratuite, Google peut utiliser les échanges.
+      </p>
+      <form
+        style={{ display: "grid", gap: 10 }}
+        onSubmit={e => {
+          e.preventDefault();
+          setState(x => ({ ...x, ai: { geminiKey: key.trim(), passcode: passcode.trim(), model: model.trim() || "gemini-2.5-flash" } }));
+          toast("Réglages du tuteur enregistrés");
+        }}
+      >
+        <label className="field" htmlFor="gemini-key">Clé Gemini (facultative si l'app est sur Vercel)
+          <input id="gemini-key" type="password" autoComplete="off" value={key} onChange={e => setKey(e.target.value)} placeholder="AIza…" />
+        </label>
+        <label className="field" htmlFor="passcode">Code d'accès du serveur (si tu en as défini un)
+          <input id="passcode" type="password" autoComplete="off" value={passcode} onChange={e => setPasscode(e.target.value)} />
+        </label>
+        <label className="field" htmlFor="model">Modèle Gemini
+          <input id="model" type="text" value={model} onChange={e => setModel(e.target.value)} />
+        </label>
+        <button className="btn3d">Enregistrer</button>
+      </form>
     </div>
   );
 }

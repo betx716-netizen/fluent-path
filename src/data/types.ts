@@ -5,7 +5,8 @@ export type Exercise =
   | { type: "fill"; sentence: string; options: string[]; answer: number; explain: string }
   | { type: "build"; fr: string; answer: string; extra: string[]; explain: string }
   | { type: "listen"; audio: string; options: string[]; answer: number; explain: string }
-  | { type: "pairs"; pairs: [string, string][] };
+  | { type: "pairs"; pairs: [string, string][] }
+  | { type: "speak"; text: string; fr: string };
 
 export interface Unit {
   id: string;

@@ -5,8 +5,15 @@ import { speak } from "../lib/speech";
 import { sfx } from "../lib/sfx";
 import { Speaker } from "../components/Icons";
 import { Zazou } from "../components/Zazou";
+import { SpeechTry } from "../components/SpeechTry";
+import { PASS_SPEECH } from "../lib/score";
+import { setState } from "../lib/store";
 
-export type Answer = number | string[] | { mistakes: number };
+function recordSpeech(score: number) {
+  setState(s => ({ ...s, speechScores: [...s.speechScores, score].slice(-50) }));
+}
+
+export type Answer = number | string[] | { mistakes: number } | { speech: number };
 
 export interface ExProps<E extends Exercise = Exercise> {
   ex: E;
@@ -26,7 +33,9 @@ export function isCorrect(ex: Exercise, a: Answer): boolean {
     case "build":
       return Array.isArray(a) && norm(a.join(" ")) === norm(ex.answer);
     case "pairs":
-      return typeof a === "object" && !Array.isArray(a) && a.mistakes === 0;
+      return typeof a === "object" && "mistakes" in a && a.mistakes === 0;
+    case "speak":
+      return typeof a === "object" && "speech" in a && a.speech >= PASS_SPEECH;
   }
 }
 
@@ -41,11 +50,15 @@ export function solution(ex: Exercise): string {
       return ex.answer + (/[?]$/.test(ex.fr) ? "?" : ".");
     case "pairs":
       return "";
+    case "speak":
+      return ex.text;
   }
 }
 
 export function explanation(ex: Exercise): string {
-  return ex.type === "pairs" ? "" : ex.explain;
+  if (ex.type === "pairs") return "";
+  if (ex.type === "speak") return "Écoute le modèle, puis réessaie : les mots en rouge n'ont pas été reconnus.";
+  return ex.explain;
 }
 
 export function title(ex: Exercise): string {
@@ -54,7 +67,8 @@ export function title(ex: Exercise): string {
     fill: "Complète la phrase",
     build: "Traduis cette phrase",
     listen: "Écoute et choisis ce que tu entends",
-    pairs: "Associe les paires"
+    pairs: "Associe les paires",
+    speak: "Lis cette phrase à voix haute"
   }[ex.type];
 }
 
@@ -259,6 +273,28 @@ export function Pairs({ ex, checked, onAnswer }: ExProps<Extract<Exercise, { typ
   );
 }
 
+export function Speak({ ex, checked, onAnswer }: ExProps<Extract<Exercise, { type: "speak" }>>) {
+  return (
+    <>
+      <div className="say">
+        <SpeakButton text={ex.text} />
+        <div className="bubble">
+          <b>{ex.text}</b>
+          <p className="muted" style={{ fontSize: "0.95rem" }}>{ex.fr}</p>
+        </div>
+      </div>
+      <SpeechTry
+        text={ex.text}
+        disabled={checked}
+        onResult={r => {
+          recordSpeech(r.score);
+          onAnswer({ speech: r.score });
+        }}
+      />
+    </>
+  );
+}
+
 export function ExerciseView(props: ExProps) {
   const { ex } = props;
   switch (ex.type) {
@@ -272,5 +308,7 @@ export function ExerciseView(props: ExProps) {
       return <Build {...props} ex={ex} />;
     case "pairs":
       return <Pairs {...props} ex={ex} />;
+    case "speak":
+      return <Speak {...props} ex={ex} />;
   }
 }

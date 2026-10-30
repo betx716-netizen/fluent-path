@@ -44,7 +44,8 @@ export const SECTIONS: Section[] = [
           { type: "pairs", pairs: [["hello", "bonjour"], ["trader", "commerçant"], ["my name is", "je m'appelle"], ["nice to meet you", "enchanté"]] },
           { type: "mcq", prompt: "Ton contact dit « Nice to meet you ». Tu réponds :", options: ["Nice to meet you too.", "Yes, it is.", "I am fine nice.", "Me too meet."], answer: 0, explain: "On renvoie la politesse avec « too » (aussi) à la fin." },
           { type: "build", fr: "Comment vous appelez-vous ?", answer: "What is your name", extra: ["how", "you", "call"], explain: "En anglais on demande « What is your name? », mot à mot « quel est votre nom ? »." },
-          { type: "listen", audio: "I'm a trader from Lomé.", options: ["I'm a trader from Lomé.", "I'm a teacher from Lomé.", "I'm a trailer from Lomé.", "I'm the trader in Lomé."], answer: 0, explain: "« trader » = commerçant. « from » = de, pour dire d'où l'on vient." }
+          { type: "listen", audio: "I'm a trader from Lomé.", options: ["I'm a trader from Lomé.", "I'm a teacher from Lomé.", "I'm a trailer from Lomé.", "I'm the trader in Lomé."], answer: 0, explain: "« trader » = commerçant. « from » = de, pour dire d'où l'on vient." },
+          { type: "speak", text: "Hello, my name is Kodjo. Nice to meet you.", fr: "Bonjour, je m'appelle Kodjo. Enchanté." }
         ]
       },
       {
@@ -81,7 +82,8 @@ export const SECTIONS: Section[] = [
           { type: "build", fr: "Nous importons du riz.", answer: "We import rice", extra: ["imports", "the", "a"], explain: "Pas d'article devant « rice » : on parle du riz en général." },
           { type: "mcq", prompt: "Que veut dire « customer » ?", options: ["client", "douane", "costume", "coutume"], answer: 0, explain: "Faux ami ! « customer » = client. La douane se dit « customs »." },
           { type: "build", fr: "L'entreprise vend des pièces détachées.", answer: "The company sells spare parts", extra: ["sell", "pieces", "a"], explain: "« spare parts » = pièces détachées. « sells » avec -s car « the company » = it." },
-          { type: "listen", audio: "We sell to customers in Ghana.", options: ["We sell to customers in Ghana.", "We sail to customers in Ghana.", "We sell two customers in Ghana.", "We send customers to Ghana."], answer: 0, explain: "« sell » (vendre) et « sail » (naviguer) se ressemblent : écoute bien la voyelle." }
+          { type: "listen", audio: "We sell to customers in Ghana.", options: ["We sell to customers in Ghana.", "We sail to customers in Ghana.", "We sell two customers in Ghana.", "We send customers to Ghana."], answer: 0, explain: "« sell » (vendre) et « sail » (naviguer) se ressemblent : écoute bien la voyelle." },
+          { type: "speak", text: "I work for a transit company.", fr: "Je travaille pour une entreprise de transit." }
         ]
       },
       {
@@ -118,7 +120,8 @@ export const SECTIONS: Section[] = [
           { type: "mcq", prompt: "Comment dit-on 50 ?", options: ["fifty", "fifteen", "five ten", "fivety"], answer: 0, explain: "50 = fifty. 15 = fifteen." },
           { type: "build", fr: "C'est quinze dollars le sac.", answer: "It is fifteen dollars a bag", extra: ["fifty", "the", "for"], explain: "« a bag » = par sac, le sac. Le prix se dit avec « a » : ten dollars a kilo." },
           { type: "mcq", prompt: "Le client dit « That's too expensive ». Il veut dire :", options: ["C'est trop cher.", "C'est très bien.", "C'est trop loin.", "C'est trop lourd."], answer: 0, explain: "« too » = trop. « expensive » = cher." },
-          { type: "build", fr: "Combien ça coûte ?", answer: "How much is it", extra: ["many", "cost", "are"], explain: "La question la plus utile du marché : How much is it?" }
+          { type: "build", fr: "Combien ça coûte ?", answer: "How much is it", extra: ["many", "cost", "are"], explain: "La question la plus utile du marché : How much is it?" },
+          { type: "speak", text: "How much is it? It's fifteen dollars a bag.", fr: "Combien ça coûte ? C'est quinze dollars le sac." }
         ]
       },
       {
@@ -154,7 +157,8 @@ export const SECTIONS: Section[] = [
           { type: "pairs", pairs: [["welcome", "bienvenue"], ["here you are", "voici"], ["you're welcome", "de rien"], ["see you soon", "à bientôt"]] },
           { type: "build", fr: "Voulez-vous du thé ?", answer: "Would you like some tea", extra: ["want", "do", "a"], explain: "« some » s'utilise pour proposer une quantité non comptée : some tea, some water." },
           { type: "build", fr: "Je peux vous aider ?", answer: "Can I help you", extra: ["me", "do", "helping"], explain: "Dans une question, on inverse : Can I…? et pas I can…?" },
-          { type: "listen", audio: "Would you like to see the samples?", options: ["Would you like to see the samples?", "Would you like to sell the samples?", "Would you like to see the sandals?", "Would you like the simple?"], answer: 0, explain: "« samples » = échantillons. Très utile pour montrer ta marchandise." }
+          { type: "listen", audio: "Would you like to see the samples?", options: ["Would you like to see the samples?", "Would you like to sell the samples?", "Would you like to see the sandals?", "Would you like the simple?"], answer: 0, explain: "« samples » = échantillons. Très utile pour montrer ta marchandise." },
+          { type: "speak", text: "Welcome! Can I help you?", fr: "Bienvenue ! Je peux vous aider ?" }
         ]
       },
       {
@@ -190,7 +194,8 @@ export const SECTIONS: Section[] = [
           { type: "pairs", pairs: [["container", "conteneur"], ["shipment", "expédition"], ["file number", "numéro de dossier"], ["to spell", "épeler"]] },
           { type: "build", fr: "Quel est le numéro du conteneur ?", answer: "What is the container number", extra: ["number of", "which", "a"], explain: "En anglais : container number (le nom qui précise vient avant)." },
           { type: "mcq", prompt: "« The shipment is at the port » veut dire :", options: ["L'expédition est au port.", "Le bateau est au port.", "Le paiement est au port.", "Le chauffeur est au port."], answer: 0, explain: "« shipment » = expédition, la marchandise envoyée." },
-          { type: "listen", audio: "The file number is two, oh, seven, five.", options: ["2075", "2705", "2575", "275"], answer: 0, explain: "« oh » se dit souvent à la place de « zero » quand on lit un numéro." }
+          { type: "listen", audio: "The file number is two, oh, seven, five.", options: ["2075", "2705", "2575", "275"], answer: 0, explain: "« oh » se dit souvent à la place de « zero » quand on lit un numéro." },
+          { type: "speak", text: "The shipment is at the port.", fr: "L'expédition est au port." }
         ]
       },
       {
@@ -226,7 +231,8 @@ export const SECTIONS: Section[] = [
           { type: "pairs", pairs: [["Monday", "lundi"], ["Wednesday", "mercredi"], ["Thursday", "jeudi"], ["meeting", "réunion"]] },
           { type: "build", fr: "Êtes-vous disponible lundi ?", answer: "Are you free on Monday", extra: ["at", "in", "is"], explain: "« free » = disponible. Majuscule à Monday." },
           { type: "listen", audio: "Thursday at three p.m. is fine for me.", options: ["Jeudi 15 h", "Mardi 15 h", "Jeudi 13 h", "Jeudi 3 h"], answer: 0, explain: "Thursday = jeudi (son « th »). Tuesday = mardi." },
-          { type: "build", fr: "À vendredi.", answer: "See you on Friday", extra: ["at", "to", "in"], explain: "« See you on + jour » = à + jour." }
+          { type: "build", fr: "À vendredi.", answer: "See you on Friday", extra: ["at", "to", "in"], explain: "« See you on + jour » = à + jour." },
+          { type: "speak", text: "Are you free on Thursday at ten?", fr: "Êtes-vous disponible jeudi à 10 h ?" }
         ]
       }
     ]

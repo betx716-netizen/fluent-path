@@ -10,6 +10,22 @@ export interface UnitProgress {
   completedAt: string;
 }
 
+export interface Card {
+  en: string;
+  fr: string;
+  ipa: string;
+  due: number;
+  interval: number;
+  ease: number;
+  reps: number;
+}
+
+export interface RoleplayProgress {
+  best: number;
+  plays: number;
+  lastAt: string;
+}
+
 export interface State {
   version: 1;
   profile: { name: string; goal: Goal; minutes: 10 | 20 | 30; onboarded: boolean };
@@ -25,6 +41,10 @@ export interface State {
   minutesTotal: number;
   achievements: Record<string, string>;
   sound: boolean;
+  cards: Record<string, Card>;
+  roleplays: Record<string, RoleplayProgress>;
+  speechScores: number[];
+  ai: { geminiKey: string; passcode: string; model: string };
   updatedAt: string;
 }
 
@@ -45,6 +65,10 @@ export const initialState = (): State => ({
   minutesTotal: 0,
   achievements: {},
   sound: true,
+  cards: {},
+  roleplays: {},
+  speechScores: [],
+  ai: { geminiKey: "", passcode: "", model: "gemini-2.5-flash" },
   updatedAt: new Date().toISOString()
 });
 

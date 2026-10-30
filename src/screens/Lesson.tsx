@@ -5,14 +5,17 @@ import { Zazou } from "../components/Zazou";
 import { ExerciseView, SpeakButton, explanation, isCorrect, solution, title, type Answer } from "../exercises/Exercises";
 import { sfx } from "../lib/sfx";
 import type { LessonResult } from "../lib/game";
+import { canListen } from "../lib/listen";
 
 const CHEERS = ["Excellent !", "Bravo !", "Parfait !", "Bien joué !", "Super !"];
 
 export function Lesson({ unit, onExit, onDone }: { unit: Unit; onExit: () => void; onDone: (r: LessonResult) => void }) {
-  const total = unit.exercises.length;
   const started = useRef(Date.now());
   const [intro, setIntro] = useState(true);
-  const [queue, setQueue] = useState<number[]>(() => unit.exercises.map((_, i) => i));
+  const [queue, setQueue] = useState<number[]>(() =>
+    unit.exercises.map((_, i) => i).filter(i => unit.exercises[i].type !== "speak" || canListen())
+  );
+  const [total, setTotal] = useState(queue.length);
   const [pos, setPos] = useState(0);
   const [answer, setAnswer] = useState<Answer | null>(null);
   const [verdict, setVerdict] = useState<null | boolean>(null);
@@ -38,6 +41,21 @@ export function Lesson({ unit, onExit, onDone }: { unit: Unit; onExit: () => voi
       setCombo(0);
       setMissed(m => new Set(m).add(idx));
       setQueue(q => [...q, idx]);
+    }
+  };
+
+  // « Je ne peux pas parler maintenant » : on retire les exercices oraux restants.
+  const skipSpeaking = () => {
+    const rest = queue.slice(pos).filter(i => unit.exercises[i].type !== "speak");
+    const removed = new Set(queue.slice(pos).filter(i => unit.exercises[i].type === "speak"));
+    setTotal(t => t - removed.size);
+    setMissed(m => new Set([...m].filter(i => !removed.has(i))));
+    const nextQueue = [...queue.slice(0, pos), ...rest];
+    setQueue(nextQueue);
+    setAnswer(null);
+    setVerdict(null);
+    if (pos >= nextQueue.length) {
+      onDone({ unit, firstTry: total - removed.size - [...missed].filter(i => !removed.has(i)).length, total: total - removed.size, seconds: Math.round((Date.now() - started.current) / 1000) });
     }
   };
 
@@ -132,6 +150,11 @@ export function Lesson({ unit, onExit, onDone }: { unit: Unit; onExit: () => voi
               <button className="btn3d mint" disabled={answer === null || ex.type === "pairs"} onClick={() => check()}>
                 Vérifier
               </button>
+              {ex.type === "speak" && (
+                <button className="btn3d ghost" style={{ marginTop: 12 }} onClick={skipSpeaking}>
+                  Je ne peux pas parler maintenant
+                </button>
+              )}
             </div>
           ) : (
             <div className={`feedback ${verdict ? "ok" : "ko"}`} role="status">

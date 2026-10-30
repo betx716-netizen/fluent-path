@@ -1,8 +1,6 @@
 import { Zazou } from "../components/Zazou";
 
 const TEXT = {
-  review: ["Révisions", "Tes mots reviendront juste avant que tu les oublies, avec l'audio.", "Phase 2"],
-  talk: ["Parler avec Zazou", "Des jeux de rôle à l'oral : client nigérian, agent maritime, fournisseur… Tu parles au micro, Zazou te répond et corrige.", "Phase 2"],
   accent: ["Studio des accents", "Une même phrase en accent américain, britannique, nigérian, ghanéen… avec le shadowing et la dictée.", "Phase 3"]
 } as const;
 

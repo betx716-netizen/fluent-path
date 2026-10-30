@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 import type { Session } from "@supabase/supabase-js";
 import type { Section, Unit } from "./data/types";
+import type { Scenario } from "./data/scenarios";
+import { syncUnitCards } from "./lib/review";
+import { Review } from "./screens/Review";
+import { Roleplay, type RoleplayOutcome } from "./screens/Roleplay";
+import { RoleplayReport } from "./screens/RoleplayReport";
+import { Talk } from "./screens/Talk";
 import { BottomNav, TopBar, type Tab } from "./components/Chrome";
 import { Chest, Gem } from "./components/Icons";
 import { Zazou } from "./components/Zazou";
@@ -17,6 +23,8 @@ import { Victory } from "./screens/Victory";
 
 type View =
   | { kind: "tabs" }
+  | { kind: "roleplay"; sc: Scenario }
+  | { kind: "report"; sc: Scenario; outcome: RoleplayOutcome }
   | { kind: "lesson"; unit: Unit }
   | { kind: "victory"; reward: Reward; seconds: number };
 
@@ -29,6 +37,12 @@ export default function App() {
   const [toastMsg, setToastMsg] = useState<string | null>(null);
 
   useEffect(() => startSync(setSession), []);
+  // Les mots des unités déjà validées entrent dans les révisions.
+  useEffect(() => {
+    const s = getState();
+    const next = syncUnitCards(s);
+    if (next !== s) setState(() => next);
+  }, []);
   useEffect(() => {
     if (!toastMsg) return;
     const t = setTimeout(() => setToastMsg(null), 2400);
@@ -42,7 +56,7 @@ export default function App() {
 
   const done = (r: LessonResult) => {
     const { next, reward } = finishLesson(getState(), r);
-    setState(() => next);
+    setState(() => syncUnitCards(next));
     void logSession(r.unit.id, r.seconds, reward.xp);
     setView({ kind: "victory", reward, seconds: r.seconds });
   };
@@ -51,6 +65,24 @@ export default function App() {
     return (
       <div className="app">
         <Lesson unit={view.unit} onExit={() => setView({ kind: "tabs" })} onDone={done} />
+      </div>
+    );
+  }
+  if (view.kind === "roleplay") {
+    return (
+      <div className="app">
+        <Roleplay
+          sc={view.sc}
+          onExit={() => setView({ kind: "tabs" })}
+          onFinish={outcome => setView({ kind: "report", sc: view.sc, outcome })}
+        />
+      </div>
+    );
+  }
+  if (view.kind === "report") {
+    return (
+      <div className="app">
+        <RoleplayReport sc={view.sc} outcome={view.outcome} onDone={() => setView({ kind: "tabs" })} />
       </div>
     );
   }
@@ -67,8 +99,8 @@ export default function App() {
       <TopBar />
       <main style={{ flex: 1, display: "flex", flexDirection: "column" }}>
         {tab === "learn" && <PathMap onStart={unit => setView({ kind: "lesson", unit })} onChest={setChest} />}
-        {tab === "review" && <ComingSoon kind="review" />}
-        {tab === "talk" && <ComingSoon kind="talk" />}
+        {tab === "review" && <Review />}
+        {tab === "talk" && <Talk onStart={sc => setView({ kind: "roleplay", sc })} />}
         {tab === "accent" && <ComingSoon kind="accent" />}
         {tab === "profile" && <Profile session={session} toast={setToastMsg} />}
       </main>
