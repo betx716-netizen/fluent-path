@@ -8,6 +8,7 @@ import { dueCards, grade, type Grade } from "../lib/review";
 import { getState, setState, useStore } from "../lib/store";
 import { sfx } from "../lib/sfx";
 import { canListen } from "../lib/listen";
+import { Writing } from "./Writing";
 
 const XP_PER_CARD = 2;
 const GRADES: [Grade, string, string][] = [
@@ -100,5 +101,20 @@ export function Review() {
         <Bolt width={16} height={16} /> +{XP_PER_CARD} XP par carte · {total} mots au total
       </p>
     </div>
+  );
+}
+
+export function ReviewTab({ toast }: { toast: (m: string) => void }) {
+  const [mode, setMode] = useState<"cards" | "writing">("cards");
+  return (
+    <>
+      <div className="screen" style={{ paddingBottom: 0 }}>
+        <div className="seg wide" role="tablist">
+          <button role="tab" aria-pressed={mode === "cards"} onClick={() => setMode("cards")}>Cartes</button>
+          <button role="tab" aria-pressed={mode === "writing"} onClick={() => setMode("writing")}>Écriture</button>
+        </div>
+      </div>
+      {mode === "cards" ? <Review /> : <div className="screen"><Writing toast={toast} /></div>}
+    </>
   );
 }

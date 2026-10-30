@@ -3,7 +3,8 @@ import type { Session } from "@supabase/supabase-js";
 import { allUnits } from "../data/units";
 import { Bolt, Book, Clock, Flame, Gem, Mic, NavTalk, Snow, Trophy } from "../components/Icons";
 import { detectMode, type AiMode } from "../lib/ai";
-import { Zazou } from "../components/Zazou";
+import { OUTFITS, Zazou } from "../components/Zazou";
+import { award } from "../lib/award";
 import { ACHIEVEMENTS, FREEZE_PRICE, PASS_STARS, buyFreeze } from "../lib/game";
 import { dailyGoalXp, initialState, replaceState, setState, useStore } from "../lib/store";
 import { dayLabel, today } from "../lib/day";
@@ -77,6 +78,8 @@ export function Profile({ session, toast }: { session: Session | null; toast: (m
           </span>
         </button>
       </div>
+
+      <Shop toast={toast} />
 
       <h3>Trophées</h3>
       <div className="achievements">
@@ -222,6 +225,62 @@ function AiCard({ toast }: { toast: (m: string) => void }) {
         </label>
         <button className="btn3d">Enregistrer</button>
       </form>
+    </div>
+  );
+}
+
+function Shop({ toast }: { toast: (m: string) => void }) {
+  const gems = useStore(x => x.gems);
+  const outfits = useStore(x => x.outfits);
+  const [preview, setPreview] = useState<string | null>(outfits.worn);
+  const item = OUTFITS.find(o => o.id === preview);
+  const owned = !!item && outfits.owned.includes(item.id);
+
+  const buy = () => {
+    if (!item || owned || gems < item.price) return;
+    const trophies = award(
+      x => ({ ...x, gems: x.gems - item.price, outfits: { owned: [...x.outfits.owned, item.id], worn: item.id } }),
+      0
+    );
+    toast(`${item.name} achetée !`);
+    trophies.forEach(t => toast(`Trophée : ${t}`));
+  };
+  const wear = (id: string | null) => setState(x => ({ ...x, outfits: { ...x.outfits, worn: id } }));
+
+  return (
+    <div className="card shop" style={{ display: "grid", gap: 12 }}>
+      <div className="row" style={{ justifyContent: "space-between" }}>
+        <h3>Garde-robe de Zazou</h3>
+        <span className="stat gem"><Gem /> {gems}</span>
+      </div>
+      <div className="shop-stage">
+        <Zazou mood="cheer" size={130} outfit={preview} />
+      </div>
+      <div className="shop-items">
+        <button className={`shop-item${preview === null ? " sel" : ""}`} onClick={() => setPreview(null)}>
+          <b>Sans tenue</b>
+          <small className="muted">{outfits.worn === null ? "Porté" : "Gratuit"}</small>
+        </button>
+        {OUTFITS.map(o => (
+          <button key={o.id} className={`shop-item${preview === o.id ? " sel" : ""}`} onClick={() => setPreview(o.id)}>
+            <b>{o.name}</b>
+            <small className="muted row" style={{ gap: 4, justifyContent: "center" }}>
+              {outfits.worn === o.id ? "Porté" : outfits.owned.includes(o.id) ? "À toi" : <>{o.price} <Gem width={14} height={14} /></>}
+            </small>
+          </button>
+        ))}
+      </div>
+      {preview === null ? (
+        <button className="btn3d ghost" disabled={outfits.worn === null} onClick={() => wear(null)}>Retirer la tenue</button>
+      ) : owned ? (
+        <button className="btn3d" disabled={outfits.worn === preview} onClick={() => wear(preview)}>
+          {outfits.worn === preview ? "Déjà portée" : "Mettre cette tenue"}
+        </button>
+      ) : (
+        <button className="btn3d sun" disabled={!item || gems < item.price} onClick={buy}>
+          {item && gems < item.price ? `Encore ${item.price - gems} gemmes` : `Acheter pour ${item?.price} gemmes`}
+        </button>
+      )}
     </div>
   );
 }

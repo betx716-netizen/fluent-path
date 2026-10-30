@@ -45,6 +45,9 @@ export interface State {
   roleplays: Record<string, RoleplayProgress>;
   speechScores: number[];
   ai: { geminiKey: string; passcode: string; model: string };
+  accents: { heard: string[]; pairsBest: number; dictations: number };
+  writings: { count: number; best: number };
+  outfits: { owned: string[]; worn: string | null };
   updatedAt: string;
 }
 
@@ -69,6 +72,9 @@ export const initialState = (): State => ({
   roleplays: {},
   speechScores: [],
   ai: { geminiKey: "", passcode: "", model: "gemini-2.5-flash" },
+  accents: { heard: [], pairsBest: 0, dictations: 0 },
+  writings: { count: 0, best: 0 },
+  outfits: { owned: [], worn: null },
   updatedAt: new Date().toISOString()
 });
 

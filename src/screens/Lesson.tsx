@@ -158,6 +158,10 @@ export function Lesson({ unit, onExit, onDone }: { unit: Unit; onExit: () => voi
             </div>
           ) : (
             <div className={`feedback ${verdict ? "ok" : "ko"}`} role="status">
+              <div className="fb-zazou" aria-hidden>
+                <Zazou mood={verdict ? "cheer" : "sad"} size={64} />
+              </div>
+              {verdict && <span className="xp-pop" aria-hidden>+10 XP</span>}
               <h3>
                 {verdict ? <Check /> : <Cross />}
                 {verdict ? cheer : ex.type === "pairs" ? "Quelques erreurs" : "Bonne réponse :"}

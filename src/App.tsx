@@ -3,7 +3,8 @@ import type { Session } from "@supabase/supabase-js";
 import type { Section, Unit } from "./data/types";
 import type { Scenario } from "./data/scenarios";
 import { syncUnitCards } from "./lib/review";
-import { Review } from "./screens/Review";
+import { ReviewTab } from "./screens/Review";
+import { Accents } from "./screens/Accents";
 import { Roleplay, type RoleplayOutcome } from "./screens/Roleplay";
 import { RoleplayReport } from "./screens/RoleplayReport";
 import { Talk } from "./screens/Talk";
@@ -14,7 +15,6 @@ import { GEMS_PER_CHEST, finishLesson, openChest, type LessonResult, type Reward
 import { getState, setState, useStore } from "./lib/store";
 import { sfx } from "./lib/sfx";
 import { logSession, startSync } from "./lib/sync";
-import { ComingSoon } from "./screens/ComingSoon";
 import { Lesson } from "./screens/Lesson";
 import { Onboarding } from "./screens/Onboarding";
 import { PathMap } from "./screens/PathMap";
@@ -99,9 +99,9 @@ export default function App() {
       <TopBar />
       <main style={{ flex: 1, display: "flex", flexDirection: "column" }}>
         {tab === "learn" && <PathMap onStart={unit => setView({ kind: "lesson", unit })} onChest={setChest} />}
-        {tab === "review" && <Review />}
+        {tab === "review" && <ReviewTab toast={setToastMsg} />}
         {tab === "talk" && <Talk onStart={sc => setView({ kind: "roleplay", sc })} />}
-        {tab === "accent" && <ComingSoon kind="accent" />}
+        {tab === "accent" && <Accents toast={setToastMsg} />}
         {tab === "profile" && <Profile session={session} toast={setToastMsg} />}
       </main>
       <BottomNav tab={tab} onTab={setTab} />

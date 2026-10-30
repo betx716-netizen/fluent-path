@@ -76,7 +76,13 @@ export const ACHIEVEMENTS: Record<string, { title: string; desc: string }> = {
   first_talk: { title: "Premier échange", desc: "Terminer un premier jeu de rôle" },
   talk_5: { title: "Bavard", desc: "Terminer 5 jeux de rôle différents" },
   talk_90: { title: "Comme un pro", desc: "Obtenir 90/100 ou plus dans un jeu de rôle" },
-  reviews_50: { title: "Mémoire d'éléphant", desc: "Réviser 50 cartes" }
+  reviews_50: { title: "Mémoire d'éléphant", desc: "Réviser 50 cartes" },
+  accents_6: { title: "Oreille du monde", desc: "Écouter les 6 accents" },
+  pairs_10: { title: "Oreille fine", desc: "10/10 aux paires minimales" },
+  dictation_10: { title: "Scribe", desc: "Faire 10 dictées" },
+  writer: { title: "Plume", desc: "Faire corriger un premier texte" },
+  writer_90: { title: "Belle plume", desc: "Obtenir 90/100 ou plus à l'écrit" },
+  outfit: { title: "Élégant", desc: "Offrir une tenue à Zazou" }
 };
 
 export function finishLesson(s: State, r: LessonResult, now = today()): { next: State; reward: Reward } {
@@ -140,6 +146,12 @@ export function checkAchievements(before: State, after: State, accuracy?: number
   add("talk_5", Object.keys(after.roleplays).length >= 5);
   add("talk_90", Object.values(after.roleplays).some(r => r.best >= 90));
   add("reviews_50", Object.values(after.cards).reduce((a, c) => a + c.reps, 0) >= 50);
+  add("accents_6", after.accents.heard.length >= 6);
+  add("pairs_10", after.accents.pairsBest >= 10);
+  add("dictation_10", after.accents.dictations >= 10);
+  add("writer", after.writings.count > 0);
+  add("writer_90", after.writings.best >= 90);
+  add("outfit", after.outfits.owned.length > 0);
   return out;
 }
 

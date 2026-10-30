@@ -1,7 +1,7 @@
 # Fluent Path
 
 Application d'anglais personnelle, gamifiée, centrée sur le commerce, le transit et l'usage professionnel.
-Mascotte : Zazou le calao. Version **phase 2** (voix), coût : **0 €**.
+Mascotte : Zazou le calao. Version **phase 3** (premium), coût : **0 €**.
 
 ## Ce que contient la phase 1
 
@@ -24,6 +24,17 @@ Mascotte : Zazou le calao. Version **phase 2** (voix), coût : **0 €**.
 - 4 nouveaux trophées
 
 La voix utilise la reconnaissance vocale gratuite de Chrome (meilleure sur Android). Sans micro, tout se fait au clavier.
+
+## Ce qu'ajoute la phase 3 (premium)
+
+- **Studio des accents** : une même phrase de travail en 6 accents (américain, britannique, nigérian, ghanéen, indien, sud-africain), 3 vitesses, les traits de chaque accent expliqués en français, shadowing au micro
+- **Paires minimales** : jeu de 10 manches sur les sons qui piègent les francophones (ship/sheep, think/sink, hat/at…)
+- **Dictée** : une phrase lue dans un accent au hasard, correction mot à mot
+- **Atelier d'écriture** (onglet Réviser → Écriture) : 8 sujets d'e-mails pros (commerce, transit), note, erreurs soulignées et expliquées, version professionnelle à écouter
+- **Garde-robe de Zazou** : 5 tenues à acheter avec tes gemmes (casquette, cravate, écharpe kente, lunettes, couronne)
+- Zazou réagit à chaque réponse dans les leçons, « +10 XP » animé, 6 nouveaux trophées
+
+Note : les animations de Zazou sont en SVG et CSS. Rive demanderait de dessiner Zazou dans l'éditeur Rive ; ce sera possible plus tard sans changer le reste de l'app.
 
 ## Activer le tuteur IA (gratuit)
 
@@ -69,6 +80,7 @@ Puis ouvre l'adresse affichée (par exemple http://localhost:5173).
 | `src/lib/sync.ts` | Sauvegarde en ligne Supabase (facultative) |
 | `src/exercises/` | Les 6 types d'exercices (dont l'oral) |
 | `src/data/scenarios.ts` | Les 10 jeux de rôle |
+| `src/data/accents.ts` | Les 6 accents, phrases et paires minimales |
 | `src/lib/ai.ts`, `src/lib/tutor.ts` | Le tuteur IA (Gemini gratuit) et ses consignes |
 | `src/lib/listen.ts`, `src/lib/score.ts` | Le micro et la note de prononciation |
 | `api/tutor.js` | Fonction serveur Vercel qui garde la clé secrète |
@@ -79,5 +91,5 @@ Puis ouvre l'adresse affichée (par exemple http://localhost:5173).
 ## Prochaines phases
 
 - ~~Phase 2 — Voix~~ : faite
-- **Phase 3 — Premium** : animations Rive de Zazou, studio des accents, atelier d'écriture
+- ~~Phase 3 — Premium~~ : faite
 - **Phase 4 — Contenu** : 60 unités, 20 scénarios, tests de section
