@@ -52,7 +52,8 @@ export function Victory({ reward, seconds, onContinue }: { reward: Reward; secon
   return (
     <div className="victory">
       <Zazou mood={passed ? "cheer" : "think"} size={150} />
-      <h1>{passed ? "Leçon terminée !" : "Presque !"}</h1>
+      <h1>{passed ? "Super !" : "Presque !"}</h1>
+      {passed && <p className="muted">Leçon terminée.</p>}
       {!passed && <p className="muted">Il faut 3 étoiles pour débloquer la suite. Refais la leçon, tu y es presque.</p>}
       <div className="big-stars" aria-label={`${reward.stars} étoiles sur 5`}>
         {[1, 2, 3, 4, 5].map(k => (
@@ -74,10 +75,10 @@ export function Victory({ reward, seconds, onContinue }: { reward: Reward; secon
             {Math.round(reward.accuracy * 100)}%
           </span>
         </div>
-        <div className="tile" style={{ "--c": "var(--indigo)" } as React.CSSProperties}>
+        <div className="tile" style={{ "--c": "var(--blue)" } as React.CSSProperties}>
           <b>Temps</b>
           <span>
-            <Clock style={{ color: "var(--indigo)" }} />
+            <Clock style={{ color: "var(--blue)" }} />
             {min}:{String(sec).padStart(2, "0")}
           </span>
         </div>

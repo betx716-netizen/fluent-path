@@ -99,14 +99,15 @@ export function RoleplayReport({ sc, outcome, onDone }: { sc: Scenario; outcome:
     <div className="screen" style={{ paddingTop: 24 }}>
       <div style={{ display: "grid", justifyItems: "center", gap: 8, textAlign: "center" }}>
         <Zazou mood={report && report.score >= 70 ? "cheer" : "happy"} size={120} />
-        <h1 style={{ fontSize: "1.8rem", color: "var(--sun-dark)" }}>Conversation terminée !</h1>
+        <h1>{report && report.score < 50 ? "Bien essayé !" : "Super !"}</h1>
+        <p className="muted">Conversation terminée avec {sc.partner.name}.</p>
         {report?.summary_fr && <p className="muted">{report.summary_fr}</p>}
       </div>
 
       <div className="tiles">
-        <div className="tile" style={{ "--c": "var(--indigo)" } as React.CSSProperties}>
+        <div className="tile" style={{ "--c": "var(--blue)" } as React.CSSProperties}>
           <b>Note</b>
-          <span><Target style={{ color: "var(--indigo)" }} />{report ? report.score : "–"}</span>
+          <span><Target style={{ color: "var(--blue)" }} />{report ? report.score : "–"}</span>
         </div>
         <div className="tile" style={{ "--c": "var(--mint)" } as React.CSSProperties}>
           <b>Voix</b>

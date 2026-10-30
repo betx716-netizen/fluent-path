@@ -8,6 +8,8 @@ export const GEMS_PER_LESSON = 5;
 export const GEMS_PER_CHEST = 20;
 export const FREEZE_PRICE = 50;
 export const PASS_STARS = 3;
+// Vies affichées en leçon : 5 au départ, une de moins par erreur (sans blocage).
+export const LIVES = 5;
 
 export function starsFor(accuracy: number): number {
   if (accuracy >= 0.95) return 5;

@@ -25,11 +25,7 @@ export function Onboarding() {
   return (
     <div className="onboard">
       <div className="hero">
-        {step === 0 ? (
-          <img className="zazou-logo" src="/zazou.webp" alt="Zazou, l'ara de Fluent Path" width={260} height={173} />
-        ) : (
-          <Zazou mood={step === 3 ? "cheer" : "happy"} size={140} />
-        )}
+        <Zazou mood={step === 0 ? "wave" : step === 3 ? "cheer" : "happy"} size={step === 0 ? 170 : 140} />
         <div className="bubble">
           {step === 0 && "Salut ! Moi c'est Zazou. Je vais t'apprendre l'anglais, 20 minutes par jour."}
           {step === 1 && "Comment tu t'appelles ?"}

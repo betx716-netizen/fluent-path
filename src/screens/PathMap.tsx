@@ -1,7 +1,8 @@
 import { Fragment, useLayoutEffect, useRef, useState } from "react";
 import { SECTIONS } from "../data/units";
 import type { Section, Unit } from "../data/types";
-import { Book, Check, Chest, Crown, Lock, Star } from "../components/Icons";
+import { Check, Chest, Crown, Guide, Lock, Mic, Star } from "../components/Icons";
+import { SpeakButton } from "../exercises/Exercises";
 import { Zazou } from "../components/Zazou";
 import { CHEST_AFTER, PASS_STARS, TEST_PASS, TEST_SIZE, chestId, chestReady, sectionOpen, sectionUnitsDone, unitState } from "../lib/game";
 import { dailyGoalXp, setState, useStore, type State } from "../lib/store";
@@ -31,6 +32,7 @@ export function PathMap({ onStart, onChest, onTest }: { onStart: (u: Unit) => vo
   const s = useStore(x => x);
   const [preview, setPreview] = useState<Unit | null>(null);
   const [testFor, setTestFor] = useState<Section | null>(null);
+  const [guide, setGuide] = useState<Unit | null>(null);
   const goal = dailyGoalXp(s.profile.minutes);
   const todayXp = s.xpByDay[today()] ?? 0;
   const container = useRef<HTMLDivElement>(null);
@@ -45,15 +47,20 @@ export function PathMap({ onStart, onChest, onTest }: { onStart: (u: Unit) => vo
     const box = container.current?.getBoundingClientRect();
     if (!el || !box) return null;
     const r = el.getBoundingClientRect();
-    return { x: r.left - box.left + r.width / 2 - PERCH / 2 + 14, y: r.top - box.top - PERCH + 10 };
+    const cx = r.left - box.left + r.width / 2;
+    const left = cx > box.width / 2;
+    const w = bird.current?.offsetWidth ?? PERCH;
+    return { x: left ? cx - r.width / 2 - w + 6 : cx + r.width / 2 - 6, y: r.top - box.top + r.height - PERCH + 4, left };
   };
+  const [side, setSide] = useState<"left" | "right">("right");
 
   useLayoutEffect(() => {
     const el = bird.current;
     const to = spot(target);
     if (!el || !to) return;
-    const place = (p: { x: number; y: number }) => {
+    const place = (p: { x: number; y: number; left: boolean }) => {
       el.style.transform = `translate(${p.x}px, ${p.y}px)`;
+      setSide(p.left ? "left" : "right");
     };
     const from = spot(s.zazouAt);
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -98,8 +105,9 @@ export function PathMap({ onStart, onChest, onTest }: { onStart: (u: Unit) => vo
   return (
     <div className="screen" ref={container} style={{ position: "relative" }}>
       {target && (
-        <div className="perch" ref={bird} aria-hidden>
+        <div className={`perch ${side}`} ref={bird} aria-hidden>
           <Zazou mood={hopping ? "cheer" : "happy"} size={PERCH} />
+          <span className="perch-bubble">{hopping ? "Hop !" : target.endsWith("-boss") ? "Le test t'attend !" : "À toi !"}</span>
         </div>
       )}
       <div className="card row" style={{ gap: 12 }}>
@@ -127,9 +135,13 @@ export function PathMap({ onStart, onChest, onTest }: { onStart: (u: Unit) => vo
                 </div>
                 <h2>{section.title}</h2>
               </div>
-              <span className="count">
-                {section.units.length ? `${done} / ${section.units.length}` : "Bientôt"}
-              </span>
+              {open && section.units.length > 0 ? (
+                <button className="guide-btn" onClick={() => setGuide(guideUnit(s, section))}>
+                  <Guide /> Guide
+                </button>
+              ) : (
+                <span className="count">{section.units.length ? `${done} / ${section.units.length}` : "Bientôt"}</span>
+              )}
             </div>
             {!open && section.units.length > 0 && (
               <button className="btn3d ghost small-btn jump-btn" onClick={() => setTestFor(section)}>
@@ -152,6 +164,8 @@ export function PathMap({ onStart, onChest, onTest }: { onStart: (u: Unit) => vo
           </Fragment>
         );
       })}
+
+      {guide && <GuideSheet unit={guide} onClose={() => setGuide(null)} onStart={() => { setGuide(null); onStart(guide); }} />}
 
       {testFor && (
         <>
@@ -206,13 +220,13 @@ function SectionPath({ section, onPick, onChest, onBoss, nodeRef }: {
         <button
           ref={el => nodeRef(unit.id, el)}
           className={`node ${st}`}
-          style={st !== "locked" && st !== "done" ? ({ "--c": `var(--${section.theme})`, "--cd": `var(--${section.theme}-dark)` } as React.CSSProperties) : undefined}
-          aria-label={`${unit.title}${st === "locked" ? " (verrouillée)" : ""}`}
+          aria-label={`${unit.title}${st === "locked" ? " (verrouillée)" : st === "current" ? " (en cours)" : ""}`}
           disabled={st === "locked"}
           onClick={() => onPick(unit)}
         >
-          {st === "locked" ? <Lock /> : st === "done" ? <Check /> : <Book />}
+          {st === "locked" ? <Lock /> : st === "done" ? <Check /> : <Mic />}
         </button>
+        {st === "current" && <span className="node-label">PARLER</span>}
         {st === "done" && (
           <div className="stars" aria-label={`${stars} étoiles sur 5`}>
             {[1, 2, 3, 4, 5].map(k => (
@@ -287,6 +301,44 @@ function UnitSheet({ unit, stars, onClose, onStart }: { unit: Unit; stars: numbe
         <button className="btn3d" onClick={onStart}>
           {stars ? `Refaire (+${unit.exercises.length * 10} XP max)` : `Commencer (+${unit.exercises.length * 10} XP)`}
         </button>
+      </div>
+    </>
+  );
+}
+
+// L'unité que le Guide présente : celle en cours dans la section, sinon la dernière.
+function guideUnit(s: State, section: Section): Unit {
+  const i = section.units.findIndex((_, k) => unitState(s, section, k) === "current");
+  return section.units[i >= 0 ? i : section.units.length - 1];
+}
+
+function GuideSheet({ unit, onClose, onStart }: { unit: Unit; onClose: () => void; onStart: () => void }) {
+  return (
+    <>
+      <div className="sheet-backdrop" onClick={onClose} />
+      <div className="sheet guide-sheet" role="dialog" aria-modal="true" aria-label={`Guide : ${unit.title}`}>
+        <div className="say">
+          <Zazou mood="wave" size={72} />
+          <div className="bubble">
+            <b>Guide · {unit.title}</b>
+            <p className="muted" style={{ fontSize: 15 }}>{unit.goal}</p>
+          </div>
+        </div>
+        <div className="card intro-card">
+          <h3>À retenir</h3>
+          <ul>{unit.points.map(p => <li key={p}>{p}</li>)}</ul>
+        </div>
+        <div className="card intro-card">
+          <h3>Phrases clés</h3>
+          {unit.examples.map(([en, fr]) => (
+            <div className="vocab-row" key={en}>
+              <SpeakButton text={en} />
+              <div><b>{en}</b><p className="muted">{fr}</p></div>
+            </div>
+          ))}
+        </div>
+        <button className="btn3d" onClick={onStart}>Commencer l'unité</button>
+        <button className="btn3d ghost" onClick={onClose}>Fermer</button>
       </div>
     </>
   );

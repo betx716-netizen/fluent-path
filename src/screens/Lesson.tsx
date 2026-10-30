@@ -1,10 +1,10 @@
 import { useMemo, useRef, useState } from "react";
 import type { Unit } from "../data/types";
-import { Check, Cross } from "../components/Icons";
+import { Check, Cross, Heart } from "../components/Icons";
 import { Zazou } from "../components/Zazou";
 import { ExerciseView, SpeakButton, explanation, isCorrect, solution, title, type Answer } from "../exercises/Exercises";
 import { sfx } from "../lib/sfx";
-import type { LessonResult } from "../lib/game";
+import { LIVES, type LessonResult } from "../lib/game";
 import { canListen } from "../lib/listen";
 import { setState } from "../lib/store";
 
@@ -107,11 +107,10 @@ export function Lesson({ unit, onExit, onDone, test = false }: { unit: Unit; onE
         <div className={`progress${combo >= 3 ? " combo" : ""}`} role="progressbar" aria-valuenow={Math.round(progress * 100)} aria-valuemin={0} aria-valuemax={100}>
           <i style={{ width: `${Math.max(progress * 100, 3)}%` }} />
         </div>
-        {test ? (
-          <span className="combo-label" style={{ color: "var(--muted)" }}>{Math.min(answered + (verdict === null ? 1 : 0), total)}/{total}</span>
-        ) : (
-          combo >= 3 && <span className="combo-label">{combo} d'affilée</span>
-        )}
+        {test && <span className="combo-label" style={{ color: "var(--muted)" }}>{Math.min(answered + (verdict === null ? 1 : 0), total)}/{total}</span>}
+        <span className="lives" aria-label={`${Math.max(0, LIVES - missed.size)} vies`}>
+          <Heart /> {Math.max(0, LIVES - missed.size)}
+        </span>
       </div>
 
       {intro ? (

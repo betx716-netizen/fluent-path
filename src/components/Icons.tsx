@@ -5,15 +5,15 @@ const base = { viewBox: "0 0 24 24", "aria-hidden": true } as const;
 
 export const Flame = (p: P) => (
   <svg {...base} {...p}>
-    <path fill="#ffb020" d="M12 2c1 3.5 5.5 6 5.5 11.2A5.5 5.5 0 0 1 12 19a5.5 5.5 0 0 1-5.5-5.8c0-2.4 1.3-4 2.6-5.2.2 1.6.9 2.8 2 3.4C11 9.5 10.8 5.5 12 2Z" />
-    <path fill="#ff7a1a" d="M12 10.5c.6 1.8 2.8 3 2.8 5.3A2.8 2.8 0 0 1 12 18.6a2.8 2.8 0 0 1-2.8-2.8c0-1.4.9-2.4 1.6-3 .2.8.6 1.3 1.1 1.5-.3-1.4-.2-2.6.1-3.8Z" />
+    <path fill="currentColor" d="M12 2c1 3.5 5.5 6 5.5 11.2A5.5 5.5 0 0 1 12 19a5.5 5.5 0 0 1-5.5-5.8c0-2.4 1.3-4 2.6-5.2.2 1.6.9 2.8 2 3.4C11 9.5 10.8 5.5 12 2Z" />
+    <path fill="#ffc93c" d="M12 10.5c.6 1.8 2.8 3 2.8 5.3A2.8 2.8 0 0 1 12 18.6a2.8 2.8 0 0 1-2.8-2.8c0-1.4.9-2.4 1.6-3 .2.8.6 1.3 1.1 1.5-.3-1.4-.2-2.6.1-3.8Z" />
   </svg>
 );
 export const Gem = (p: P) => (
   <svg {...base} {...p}>
-    <path fill="#3cc4f5" d="M6 3h12l4 6-10 12L2 9z" />
-    <path fill="#1aa3d9" d="M2 9h20L12 21z" />
-    <path fill="#a6e7ff" d="M6 3l3 6h6l3-6z" />
+    <path fill="#ffc93c" d="M6 3h12l4 6-10 12L2 9z" />
+    <path fill="#f2a900" d="M2 9h20L12 21z" />
+    <path fill="#ffe7a3" d="M6 3l3 6h6l3-6z" />
   </svg>
 );
 export const Bolt = (p: P) => (
@@ -112,6 +112,47 @@ export const Keyboard = (p: P) => (
 export const Send = (p: P) => (
   <svg {...base} {...p}>
     <path fill="currentColor" d="M3 20.5 21 12 3 3.5l2.5 7L15 12l-9.5 1.5z" />
+  </svg>
+);
+
+export const Heart = (p: P) => (
+  <svg {...base} {...p}>
+    <path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.3C.9 8.3 3 4.5 6.7 4.5c2.1 0 3.6 1.1 4.3 2.4.7-1.3 2.2-2.4 4.3-2.4 3.7 0 5.8 3.8 4.3 7.2C19.5 16.4 12 21 12 21Z" />
+    <ellipse cx="7.4" cy="8.6" rx="1.8" ry="1.2" fill="#fff" opacity=".45" transform="rotate(-30 7.4 8.6)" />
+  </svg>
+);
+export const Bulb = (p: P) => (
+  <svg {...base} {...p}>
+    <path fill="currentColor" d="M12 2.5a7 7 0 0 0-4.2 12.6c.7.5 1.2 1.3 1.2 2.2v.7h6v-.7c0-.9.5-1.7 1.2-2.2A7 7 0 0 0 12 2.5Z" />
+    <rect x="9" y="19" width="6" height="2.5" rx="1.2" fill="currentColor" />
+  </svg>
+);
+export const Slow = (p: P) => (
+  <svg {...base} {...p}>
+    <path fill="currentColor" d="M4 15.5C4 10.8 7.6 7 12 7s8 3.8 8 8.5H4Z" />
+    <path fill="currentColor" d="M19 14.5h1.6a2.4 2.4 0 1 0 0-4.8c-.7 0-1.3.3-1.7.7 .1 1.3.2 2.7.1 4.1Z" />
+    <rect x="5" y="16" width="3.2" height="3.5" rx="1.4" fill="currentColor" />
+    <rect x="15.8" y="16" width="3.2" height="3.5" rx="1.4" fill="currentColor" />
+    <path d="M8.5 9.5 12 12.5l3.5-3" stroke="#fff" strokeWidth="1.4" fill="none" strokeLinecap="round" opacity=".7" />
+  </svg>
+);
+export const Explain = (p: P) => (
+  <svg {...base} {...p}>
+    <path fill="currentColor" d="M4 3.5h11a2.5 2.5 0 0 1 2.5 2.5v6A2.5 2.5 0 0 1 15 14.5H9l-4 3.5v-3.5H4A2.5 2.5 0 0 1 1.5 12V6A2.5 2.5 0 0 1 4 3.5Z" />
+    <path fill="currentColor" opacity=".55" d="M19 8h1a2.5 2.5 0 0 1 2.5 2.5v5A2.5 2.5 0 0 1 20 18h-.5v3l-3.5-3h-4.5a2.5 2.5 0 0 1-2-1h5.5a4 4 0 0 0 4-4V8Z" />
+    <path d="M6 7.5h7M6 10.5h4.5" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" />
+  </svg>
+);
+export const Sparkle = (p: P) => (
+  <svg {...base} {...p}>
+    <path fill="currentColor" d="M11 2.5c.6 4.4 2.4 6.2 6.8 6.8-4.4.6-6.2 2.4-6.8 6.8-.6-4.4-2.4-6.2-6.8-6.8C8.6 8.7 10.4 6.9 11 2.5Z" />
+    <path fill="currentColor" d="M18.5 14c.3 2.1 1.2 3 3.3 3.3-2.1.3-3 1.2-3.3 3.3-.3-2.1-1.2-3-3.3-3.3 2.1-.3 3-1.2 3.3-3.3Z" />
+  </svg>
+);
+export const Guide = (p: P) => (
+  <svg {...base} {...p}>
+    <path fill="currentColor" d="M3 5.2C5.8 3.9 8.6 4 11 5.6V20c-2.4-1.5-5.2-1.6-8-.4V5.2Z" />
+    <path fill="currentColor" opacity=".75" d="M21 5.2c-2.8-1.3-5.6-1.2-8 .4V20c2.4-1.5 5.2-1.6 8-.4V5.2Z" />
   </svg>
 );
 

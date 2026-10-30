@@ -2,7 +2,8 @@ import { SECTIONS } from "../data/units";
 import { sectionOpen } from "../lib/game";
 import { useStore } from "../lib/store";
 import { today } from "../lib/day";
-import { Bolt, Flame, Gem, NavAccent, NavLearn, NavProfile, NavReview, NavTalk } from "./Icons";
+import { Flame, Gem, Heart, NavAccent, NavLearn, NavProfile, NavReview, NavTalk } from "./Icons";
+import { LIVES } from "../lib/game";
 
 export type Tab = "learn" | "review" | "talk" | "accent" | "profile";
 
@@ -19,8 +20,8 @@ export function TopBar() {
       <span className="stat gem" title="Gemmes">
         <Gem /> {s.gems}
       </span>
-      <span className="stat xp" title="Points d'expérience">
-        <Bolt /> {s.xpTotal}
+      <span className="stat heart" title="Vies">
+        <Heart /> {LIVES}
       </span>
     </header>
   );

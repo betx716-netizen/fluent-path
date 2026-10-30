@@ -7,14 +7,14 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: "autoUpdate",
-      includeAssets: ["apple-touch-icon.png", "zazou.webp"],
+      includeAssets: ["apple-touch-icon.png"],
       manifest: {
         name: "Fluent Path",
         short_name: "Fluent Path",
         description: "Apprends l'anglais du commerce et du transit avec Zazou.",
         lang: "fr",
-        theme_color: "#3B2FC9",
-        background_color: "#F6F4FF",
+        theme_color: "#FFF9F2",
+        background_color: "#FFF9F2",
         display: "standalone",
         orientation: "portrait",
         start_url: "/",
