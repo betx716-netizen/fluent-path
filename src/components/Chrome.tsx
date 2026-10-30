@@ -2,10 +2,12 @@ import { sectionsOf } from "../data/units";
 import { sectionOpen } from "../lib/game";
 import { useStore } from "../lib/store";
 import { today } from "../lib/day";
-import { Flame, Gem, Heart, NavAccent, NavLearn, NavProfile, NavReview, NavTalk } from "./Icons";
+import { Flame, Gem, Heart, NavLeague, NavLearn, NavProfile, NavSounds, NavTalk } from "./Icons";
 import { LIVES } from "../lib/game";
 
-export type Tab = "learn" | "review" | "talk" | "accent" | "profile";
+// « review » et « accent » sont des sous-écrans (Accueil et Sons).
+export type Tab = "learn" | "talk" | "sounds" | "league" | "profile" | "review" | "accent";
+const PARENT: Partial<Record<Tab, Tab>> = { review: "learn", accent: "sounds" };
 
 export function TopBar() {
   const s = useStore(x => x);
@@ -29,18 +31,19 @@ export function TopBar() {
 }
 
 const TABS: [Tab, string, typeof NavLearn][] = [
-  ["learn", "Apprendre", NavLearn],
-  ["review", "Réviser", NavReview],
+  ["learn", "Accueil", NavLearn],
   ["talk", "Parler", NavTalk],
-  ["accent", "Accents", NavAccent],
+  ["sounds", "Sons", NavSounds],
+  ["league", "Ligue", NavLeague],
   ["profile", "Profil", NavProfile]
 ];
 
 export function BottomNav({ tab, onTab }: { tab: Tab; onTab: (t: Tab) => void }) {
+  const active = PARENT[tab] ?? tab;
   return (
     <nav className="bottomnav" aria-label="Navigation principale">
       {TABS.map(([id, label, Icon]) => (
-        <button key={id} aria-current={tab === id ? "page" : undefined} onClick={() => onTab(id)}>
+        <button key={id} aria-current={active === id ? "page" : undefined} onClick={() => onTab(id)}>
           <span className="navicon">
             <Icon />
           </span>

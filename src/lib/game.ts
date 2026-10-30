@@ -233,8 +233,9 @@ export function checkAchievements(before: State, after: State, accuracy?: number
   const pro = SECTIONS.filter(x => x.track === "pro");
   add("section_1", !!pro[0] && pro[0].units.every(u => (after.units[u.id]?.stars ?? 0) >= PASS_STARS));
   add("first_talk", Object.keys(after.roleplays).length > 0);
-  add("first_test", Object.values(after.bosses).some(b => b.passed));
-  pro.slice(1).forEach((sec, k) => add(`section_${k + 2}`, !!after.bosses[sec.id]?.passed));
+  // best > 0 : un vrai test réussi (le test de niveau ouvre des sections sans test).
+  add("first_test", Object.values(after.bosses).some(b => b.passed && b.best > 0));
+  pro.slice(1).forEach((sec, k) => add(`section_${k + 2}`, !!after.bosses[sec.id]?.passed && (after.bosses[sec.id]?.best ?? 0) > 0));
   add("units_30", Object.values(after.units).filter(u => u.stars >= PASS_STARS).length >= 30);
   add("xp_2000", after.xpTotal >= 2000);
   add("streak_100", after.streak >= 100);
@@ -300,3 +301,37 @@ export function withAchievements(before: State, after: State): { next: State; un
 
 export const XP_ROLEPLAY = 20;
 export const XP_OBJECTIVE = 5;
+
+// Avancement d'un succès : [valeur actuelle, objectif].
+export function achievementProgress(s: State, key: string): [number, number] {
+  if (s.achievements[key]) return [1, 1];
+  const passed = Object.values(s.units).filter(u => u.stars >= PASS_STARS).length;
+  const reps = Object.values(s.cards).reduce((a, c) => a + c.reps, 0);
+  const pro = SECTIONS.filter(x => x.track === "pro");
+  const table: Record<string, [number, number]> = {
+    first_lesson: [Object.keys(s.units).length, 1],
+    streak_3: [s.streak, 3],
+    streak_7: [s.streak, 7],
+    streak_30: [s.streak, 30],
+    streak_100: [s.streak, 100],
+    xp_100: [s.xpTotal, 100],
+    xp_500: [s.xpTotal, 500],
+    xp_2000: [s.xpTotal, 2000],
+    chest_1: [Object.keys(s.chests).length, 1],
+    section_1: [pro[0]?.units.filter(u => (s.units[u.id]?.stars ?? 0) >= PASS_STARS).length ?? 0, pro[0]?.units.length || 1],
+    first_talk: [Object.keys(s.roleplays).length, 1],
+    talk_5: [Object.keys(s.roleplays).length, 5],
+    talk_90: [Math.max(0, ...Object.values(s.roleplays).map(r => r.best)), 90],
+    reviews_50: [reps, 50],
+    accents_6: [s.accents.heard.length, 6],
+    pairs_10: [s.accents.pairsBest, 10],
+    dictation_10: [s.accents.dictations, 10],
+    writer: [s.writings.count, 1],
+    writer_90: [s.writings.best, 90],
+    outfit: [s.outfits.owned.length, 1],
+    units_30: [passed, 30],
+    first_test: [Object.values(s.bosses).filter(b => b.passed && b.best > 0).length, 1]
+  };
+  const [cur, goal] = table[key] ?? [0, 1];
+  return [Math.min(cur, goal), goal];
+}

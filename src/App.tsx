@@ -9,6 +9,11 @@ import { Accents } from "./screens/Accents";
 import { Roleplay, type RoleplayOutcome } from "./screens/Roleplay";
 import { RoleplayReport } from "./screens/RoleplayReport";
 import { Talk } from "./screens/Talk";
+import { Sounds } from "./screens/Sounds";
+import { League } from "./screens/League";
+import { PlacementTest } from "./screens/PlacementTest";
+import { applyPlacement } from "./lib/placement";
+import { rollLeague } from "./lib/league";
 import { BottomNav, TopBar, type Tab } from "./components/Chrome";
 import { Chest, Gem } from "./components/Icons";
 import { Zazou } from "./components/Zazou";
@@ -30,7 +35,8 @@ type View =
   | { kind: "lesson"; unit: Unit }
   | { kind: "victory"; reward: Reward; seconds: number; unit: Unit }
   | { kind: "test"; section: Section; unit: Unit }
-  | { kind: "testResult"; section: Section; outcome: TestOutcome };
+  | { kind: "testResult"; section: Section; outcome: TestOutcome }
+  | { kind: "placement" };
 
 export default function App() {
   const onboarded = useStore(s => s.profile.onboarded);
@@ -41,6 +47,12 @@ export default function App() {
   const [toastMsg, setToastMsg] = useState<string | null>(null);
 
   useEffect(() => startSync(setSession), []);
+  // Nouvelle semaine : montée ou descente de ligue.
+  useEffect(() => {
+    const s = getState();
+    const next = rollLeague(s);
+    if (next !== s) setState(() => next);
+  }, []);
   // Les mots des unités déjà validées entrent dans les révisions.
   useEffect(() => {
     const s = getState();
@@ -65,6 +77,20 @@ export default function App() {
     setView({ kind: "victory", reward, seconds: r.seconds, unit: r.unit });
   };
 
+  if (view.kind === "placement") {
+    return (
+      <div className="app">
+        <PlacementTest
+          onExit={() => setView({ kind: "tabs" })}
+          onDone={level => {
+            setState(s => applyPlacement(s, level));
+            setView({ kind: "tabs" });
+            setTab("learn");
+          }}
+        />
+      </div>
+    );
+  }
   if (view.kind === "lesson") {
     return (
       <div className="app">
@@ -135,17 +161,28 @@ export default function App() {
     <div className="app">
       <TopBar />
       <main style={{ flex: 1, display: "flex", flexDirection: "column" }}>
-        {tab === "learn" && <PathMap onStart={unit => setView({ kind: "lesson", unit })} onChest={setChest} onTest={startTest} />}
-        {tab === "review" && <ReviewTab toast={setToastMsg} />}
+        {tab === "learn" && <PathMap onStart={unit => setView({ kind: "lesson", unit })} onChest={setChest} onTest={startTest} onReview={() => setTab("review")} />}
+        {tab === "review" && <SubScreen back="Accueil" onBack={() => setTab("learn")}><ReviewTab toast={setToastMsg} /></SubScreen>}
         {tab === "talk" && <Talk onStart={sc => setView({ kind: "roleplay", sc })} />}
-        {tab === "accent" && <Accents toast={setToastMsg} />}
-        {tab === "profile" && <Profile session={session} toast={setToastMsg} />}
+        {tab === "sounds" && <Sounds onAccents={() => setTab("accent")} />}
+        {tab === "accent" && <SubScreen back="Sons" onBack={() => setTab("sounds")}><Accents toast={setToastMsg} /></SubScreen>}
+        {tab === "league" && <League />}
+        {tab === "profile" && <Profile session={session} toast={setToastMsg} onPlacement={() => setView({ kind: "placement" })} />}
       </main>
       <BottomNav tab={tab} onTab={setTab} />
 
       {chest && <ChestSheet onClose={() => setChest(null)} onOpen={() => setState(s => openChest(s, chest))} />}
       {toastMsg && <div className="toast" role="status">{toastMsg}</div>}
     </div>
+  );
+}
+
+function SubScreen({ back, onBack, children }: { back: string; onBack: () => void; children: React.ReactNode }) {
+  return (
+    <>
+      <button className="back-link" onClick={onBack}>‹ {back}</button>
+      {children}
+    </>
   );
 }
 

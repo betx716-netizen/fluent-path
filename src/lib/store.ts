@@ -1,7 +1,9 @@
 import { useSyncExternalStore } from "react";
 import { today } from "./day";
 
-export type Goal = "travail" | "voyage" | "etudes";
+export type Goal = "travail" | "voyage" | "etudes" | "business";
+// Niveau estimé par le test oral de l'inscription.
+export type Level = "A0" | "A1" | "A2" | "B1";
 // Objectif quotidien en minutes (réglage du programme : 5, 10, 15 ou 20).
 export type DailyMinutes = 5 | 10 | 15 | 20;
 
@@ -30,7 +32,8 @@ export interface RoleplayProgress {
 
 export interface State {
   version: 1;
-  profile: { name: string; goal: Goal; minutes: DailyMinutes; onboarded: boolean };
+  profile: { name: string; goal: Goal; minutes: DailyMinutes; onboarded: boolean; phone?: string; verified?: boolean };
+  placement: { level: Level; at: string } | null;
   track: "general" | "pro";
   xpTotal: number;
   gems: number;
@@ -54,6 +57,11 @@ export interface State {
   zazouAt: string | null;
   bosses: Record<string, { best: number; passed: boolean }>;
   reports: { at: string; unit: string; text: string }[];
+  // Maîtrise de chaque son (meilleure note /100).
+  sounds: Record<string, number>;
+  // Ligue de la semaine : palier et numéro de semaine en cours.
+  league: { tier: number; week: number; last: { week: number; rank: number; change: -1 | 0 | 1 } | null };
+  spokenSeconds: number;
   updatedAt: string;
 }
 
@@ -85,6 +93,10 @@ export const initialState = (): State => ({
   zazouAt: null,
   bosses: {},
   reports: [],
+  placement: null,
+  sounds: {},
+  league: { tier: 0, week: 0, last: null },
+  spokenSeconds: 0,
   updatedAt: new Date().toISOString()
 });
 
@@ -148,6 +160,11 @@ export function applyMissedDays(s: State, now = today()): State {
     return { ...s, freezes: s.freezes - missed, lastActiveDay: now - 1 };
   }
   return { ...s, streak: 0 };
+}
+
+// Temps passé à parler au micro (statistique « minutes parlées »).
+export function addSpoken(seconds: number) {
+  if (seconds > 0) setState(s => ({ ...s, spokenSeconds: s.spokenSeconds + Math.min(60, seconds) }));
 }
 
 // Environ 5 XP par minute d'apprentissage.

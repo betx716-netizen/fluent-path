@@ -1,40 +1,71 @@
 import { useEffect, useState } from "react";
 import type { Session } from "@supabase/supabase-js";
-import { allUnits } from "../data/units";
-import { Bolt, Book, Clock, Flame, Gem, Mic, NavTalk, Snow, Trophy } from "../components/Icons";
+import { Bolt, Flame, Gem, Mic, Share, Snow, Trophy } from "../components/Icons";
+import { LEAGUES } from "../lib/league";
+import { LEVELS, levelValue } from "../lib/placement";
+import { LeagueBadge } from "./League";
 import { detectMode, type AiMode } from "../lib/ai";
 import { OUTFITS, Zazou } from "../components/Zazou";
 import { award } from "../lib/award";
-import { ACHIEVEMENTS, FREEZE_PRICE, PASS_STARS, buyFreeze } from "../lib/game";
+import { ACHIEVEMENTS, FREEZE_PRICE, achievementProgress, buyFreeze } from "../lib/game";
 import { dailyGoalXp, initialState, replaceState, setState, useStore } from "../lib/store";
 import { dayLabel, today } from "../lib/day";
 import { sendMagicLink, signOut, syncEnabled } from "../lib/sync";
 
-export function Profile({ session, toast }: { session: Session | null; toast: (m: string) => void }) {
+function invite(toast: (m: string) => void) {
+  const text = "J'apprends l'anglais avec Zazou, quelques minutes par jour. Rejoins-moi : " + window.location.origin;
+  if (navigator.share) {
+    navigator.share({ title: "Zazou", text }).catch(() => {});
+  } else {
+    window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank", "noopener");
+    toast("Invitation ouverte dans WhatsApp");
+  }
+}
+
+export function Profile({ session, toast, onPlacement }: { session: Session | null; toast: (m: string) => void; onPlacement: () => void }) {
   const s = useStore(x => x);
   const [confirmReset, setConfirmReset] = useState(false);
   const goal = dailyGoalXp(s.profile.minutes);
   const days = Array.from({ length: 7 }, (_, i) => today() - 6 + i);
   const max = Math.max(goal, ...days.map(d => s.xpByDay[d] ?? 0));
-  const unitsDone = allUnits.filter(u => (s.units[u.id]?.stars ?? 0) >= PASS_STARS).length;
+  const level = levelValue(s);
 
   return (
     <div className="screen">
-      <div className="row" style={{ gap: 14 }}>
-        <Zazou mood="wave" size={88} />
-        <div>
+      <div className="profile-head">
+        <span className="profile-avatar" aria-hidden>
+          <Zazou mood="wave" size={86} outfit={s.outfits.worn} />
+        </span>
+        <div style={{ flex: 1, minWidth: 0 }}>
           <h1 style={{ fontSize: "1.6rem" }}>{s.profile.name || "Apprenant"}</h1>
-          <p className="muted">Objectif : {s.profile.minutes} min par jour · {goal} XP</p>
+          <p className="muted small">{s.profile.phone ? `${s.profile.phone.replace(/^\+225(\d+)$/, (_, n: string) => "+225 " + n.replace(/(\d{2})(?=\d)/g, "$1 "))} · ` : ""}{s.profile.minutes} min par jour</p>
+          <p className="friends">
+            <b>0</b> ami
+            <button className="linkbtn" onClick={() => invite(toast)}>
+              <Share width={16} height={16} /> Inviter
+            </button>
+          </p>
         </div>
       </div>
 
-      <div className="stat-grid">
-        <div className="stat-card"><Flame /><div><b>{s.streak}</b><small>série (record {s.streakBest})</small></div></div>
-        <div className="stat-card"><Bolt style={{ color: "var(--indigo)" }} /><div><b>{s.xpTotal}</b><small>XP au total</small></div></div>
-        <div className="stat-card"><Book style={{ color: "var(--mint)" }} /><div><b>{unitsDone}</b><small>unités validées</small></div></div>
-        <div className="stat-card"><Clock style={{ color: "var(--coral)" }} /><div><b>{s.minutesTotal}</b><small>minutes apprises</small></div></div>
-        <div className="stat-card"><Mic style={{ color: "var(--mint)" }} /><div><b>{s.speechScores.length ? Math.round(s.speechScores.reduce((a, b) => a + b, 0) / s.speechScores.length) : "–"}</b><small>prononciation /100</small></div></div>
-        <div className="stat-card"><NavTalk style={{ color: "var(--indigo)" }} /><div><b>{Object.keys(s.roleplays).length}</b><small>jeux de rôle faits</small></div></div>
+      <div className="card" style={{ display: "grid", gap: 10 }}>
+        <div className="row" style={{ justifyContent: "space-between" }}>
+          <h3>Mon niveau</h3>
+          <button className="linkbtn" onClick={onPlacement}>Refaire le test</button>
+        </div>
+        <div className="level-track" aria-label={`Niveau ${level.toFixed(1)} sur l'échelle A0 à B1`}>
+          <div className="level-fill" style={{ width: `${(level / 3) * 100}%` }} />
+          {LEVELS.map((l, i) => (
+            <span key={l} className={`level-mark${level >= i ? " on" : ""}`} style={{ left: `${(i / 3) * 100}%` }}>{l}</span>
+          ))}
+        </div>
+      </div>
+
+      <div className="stat-grid four">
+        <div className="stat-card"><Flame /><div><b>{s.streak}</b><small>jours de série</small></div></div>
+        <div className="stat-card"><Bolt style={{ color: "var(--sun)" }} /><div><b>{s.xpTotal}</b><small>XP au total</small></div></div>
+        <div className="stat-card"><Mic style={{ color: "var(--coral)" }} /><div><b>{Math.round(s.spokenSeconds / 60)}</b><small>minutes parlées</small></div></div>
+        <div className="stat-card"><LeagueBadge tier={s.league.tier} size={30} /><div><b>{LEAGUES[s.league.tier].name}</b><small>ligue</small></div></div>
       </div>
 
       <div className="card" style={{ display: "grid", gap: 12 }}>
@@ -81,15 +112,27 @@ export function Profile({ session, toast }: { session: Session | null; toast: (m
 
       <Shop toast={toast} />
 
-      <h3>Trophées</h3>
-      <div className="achievements">
-        {Object.entries(ACHIEVEMENTS).map(([k, a]) => (
-          <div className={`ach${s.achievements[k] ? " on" : ""}`} key={k}>
-            <Trophy />
-            <b>{a.title}</b>
-            <small className="muted">{a.desc}</small>
-          </div>
-        ))}
+      <div className="row" style={{ justifyContent: "space-between" }}>
+        <h3>Succès</h3>
+        <span className="muted small">{Object.keys(s.achievements).filter(k => ACHIEVEMENTS[k]).length} / {Object.keys(ACHIEVEMENTS).length}</span>
+      </div>
+      <div className="success-list">
+        {Object.entries(ACHIEVEMENTS)
+          .map(([k, a]) => ({ k, a, p: achievementProgress(s, k) }))
+          .sort((x, y) => Number(!!s.achievements[x.k]) - Number(!!s.achievements[y.k]) || y.p[0] / y.p[1] - x.p[0] / x.p[1])
+          .map(({ k, a, p: [cur, max] }) => (
+            <div className={`success${s.achievements[k] ? " on" : ""}`} key={k}>
+              <span className="success-icon"><Trophy /></span>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <b>{a.title}</b>
+                <small className="muted">{a.desc}</small>
+                <div className="success-bar">
+                  <i style={{ width: `${(cur / max) * 100}%` }} />
+                </div>
+              </div>
+              <small className="success-count">{s.achievements[k] ? "Obtenu" : `${cur}/${max}`}</small>
+            </div>
+          ))}
       </div>
 
       <div className="card">

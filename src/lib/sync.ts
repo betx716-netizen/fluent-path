@@ -101,3 +101,17 @@ export function startSync(onSession: (s: Session | null) => void) {
     unsub();
   };
 }
+
+// Connexion par code SMS (Supabase Auth, téléphone). Il faut un fournisseur SMS
+// branché dans Supabase (Twilio, MessageBird…), sinon l'envoi échoue.
+export async function sendSmsCode(phone: string) {
+  if (!supabase) throw new Error("Connexion par SMS non configurée.");
+  const { error } = await supabase.auth.signInWithOtp({ phone });
+  if (error) throw error;
+}
+
+export async function verifySmsCode(phone: string, token: string) {
+  if (!supabase) throw new Error("Connexion par SMS non configurée.");
+  const { error } = await supabase.auth.verifyOtp({ phone, token, type: "sms" });
+  if (error) throw error;
+}

@@ -186,3 +186,47 @@ export const NavProfile = (p: P) => (
     <path fill="currentColor" d="M3.5 21a8.5 8.5 0 0 1 17 0z" />
   </svg>
 );
+export const NavSounds = (p: P) => (
+  <svg {...base} {...p}>
+    <path fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" d="M4 10v4M8 6v12M12 3v18M16 7v10M20 10v4" />
+  </svg>
+);
+export const NavLeague = (p: P) => (
+  <svg {...base} {...p}>
+    <path fill="currentColor" d="M12 2 20 5v6c0 5-3.4 9.3-8 11-4.6-1.7-8-6-8-11V5z" />
+    <path fill="var(--star, #fff)" opacity=".85" d="m12 7 1.5 3 3.3.5-2.4 2.3.6 3.3-3-1.6-3 1.6.6-3.3-2.4-2.3 3.3-.5z" />
+  </svg>
+);
+export const Stop = (p: P) => (
+  <svg {...base} {...p}>
+    <rect x="6" y="6" width="12" height="12" rx="3" fill="currentColor" />
+  </svg>
+);
+export const Share = (p: P) => (
+  <svg {...base} {...p}>
+    <path fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" d="M12 3v12M7 8l5-5 5 5M5 14v5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-5" />
+  </svg>
+);
+export const Briefcase = (p: P) => (
+  <svg {...base} {...p}>
+    <rect x="3" y="7" width="18" height="13" rx="3" fill="currentColor" />
+    <path fill="none" stroke="currentColor" strokeWidth="2" d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" />
+    <path fill="#fff" opacity=".5" d="M3 12h18v2H3z" />
+  </svg>
+);
+export const Plane = (p: P) => (
+  <svg {...base} {...p}>
+    <path fill="currentColor" d="M21 15.5v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V8.5l-8 5v2l8-2.5V18l-2 1.5V21l3.5-1 3.5 1v-1.5L13 18v-5z" />
+  </svg>
+);
+export const Cap = (p: P) => (
+  <svg {...base} {...p}>
+    <path fill="currentColor" d="M12 3 1 9l11 6 9-4.9V17h2V9z" />
+    <path fill="currentColor" opacity=".7" d="M5 13.2V17c0 1.7 3.1 3 7 3s7-1.3 7-3v-3.8l-7 3.8z" />
+  </svg>
+);
+export const Chart = (p: P) => (
+  <svg {...base} {...p}>
+    <path fill="currentColor" d="M4 20h4v-7H4zM10 20h4V9h-4zM16 20h4V4h-4z" />
+  </svg>
+);

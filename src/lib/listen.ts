@@ -1,4 +1,5 @@
 // Reconnaissance vocale gratuite de Chrome (Web Speech API).
+import { addSpoken } from "./store";
 
 interface RecognitionResult {
   isFinal: boolean;
@@ -59,6 +60,7 @@ export function listen(opts: { lang?: string; onInterim?: (t: string) => void } 
     const finals: { text: string; confidence: number }[] = [];
     let interim = "";
     let failed = false;
+    const t0 = Date.now();
     rec.onresult = e => {
       interim = "";
       for (let i = e.resultIndex; i < e.results.length; i++) {
@@ -78,6 +80,7 @@ export function listen(opts: { lang?: string; onInterim?: (t: string) => void } 
       reject(new ListenError(code));
     };
     rec.onend = () => {
+      addSpoken((Date.now() - t0) / 1000);
       if (failed) return;
       const text = (finals.map(f => f.text).join(" ") + " " + interim).trim();
       if (!text) return reject(new ListenError("no_speech"));

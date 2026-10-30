@@ -43,6 +43,14 @@ Note : les animations de Zazou sont en SVG et CSS. Rive demanderait de dessiner 
 
 Réglages repris du programme : leçons de 5 à 7 min, objectif quotidien de 5, 10, 15 ou 20 min, 5 vies, note de prononciation en couleur (≥ 85 parfait, 60–84 presque, < 60 réessaie), seuil de réussite propre à chaque phrase (70, ou 65 pour la traduction à l'oral).
 
+## Écrans ajoutés (inscription, test oral, sons, ligue, profil)
+
+- **Inscription en 3 étapes** : prénom, numéro WhatsApp (+225), objectif (Travail, Voyages, Études, Business), temps par jour, puis test de niveau. La connexion par code SMS passe par Supabase Auth (téléphone) : elle demande la sauvegarde en ligne et un fournisseur SMS branché dans Supabase (payant). Sans eux, le numéro reste sur le téléphone.
+- **Test de niveau oral** : 6 questions, 3 minutes, 30 s par réponse, niveau estimé A0 → B1 en direct. Notation hors ligne (longueur de la réponse + structure attendue). Le niveau ouvre le chapitre de départ du parcours général et la section pro du même niveau.
+- **Sons** : son de la semaine, 3 onglets (Pièges FR, Voyelles, Consonnes), maîtrise par son ; le Studio des accents est dans cet onglet.
+- **Ligue** : 6 ligues (Cauri → Diamant), groupe de 20, 5 montent et 5 descendent chaque lundi. Les 19 autres joueurs sont simulés tant que l'app n'a qu'un utilisateur.
+- **Profil** : niveau A0 → B1, série, XP, minutes parlées, ligue, succès avec barre de progression. Les révisions s'ouvrent depuis l'Accueil.
+
 ## Ce qu'ajoute la phase 4 (contenu)
 
 - **60 unités** sur 6 sections, du niveau A1 au niveau C2, 600 exercices, toutes tournées vers le commerce, le transit et le travail (douane, Incoterms, crédit documentaire, surestaries, négociation, réunions…)

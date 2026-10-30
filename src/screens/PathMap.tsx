@@ -1,7 +1,8 @@
 import { Fragment, useLayoutEffect, useRef, useState } from "react";
 import { sectionsOf } from "../data/units";
 import type { Section, Unit } from "../data/types";
-import { Check, Chest, Crown, Guide, Lock, Mic, Star } from "../components/Icons";
+import { Check, Chest, Crown, Guide, Lock, Mic, NavReview, Star } from "../components/Icons";
+import { dueCards } from "../lib/review";
 import { SpeakButton } from "../exercises/Exercises";
 import { Zazou } from "../components/Zazou";
 import { CHEST_AFTER, PASS_STARS, TEST_PASS, TEST_SIZE, chestId, chestReady, sectionOpen, sectionUnitsDone, unitState } from "../lib/game";
@@ -28,12 +29,13 @@ function perchFor(s: State): string | null {
 
 const PERCH = 64; // taille de Zazou sur la carte
 
-export function PathMap({ onStart, onChest, onTest }: { onStart: (u: Unit) => void; onChest: (s: Section) => void; onTest: (s: Section) => void }) {
+export function PathMap({ onStart, onChest, onTest, onReview }: { onStart: (u: Unit) => void; onChest: (s: Section) => void; onTest: (s: Section) => void; onReview: () => void }) {
   const s = useStore(x => x);
   const [preview, setPreview] = useState<Unit | null>(null);
   const [testFor, setTestFor] = useState<Section | null>(null);
   const [guide, setGuide] = useState<Unit | null>(null);
   const goal = dailyGoalXp(s.profile.minutes);
+  const due = dueCards(s).length;
   const todayXp = s.xpByDay[today()] ?? 0;
   const container = useRef<HTMLDivElement>(null);
   const bird = useRef<HTMLDivElement>(null);
@@ -122,6 +124,14 @@ export function PathMap({ onStart, onChest, onTest }: { onStart: (u: Unit) => vo
           </small>
         </div>
       </div>
+
+      <button className="review-link" onClick={onReview}>
+        <NavReview width={26} height={26} />
+        <span style={{ flex: 1, textAlign: "left" }}>
+          <b>Révisions</b> · {due ? `${due} mot${due > 1 ? "s" : ""} à revoir` : "rien à revoir pour l'instant"}
+        </span>
+        <span aria-hidden>›</span>
+      </button>
 
       <div className="seg wide track-switch" role="tablist" aria-label="Parcours">
         <button role="tab" aria-pressed={s.track === "general"} onClick={() => setState(x => ({ ...x, track: "general" }))}>Anglais général</button>
